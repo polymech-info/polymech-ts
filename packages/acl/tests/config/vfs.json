@@ -1,0 +1,7 @@
+[
+  {
+    "name": "root",
+    "type": "fs",
+    "path": "./tests/vfs"
+  }
+]

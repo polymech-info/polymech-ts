@@ -1,0 +1,35 @@
+[[main]]
+name = "A propos de"
+url = "about/"
+weight = 5
+hidden = true
+
+[[main]]
+name = "Produits"
+url = "product/"
+weight = 1
+
+[[main]]
+name = "Projets"
+url = "project/"
+weight = 2
+
+[[main]]
+name = "Services"
+url = "service/"
+weight = 3
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 7
+
+[[footer]]
+name = "Conditions d'utilisation"
+url = "terms/"
+weight = 1
+
+[[footer]]
+name = "Politique de confidentialité"
+url = "privacy-policy/"
+weight = 2

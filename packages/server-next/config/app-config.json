@@ -1,0 +1,298 @@
+{
+  "site": {
+    "title": "Polymech",
+    "base_url": "https://service.polymech.info/",
+    "canonical_url": "https://service.polymech.info/",
+    "description": "Polymech Media Platform",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo_width": "150",
+    "logo_height": "33",
+    "logo_text": "Astrofront",
+    "image": {
+      "default": "/images/default-image.png",
+      "error": "/images/error-image.png",
+      "alt": "Astrofront"
+    }
+  },
+  "i18n": {
+    "store": "${OSR_ROOT}/i18n-store/store-${LANG}.json",
+    "cache": true,
+    "source_language": "en",
+    "asset_path": "${SRC_DIR}/${SRC_NAME}-${DST_LANG}${SRC_EXT}"
+  },
+  "cad": {
+    "cache": true,
+    "export_configurations": true,
+    "export_sub_components": true,
+    "renderer": "solidworks",
+    "renderer_view": "Render",
+    "renderer_quality": 1,
+    "extensions": [
+      ".STEP",
+      ".html"
+    ],
+    "model_ext": ".tree.json",
+    "default_configuration": "Default",
+    "main_match": "${product}/cad*/*Global*.+(SLDASM)",
+    "cam_main_match": "${product}/cad*/*-CNC*.+(SLDASM)"
+  },
+  "core": {
+    "logging_namespace": "polymech-site",
+    "translate_content": true,
+    "languages": [
+      "en",
+      "de",
+      "es",
+      "it",
+      "fr"
+    ],
+    "languages_prod": [
+      "en",
+      "es",
+      "fr",
+      "it",
+      "de"
+    ],
+    "rtl_languages": [
+      "ar"
+    ],
+    "osr_root": "${OSR_ROOT}"
+  },
+  "footer_left": [
+    {
+      "href": "/user/cgo/pages/about-contact",
+      "text": "Contact"
+    },
+    {
+      "href": "https://forum.polymech.info/",
+      "text": "Forum"
+    },
+    {
+      "href": "https://service.polymech.info/app/filebrowser/machines?mode=thumb",
+      "text": "Files"
+    },
+    {
+      "href": "https://git.polymech.info/explore/repos",
+      "text": "Github"
+    },
+    {
+      "href": "https://discord.gg/A68ChG9hnN",
+      "text": "Discord"
+    },
+    {
+      "href": "https://service.polymech.info/support-chat",
+      "text": "Support Chat (Instant Quotes)"
+    }
+  ],
+  "footer_email": [
+    {
+      "href": "https://service.polymech.info/user/3bb4cfbf-318b-44d3-a9d3-35680e738421/pages/about-contact",
+      "text": "Contact"
+    },
+    {
+      "href": "https://forum.polymech.info/",
+      "text": "Forum"
+    },
+    {
+      "href": "https://service.polymech.info/app/filebrowser/machines?mode=thumb",
+      "text": "Files"
+    },
+    {
+      "href": "https://git.polymech.info/explore/repos",
+      "text": "Github"
+    },
+    {
+      "href": "https://discord.gg/A68ChG9hnN",
+      "text": "Discord"
+    },
+    {
+      "href": "https://service.polymech.info/support-chat",
+      "text": "Support Chat (Instant Quotes)"
+    }
+  ],
+  "email": {
+    "languages": [
+      "en",
+      "de",
+      "es",
+      "it",
+      "fr"
+    ]
+  },
+  "footer_right": [],
+  "settings": {
+    "search": true,
+    "account": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system"
+  },
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Designed And Developed by [Themefisher](https://themefisher.com/)"
+  },
+  "navigation": {
+    "top": [
+      {
+        "href": "/${LANG}",
+        "text": "Home"
+      },
+      {
+        "href": "https://service.polymech.info/",
+        "text": "Media"
+      },
+      {
+        "href": "https://forum.polymech.info/",
+        "text": "Forum"
+      },
+      {
+        "href": "https://polymech.info/${LANG}/resources",
+        "text": "Resources"
+      }
+    ]
+  },
+  "navigation_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "https://github.com/themefisher/astrofront"
+  },
+  "ecommerce": {
+    "brand": "Polymech",
+    "currencySymbol": "E",
+    "currencyCode": "EUR"
+  },
+  "impressum": {
+    "company": "Polymech S.L.",
+    "representative": "Guenter Volkmar Baumgart",
+    "address": "Poligono Can Clapers, Carrer Can Peric 11, 1B, 08181 Sentmenat, Barcelona, Spain",
+    "email": "info@polymech.info",
+    "phone": "+34 691 952 287",
+    "vat_id": "ES-Y0100830N",
+    "register": "Registro Mercantil de Barcelona",
+    "responsible_content": "Guenter Volkmar Baumgart (§ 18 Abs. 2 MStV)"
+  },
+  "metadata": {
+    "country": "Spain",
+    "city": "Barcelona",
+    "author": "Polymech",
+    "author_bio": "I am in, if its true",
+    "author_url": "https://polymech.info/",
+    "image": "/images/og-image.png",
+    "description": "Polymech is a plastic prototyping company that offers product design services.",
+    "keywords": "Plastic, Prototyping, Product Design, Opensource"
+  },
+  "shopify": {
+    "currencySymbol": "",
+    "currencyCode": "EU",
+    "collections": {
+      "hero_slider": "hidden-homepage-carousel",
+      "featured_products": "featured-products"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": "https://assets.polymech.info/machines//assets/newsletter/common/products/extruders/overview-3.jpg",
+      "_blog": {
+        "store": "resources"
+      }
+    }
+  },
+  "dev": {
+    "file_server": "localhost:5000"
+  },
+  "features": {
+    "show_description": false,
+    "show_license": true,
+    "show_renderings": true,
+    "show_tabs": false,
+    "show_gallery": true,
+    "show_files": true,
+    "show_specs": true,
+    "show_checkout": true,
+    "show_contact": true,
+    "show_3d_preview": true,
+    "show_resources": true,
+    "show_debug": false,
+    "show_samples": true,
+    "show_readme": false,
+    "show_related": true,
+    "show_showcase": true,
+    "show_screenshots": true
+  },
+  "retail": {
+    "products": "site-prod",
+    "library_branch": "site-prod",
+    "projects_branch": "projects",
+    "compile_cache": false,
+    "media_cache": true,
+    "log_level_i18n_product_assets": "info",
+    "convert_product_media": true,
+    "translate_product_assets": false,
+    "populate_product_defaults": true
+  },
+  "osrl": {
+    "env": "astro-release",
+    "env_dev": "astro-debug",
+    "module_name": "polymech.io",
+    "lang_flavor": "osr",
+    "product_profile": "./src/app/profile.json"
+  },
+  "products": {
+    "root": "${OSR_ROOT}/products",
+    "howto_migration": "./data/last.json",
+    "glob": "**/config.json",
+    "enabled": "${OSR_ROOT}/products/config/machines.json"
+  },
+  "defaults": {
+    "image_url": "https://picsum.photos/640/640",
+    "license": "CERN Open Source Hardware License",
+    "contact": "sales@plastic-hub.com"
+  },
+  "assets": {
+    "local": false,
+    "glob": "*.+(JPG|jpg|jpeg|png|PNG|gif)",
+    "cad_url": "${OSR_MACHINES_ASSETS_URL}/${file}",
+    "url": "${OSR_MACHINES_ASSETS_URL}/products/${product_rel_min}/${file}",
+    "item_url_r": "${OSR_MACHINES_ASSETS_URL}/${ITEM_REL}/${assetPath}/${filePath}",
+    "item_url": "http://${FILE_SERVER_DEV}/${ITEM_REL}/${assetPath}/${filePath}"
+  },
+  "optimization": {
+    "image_settings": {
+      "gallery": {
+        "show_title": true,
+        "show_description": false,
+        "sizes_thumb": "(min-width: 120px) 120px, 120vw",
+        "sizes_large": "(min-width: 1024px) 1024px, 1024vw",
+        "sizes_regular": "(min-width: 400px) 400px, 400vw"
+      },
+      "lightbox": {
+        "show_title": true,
+        "show_description": true,
+        "sizes_thumb": "(min-width: 120px) 120px, 120vw",
+        "sizes_large": "(min-width: 1024px) 1024px, 1024vw",
+        "sizes_regular": "(min-width: 400px) 400px, 400vw"
+      }
+    },
+    "presets": {
+      "slow": {
+        "sizes_medium": "(min-width: 100px) 100px, 100vw",
+        "sizes_thumbs": "(min-width: 80px) 80px, 80vw",
+        "sizes_large": "(min-width: 320px) 320px, 320vw"
+      },
+      "medium": {
+        "sizes_medium": "(min-width: 400px) 400px, 400vw",
+        "sizes_thumbs": "(min-width: 120px) 120px, 120vw",
+        "sizes_large": "(min-width: 1024px) 1024px, 1024vw"
+      },
+      "fast": {
+        "sizes_medium": "(min-width: 1024px) 1024px, 1024vw",
+        "sizes_thumbs": "(min-width: 180px) 180px, 180vw",
+        "sizes_large": "(min-width: 1200px) 1200px, 1200vw"
+      }
+    }
+  }
+}

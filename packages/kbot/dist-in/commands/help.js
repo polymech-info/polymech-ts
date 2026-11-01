@@ -1,0 +1,44 @@
+import { z } from 'zod';
+import { marked } from 'marked';
+import { getDefaultValue, getDescription } from '@polymech/commons';
+import { OptionsSchema } from '../zod_schema.js';
+export const help = () => {
+    const schema = OptionsSchema();
+    const desc = schema._def.description;
+    const shape = schema.shape;
+    const md = [
+        '# KBot Command Line Interface',
+        '',
+        '```bash',
+        'kplus modify [prompt] [options]',
+        '```',
+        '',
+        '## Description',
+        '',
+        desc || 'KBot CLI Tool',
+        '',
+        '## Options',
+        ''
+    ];
+    // Process each parameter
+    for (const [key, def] of Object.entries(shape)) {
+        const isOptional = def instanceof z.ZodOptional;
+        const defaultValue = getDefaultValue(def);
+        const description = getDescription(def);
+        md.push(`--${key}`);
+        md.push('');
+        md.push(`Description: ${description}`);
+        if (defaultValue !== undefined) {
+            md.push(`Default: \`${JSON.stringify(defaultValue)}\``);
+        }
+        md.push(`Required: ${(!isOptional).toString()}`);
+        md.push('');
+    }
+    const content = marked(md.join('\n'));
+    process.stdout.write(content);
+    return content;
+};
+export default async (argv) => {
+    return help();
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGVscC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYW5kcy9oZWxwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxDQUFDLEVBQUUsTUFBTSxLQUFLLENBQUE7QUFDdkIsT0FBTyxFQUFFLE1BQU0sRUFBRSxNQUFNLFFBQVEsQ0FBQTtBQUMvQixPQUFPLEVBQUUsZUFBZSxFQUFFLGNBQWMsRUFBRSxNQUFNLG1CQUFtQixDQUFBO0FBRW5FLE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSxrQkFBa0IsQ0FBQTtBQUVoRCxNQUFNLENBQUMsTUFBTSxJQUFJLEdBQUcsR0FBRyxFQUFFO0lBQ3ZCLE1BQU0sTUFBTSxHQUFHLGFBQWEsRUFBRSxDQUFBO0lBQzlCLE1BQU0sSUFBSSxHQUFHLE1BQU0sQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFBO0lBQ3BDLE1BQU0sS0FBSyxHQUFHLE1BQU0sQ0FBQyxLQUFLLENBQUE7SUFFMUIsTUFBTSxFQUFFLEdBQUc7UUFDVCwrQkFBK0I7UUFDL0IsRUFBRTtRQUNGLFNBQVM7UUFDVCxpQ0FBaUM7UUFDakMsS0FBSztRQUNMLEVBQUU7UUFDRixnQkFBZ0I7UUFDaEIsRUFBRTtRQUNGLElBQUksSUFBSSxlQUFlO1FBQ3ZCLEVBQUU7UUFDRixZQUFZO1FBQ1osRUFBRTtLQUNILENBQUE7SUFFRCx5QkFBeUI7SUFDekIsS0FBSyxNQUFNLENBQUMsR0FBRyxFQUFFLEdBQUcsQ0FBQyxJQUFJLE1BQU0sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLEVBQUUsQ0FBQztRQUMvQyxNQUFNLFVBQVUsR0FBRyxHQUFHLFlBQVksQ0FBQyxDQUFDLFdBQVcsQ0FBQTtRQUMvQyxNQUFNLFlBQVksR0FBRyxlQUFlLENBQUMsR0FBVSxDQUFDLENBQUE7UUFDaEQsTUFBTSxXQUFXLEdBQUcsY0FBYyxDQUFDLEdBQVUsQ0FBQyxDQUFBO1FBQzlDLEVBQUUsQ0FBQyxJQUFJLENBQUMsS0FBSyxHQUFHLEVBQUUsQ0FBQyxDQUFBO1FBQ25CLEVBQUUsQ0FBQyxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUE7UUFDWCxFQUFFLENBQUMsSUFBSSxDQUFDLGdCQUFnQixXQUFXLEVBQUUsQ0FBQyxDQUFBO1FBQ3RDLElBQUksWUFBWSxLQUFLLFNBQVMsRUFBRSxDQUFDO1lBQy9CLEVBQUUsQ0FBQyxJQUFJLENBQUMsY0FBYyxJQUFJLENBQUMsU0FBUyxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsQ0FBQTtRQUN6RCxDQUFDO1FBQ0QsRUFBRSxDQUFDLElBQUksQ0FBQyxhQUFhLENBQUMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxRQUFRLEVBQUUsRUFBRSxDQUFDLENBQUE7UUFDaEQsRUFBRSxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQTtJQUNiLENBQUM7SUFFRCxNQUFNLE9BQU8sR0FBVyxNQUFNLENBQUMsRUFBRSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBVyxDQUFDO0lBQ3hELE9BQU8sQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFBO0lBQzdCLE9BQU8sT0FBTyxDQUFBO0FBQ2hCLENBQUMsQ0FBQTtBQUVELGVBQWUsS0FBSyxFQUFFLElBQVMsRUFBRSxFQUFFO0lBQ2pDLE9BQU8sSUFBSSxFQUFFLENBQUE7QUFDZixDQUFDLENBQUEifQ==

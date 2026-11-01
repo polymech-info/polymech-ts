@@ -1,0 +1,20 @@
+{% minclude "test.md" %}
+
+
+[% js %]
+
+return new Promise((resolve, reject) => {
+
+  console.log(path.resolve('..'));
+/*
+  const log = git.log(path.resolve('..'),'./examples');
+  log.then((d)=>{
+    const t = git.print_log('httt',d.files); 
+    console.log('tt',d);
+    resolve(t);
+  })
+*/
+
+});
+
+[%endjs%]

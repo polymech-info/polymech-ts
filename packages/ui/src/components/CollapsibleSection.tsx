@@ -1,0 +1,172 @@
+import React, { useState, type ReactNode, useEffect } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+
+interface CollapsibleSectionProps {
+  title: ReactNode;
+  children: ReactNode;
+  initiallyOpen?: boolean;
+  storageKey?: string; // New prop for localStorage key
+  className?: string;
+  headerClassName?: string;
+  headerContent?: ReactNode;
+  titleClassName?: string;
+  buttonClassName?: string;
+  contentClassName?: string;
+  asCard?: boolean; // New prop to decide if it should render as a Card
+  onStateChange?: (isOpen: boolean) => void; // New prop for state change callback
+  id?: string;
+  minimal?: boolean; // New prop for minimal styling
+  renderHeader?: (
+    toggle: () => void,
+    isOpen: boolean
+  ) => React.ReactNode;
+  keepMounted?: boolean; // Keep component mounted when closed
+}
+
+const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
+  title,
+  children,
+  initiallyOpen = true,
+  storageKey,
+  className = '',
+  headerClassName,
+  headerContent,
+  titleClassName,
+  buttonClassName = '', // Made button smaller
+  contentClassName,
+  asCard = false, // Default to not rendering as a card
+  onStateChange, // Destructure new prop
+  id,
+  minimal = false,
+  renderHeader,
+  keepMounted = false
+}) => {
+  const [isOpen, setIsOpen] = useState(() => {
+    if (storageKey) {
+      try {
+        const storedState = localStorage.getItem(storageKey);
+        if (storedState !== null) {
+          return JSON.parse(storedState) as boolean;
+        }
+      } catch (error) {
+        console.error(`Error reading CollapsibleSection state from localStorage for key "${storageKey}":`, error);
+      }
+    }
+    return initiallyOpen;
+  });
+
+  useEffect(() => {
+    if (storageKey) {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(isOpen));
+        if (onStateChange) { // Call onStateChange when state is synced from localStorage
+          onStateChange(isOpen);
+        }
+      } catch (error) {
+        console.error(`Error writing CollapsibleSection state to localStorage for key "${storageKey}":`, error);
+      }
+    }
+  }, [isOpen, storageKey, onStateChange]);
+
+  const toggleOpen = () => {
+    const newState = !isOpen;
+    setIsOpen(newState);
+    if (onStateChange) { // Call onStateChange when toggling
+      onStateChange(newState);
+    }
+  };
+
+  // Apply minimal styling if enabled
+  const finalHeaderClassName = headerClassName || (minimal
+    ? 'flex justify-between items-center p-1 cursor-pointer border-t border-b border-border bg-muted/40'
+    : 'flex justify-between items-center p-3 md:p-4 cursor-pointer border-b border-border'
+  );
+
+  const finalTitleClassName = titleClassName || (minimal
+    ? 'pl-2 text-sm font-semibold'
+    : 'pl-2 text-md md:text-lg font-semibold'
+  );
+
+  const finalContentClassName = contentClassName || (minimal
+    ? 'p-2'
+    : 'p-3 md:p-4'
+  );
+
+  const finalContainerClassName = minimal
+    ? `dark:bg-slate-800/30 ${className} lg:rounded-lg`
+    : `rounded-lg shadow-none md:shadow-md border border-border ${className} lg:rounded-lg`;
+
+  const header = renderHeader ? (
+    renderHeader(toggleOpen, isOpen)
+  ) : (
+    <div className={finalHeaderClassName} onClick={toggleOpen}>
+      <div className={finalTitleClassName}>{title}</div>
+      <div className="flex items-center gap-2">
+        {headerContent}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleOpen();
+          }}
+          className={buttonClassName}
+        >
+          {isOpen ? (
+            <ChevronUp size={32} />
+          ) : (
+            <ChevronDown size={32} />
+          )}
+        </Button>
+      </div>
+    </div>
+  );
+
+
+  if (asCard) {
+    const cardClassName = minimal
+      ? `${className}`
+      : `shadow-none md:shadow-md ${className}`;
+    return (
+      <Card className={cardClassName} id={id}>
+        <CardHeader className={`cursor-pointer ${finalHeaderClassName}`} onClick={toggleOpen}>
+          <div className="flex justify-between items-center w-full">
+            <div className={finalTitleClassName}>{title}</div>
+            <div className="flex items-center gap-2">
+              {headerContent}
+              <Button variant="ghost" size="icon" onClick={(e) => { e.stopPropagation(); toggleOpen(); }} className={buttonClassName}>
+                {isOpen ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
+              </Button>
+            </div>
+          </div>
+        </CardHeader>
+        {(isOpen || keepMounted) && (
+          <CardContent 
+            className={finalContentClassName} 
+            style={!isOpen ? { display: 'none' } : undefined}
+          >
+            {children}
+          </CardContent>
+        )}
+      </Card>
+    );
+  }
+
+  return (
+    <div className={finalContainerClassName} id={id}>
+      {header}
+      {(isOpen || keepMounted) && (
+        <div 
+          className={finalContentClassName} 
+          style={!isOpen ? { display: 'none' } : undefined}
+        >
+          {children}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CollapsibleSection; 

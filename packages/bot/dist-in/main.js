@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+import { defaults } from './_cli.js';
+defaults();
+import { cli } from './cli.js';
+import { register as registerBazarDownload } from './commands/bazar/downloadBazar.js';
+registerBazarDownload(cli);
+const argv = cli.argv;
+if (argv.h || argv.help) {
+    cli.showHelp();
+    process.exit();
+}
+else if (argv.v || argv.version) {
+    process.exit();
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9tYWluLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sV0FBVyxDQUFDO0FBQUMsUUFBUSxFQUFFLENBQUE7QUFDaEQsT0FBTyxFQUFFLEdBQUcsRUFBRSxNQUFNLFVBQVUsQ0FBQTtBQUM5QixPQUFPLEVBQUUsUUFBUSxJQUFJLHFCQUFxQixFQUFFLE1BQU0sbUNBQW1DLENBQUE7QUFDckYscUJBQXFCLENBQUMsR0FBRyxDQUFDLENBQUE7QUFFMUIsTUFBTSxJQUFJLEdBQVEsR0FBRyxDQUFDLElBQUksQ0FBQztBQUUzQixJQUFJLElBQUksQ0FBQyxDQUFDLElBQUksSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO0lBQ3RCLEdBQUcsQ0FBQyxRQUFRLEVBQUUsQ0FBQztJQUNmLE9BQU8sQ0FBQyxJQUFJLEVBQUUsQ0FBQztBQUNuQixDQUFDO0tBQU0sSUFBSSxJQUFJLENBQUMsQ0FBQyxJQUFJLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztJQUNoQyxPQUFPLENBQUMsSUFBSSxFQUFFLENBQUM7QUFDbkIsQ0FBQyJ9

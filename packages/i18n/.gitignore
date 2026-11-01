@@ -1,0 +1,8 @@
+/node_modules
+/coverage
+*.log
+.DS_Store
+tests/temp
+data
+clear_history.sh
+.kbot

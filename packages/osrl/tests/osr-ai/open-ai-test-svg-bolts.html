@@ -1,0 +1,75 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bolt { fill: #606060; stroke: #404040; }
+    .block { fill: #909090; stroke: #707070; }
+    .legend { font: italic 18px sans-serif; fill: #000000; }
+    .teacher { fill: #d4a190; }
+    .stick { fill: #704214; stroke: #502014; }
+    .shadow { filter: url(#shadow); }
+  </style>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="5" dy="5" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <g class="block">
+    <rect x="120" y="180" width="200" height="120" class="shadow"/>
+    <rect x="320" y="180" width="80" height="40" class="shadow"/>
+  </g>
+
+  <g class="bolt">
+    <!-- Left side bolts -->
+    <circle cx="140" cy="200" r="5" class="shadow">
+      <animate attributeName="cy" from="140" to="200" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="220" r="5" class="shadow">
+      <animate attributeName="cy" from="160" to="220" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="240" r="5" class="shadow">
+      <animate attributeName="cy" from="180" to="240" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="260" r="5" class="shadow">
+      <animate attributeName="cy" from="200" to "260" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="280" r="5" class="shadow">
+      <animate attributeName="cy" from="220" to="280" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Cylinder head bolts -->
+    <circle cx="340" cy="200" r="5" class="shadow">
+      <animate attributeName="cy" from="140" to="200" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="220" r="5" class="shadow">
+      <animate attributeName="cy" from="160" to="220" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="240" r="5" class="shadow">
+      <animate attributeName="cy" from="180" to="240" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="260" r="5" class="shadow">
+      <animate attributeName="cy" from="200" to "260" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="280" r="5" class="shadow">
+      <animate attributeName="cy" from="220" to="280" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g class="legend">
+    <text x="120" y="340">1. Engine Block</text>
+    <text x="320" y="340">2. Cylinder Head Bolts</text>
+    <text x="20" y="520">3. Left Side Bolts</text>
+  </g>
+
+  <g class="teacher">
+    <circle cx="700" cy="300" r="50"/>
+    <path d="M 700 350 Q 670 380 650 500 L 750 500 Q 730 380 700 350" />
+    <path d="M 650 500 L 650 550 L 750 550 L 750 500" />
+    <path d="M 650 550 Q 650 600 600 600 L 600 550" />
+    <path d="M 750 550 Q 750 600 800 600 L 800 550" />
+
+    <rect x="710" y="300" width="80" height="10" class="stick">
+      <animate attributeName="x" from="710" to="715" dur="0.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

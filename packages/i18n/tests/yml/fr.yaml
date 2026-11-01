@@ -1,0 +1,54 @@
+- id: read_more
+  translation: Lire la suite
+- id: address
+  translation: Notre adresse
+- id: phone
+  translation: Numéro de téléphone
+- id: email
+  translation: Nous envoyer un message
+- id: contact_form
+  translation: Formulaire de contact
+- id: send
+  translation: envoyer un message
+- id: follow
+  translation: SUIVEZ-NOUS SUR
+- id: services
+  translation: Services
+- id: contact_info
+  translation: Contact
+- id: subscribe_newsletter
+  translation: S'abonner à la lettre d'information
+- id: subscribe
+  translation: S'abonner
+- id: connect_with_us
+  translation: Connectez-vous avec nous
+- id: call_now
+  translation: Appeler maintenant
+- id: search_placeholder
+  translation: Tapez et appuyez sur Entrée...
+- id: quick_contact
+  translation: Contact rapide
+- id: latest_article
+  translation: Dernier article
+- id: category
+  translation: Catégorie
+- id: tags
+  translation: Tags
+- id: all
+  translation: TOUS
+- id: client
+  translation: client
+- id: clients
+  translation: clients
+- id: date
+  translation: date
+- id: status
+  translation: statut
+- id: our_services
+  translation: Nos services
+- id: prices
+  translation: Prix
+- id: built
+  translation: Construit
+- id: duration
+  translation: Durée de l'accord

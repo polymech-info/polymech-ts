@@ -1,0 +1,14 @@
+{
+  "model": "openai/gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are an assistant that judges if two AI responses are semantically equivalent for a given prompt.\nThe original prompt was: \"Use the add tool to calculate 100 plus 200. Do not use any other tool.\"\n\nResponse A:\n\"The sum of 100 and 200 is 300.\"\nResponse B (expected):\n\"300\"\nAre these two responses semantically equivalent? Consider that minor differences in formatting (like commas, casing) or phrasing should be ignored as long as the meaning is the same. Dont comment, just return the JSON object."
+    },
+    {
+      "role": "user",
+      "content": ""
+    }
+  ],
+  "tools": []
+}

@@ -1,0 +1,11 @@
+[%js%]
+const _path = substitute(`${cwd}/${product_rel}/${path}`);
+console.log(_path + ' _com');
+if(fs.images(_path).length)
+{
+    const t = html.thumbs(`${abs_url}/${product_rel}/${path}`,_path);
+    return `<h4 style="text-align:center">${name}</h4>${t}`;
+}else{
+    console.log(_path + 'doesnt exists');
+}
+[%endjs%]

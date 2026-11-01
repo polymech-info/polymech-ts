@@ -1,0 +1,55 @@
+
+[% include "product_variables.osr" %]
+
+[% include "body.md" %]
+
+[% include "header_notice.osr" %]
+
+[% include "${PRODUCT_ROOT}/header_notice.osr" %]
+
+<div style="clear:both">
+    [% include "product_overview_drawings.osr" %]
+</div>
+
+<div style="padding:16px;text-align: center;">
+    <div class="ty-vendor-plans">
+            
+        <div class="ty-grid-list__item" style="float: left;border: 1px gray;">
+            <h4 id="authors">Specification</h4>
+            [% include "product_specs.osr" html:true %] 
+        </div>
+
+        <div class="ty-grid-list__item" style="float: left;text-align: left;border: 1px gray;">
+            [% if config.show.authors %]
+                [% include "authors_html.osr" authors:product.authors showHeader:true %]
+            [%endif%]     
+        </div>
+    </div>
+</div>
+
+[% include "product_resources.osr" %]
+
+<hr/>
+
+[% include "product_showreel.osr" %]
+
+[% if config.show.others %]
+    [% include "other_products.osr" %]
+[%endif%]
+
+[% if config.show.howtos %]
+    [% include "product_howtos.osr" %]
+[%endif%]
+
+[% include "social_links.osr" %]
+
+[% include "vendor_instagram.osr" %]
+
+[% if config.show.debug %]
+    [% include "product_debug.osr" %]
+[%endif%]
+
+
+[%js%]
+
+[%endjs%]

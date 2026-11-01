@@ -1,0 +1,50 @@
+
+### Create a SVG Animation
+
+- argument `cache` : cache existing results (only works with `dst` specified).
+
+
+```js
+[% raw %]
+[% osr-ai model:"gpt-4o" cache:true gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}.svg" %]
+    Create a 4 balls, rotating around the outside of a cube, as SVG
+     - no comments
+     - scale it to 400x400px
+     - add another ball bouncing against the inside walls of the cube
+[% osr-ai-end %]
+[% endraw %]
+```
+
+[% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}.svg" %]
+    Create a 4 balls, rotating around the outside of a cube, as SVG
+     - no comments
+     - scale it to 400x400px
+     - add another ball bouncing against the inside walls of the cube
+[% osr-ai-end %]
+
+
+### Create an animated solar system
+```js
+[% raw %]
+[% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}-solar.svg" %]
+    Simluate the solar system, as SVG
+    - Each planet should open the link to Wikipedia.
+    - all planets rotate around the sun (center), animated, slow, add a thin line for the orbit
+    - compact the code, no comments
+    - make it all fit to 600x600px
+    All as SVG, no comments
+[% osr-ai-end %]
+[% endraw %]
+```
+
+
+[% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}-solar.svg" %]
+    Simluate the solar system, as SVG
+    - Each planet should open the link to Wikipedia.
+    - all planets rotate around the sun (center), animated, slow, add a thin line for the orbit
+    - make sure all planets are visible
+    - compact the code, no comments
+    - use a dark background
+    - make it all fit to 600x600px canvas, with a black border
+    All as SVG, no comments
+[% osr-ai-end %]

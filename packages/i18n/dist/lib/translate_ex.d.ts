@@ -1,0 +1,9 @@
+import { IOptions } from '../types.js';
+import * as deepl from './deepl.js';
+export declare const clean: (text?: string) => string;
+export declare const hash: (text: string) => string;
+export declare const getTranslation: (translations: any, all?: boolean) => any;
+export declare const storeSet: (storePath: string, text: string, translation: string, file?: string) => void;
+export declare const storeGet: (storePath: string, text: string, file?: string) => any;
+export declare const translateDeepL: (text: string, srcLang: string, dstLang: string, dOptions: deepl.IDeepLOptions, options?: IOptions, file?: string) => Promise<any>;
+export declare const translateText: (text: string, srcLang: string, dstLang: string, options?: IOptions) => Promise<any>;

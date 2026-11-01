@@ -1,0 +1,18 @@
+[
+  {
+    "src": 1,
+    "translation": 1
+  },
+  {
+    "src": true,
+    "translation": true
+  },
+  {
+    "src": "foo",
+    "translation": "foo"
+  },
+  {
+    "src": "baz",
+    "translation": "baz"
+  }
+]

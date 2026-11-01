@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.link {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem 1.25rem;
+  max-width: 56rem;
+}
+
+.nested {
+  margin-top: 1rem;
+}
+
+.panel {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+code {
+  font-size: 0.95em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: #e2e8f0;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.examples-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.btn:hover {
+  background: #e2e8f0;
+}
+
+/* Scroll restoration demo (see /examples/scroll-restoration) */
+.scroll-hud {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  max-width: min(22rem, calc(100vw - 2rem));
+  padding: 0.65rem 0.85rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+}
+
+.scroll-hud code {
+  background: rgba(148, 163, 184, 0.25);
+  color: #f8fafc;
+}
+
+.scroll-hud-hint {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.scroll-demo-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-demo-steps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.scroll-demo-steps li {
+  margin-bottom: 0.35rem;
+}
+
+.scroll-demo-blocks {
+  margin-top: 1.5rem;
+}
+
+.scroll-demo-block {
+  min-height: 5.5rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px dashed #cbd5e1;
+  background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+  color: #475569;
+  font-weight: 600;
+}
+
+.scroll-demo-block:nth-child(12n + 1) {
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.lazy-chunk-intro {
+  border-left: 4px solid #6366f1;
+}
+
+.widget-text-block h3 {
+  margin-top: 0;
+}
+
+.widget-demo-toolbar {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.widget-demo-toolbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.widget-slot-pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: #312e81;
+  color: #e0e7ff;
+}

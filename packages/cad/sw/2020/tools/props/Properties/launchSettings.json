@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\injection\\components\\600_GearBrackets\\600_GlobalAssembly.SLDASM C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\injection\\components\\600_GearBrackets\\600_GlobalAssembly.json",
+      "workingDirectory": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\tools\\props\\bin\\Debug\\netcoreapp3.1",
+      "nativeDebugging": false
+    }
+  }
+}

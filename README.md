@@ -1,2 +1,3 @@
-# polymech-ts
-Polymech Mono Repo - Typescript Libraries
+# PolyMech Typescript Packages
+
+CAD, Media, Bots, ...

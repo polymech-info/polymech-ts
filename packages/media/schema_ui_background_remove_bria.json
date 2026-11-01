@@ -1,0 +1,72 @@
+{
+  "ui:submitButtonOptions": {
+    "props": {
+      "disabled": false,
+      "className": "btn btn-info"
+    },
+    "norender": false,
+    "submitText": "Submit"
+  },
+  "src": {
+    "ui:description": "FILE|FOLDER|GLOB - Source file(s) to remove background from",
+    "ui:title": "Src"
+  },
+  "dst": {
+    "ui:description": "FILE|FOLDER|GLOB - Destination for processed files",
+    "ui:title": "Dst"
+  },
+  "debug": {
+    "ui:description": "Enable internal debug messages",
+    "ui:title": "Debug",
+    "ui:placeholder": false
+  },
+  "alt": {
+    "ui:description": "Use alternate tokenizer, & instead of $",
+    "ui:title": "Alt",
+    "ui:placeholder": false
+  },
+  "dry": {
+    "ui:description": "Run without conversion",
+    "ui:title": "Dry",
+    "ui:placeholder": false
+  },
+  "verbose": {
+    "ui:description": "Show internal messages",
+    "ui:title": "Verbose",
+    "ui:placeholder": false
+  },
+  "logLevel": {
+    "ui:description": "Log level: warn, info, debug, error",
+    "ui:title": "Loglevel",
+    "ui:placeholder": "info"
+  },
+  "cache": {
+    "ui:description": "Skip processing if target file already exists",
+    "ui:title": "Cache",
+    "ui:placeholder": true
+  },
+  "apiKey": {
+    "ui:description": "Bria API key (or set in config.bria.key)",
+    "ui:title": "Apikey"
+  },
+  "sync": {
+    "ui:description": "Use synchronous processing (recommended)",
+    "ui:title": "Sync",
+    "ui:placeholder": true
+  },
+  "contentModeration": {
+    "ui:description": "Enable content moderation",
+    "ui:title": "Contentmoderation",
+    "ui:placeholder": false
+  },
+  "preserveAlpha": {
+    "ui:description": "Preserve alpha channel from input image",
+    "ui:title": "Preservealpha",
+    "ui:placeholder": true
+  },
+  "jpg": {
+    "ui:description": "Convert PNG output to JPG format and delete PNG",
+    "ui:title": "Jpg",
+    "ui:placeholder": false
+  }
+}

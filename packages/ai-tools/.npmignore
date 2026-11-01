@@ -1,0 +1,7 @@
+./docs
+./scripts
+./tests
+./incoming
+.kbot
+package-lock.json
+pnpm-lock.yaml

@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+import { commands } from './commands/index.js';
+import { logger } from './index.js';
+import cli from 'yargs';
+import { hideBin } from 'yargs/helpers';
+const yargs = cli(hideBin(process.argv));
+async function main() {
+    try {
+        const argv = await commands(yargs).argv;
+    }
+    catch (error) {
+        logger.error('Error executing command:', error);
+        process.exit(1);
+    }
+}
+main();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9tYWluLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0scUJBQXFCLENBQUE7QUFDOUMsT0FBTyxFQUFFLE1BQU0sRUFBRSxNQUFNLFlBQVksQ0FBQTtBQUNuQyxPQUFPLEdBQUcsTUFBTSxPQUFPLENBQUE7QUFDdkIsT0FBTyxFQUFFLE9BQU8sRUFBRSxNQUFNLGVBQWUsQ0FBQTtBQUN2QyxNQUFNLEtBQUssR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFBO0FBRXhDLEtBQUssVUFBVSxJQUFJO0lBQ2YsSUFBSSxDQUFDO1FBQ0QsTUFBTSxJQUFJLEdBQUcsTUFBTSxRQUFRLENBQUMsS0FBSyxDQUFDLENBQUMsSUFBSSxDQUFBO0lBQzNDLENBQUM7SUFBQyxPQUFPLEtBQUssRUFBRSxDQUFDO1FBQ2IsTUFBTSxDQUFDLEtBQUssQ0FBQywwQkFBMEIsRUFBRSxLQUFLLENBQUMsQ0FBQztRQUNoRCxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQ3BCLENBQUM7QUFDTCxDQUFDO0FBQ0QsSUFBSSxFQUFFLENBQUEifQ==

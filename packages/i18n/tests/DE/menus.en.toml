@@ -1,0 +1,15 @@
+name = "Wenn Sie es nicht wollen, nehmen Sie es nicht"
+
+[[library]]
+name = "Bibliothek"
+weight = 1
+post = "break"
+identifier = "library"
+url = "/library/machines"
+
+[[library]]
+name = "Einspritzung"
+weight = 1
+post = "break"
+identifier = "Injection"
+url = "/library/injection"

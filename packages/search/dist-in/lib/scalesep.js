@@ -1,0 +1,3 @@
+import axios from 'axios';
+export const search = async (params) => await (await axios.get('https://api.scaleserp.com/search', { params })).data;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2NhbGVzZXAuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvbGliL3NjYWxlc2VwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLE9BQU8sS0FBSyxNQUFNLE9BQU8sQ0FBQztBQUUxQixNQUFNLENBQUMsTUFBTSxNQUFNLEdBQUcsS0FBSyxFQUFFLE1BQVcsRUFBK0IsRUFBRSxDQUNyRSxNQUFNLENBQUMsTUFBTSxLQUFLLENBQUMsR0FBRyxDQUFDLGtDQUFrQyxFQUFFLEVBQUUsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLElBQTBCLENBQUMifQ==

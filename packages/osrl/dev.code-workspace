@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../osr-tasks"
+		},
+		{
+			"path": "../osr-i18n"
+		},
+		{
+			"path": "../osr-cli-commons"
+		},
+		{
+			"path": "../osr-log"
+		},
+		{
+			"path": "../osr-commons"
+		},
+		{
+			"path": "../osr-sync"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+import './commands/resize.js';
+import './commands/pdf2jpg.js';
+import './commands/watermark.js';
+import './commands/background-remove.js';
+import './commands/background-remove-bria.js';
+import './commands/crop-foreground.js';
+import './commands/salamander.js';
+import './commands/schemas.js';
+import './commands/register-commands.js';
+import './commands/register-explorer.js';

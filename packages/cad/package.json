@@ -1,0 +1,78 @@
+{
+    "name": "@polymech/cad",
+    "version": "1.8.9",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "help": "node build/main.js --help",
+        "build": "tsc -p .",
+        "dev": "tsc -w -p . --declaration",
+        "publish": "npm publish --access public",
+        "webpack": "webpack --config webpack.config.js --stats-error-details",
+        "exe:win": "cd dist && nexe -i main_node.js -o polymech-cad.exe --build --temp=../../temp-polymech --verbose",
+        "installer": "makensis scripts/installer.nsi",
+        "test:installer": "dist\\PolyMechCAD-Setup.exe /S /D=C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\dist-out"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist-in/index.js",
+            "require": "./dist-in/index.cjs"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://git.polymech.info/mono/cad.git"
+    },
+    "author": "PlasticHub",
+    "keywords": [
+        "SolidWorks",
+        "CAD",
+        "STEP",
+        "3DXML",
+        "3D"
+    ],
+    "bin": {
+        "pm-cad": "dist-in/main.js"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://git.polymech.info/mono/cad/issues"
+    },
+    "homepage": "https://git.polymech.info/mono/cad#readme",
+    "dependencies": {
+        "@polymech/cache": "file:..\\cache",
+        "@polymech/commons": "file:..\\commons",
+        "@polymech/core": "file:..\\core",
+        "@polymech/fs": "file:..\\fs",
+        "@polymech/log": "file:..\\log",
+        "add": "^2.0.6",
+        "csv-stringify": "^6.5.2",
+        "dxf-parser": "^1.1.2",
+        "errlop": "^2.1.0",
+        "fast-glob": "^3.3.2",
+        "js-yaml": "^4.1.0",
+        "md5": "^2.3.0",
+        "nexe": "4.0.0-rc.6",
+        "p-map": "^7.0.3",
+        "parse-glob": "^2.0.1",
+        "regexp.escape": "^1.1.0",
+        "tslint": "^5.10.0",
+        "tslog": "^3.3.3",
+        "which": "^2.0.2",
+        "yargs": "^17.7.2",
+        "zod": "^4.3.6"
+    },
+    "devDependencies": {
+        "@types/js-yaml": "^4.0.9",
+        "@types/node": "^22.13.1",
+        "@types/which": "^1.3.2",
+        "typescript": "^5.7.3",
+        "vitest": "^3.0.5",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-visualizer-plugin2": "^1.2.0"
+    }
+}

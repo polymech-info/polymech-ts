@@ -1,0 +1,36 @@
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <a href="[[config.vendor_instagram]]">
+                    <img width="30px"
+                        src="[[abs_url]]/assets/icons/instagram-logo.png" />
+                </a>
+            </td>
+            <td>
+                <a href="[[config.vendor_youtube]]">
+                    <img width="30px"
+                        src="[[abs_url]]/assets/icons/002-youtube.png" />
+                </a>
+            </td>
+            <td>
+                <a alt="Open Source Projects" href="[[config.vendor_github]]">
+                    <img width="30px"
+                        src="[[abs_url]]/assets/icons/github.png" />
+                </a>
+            </td>
+            <td>
+                <a alt="" href="[[config.vendor_whatsapp]]">
+                    <img width="30px"
+                        src="[[abs_url]]/assets/icons/007-whatsapp.png" />
+                </a>
+            </td>
+            <td>
+                <a alt="" href="[[config.vendor_contact_email]]">
+                    <img width="30px"
+                        src="[[abs_url]]/assets/icons/012-mail-2.png" />
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+[%if showHeader %]
+    <h4 id="authors">Authors</h4>
+[%endif%]
+<ul>
+    [% for author in authors %]
+        <li><a href="[[author.url]]">[[author.name]]</a></li>
+    [% endfor %]
+</ul>

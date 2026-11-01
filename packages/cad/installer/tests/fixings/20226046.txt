@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-26072024-046921";"";
+"REFERENCE";"20226046";"";
+"TraceParts.PartTitle";"Button Head Seal Screw M8 16.0 316 Stainless Steel";"";
+"TraceParts.InstanceId";"90-26072024-0469213ZUSLUPOHTTC56OYSGHFL46NT";"";
+"SUPPLIER";"Essentra Components";"";
+"DESIGN";"Button Head Seal Screw M8 16.0 316 Stainless Steel";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.1";"";

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../kbot"
+		},
+		{
+			"path": "../i18n"
+		}
+	],
+	"settings": {}
+}

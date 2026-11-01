@@ -1,0 +1,10 @@
+export { sync as read } from '@plastichub/fs/read';
+export { sync as exists } from '@plastichub/fs/exists';
+export { sync as dir } from '@plastichub/fs/dir';
+export { sync as write } from '@plastichub/fs/write';
+export declare const sizeToString: (bytes: number, si?: boolean) => string;
+export declare const getExtensions: (glob: string) => any[];
+export declare const isFile: (src: string) => boolean;
+export declare const isFolder: (src: string) => boolean;
+export declare const files: (dir: any, glob: any, options?: any) => [];
+export declare const forward_slash: (path: any) => any;

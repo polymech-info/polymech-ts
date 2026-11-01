@@ -1,0 +1,9 @@
+{
+  "extends": "../typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./dist-in",
+    "rootDir": "src",
+    "baseUrl": "."
+  },
+  "include": ["src/**/*.ts"]
+}

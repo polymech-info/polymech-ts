@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"C:\Users\zx\Desktop\osr\osr-cad\tests\drive\400_Drive-test.EASM" "C:\Users\zx\Desktop\osr\osr-cad\tests\drive\400_Drive-test.EASM" test</StartArguments>
+    <StartWorkingDirectory>C:\Users\zx\Desktop\osr\osr-cad\sw\2024\tools\edrawings-api\BatchExportHTML\BatchExportHTML\bin\Debug</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

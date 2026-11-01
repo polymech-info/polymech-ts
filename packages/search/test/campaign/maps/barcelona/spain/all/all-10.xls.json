@@ -1,0 +1,163 @@
+[
+  {
+    "position": 2,
+    "title": "Plastic Hub",
+    "place_id": "ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "data_id": "0x12a4eb80cfabbbfd:0x2cd16f2aff436ed",
+    "data_cid": "201842789891454701",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 41.609375199999995,
+      "longitude": 2.1421068
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "provider_id": "/g/11rxv42q_7",
+    "type": "Machine shop",
+    "types": [
+      "Machine shop"
+    ],
+    "type_id": "machine_shop",
+    "type_ids": [
+      "machine_shop"
+    ],
+    "address": "Carrer Can Peric, 11, 1B, 08181 Sentmenat, Barcelona, Spain",
+    "open_state": "Open · Closes 7 AM Sat",
+    "hours": "Open · Closes 7 AM Sat",
+    "operating_hours": {
+      "friday": "9 AM-12 AM",
+      "saturday": "12-7 AM",
+      "sunday": "Closed",
+      "monday": "9 AM-12 AM",
+      "tuesday": "12-7 AM, 9 AM-7 PM",
+      "wednesday": "9 AM-7 PM",
+      "thursday": "9 AM-7 PM"
+    },
+    "phone": "+34 691 95 22 87",
+    "website": "https://polymech.io/es",
+    "extensions": [
+      {
+        "accessibility": [
+          "Wheelchair accessible entrance"
+        ]
+      },
+      {
+        "crowd": [
+          "LGBTQ+ friendly",
+          "Transgender safespace"
+        ]
+      }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S=w92-h92-k-no",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/xe13Z3icuxmbUVJSUGylr5-TYayXnp-fnpNaWpxalJyfV5KaV6KXnJ-rX6Dv6GYYmFng7xRZlpKUEhXinR8SYFJUkhmcl57hWlLuFuZbkuZvoWuZHh6sG2xbbmmkmwHE2bp5-QCcDyFm",
+    "page": 0,
+    "geo": {
+      "latitude": 41.609375199999995,
+      "longitude": 2.1421068,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "principalSubdivision": "Catalunya",
+      "principalSubdivisionCode": "ES-CT",
+      "city": "Sentmenat",
+      "locality": "Sentmenat",
+      "postcode": "",
+      "plusCode": "8FH4J45R+QR",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Spain",
+            "description": "constitutional monarchy in Southwest Europe",
+            "isoName": "Spain",
+            "order": 2,
+            "adminLevel": 2,
+            "isoCode": "ES",
+            "wikidataId": "Q29",
+            "geonameId": 2510769
+          },
+          {
+            "name": "East",
+            "order": 5,
+            "adminLevel": 3
+          },
+          {
+            "name": "Catalunya",
+            "description": "nationality and autonomous community of Spain",
+            "isoName": "Catalunya",
+            "order": 7,
+            "adminLevel": 4,
+            "isoCode": "ES-CT",
+            "wikidataId": "Q5705",
+            "geonameId": 3336901
+          },
+          {
+            "name": "Provincia de Barcelona",
+            "description": "province in Catalonia, Spain",
+            "isoName": "Provincia de Barcelona",
+            "order": 9,
+            "adminLevel": 6,
+            "isoCode": "ES-B",
+            "wikidataId": "Q81949",
+            "geonameId": 3128759
+          },
+          {
+            "name": "Valles Occidental",
+            "description": "Catalan comarca (county) in the vegueria (region) of Barcelona",
+            "order": 11,
+            "adminLevel": 7,
+            "wikidataId": "Q13948"
+          },
+          {
+            "name": "Sentmenat",
+            "description": "municipality in the comarca of the Vallès Occidental in Catalonia, Spain",
+            "order": 12,
+            "adminLevel": 8,
+            "wikidataId": "Q13943",
+            "geonameId": 3109165
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Madrid",
+            "description": "time zone",
+            "order": 3
+          },
+          {
+            "name": "Iberian Peninsula",
+            "description": "peninsula located in the extreme southwest of Europe",
+            "order": 4,
+            "wikidataId": "Q12837",
+            "geonameId": 2267430
+          },
+          {
+            "name": "Catalan countries",
+            "description": "territories where Catalan is the native language",
+            "order": 6,
+            "wikidataId": "Q234963"
+          },
+          {
+            "name": "Catalan as own language in Catalonia",
+            "order": 8
+          },
+          {
+            "name": "Ambit metropolita de Barcelona",
+            "description": "region (vegueria) of Catalonia",
+            "order": 10,
+            "wikidataId": "Q249461"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,100 @@
+{
+    "products_path": "./products/products",
+    "fragments_path": "../../products/templates/jekyll/",
+    "vendor_name": "Plastic Hub",
+    "vendor_website": "https://plastic-hub.com/",
+    "vendor_products_external": "https://plastic-hub.com/products/",
+    "vendor_instagram": "https://www.instagram.com/plastichubcat",
+    "vendor_youtube": "https://www.youtube.com/channel/UCuWDxJtV2pf5BefHEy09Cew/featured?view_as=subscriber",
+    "vendor_github": "https://git.osr-plastic.org/osr-plastic",
+    "vendor_contact_email": "mailto:sales@plastic-hub.com",
+    "vendor_whatsapp": "tel:0034666894789",
+    "vendor_facebook": "https://www.facebook.com/plastichubcat/",
+    "vendor_blog": "https://precious-plastic.org/",
+    "vendor_discord": "https://discord.gg/vR5d6ShTez",
+    "author_link_pp": "https://preciousplastic.com/",
+    "author_link": "https://osr-plastic.org",
+    "site": "https://precious-plastic.org/",
+    "github_root": "https://precious-plastic.org/",
+    "OSR_HOWTOS_ROOT_URL": "https://osr-plastic.org/howtos/",
+    "OSR_HOWTOS_PATH": "../../ph3/pp-next2/howtos",    
+    "mysql" : {
+    },
+    "show": {
+        "badges": false,
+        "authors": true,
+        "head": true,
+        "debug": false,
+        "wiki": false,
+        "forum": false,
+        "others": false,
+        "howtos":false
+    },
+    "discourse": {
+        "host": "https://forum.osr-plastic.org/",
+        "key": "a642d7405fb1318990b9e440cbc8d262a81d643c0530980ab470671296197d4f",
+        "username": "PlasticHub",
+        "rateLimitConcurrency": 1
+    },
+    "instagram": {
+       
+    },
+    "all": [
+        {
+            "name": "Zoe",
+            "rel": "products/zoe",
+            "slug": "zoe",
+            "link": "https://shop.osr-plastic.org/shredder-en/shredder-fully-built/zoe-shredder-and-extrusion-combo/",
+            "image" : "https://plastic-hub.com/products/zoe/media/gallery/xmax.JPG"
+        },
+        {
+            "name": "Lydia-v3.5",
+            "rel": "products/extrusion/lydia-v3.5",
+            "slug": "lydia-v3.5",
+            "link": "https://bazar.preciousplastic.com/machines/extruder/extruder-fully-built/extrusion-v3.1-lydia/",
+            "image" : "https://plastic-hub.com/products/extrusion/lydia-v3.5/renderings/perspective.jpg"
+        },
+        {
+            "name": "Lydia-v4.5",
+            "rel": "products/extrusion/lydia-v4.5",
+            "slug": "lydia-v4.5",
+            "link": "https://bazar.preciousplastic.com/machines/extruder-pro/extruder-pro-fully-built/extrusion-v4.3-lydia/",
+            "image" : "https://plastic-hub.com/products/extrusion/lydia-v4.5/renderings/perspective_2k_teaser.png"
+        },
+        {
+            "name": "Elena",
+            "rel": "products/injection/elena",
+            "slug": "elena",
+            "link": "https://bazar.preciousplastic.com/machines/injection/injection-fully-built/arbor-injection-machine-elena-catalonia-the-original/",
+            "image" : "https://plastic-hub.com/products/injection/elena/renderings/teaser.jpg"
+        },
+        {
+            "name": "Obelix",
+            "rel": "products/shredder/obelix",
+            "slug": "obelix",
+            "link": "https://bazar.preciousplastic.com/machines/shredder-pro/shredder-pro-fully-built/upgraded-v4-shredder/",
+            "image" : "https://plastic-hub.com/products/shredder/obelix/media/gallery/latest.jpg"
+        },
+        {
+            "name": "Asterix",
+            "rel": "products/shredder/asterix",
+            "slug": "asterix",
+            "link": "https://bazar.preciousplastic.com/machines/shredder/shredder-fully-built/dual-axis-shredder-withh-auto-plunge-and-reverse/",
+            "image" : "https://plastic-hub.com/products/shredder/asterix/media/gallery/revA.JPG"
+        },
+        {
+            "name": "Idefix",
+            "rel": "products/shredder/idefix",
+            "slug": "idefix",
+            "link": "https://bazar.preciousplastic.com/machines/shredder/shredder-fully-built/shredder-v3.1-and-hopper/",
+            "image" : "https://plastic-hub.com/products/shredder/idefix/media/gallery/IMG_2994.JPG"
+        },
+        {
+            "name": "Cassandra",
+            "rel": "products/cassandra",
+            "slug": "cassandra",
+            "link": "https://bazar.preciousplastic.com/machines/sheetpress/sheet-press-fully-built/heat-conductive-putty-sheetpress/",
+            "image" : "https://plastic-hub.com/products/cassandra/media/gallery/perspective_closed.JPG"
+        }
+    ]
+}

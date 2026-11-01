@@ -1,0 +1,114 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Profile",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "sync",
+                "--clear=true",
+                "--source='./tests/profiles/src/304_Valve-40mm'",
+                "--target='./tests/profiles/dst/304_Valve-40mm_dst'",
+                "--debug=true",
+                "--profile='./tests/profiles/.osr-sync.json'"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Profile - OSR-Paths",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "sync",
+                "--clear=true",
+                "--source='${OSR_PRIVATE}/cache'",
+                "--target='./tests/profiles/dst/.private'",
+                "--debug=true",
+                "--profile='./tests/profiles/.osr-sync-json.json'"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - ZIP - OSR-Paths",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "zip",
+                "--clear=true",
+                "--cwd='./tests/zip'",
+                "--source='./tests/zip/firmware_v2_cm'",
+                "--source='${OSR_ROOT}/osr-fw-base'",
+                "--target='./tests/test.zip/'",
+                "--debug=true",
+                "--logLevel=trace"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Profile - OSR-Commons - Product",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "sync",
+                "--clear=true",
+                "--source='./tests/profiles/src/304_Valve-40mm'",
+                "--target='./tests/profiles/dst/304_Valve-40mm_dst'",
+                "--debug=true",
+                "--verbose=true",
+                "--profile='${OSR_ROOT}/osr-commons/profiles/.osr-sync-public.json'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Profile - Product Salamand",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "sync",
+                "--alt=true",
+                "--clear=true",
+                "--source='./tests/profiles/src/304_Valve-40mm'",
+                "--target='&{OSR_ROOT}/temp/304_Valve-40mm'",
+                "--debug=true",
+                "--profile='&{OSR_ROOT}/osr-commons/profiles/.osr-sync-public.json'"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Product - OSR - Machines",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "args": [
+                "sync",
+                "--clear=false",
+                "--root='${PRODUCT_ROOT}/products/'",
+                "--source='${PRODUCT_ROOT}/products/injection/myriad-spring'",
+                "--target='${OSR_ROOT}/osr-machines/${ROOT_REL}/'",
+                "--debug=true",
+                "--profile='&{OSR_ROOT}/osr-commons/profiles/.osr-sync-public.json'"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+## Product
+[% js %]
+    if(debug){
+        return "<pre>" + prettyJSON(store.product) + "</pre>";
+    }
+[%endjs%]

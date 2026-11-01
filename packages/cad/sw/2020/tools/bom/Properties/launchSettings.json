@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:/Users/mc007/Desktop/ph3/products/products/extrusion/lydia-v4.5/cad/Bearing Housing Assembly.SLDASM\" \"C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\extrusion\\lydia-v4.5\\cad\\Bearing Housing Assembly.xlsx\" --config Default --type 2 --detail 1",
+      "nativeDebugging": false
+    }
+  }
+}

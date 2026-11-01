@@ -1,0 +1,1 @@
+keytool -genkey -v -keystore debug.keystore -alias debug -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=Debug,O=Dev,C=US"

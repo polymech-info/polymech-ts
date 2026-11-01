@@ -1,0 +1,25 @@
+export declare const uploadFile: (discourse: any, forum: any, name: any, filePath: any) => Promise<any>;
+export declare const findReplyPage: (b: any, pages: any) => any;
+export declare const findReplyUpload: (u: any, page: any) => any;
+export declare const getPages: (topics: any, topic: any) => any;
+export declare const getReplies: (topics: any, topic: any) => any[];
+export declare const findFile: (folder: any, filename: any) => any;
+export declare const topicFolder: (forum: any, folder: any, title: any) => string;
+export declare const getFUser: (users: any, user_name: any) => any;
+export declare const dOptions: {
+    host: string;
+    key: string;
+    username: string;
+    rateLimitConcurrency: number;
+};
+export declare const getOAvatar: (index: any, user: any) => any;
+export declare const getTopics: (index: any) => any[];
+export declare const convert: (input: string) => any;
+export declare const getDiscourse: () => any;
+export declare function inspect(arg: any): string;
+export declare function log(...args: any[]): void;
+export declare function mkdirp(path: string): Promise<void>;
+export declare function readJSON<T extends object>(path: string): Promise<T>;
+export declare function writeJSON(path: string, data: object): Promise<void>;
+export declare function exists(path: string): Promise<boolean>;
+export declare function escape(path: string): string;

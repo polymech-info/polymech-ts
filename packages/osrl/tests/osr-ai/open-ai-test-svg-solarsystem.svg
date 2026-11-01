@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 800" width="800" height="800" xmlns="http://www.w3.org/2000/svg" style="background: black;">
+  <!-- Background stars -->
+  <circle cx="100" cy="100" r="1" fill="white"/>
+  <circle cx="300" cy="50" r="1" fill="white"/>
+  <circle cx="600" cy="200" r="1" fill="white"/>
+  <circle cx="700" cy="500" r="1" fill="white"/>
+  <circle cx="450" cy="350" r="1" fill="white"/>
+
+  <!-- Sun -->
+  <circle cx="400" cy="400" r="40" fill="yellow">
+    <animate attributeName="fill" values="#FFFF00;#FFA500;#FFFF00" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Mercury -->
+  <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">
+    <circle cx="400" cy="300" r="4" fill="gray">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="10s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Venus -->
+  <a href="https://en.wikipedia.org/wiki/Venus" target="_blank">
+    <circle cx="400" cy="250" r="9" fill="orange">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="20s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Earth -->
+  <a href="https://en.wikipedia.org/wiki/Earth" target="_blank">
+    <circle cx="400" cy="200" r="10" fill="blue">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="30s" repeatCount="indefinite"/>
+      <circle cx="400" cy="200" r="10" fill="url(#earthTexture)"/>
+    </circle>
+  </a>
+
+  <!-- Mars -->
+  <a href="https://en.wikipedia.org/wiki/Mars" target="_blank">
+    <circle cx="400" cy="150" r="5" fill="red">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="40s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Jupiter -->
+  <a href="https://en.wikipedia.org/wiki/Jupiter" target="_blank">
+    <circle cx="400" cy="100" r="20" fill="orange">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="50s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Saturn -->
+  <a href="https://en.wikipedia.org/wiki/Saturn" target="_blank">
+    <circle cx="400" cy="50" r="17" fill="lightgoldenrodyellow">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="60s" repeatCount="indefinite"/>
+    </circle>
+      <ellipse cx="400" cy="50" rx="30" ry="17" fill="none" stroke="lightgoldenrodyellow" stroke-width="2"/>
+  </a>
+
+  <!-- Uranus -->
+  <a href="https://en.wikipedia.org/wiki/Uranus" target="_blank">
+    <circle cx="480" cy="400" r="14" fill="lightblue">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="70s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Neptune -->
+  <a href="https://en.wikipedia.org/wiki/Neptune" target="_blank">
+    <circle cx="500" cy="400" r="14" fill="blue">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="80s" repeatCount="indefinite"/>
+    </circle>
+  </a>
+
+  <!-- Legend -->
+  <rect x="50" y="650" width="700" height="120" fill="white" opacity="0.8"/>
+  <text x="70" y="670" font-size="12" fill="black">Legend</text>
+  <text x="70" y="690" font-size="12" fill="black">Mercury: size - 4, weight - 3.3x10^23 kg, age - 4.5 billion years</text>
+  <text x="70" y="710" font-size="12" fill="black">Venus: size - 9, weight - 4.87x10^24 kg, age - 4.5 billion years</text>
+  <text x="70" y="730" font-size="12" fill="black">Earth: size - 10, weight - 5.97x10^24 kg, age - 4.5 billion years</text>
+  <text x="70" y="750" font-size="12" fill="black">Mars: size - 5, weight - 6.42x10^23 kg, age - 4.5 billion years</text>
+  <text x="70" y="770" font-size="12" fill="black">Jupiter: size - 20, weight - 1.9x10^27 kg, age - 4.5 billion years</text>
+  <text x="70" y="790" font-size="12" fill="black">Saturn: size - 17, weight - 5.68x10^26 kg, age - 4.5 billion years</text>
+  <text x="370" y="710" font-size="12" fill="black">Uranus: size - 14, weight - 8.68x10^25 kg, age - 4.5 billion years</text>
+  <text x="370" y="730" font-size="12" fill="black">Neptune: size - 14, weight - 1.02x10^26 kg, age - 4.5 billion years</text>
+</svg>

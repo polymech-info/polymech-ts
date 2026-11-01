@@ -1,0 +1,10 @@
+[%if showHeader %]
+## Authors
+[%endif%]
+
+[% for author in authors %]
+- [ [[author.name]] ]( [[author.url]] )
+[% endfor %]
+
+[% js %]
+[%endjs%]

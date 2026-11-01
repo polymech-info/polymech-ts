@@ -1,0 +1,16 @@
+export let canNormalize = typeof (''.normalize) === 'function';
+const nonAsciiCharactersPattern = /[^\u0000-\u0080]/;
+export const normalizeNFC = (str) => {
+    if (!canNormalize || !str) {
+        return str;
+    }
+    let res;
+    if (nonAsciiCharactersPattern.test(str)) {
+        res = str.normalize('NFC');
+    }
+    else {
+        res = str;
+    }
+    return res;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RyaW5ncy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlscy9zdHJpbmdzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBQyxJQUFJLFlBQVksR0FBRyxPQUFPLENBQUUsRUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLFVBQVUsQ0FBQztBQUN4RSxNQUFNLHlCQUF5QixHQUFHLGtCQUFrQixDQUFDO0FBQ3JELE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRyxDQUFDLEdBQVcsRUFBVSxFQUFFO0lBQ25ELElBQUksQ0FBQyxZQUFZLElBQUksQ0FBQyxHQUFHLEVBQUUsQ0FBQztRQUMzQixPQUFPLEdBQUcsQ0FBQztJQUNaLENBQUM7SUFFRCxJQUFJLEdBQVcsQ0FBQztJQUNoQixJQUFJLHlCQUF5QixDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDO1FBQ3pDLEdBQUcsR0FBSSxHQUFXLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7U0FBTSxDQUFDO1FBQ1AsR0FBRyxHQUFHLEdBQUcsQ0FBQztJQUNYLENBQUM7SUFDRCxPQUFPLEdBQUcsQ0FBQztBQUNaLENBQUMsQ0FBQyJ9

@@ -1,0 +1,8 @@
+{
+  "ls-test": {
+    "name": "List Directory to File",
+    "command": "cmd",
+    "args": "/c dir \"$(FullPath)\" > \"$(FullPath)\\dir.txt\"",
+    "description": "List directory contents and save to dir.txt"
+  }
+}

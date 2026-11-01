@@ -1,0 +1,13 @@
+{
+    "includes": [],
+    "variables": {
+        "GIT_REPO": "https://git.polymech.io/",
+        "GIT_USER": "osr-plastic"
+    },
+    "env": {
+        "hugo-release":{
+            "includes": [],
+            "variables": {}
+        }
+    }
+}

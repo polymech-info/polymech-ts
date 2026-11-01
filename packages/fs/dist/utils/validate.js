@@ -1,0 +1,97 @@
+const prettyPrintTypes = (types) => {
+    const addArticle = (str) => {
+        const vowels = ["a", "e", "i", "o", "u"];
+        if (vowels.includes(str[0])) {
+            return `an ${str}`;
+        }
+        return `a ${str}`;
+    };
+    return types.map(addArticle).join(" or ");
+};
+const isArrayOfNotation = function (typeDefinition) {
+    return typeDefinition.includes('array of ');
+};
+const extractTypeFromArrayOfNotation = function (typeDefinition) {
+    // The notation is e.g. 'array of string'
+    return typeDefinition.split(' of ')[1];
+};
+const isValidTypeDefinition = (typeStr) => {
+    if (isArrayOfNotation(typeStr)) {
+        return isValidTypeDefinition(extractTypeFromArrayOfNotation(typeStr));
+    }
+    return [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object",
+        "buffer",
+        "null",
+        "undefined",
+        "function",
+    ].some((validType) => validType === typeStr);
+};
+const detectType = function (value) {
+    if (value === null) {
+        return 'null';
+    }
+    if (Array.isArray(value)) {
+        return 'array';
+    }
+    if (Buffer.isBuffer(value)) {
+        return 'buffer';
+    }
+    return typeof value;
+};
+const onlyUniqueValuesInArrayFilter = function (value, index, self) {
+    return self.indexOf(value) === index;
+};
+const detectTypeDeep = (value) => {
+    let type = detectType(value);
+    let typesInArray;
+    if (type === "array") {
+        typesInArray = value
+            .map((element) => {
+            return detectType(element);
+        })
+            .filter(onlyUniqueValuesInArrayFilter);
+        type += ` of ${typesInArray.join(", ")}`;
+    }
+    return type;
+};
+const validateArray = (argumentValue, typeToCheck) => {
+    const allowedTypeInArray = extractTypeFromArrayOfNotation(typeToCheck);
+    if (detectType(argumentValue) !== "array") {
+        return false;
+    }
+    return argumentValue.every((element) => detectType(element) === allowedTypeInArray);
+};
+export const validateArgument = (methodName, argumentName, argumentValue, argumentMustBe) => {
+    const isOneOfAllowedTypes = argumentMustBe.some((type) => {
+        if (!isValidTypeDefinition(type)) {
+            throw new Error(`Unknown type "${type}"`);
+        }
+        if (isArrayOfNotation(type)) {
+            return validateArray(argumentValue, type);
+        }
+        return type === detectType(argumentValue);
+    });
+    if (!isOneOfAllowedTypes) {
+        throw new Error(`Argument "${argumentName}" passed to ${methodName} must be ${prettyPrintTypes(argumentMustBe)}. Received ${detectTypeDeep(argumentValue)}`);
+    }
+};
+export const validateOptions = (methodName, optionsObjName, obj, allowedOptions) => {
+    if (obj !== undefined) {
+        validateArgument(methodName, optionsObjName, obj, ["object"]);
+        Object.keys(obj).forEach((key) => {
+            const argName = `${optionsObjName}.${key}`;
+            if (allowedOptions[key] !== undefined) {
+                validateArgument(methodName, argName, obj[key], allowedOptions[key]);
+            }
+            else {
+                throw new Error(`Unknown argument "${argName}" passed to ${methodName}`);
+            }
+        });
+    }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmFsaWRhdGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdXRpbHMvdmFsaWRhdGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxnQkFBZ0IsR0FBRyxDQUFDLEtBQUssRUFBRSxFQUFFO0lBQ2xDLE1BQU0sVUFBVSxHQUFHLENBQUMsR0FBRyxFQUFFLEVBQUU7UUFDMUIsTUFBTSxNQUFNLEdBQUcsQ0FBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLEdBQUcsRUFBRSxHQUFHLEVBQUUsR0FBRyxDQUFDLENBQUE7UUFDeEMsSUFBSSxNQUFNLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUM7WUFDN0IsT0FBTyxNQUFNLEdBQUcsRUFBRSxDQUFBO1FBQ25CLENBQUM7UUFDRCxPQUFPLEtBQUssR0FBRyxFQUFFLENBQUE7SUFDbEIsQ0FBQyxDQUFDO0lBRUYsT0FBTyxLQUFLLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQTtBQUMxQyxDQUFDLENBQUE7QUFFRCxNQUFNLGlCQUFpQixHQUFHLFVBQVUsY0FBc0I7SUFDekQsT0FBTyxjQUFjLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0FBQzdDLENBQUMsQ0FBQztBQUVGLE1BQU0sOEJBQThCLEdBQUcsVUFBVSxjQUFzQjtJQUN0RSx5Q0FBeUM7SUFDekMsT0FBTyxjQUFjLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBQ3hDLENBQUMsQ0FBQztBQUVGLE1BQU0scUJBQXFCLEdBQUcsQ0FBQyxPQUFPLEVBQUUsRUFBRTtJQUN6QyxJQUFJLGlCQUFpQixDQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUM7UUFDaEMsT0FBTyxxQkFBcUIsQ0FBQyw4QkFBOEIsQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDO0lBQ3ZFLENBQUM7SUFDRCxPQUFPO1FBQ04sUUFBUTtRQUNSLFFBQVE7UUFDUixTQUFTO1FBQ1QsT0FBTztRQUNQLFFBQVE7UUFDUixRQUFRO1FBQ1IsTUFBTTtRQUNOLFdBQVc7UUFDWCxVQUFVO0tBQ1YsQ0FBQyxJQUFJLENBQUMsQ0FBQyxTQUFTLEVBQUUsRUFBRSxDQUFDLFNBQVMsS0FBSyxPQUFPLENBQUMsQ0FBQTtBQUM3QyxDQUFDLENBQUE7QUFFRCxNQUFNLFVBQVUsR0FBRyxVQUFVLEtBQWlCO0lBQzdDLElBQUksS0FBSyxLQUFLLElBQUksRUFBRSxDQUFDO1FBQ3BCLE9BQU8sTUFBTSxDQUFDO0lBQ2YsQ0FBQztJQUNELElBQUksS0FBSyxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDO1FBQzFCLE9BQU8sT0FBTyxDQUFDO0lBQ2hCLENBQUM7SUFDRCxJQUFJLE1BQU0sQ0FBQyxRQUFRLENBQUMsS0FBSyxDQUFDLEVBQUUsQ0FBQztRQUM1QixPQUFPLFFBQVEsQ0FBQztJQUNqQixDQUFDO0lBQ0QsT0FBTyxPQUFPLEtBQUssQ0FBQztBQUNyQixDQUFDLENBQUM7QUFFRixNQUFNLDZCQUE2QixHQUFHLFVBQVUsS0FBYSxFQUFFLEtBQWEsRUFBRSxJQUFTO0lBQ3RGLE9BQU8sSUFBSSxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsS0FBSyxLQUFLLENBQUM7QUFDdEMsQ0FBQyxDQUFBO0FBRUQsTUFBTSxjQUFjLEdBQUcsQ0FBQyxLQUFLLEVBQUUsRUFBRTtJQUNoQyxJQUFJLElBQUksR0FBRyxVQUFVLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDN0IsSUFBSSxZQUFZLENBQUM7SUFFakIsSUFBSSxJQUFJLEtBQUssT0FBTyxFQUFFLENBQUM7UUFDdEIsWUFBWSxHQUFHLEtBQUs7YUFDbEIsR0FBRyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUU7WUFDaEIsT0FBTyxVQUFVLENBQUMsT0FBTyxDQUFDLENBQUM7UUFDNUIsQ0FBQyxDQUFDO2FBQ0QsTUFBTSxDQUFDLDZCQUE2QixDQUFDLENBQUM7UUFDeEMsSUFBSSxJQUFJLE9BQU8sWUFBWSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsRUFBRSxDQUFDO0lBQzFDLENBQUM7SUFFRCxPQUFPLElBQUksQ0FBQztBQUNiLENBQUMsQ0FBQTtBQUNELE1BQU0sYUFBYSxHQUFHLENBQUMsYUFBYSxFQUFFLFdBQVcsRUFBRSxFQUFFO0lBQ3BELE1BQU0sa0JBQWtCLEdBQUcsOEJBQThCLENBQUMsV0FBVyxDQUFDLENBQUM7SUFFdkUsSUFBSSxVQUFVLENBQUMsYUFBYSxDQUFDLEtBQUssT0FBTyxFQUFFLENBQUM7UUFDM0MsT0FBTyxLQUFLLENBQUM7SUFDZCxDQUFDO0lBRUQsT0FBTyxhQUFhLENBQUMsS0FBSyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FDdEMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxLQUFLLGtCQUFrQixDQUFDLENBQUE7QUFDN0MsQ0FBQyxDQUFBO0FBRUQsTUFBTSxDQUFDLE1BQU0sZ0JBQWdCLEdBQUcsQ0FDL0IsVUFBVSxFQUNWLFlBQVksRUFDWixhQUFhLEVBQ2IsY0FBYyxFQUNiLEVBQUU7SUFDSCxNQUFNLG1CQUFtQixHQUFHLGNBQWMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRTtRQUN4RCxJQUFJLENBQUMscUJBQXFCLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQztZQUNsQyxNQUFNLElBQUksS0FBSyxDQUFDLGlCQUFpQixJQUFJLEdBQUcsQ0FBQyxDQUFBO1FBQzFDLENBQUM7UUFFRCxJQUFJLGlCQUFpQixDQUFDLElBQUksQ0FBQyxFQUFFLENBQUM7WUFDN0IsT0FBTyxhQUFhLENBQUMsYUFBYSxFQUFFLElBQUksQ0FBQyxDQUFBO1FBQzFDLENBQUM7UUFFRCxPQUFPLElBQUksS0FBSyxVQUFVLENBQUMsYUFBYSxDQUFDLENBQUE7SUFDMUMsQ0FBQyxDQUFDLENBQUE7SUFFRixJQUFJLENBQUMsbUJBQW1CLEVBQUUsQ0FBQztRQUMxQixNQUFNLElBQUksS0FBSyxDQUNkLGFBQWEsWUFBWSxlQUFlLFVBQVUsWUFBWSxnQkFBZ0IsQ0FDN0UsY0FBYyxDQUNkLGNBQWMsY0FBYyxDQUFDLGFBQWEsQ0FBQyxFQUFFLENBQzlDLENBQUE7SUFDRixDQUFDO0FBQ0YsQ0FBQyxDQUFBO0FBRUQsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHLENBQUMsVUFBVSxFQUFFLGNBQWMsRUFBRSxHQUFHLEVBQUUsY0FBYyxFQUFFLEVBQUU7SUFDbEYsSUFBSSxHQUFHLEtBQUssU0FBUyxFQUFFLENBQUM7UUFDdkIsZ0JBQWdCLENBQUMsVUFBVSxFQUFFLGNBQWMsRUFBRSxHQUFHLEVBQUUsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFBO1FBQzdELE1BQU0sQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUMsR0FBRyxFQUFFLEVBQUU7WUFDaEMsTUFBTSxPQUFPLEdBQUcsR0FBRyxjQUFjLElBQUksR0FBRyxFQUFFLENBQUE7WUFDMUMsSUFBSSxjQUFjLENBQUMsR0FBRyxDQUFDLEtBQUssU0FBUyxFQUFFLENBQUM7Z0JBQ3ZDLGdCQUFnQixDQUFDLFVBQVUsRUFBRSxPQUFPLEVBQUUsR0FBRyxDQUFDLEdBQUcsQ0FBQyxFQUFFLGNBQWMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFBO1lBQ3JFLENBQUM7aUJBQU0sQ0FBQztnQkFDUCxNQUFNLElBQUksS0FBSyxDQUNkLHFCQUFxQixPQUFPLGVBQWUsVUFBVSxFQUFFLENBQ3ZELENBQUE7WUFDRixDQUFDO1FBQ0YsQ0FBQyxDQUFDLENBQUE7SUFDSCxDQUFDO0FBQ0YsQ0FBQyxDQUFBIn0=

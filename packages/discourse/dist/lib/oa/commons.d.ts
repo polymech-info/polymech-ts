@@ -1,0 +1,27 @@
+import { IUploadedFileMeta } from '@polymech/commons';
+import { IOACategory, IOATags, IOAHowtoImport } from '../../';
+export declare const DEFAULT_HT_CATEGORY: {
+    _modified: string;
+    label: string;
+    _id: string;
+    _created: string;
+    _deleted: boolean;
+};
+export declare const LATEST_TRACK = "${OSR_ROOT}/oa-data/howtos/latest_track.json";
+export declare const LATEST_TEST = "./latest_test.json";
+export declare const DEFAULT_USER = "katharinaelleke";
+export declare const getDataPath: (_path?: string) => string;
+export declare const getHowtosPath: () => string;
+export declare const getHowtos: () => IOAHowtoImport[];
+export declare const read_howtos: (src: string) => IOAHowtoImport[];
+export declare const read_categories: (src: string) => IOACategory[];
+export declare const read_tags: (src: string) => IOATags[];
+export declare const filter_valid: (users: IOAHowtoImport[]) => IOAHowtoImport[];
+export declare const kb_howto_folder: (howto: any) => string;
+export declare const kb_howto_file: (howto: any, filename: any) => string;
+export declare const getHowtoUser: (howto: IOAHowto) => any;
+export declare const toMDImage: (image: IUploadedFileMeta) => string;
+export declare const md_edit_wrap: (content: any, f: any, prefix?: string, context?: string) => any;
+export declare const removeEmojis: (string: any) => any;
+export declare const toHTML: (path: any, markdown: any) => any;
+export declare const createTextLinks_: (text: any) => any;

@@ -1,0 +1,54 @@
+[% include "product_variables.osr" %]
+[% include "body.md" %]
+[% include "header_notice.osr" %]
+<div style="clear:both">[%- include "product_overview_drawings.osr" -%]</div>
+
+[%- if product.showSpecs !=false || config.show.authors -%]
+<div style="padding:16px;text-align: center;">
+    <div class="ty-vendor-plans">            
+        [%- if product.showSpecs !=false -%]
+        <div class="ty-grid-list__item" style="float: left;border: 1px gray;">
+            <h4 id="authors">Specification</h4>
+            [% include "product_specs.osr" html:false %] 
+        </div>
+        [%endif%]
+        <div class="ty-grid-list__item" style="float: left;text-align: left;border: 1px gray;">
+            [% if config.show.authors %]
+                [%- if product.showAuthors !=false -%]
+                    [% include "authors_html.osr" authors:product.authors showHeader:true %]
+                [%endif%]     
+            [%endif%]     
+        </div>
+    </div>
+</div>
+[%endif%]
+
+[%- if product.showResources !=false %]
+    [% include "product_resources.osr" %]
+[%endif%]     
+
+<hr/>
+
+[% if config.show.shipping %]
+    [% include "product_shipping.osr" %]
+[% endif -%]
+
+[% if config.show.payment_terms %]
+    [% include "payment_terms.osr" %]
+[% endif -%]
+
+<hr/>
+
+[% if config.show.others %]
+    [% include "other_products.osr" %]
+[%endif%]
+[% if config.show.howtos %]
+    [% include "product_howtos.osr" %]
+[%endif%]
+[% include "social_links.osr" %]
+[% if config.show.instagram %]
+[% include "vendor_instagram.osr" %]
+[%endif%]
+[% if config.show.debug %]
+    [% include "product_debug.osr" %]
+[%endif%]

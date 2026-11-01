@@ -1,0 +1,102 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "model-generator/1.0.0": {
+        "dependencies": {
+          "Xarial.XCad.SolidWorks": "0.7.1"
+        },
+        "runtime": {
+          "model-generator.dll": {}
+        }
+      },
+      "Xarial.XCad/0.7.1": {
+        "runtime": {
+          "lib/netstandard2.1/Xarial.XCad.dll": {
+            "assemblyVersion": "0.7.1.0",
+            "fileVersion": "0.7.1.0"
+          }
+        }
+      },
+      "Xarial.XCad.SolidWorks/0.7.1": {
+        "dependencies": {
+          "Xarial.XCad": "0.7.1",
+          "Xarial.XCad.SolidWorks.Interops": "0.3.0",
+          "Xarial.XCad.Toolkit": "0.7.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Xarial.XCad.SolidWorks.dll": {
+            "assemblyVersion": "0.7.1.0",
+            "fileVersion": "0.7.1.0"
+          }
+        }
+      },
+      "Xarial.XCad.SolidWorks.Interops/0.3.0": {
+        "runtime": {
+          "lib/net40/SolidWorks.Interop.sldworks.dll": {
+            "assemblyVersion": "28.1.0.74",
+            "fileVersion": "28.1.0.74"
+          },
+          "lib/net40/SolidWorks.Interop.swconst.dll": {
+            "assemblyVersion": "28.1.0.74",
+            "fileVersion": "28.1.0.74"
+          },
+          "lib/net40/SolidWorks.Interop.swpublished.dll": {
+            "assemblyVersion": "28.1.0.74",
+            "fileVersion": "28.1.0.74"
+          }
+        }
+      },
+      "Xarial.XCad.Toolkit/0.7.1": {
+        "dependencies": {
+          "Xarial.XCad": "0.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Xarial.XCad.Toolkit.dll": {
+            "assemblyVersion": "0.7.1.0",
+            "fileVersion": "0.7.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "model-generator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Xarial.XCad/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QOiKqiykbXcu4eRe0VZg9RKn+lpIXB2ckWmPaK5Z26UVnu4hYAWON2TxUacOAuOzRulAsQ2tSapDovX+Ps7cZA==",
+      "path": "xarial.xcad/0.7.1",
+      "hashPath": "xarial.xcad.0.7.1.nupkg.sha512"
+    },
+    "Xarial.XCad.SolidWorks/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZoM8hSjjEn4/t1SUxTy2hGGDKpt6d9fQLvPqpaI0EWIrDnI6bWKUzqOawVl8qsmvblKpaH/GvGWnEt2qZiCYvA==",
+      "path": "xarial.xcad.solidworks/0.7.1",
+      "hashPath": "xarial.xcad.solidworks.0.7.1.nupkg.sha512"
+    },
+    "Xarial.XCad.SolidWorks.Interops/0.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ebiAAOHtYpZfjbO4PgdWcmv8+YtoPfAJwUJBeUM2SEBxO1+ru2dYI0XI2Fa1MpmAlsDRuBj6Z3LKtZMtff6NEQ==",
+      "path": "xarial.xcad.solidworks.interops/0.3.0",
+      "hashPath": "xarial.xcad.solidworks.interops.0.3.0.nupkg.sha512"
+    },
+    "Xarial.XCad.Toolkit/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZQ0uHLpoCQHdhP7kZ1wnfB/C0j0SDgJo00uJ/uvfgSHrKesrFhkZakRRMW5yrMDuLhARySs8mE81qdpjBdjBg==",
+      "path": "xarial.xcad.toolkit/0.7.1",
+      "hashPath": "xarial.xcad.toolkit.0.7.1.nupkg.sha512"
+    }
+  }
+}

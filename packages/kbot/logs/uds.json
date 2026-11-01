@@ -1,0 +1,691 @@
+[2026-03-30 10:36:08.744] [info] Worker mode: listening on stdin
+[2026-03-30 10:36:08.744] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 10:36:08.744] [info] Starting UDS daemon on 4001
+[2026-03-30 10:36:08.745] [info] Bound TCP server on 127.0.0.1:4001
+[2026-03-30 10:36:08.747] [info] UDS ready! Waiting for orchestrator...
+[2026-03-30 10:36:09.136] [info] UDS/IPC Client connected!
+[2026-03-30 10:59:12.312] [info] Worker mode: listening on stdin
+[2026-03-30 10:59:12.312] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 10:59:12.312] [info] Starting UDS daemon on 4001
+[2026-03-30 10:59:12.312] [info] Bound TCP server on 127.0.0.1:4001
+[2026-03-30 10:59:12.315] [info] UDS ready! Waiting for orchestrator...
+[2026-03-30 10:59:12.700] [info] UDS/IPC Client connected!
+[2026-03-30 11:17:27.959] [info] Worker mode: listening on stdin
+[2026-03-30 11:17:27.959] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:17:27.959] [info] Starting KBot UDS on 4001
+[2026-03-30 11:17:27.960] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:17:27.962] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:17:28.360] [info] KBot UDS client connected
+[2026-03-30 11:17:28.374] [info] KBot UDS: shutdown requested
+[2026-03-30 11:23:26.414] [info] Worker mode: listening on stdin
+[2026-03-30 11:23:26.414] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:23:26.414] [info] Starting KBot UDS on 4001
+[2026-03-30 11:23:26.415] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:23:26.416] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:23:26.819] [info] KBot UDS client connected
+[2026-03-30 11:23:26.852] [info] Receiving AI task over IPC... job: 9659caed-1714-431e-9666-1cbc32b9c5e2
+[2026-03-30 11:23:26.852] [info] Dry run triggered for kbot ai
+[2026-03-30 11:23:26.852] [info] KBot UDS: shutdown requested
+[2026-03-30 11:24:22.301] [info] Worker mode: listening on stdin
+[2026-03-30 11:24:22.301] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:24:22.301] [info] Starting KBot UDS on 4001
+[2026-03-30 11:24:22.302] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:24:22.304] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:24:22.701] [info] KBot UDS client connected
+[2026-03-30 11:24:22.735] [info] Receiving AI task over IPC... job: f346a673-f9aa-4d6a-abeb-d477f5a9ae11
+[2026-03-30 11:24:22.735] [info] Dry run triggered for kbot ai
+[2026-03-30 11:24:22.736] [info] KBot UDS: shutdown requested
+[2026-03-30 11:30:07.495] [info] Worker mode: listening on stdin
+[2026-03-30 11:30:07.496] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:30:07.496] [info] Starting KBot UDS on 4001
+[2026-03-30 11:30:07.496] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:30:07.499] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:30:07.897] [info] KBot UDS client connected
+[2026-03-30 11:30:07.920] [info] Receiving AI task over IPC... job: a7c1eb15-a5fa-4648-a70d-41a7ff8ef0c2
+[2026-03-30 11:30:07.920] [info] Dry run triggered for kbot ai
+[2026-03-30 11:30:07.921] [info] KBot UDS: shutdown requested
+[2026-03-30 11:30:28.464] [info] Worker mode: listening on stdin
+[2026-03-30 11:30:28.464] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:30:28.464] [info] Starting KBot UDS on 4001
+[2026-03-30 11:30:28.465] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:30:28.467] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:30:28.870] [info] KBot UDS client connected
+[2026-03-30 11:30:28.897] [info] Receiving AI task over IPC... job: c64b5821-c017-40f2-80f8-49842f26aa9a
+[2026-03-30 11:30:28.897] [info] Dry run triggered for kbot ai
+[2026-03-30 11:30:28.899] [info] KBot UDS: shutdown requested
+[2026-03-30 11:31:24.953] [info] Worker mode: listening on stdin
+[2026-03-30 11:31:24.953] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:31:24.953] [info] Starting KBot UDS on 4001
+[2026-03-30 11:31:24.953] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:31:24.955] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:31:25.347] [info] KBot UDS client connected
+[2026-03-30 11:31:25.364] [info] KBot UDS: shutdown requested
+[2026-03-30 11:31:51.494] [info] Worker mode: listening on stdin
+[2026-03-30 11:31:51.494] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:31:51.494] [info] Starting KBot UDS on 4001
+[2026-03-30 11:31:51.495] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:31:51.496] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:31:51.896] [info] KBot UDS client connected
+[2026-03-30 11:31:51.914] [info] KBot UDS: shutdown requested
+[2026-03-30 11:32:24.360] [info] Worker mode: listening on stdin
+[2026-03-30 11:32:24.361] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:32:24.361] [info] Starting KBot UDS on 4001
+[2026-03-30 11:32:24.361] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:32:24.363] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:32:24.762] [info] KBot UDS client connected
+[2026-03-30 11:32:24.779] [info] Receiving AI task over IPC... job: 21d27d39-c102-4780-a311-b852645c1179
+[2026-03-30 11:32:24.787] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): model 'leonard' not found (E_APIERROR:0x02)
+[2026-03-30 11:32:24.787] [error] AI Task Failed: liboai::Response::CheckResponse(): model 'leonard' not found (E_APIERROR:0x02)
+[2026-03-30 11:32:24.788] [info] KBot UDS: shutdown requested
+[2026-03-30 11:33:56.588] [info] Worker mode: listening on stdin
+[2026-03-30 11:33:56.588] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:33:56.588] [info] Starting KBot UDS on 4001
+[2026-03-30 11:33:56.589] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:33:56.591] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:33:56.994] [info] KBot UDS client connected
+[2026-03-30 11:33:57.028] [info] Receiving AI task over IPC... job: 1197574b-bd85-40a3-b312-65b1602568d4
+[2026-03-30 11:33:58.062] [info] KBot UDS: shutdown requested
+[2026-03-30 11:34:21.245] [info] Worker mode: listening on stdin
+[2026-03-30 11:34:21.245] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:34:21.245] [info] Starting KBot UDS on 4001
+[2026-03-30 11:34:21.246] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:34:21.247] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:34:21.644] [info] KBot UDS client connected
+[2026-03-30 11:34:21.651] [info] KBot UDS: shutdown requested
+[2026-03-30 11:37:27.427] [info] Worker mode: listening on stdin
+[2026-03-30 11:37:27.427] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:37:27.427] [info] Starting KBot UDS on 4001
+[2026-03-30 11:37:27.428] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:37:27.429] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:37:27.827] [info] KBot UDS client connected
+[2026-03-30 11:37:27.845] [info] KBot UDS: shutdown requested
+[2026-03-30 11:38:35.722] [info] Worker mode: listening on stdin
+[2026-03-30 11:38:35.722] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:38:35.722] [info] Starting KBot UDS on 4001
+[2026-03-30 11:38:35.723] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:38:35.725] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:38:36.124] [info] KBot UDS client connected
+[2026-03-30 11:38:36.140] [info] KBot UDS: shutdown requested
+[2026-03-30 11:38:51.998] [info] Worker mode: listening on stdin
+[2026-03-30 11:38:51.998] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:38:51.998] [info] Starting KBot UDS on 4001
+[2026-03-30 11:38:51.998] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:38:52.000] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:38:52.393] [info] KBot UDS client connected
+[2026-03-30 11:38:52.424] [info] Receiving AI task over IPC... job: 2d76a7da-e004-4907-af2f-394e1d645c96
+[2026-03-30 11:38:54.106] [info] KBot UDS: shutdown requested
+[2026-03-30 11:41:15.770] [info] Worker mode: listening on stdin
+[2026-03-30 11:41:15.770] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:41:15.770] [info] Starting KBot UDS on 4001
+[2026-03-30 11:41:15.770] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:41:15.772] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:41:16.172] [info] KBot UDS client connected
+[2026-03-30 11:41:16.190] [info] KBot UDS: shutdown requested
+[2026-03-30 11:42:13.091] [info] Worker mode: listening on stdin
+[2026-03-30 11:42:13.092] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:42:13.092] [info] Starting KBot UDS on 4001
+[2026-03-30 11:42:13.092] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:42:13.094] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:42:13.488] [info] KBot UDS client connected
+[2026-03-30 11:42:13.522] [info] Receiving AI task over IPC... job: 821bdf84-7446-49fe-846a-da142b6f55fa
+[2026-03-30 11:42:14.488] [info] KBot UDS: shutdown requested
+[2026-03-30 11:43:29.955] [info] Worker mode: listening on stdin
+[2026-03-30 11:43:29.955] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:43:29.955] [info] Starting KBot UDS on 4001
+[2026-03-30 11:43:29.956] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:43:29.958] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:43:30.349] [info] KBot UDS client connected
+[2026-03-30 11:43:30.355] [info] KBot UDS: shutdown requested
+[2026-03-30 11:45:02.124] [info] Worker mode: listening on stdin
+[2026-03-30 11:45:02.124] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:45:02.124] [info] Starting KBot UDS on 4001
+[2026-03-30 11:45:02.125] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:45:02.126] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:45:02.519] [info] KBot UDS client connected
+[2026-03-30 11:45:02.536] [info] KBot UDS: shutdown requested
+[2026-03-30 11:47:19.108] [info] Worker mode: listening on stdin
+[2026-03-30 11:47:19.108] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:47:19.108] [info] Starting KBot UDS on 4001
+[2026-03-30 11:47:19.108] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:47:19.110] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:47:19.518] [info] KBot UDS client connected
+[2026-03-30 11:47:19.524] [info] KBot UDS: shutdown requested
+[2026-03-30 11:48:31.840] [info] Worker mode: listening on stdin
+[2026-03-30 11:48:31.840] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:48:31.840] [info] Starting KBot UDS on 4001
+[2026-03-30 11:48:31.840] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:48:31.842] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:48:32.235] [info] KBot UDS client connected
+[2026-03-30 11:48:32.267] [info] Receiving AI task over IPC... job: 8ea9158a-8861-43a6-8000-c27d32bc2f74
+[2026-03-30 11:48:33.524] [info] KBot UDS: shutdown requested
+[2026-03-30 11:57:10.842] [info] Worker mode: listening on stdin
+[2026-03-30 11:57:10.842] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 11:57:10.842] [info] Starting KBot UDS on 4001
+[2026-03-30 11:57:10.842] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 11:57:10.844] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 11:57:11.244] [info] KBot UDS client connected
+[2026-03-30 11:57:11.261] [info] KBot UDS: shutdown requested
+[2026-03-30 12:03:46.548] [info] Worker mode: listening on stdin
+[2026-03-30 12:03:46.548] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:03:46.548] [info] Starting KBot UDS on 4001
+[2026-03-30 12:03:46.549] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:03:46.553] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:03:46.955] [info] KBot UDS client connected
+[2026-03-30 12:03:46.989] [info] Receiving AI task over IPC... job: 37613775-8fd0-41d2-b213-484bef8345b3
+[2026-03-30 12:03:48.043] [info] KBot UDS: shutdown requested
+[2026-03-30 12:05:06.292] [info] Worker mode: listening on stdin
+[2026-03-30 12:05:06.293] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:05:06.293] [info] Starting KBot UDS on 4001
+[2026-03-30 12:05:06.293] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:05:06.295] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:05:06.687] [info] KBot UDS client connected
+[2026-03-30 12:05:06.705] [info] KBot UDS: shutdown requested
+[2026-03-30 12:05:22.044] [info] Worker mode: listening on stdin
+[2026-03-30 12:05:22.044] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:05:22.044] [info] Starting KBot UDS on 4001
+[2026-03-30 12:05:22.045] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:05:22.046] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:05:22.441] [info] KBot UDS client connected
+[2026-03-30 12:05:22.471] [info] Receiving AI task over IPC... job: f399e53b-6cb8-4130-83b7-61a39d3556fc
+[2026-03-30 12:05:25.022] [info] Receiving AI task over IPC... job: ec80efa0-9508-46b5-893c-9259a8045153
+[2026-03-30 12:05:25.237] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): Loading model (E_APIERROR:0x02)
+[2026-03-30 12:05:25.237] [error] AI Task Failed: liboai::Response::CheckResponse(): Loading model (E_APIERROR:0x02)
+[2026-03-30 12:05:25.239] [info] KBot UDS: shutdown requested
+[2026-03-30 12:05:59.177] [info] Worker mode: listening on stdin
+[2026-03-30 12:05:59.177] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:05:59.177] [info] Starting KBot UDS on 4001
+[2026-03-30 12:05:59.178] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:05:59.180] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:05:59.570] [info] KBot UDS client connected
+[2026-03-30 12:05:59.588] [info] KBot UDS: shutdown requested
+[2026-03-30 12:06:06.262] [info] Worker mode: listening on stdin
+[2026-03-30 12:06:06.262] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:06:06.263] [info] Starting KBot UDS on 4001
+[2026-03-30 12:06:06.263] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:06:06.265] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:06:06.670] [info] KBot UDS client connected
+[2026-03-30 12:06:06.704] [info] Receiving AI task over IPC... job: 965f4adb-7604-4312-ae15-f96d551d4a6c
+[2026-03-30 12:06:07.928] [info] KBot UDS: shutdown requested
+[2026-03-30 12:06:47.059] [info] Worker mode: listening on stdin
+[2026-03-30 12:06:47.059] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:06:47.059] [info] Starting KBot UDS on 4001
+[2026-03-30 12:06:47.059] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:06:47.061] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:06:47.457] [info] KBot UDS client connected
+[2026-03-30 12:06:47.487] [info] Receiving AI task over IPC... job: 94b8ec41-c2f2-4802-8cf9-55b7076da80d
+[2026-03-30 12:06:48.893] [info] Receiving AI task over IPC... job: dc5a3380-61a9-458f-8e58-5ce384542021
+[2026-03-30 12:06:49.432] [info] KBot UDS: shutdown requested
+[2026-03-30 12:29:51.079] [info] Worker mode: listening on stdin
+[2026-03-30 12:29:51.079] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:29:51.079] [info] Starting KBot UDS on 4001
+[2026-03-30 12:29:51.079] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:29:51.081] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:29:51.471] [info] KBot UDS client connected
+[2026-03-30 12:29:51.474] [info] Receiving AI task over IPC... job: 3cbaeecc-1e1e-4361-a9f5-64beceb032da
+[2026-03-30 12:29:54.603] [info] Receiving AI task over IPC... job: dd650141-91e5-4d54-aaaf-ec5692d54d1e
+[2026-03-30 12:29:56.431] [info] KBot UDS: shutdown requested
+[2026-03-30 12:30:05.961] [info] Worker mode: listening on stdin
+[2026-03-30 12:30:05.961] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:30:05.961] [info] Starting KBot UDS on 4001
+[2026-03-30 12:30:05.962] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:30:05.963] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:30:06.353] [info] KBot UDS client connected
+[2026-03-30 12:30:06.370] [info] Receiving AI task over IPC... job: 3a12d7ed-e468-4509-8897-d3feff2f6481
+[2026-03-30 12:30:08.237] [info] Receiving AI task over IPC... job: 684acf8a-ed96-48fc-b962-f0286f80f068
+[2026-03-30 12:30:10.053] [info] Receiving AI task over IPC... job: d4d737b4-1183-4145-b64b-bf60b9327a00
+[2026-03-30 12:30:11.853] [info] Receiving AI task over IPC... job: cc7086bf-4b17-4f70-95a8-7e186a314f44
+[2026-03-30 12:30:13.653] [info] Receiving AI task over IPC... job: c48b616a-0122-4c36-a266-cf2ed011a39b
+[2026-03-30 12:30:15.553] [info] Receiving AI task over IPC... job: 458a26ba-96cc-422a-8406-dbd77fbb5edc
+[2026-03-30 12:30:17.353] [info] Receiving AI task over IPC... job: f9577d97-5b1f-406b-b1bd-9c1a35f31347
+[2026-03-30 12:30:19.170] [info] Receiving AI task over IPC... job: f7a92f4c-af50-4799-86ca-5e466c4ad8b2
+[2026-03-30 12:30:21.008] [info] Receiving AI task over IPC... job: d34695cd-ac47-406b-be3a-3abdab43b2a2
+[2026-03-30 12:30:22.836] [info] Receiving AI task over IPC... job: c910c8dd-cb56-4127-89d0-8e5462e466cc
+[2026-03-30 12:30:24.686] [info] Receiving AI task over IPC... job: 63caab3c-9a62-41f1-b219-9f259f597529
+[2026-03-30 12:30:26.553] [info] Receiving AI task over IPC... job: e036c2a4-87a8-41d4-ab3c-b93b483932b5
+[2026-03-30 12:30:28.501] [info] Receiving AI task over IPC... job: c4c9267f-4c75-4a65-a382-f1d4f1d99ae0
+[2026-03-30 12:30:30.486] [info] Receiving AI task over IPC... job: b36b2e86-588a-41af-adfe-08024066063d
+[2026-03-30 12:30:32.403] [info] Receiving AI task over IPC... job: 376c911e-ae7b-442d-9d4c-77ea79bd79fc
+[2026-03-30 12:30:34.268] [info] Receiving AI task over IPC... job: a21ef07b-d384-4341-9105-969c34bfe815
+[2026-03-30 12:30:36.136] [info] Receiving AI task over IPC... job: 46d6d8e2-431a-4ff9-b2b1-2f98cffef2d3
+[2026-03-30 12:30:37.969] [info] Receiving AI task over IPC... job: d64f0df8-2048-4f1d-954b-2e527fdd7d6f
+[2026-03-30 12:30:39.786] [info] Receiving AI task over IPC... job: 823d993a-e385-4e88-8242-95a249216f28
+[2026-03-30 12:30:41.603] [info] Receiving AI task over IPC... job: ad35ef92-bfcf-4f61-8bd1-6f83ec9b6895
+[2026-03-30 12:30:43.403] [info] Receiving AI task over IPC... job: 65dc917a-2bb1-4970-9204-963f0419f63d
+[2026-03-30 12:30:45.201] [info] Receiving AI task over IPC... job: d9c038d1-64c4-4266-abe4-1efc5b875fb1
+[2026-03-30 12:30:46.951] [info] Receiving AI task over IPC... job: afd0c528-0e44-42d3-8ef4-d91976da63e5
+[2026-03-30 12:30:48.769] [info] Receiving AI task over IPC... job: 61e52d95-9372-45ab-9f2c-339232ec864e
+[2026-03-30 12:30:50.603] [info] Receiving AI task over IPC... job: a3be84ab-c281-4ee8-9116-c974fb2076ba
+[2026-03-30 12:30:52.536] [info] Receiving AI task over IPC... job: efe2d604-7d5f-47e2-9033-fd17579afd2f
+[2026-03-30 12:30:54.353] [info] Receiving AI task over IPC... job: 191e3629-21a1-4852-9125-7999b00fee84
+[2026-03-30 12:30:56.139] [info] KBot UDS: shutdown requested
+[2026-03-30 12:32:31.871] [info] Worker mode: listening on stdin
+[2026-03-30 12:32:31.871] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:32:31.871] [info] Starting KBot UDS on 4001
+[2026-03-30 12:32:31.871] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:32:31.873] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:32:32.267] [info] KBot UDS client connected
+[2026-03-30 12:32:32.285] [info] Receiving AI task over IPC... job: 16c70cf3-56d2-4567-9f30-25ad88695eea
+[2026-03-30 12:32:47.173] [info] KBot UDS: shutdown requested
+[2026-03-30 12:33:14.296] [info] Worker mode: listening on stdin
+[2026-03-30 12:33:14.296] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:33:14.296] [info] Starting KBot UDS on 4001
+[2026-03-30 12:33:14.297] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:33:14.299] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:33:14.700] [info] KBot UDS client connected
+[2026-03-30 12:33:14.717] [info] Receiving AI task over IPC... job: cfbcb75f-b5e5-4567-9765-731ac26fbd9e
+[2026-03-30 12:33:44.720] [error] LLMClient::execute_chat: Exception caught: liboai::netimpl::Session::Perform(): Timeout was reached (E_CURLERROR:0x06)
+[2026-03-30 12:33:44.721] [error] AI Task Failed: liboai::netimpl::Session::Perform(): Timeout was reached (E_CURLERROR:0x06)
+[2026-03-30 12:33:44.722] [info] KBot UDS: shutdown requested
+[2026-03-30 12:36:14.316] [info] Worker mode: listening on stdin
+[2026-03-30 12:36:14.316] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:36:14.316] [info] Starting KBot UDS on 4001
+[2026-03-30 12:36:14.317] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:36:14.318] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:36:14.720] [info] KBot UDS client connected
+[2026-03-30 12:36:14.737] [info] Receiving AI task over IPC... job: f119444b-276c-4437-98b7-4364a5a2728e
+[2026-03-30 12:36:48.538] [info] Worker mode: listening on stdin
+[2026-03-30 12:36:48.538] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:36:48.538] [info] Starting KBot UDS on 4001
+[2026-03-30 12:36:48.539] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:36:48.540] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:36:48.936] [info] KBot UDS client connected
+[2026-03-30 12:36:48.954] [info] Receiving AI task over IPC... job: 64e90f02-8c28-481f-b943-7305c366bcc0
+[2026-03-30 12:37:03.122] [info] Worker mode: listening on stdin
+[2026-03-30 12:37:03.122] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:37:03.122] [info] Starting KBot UDS on 4001
+[2026-03-30 12:37:03.122] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:37:03.124] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:37:03.520] [info] KBot UDS client connected
+[2026-03-30 12:37:03.548] [info] Receiving AI task over IPC... job: 85b84c59-557f-4a8d-a21a-ecf198c5475d
+[2026-03-30 12:37:04.737] [info] Receiving AI task over IPC... job: eaf2c0ca-7386-4e5b-8fd8-b61600118940
+[2026-03-30 12:37:05.544] [info] KBot UDS: shutdown requested
+[2026-03-30 12:37:20.908] [info] Worker mode: listening on stdin
+[2026-03-30 12:37:20.908] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:37:20.908] [info] Starting KBot UDS on 4001
+[2026-03-30 12:37:20.909] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:37:20.911] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:37:21.303] [info] KBot UDS client connected
+[2026-03-30 12:37:21.320] [info] Receiving AI task over IPC... job: 0962e211-3520-4189-ab5e-bdbe585d4a2b
+[2026-03-30 12:38:31.019] [info] KBot UDS: shutdown requested
+[2026-03-30 12:39:34.224] [info] Worker mode: listening on stdin
+[2026-03-30 12:39:34.224] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:39:34.224] [info] Starting KBot UDS on 4001
+[2026-03-30 12:39:34.225] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:39:34.226] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:39:34.627] [info] KBot UDS client connected
+[2026-03-30 12:39:34.643] [info] Receiving AI task over IPC... job: 067c5dd2-219f-4aff-8e6a-5842ab1d7a16
+[2026-03-30 12:39:34.643] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 12:39:34.644] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 12:39:34.644] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 12:40:06.993] [info] Worker mode: listening on stdin
+[2026-03-30 12:40:06.993] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:40:06.993] [info] Starting KBot UDS on 4001
+[2026-03-30 12:40:06.994] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:40:06.996] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:40:07.393] [info] KBot UDS client connected
+[2026-03-30 12:40:07.429] [info] Receiving AI task over IPC... job: a5c0d0c1-ea97-4863-a1b8-1a3891843bec
+[2026-03-30 12:40:07.429] [info] LLMClient: calling ChatCompletion (prompt chars=60)
+[2026-03-30 12:40:08.677] [info] Receiving AI task over IPC... job: 86722e09-efce-4908-aeea-e0265d62f791
+[2026-03-30 12:40:08.677] [info] LLMClient: calling ChatCompletion (prompt chars=56)
+[2026-03-30 12:40:09.239] [info] KBot UDS: shutdown requested
+[2026-03-30 12:40:33.239] [info] Worker mode: listening on stdin
+[2026-03-30 12:40:33.239] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:40:33.239] [info] Starting KBot UDS on 4001
+[2026-03-30 12:40:33.239] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:40:33.241] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:40:33.643] [info] KBot UDS client connected
+[2026-03-30 12:40:33.678] [info] Receiving AI task over IPC... job: a3832c75-c49e-46c2-be72-5a3a4911f4b8
+[2026-03-30 12:40:33.678] [info] LLMClient: calling ChatCompletion (prompt chars=60)
+[2026-03-30 12:40:34.593] [info] Receiving AI task over IPC... job: 108f96a8-4312-4ee3-912f-5d1b378e8966
+[2026-03-30 12:40:34.594] [info] LLMClient: calling ChatCompletion (prompt chars=56)
+[2026-03-30 12:40:35.208] [info] KBot UDS: shutdown requested
+[2026-03-30 12:41:02.021] [info] Worker mode: listening on stdin
+[2026-03-30 12:41:02.021] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:41:02.021] [info] Starting KBot UDS on 4001
+[2026-03-30 12:41:02.021] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:41:02.023] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:41:02.426] [info] KBot UDS client connected
+[2026-03-30 12:41:02.443] [info] Receiving AI task over IPC... job: 4a14b869-8e88-4162-8312-111f7cf6fd05
+[2026-03-30 12:41:02.444] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 12:41:02.444] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 12:41:02.444] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 12:45:34.102] [info] Worker mode: listening on stdin
+[2026-03-30 12:45:34.103] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:45:34.103] [info] Starting KBot UDS on 4001
+[2026-03-30 12:45:34.106] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:45:34.109] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:45:34.462] [info] KBot UDS client connected
+[2026-03-30 12:45:34.480] [info] Receiving AI task over IPC... job: 7b364c50-b95d-4feb-b8ed-eb366f627dae
+[2026-03-30 12:45:34.481] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 12:45:34.482] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 12:45:34.482] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 12:46:48.436] [info] Worker mode: listening on stdin
+[2026-03-30 12:46:48.437] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 12:46:48.437] [info] Starting KBot UDS on 4001
+[2026-03-30 12:46:48.437] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 12:46:48.439] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 12:46:48.843] [info] KBot UDS client connected
+[2026-03-30 12:46:48.859] [info] Receiving AI task over IPC... job: fb9a1dd1-5865-4fbf-8530-0d0b3de3cb0d
+[2026-03-30 12:46:48.860] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 12:46:48.860] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 12:46:48.860] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:27:23.742] [info] Worker mode: listening on stdin
+[2026-03-30 13:27:23.742] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:27:23.742] [info] Starting KBot UDS on 4001
+[2026-03-30 13:27:23.743] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:27:23.744] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:27:25.580] [info] Worker mode: listening on stdin
+[2026-03-30 13:27:25.580] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:27:25.580] [info] Starting KBot UDS on 4001
+[2026-03-30 13:27:25.581] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:27:25.583] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:27:25.976] [info] KBot UDS client connected
+[2026-03-30 13:27:25.993] [info] Receiving AI task over IPC... job: f3a3aec3-7bd9-4a16-9d12-f2c8b4455cfd
+[2026-03-30 13:27:25.993] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 13:27:25.994] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 13:27:25.994] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:27:31.430] [info] KBot UDS: shutdown requested
+[2026-03-30 13:32:27.167] [info] Worker mode: listening on stdin
+[2026-03-30 13:32:27.167] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:32:27.167] [info] Starting KBot UDS on 4001
+[2026-03-30 13:32:27.167] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:32:27.169] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:32:27.572] [info] KBot UDS client connected
+[2026-03-30 13:32:27.588] [info] Receiving AI task over IPC... job: f1bd3d5a-2881-4d3c-b485-d1e14cf310aa
+[2026-03-30 13:32:27.588] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 13:32:27.588] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 13:32:27.588] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:32:32.654] [info] KBot UDS: shutdown requested
+[2026-03-30 13:33:02.591] [info] Worker mode: listening on stdin
+[2026-03-30 13:33:02.592] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:33:02.592] [info] Starting KBot UDS on 4001
+[2026-03-30 13:33:02.592] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:33:02.594] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:33:02.988] [info] KBot UDS client connected
+[2026-03-30 13:33:03.005] [info] Receiving AI task over IPC... job: cfcedb42-a259-4d6c-98af-d842c0f25962
+[2026-03-30 13:33:03.005] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 13:33:03.006] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 13:33:03.006] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:33:08.053] [info] KBot UDS: shutdown requested
+[2026-03-30 13:37:15.690] [info] Worker mode: listening on stdin
+[2026-03-30 13:37:15.690] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:37:15.690] [info] Starting KBot UDS on 4001
+[2026-03-30 13:37:15.691] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:37:15.693] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:37:16.087] [info] KBot UDS client connected
+[2026-03-30 13:37:16.104] [info] Receiving AI task over IPC... job: acf21df4-2113-4a72-afe7-19ed415f597f
+[2026-03-30 13:37:16.104] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 13:37:16.104] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 13:37:16.104] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:38:13.911] [info] Worker mode: listening on stdin
+[2026-03-30 13:38:13.911] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 13:38:13.911] [info] Starting KBot UDS on 4001
+[2026-03-30 13:38:13.912] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 13:38:13.914] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 13:38:14.317] [info] KBot UDS client connected
+[2026-03-30 13:38:14.337] [info] Receiving AI task over IPC... job: 1ed85afb-6f22-4787-b560-17a4e68b6fbc
+[2026-03-30 13:38:14.337] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 13:38:14.338] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 13:38:14.338] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 13:38:20.890] [info] KBot UDS: shutdown requested
+[2026-03-30 15:12:33.935] [info] Worker mode: listening on stdin
+[2026-03-30 15:12:33.935] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 15:12:33.935] [info] Starting KBot UDS on 4001
+[2026-03-30 15:12:33.936] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 15:12:33.938] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 15:12:34.337] [info] KBot UDS client connected
+[2026-03-30 15:12:34.354] [info] Receiving AI task over IPC... job: c644b5c2-4864-46ce-8d37-8171d1a90440
+[2026-03-30 15:12:34.354] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 15:12:34.354] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 15:12:34.354] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 15:12:39.177] [info] Receiving AI task over IPC... job: 3b488170-a85b-46e4-beb2-6e643ff4c201
+[2026-03-30 15:12:39.177] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 15:12:39.177] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 15:12:39.178] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 15:12:43.771] [info] Receiving AI task over IPC... job: bc34d93a-2237-41b5-995b-401be9f8887f
+[2026-03-30 15:12:43.771] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 15:12:43.771] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 15:12:43.771] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 15:12:49.070] [info] Receiving AI task over IPC... job: ced9b285-66f0-44f8-8fa5-d78be439a512
+[2026-03-30 15:12:49.070] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 15:12:49.070] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 15:12:49.071] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 15:12:54.520] [info] Receiving AI task over IPC... job: 6427e94c-cc1b-4a1f-9d3d-0e662c2b5c62
+[2026-03-30 15:12:54.520] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 15:12:54.520] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 15:12:54.520] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 15:12:59.715] [info] KBot UDS: shutdown requested
+[2026-03-30 16:12:10.382] [info] Worker mode: listening on stdin
+[2026-03-30 16:12:10.382] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:12:10.382] [info] Starting KBot UDS on 4001
+[2026-03-30 16:12:10.383] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:12:10.384] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:12:10.776] [info] KBot UDS client connected
+[2026-03-30 16:12:10.794] [info] Receiving AI task over IPC... job: 6e63c9f8-5829-4126-9aa0-7adc4da1922f
+[2026-03-30 16:12:10.794] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:12:10.794] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:12:10.794] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:12:17.709] [info] Receiving AI task over IPC... job: a71cb1b3-f831-49e3-acea-0dba22140f75
+[2026-03-30 16:12:17.709] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:12:17.709] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:12:17.709] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:12:26.290] [info] Receiving AI task over IPC... job: 09254c31-6e68-4c5b-9399-366a7904736c
+[2026-03-30 16:12:26.290] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:12:26.290] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:12:26.290] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:12:35.163] [info] KBot UDS: shutdown requested
+[2026-03-30 16:14:15.521] [info] Worker mode: listening on stdin
+[2026-03-30 16:14:15.522] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:14:15.522] [info] Starting KBot UDS on 4001
+[2026-03-30 16:14:15.522] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:14:15.524] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:14:15.920] [info] KBot UDS client connected
+[2026-03-30 16:14:15.937] [info] Receiving AI task over IPC... job: 18dbbd41-9ee0-4f36-b9b1-2a8d7eb55449
+[2026-03-30 16:14:15.937] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:15.938] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:15.938] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:14:16.220] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.220] [error] AI Task Failed: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.237] [info] Receiving AI task over IPC... job: 59cc747a-1fd8-418e-8889-ff3a693f9831
+[2026-03-30 16:14:16.237] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:16.237] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:16.237] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:14:16.334] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.334] [error] AI Task Failed: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.354] [info] Receiving AI task over IPC... job: 732f483e-c1c4-4858-a7bb-aea702032011
+[2026-03-30 16:14:16.354] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:16.354] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:16.354] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:14:16.444] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.444] [error] AI Task Failed: liboai::Response::CheckResponse(): No endpoints available matching your guardrail restrictions and data policy. Configure: https://openrouter.ai/settings/privacy (E_APIERROR:0x02)
+[2026-03-30 16:14:16.445] [info] KBot UDS: shutdown requested
+[2026-03-30 16:14:42.058] [info] Worker mode: listening on stdin
+[2026-03-30 16:14:42.058] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:14:42.058] [info] Starting KBot UDS on 4001
+[2026-03-30 16:14:42.058] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:14:42.060] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:14:42.453] [info] KBot UDS client connected
+[2026-03-30 16:14:42.471] [info] Receiving AI task over IPC... job: 9956fe51-2349-4e0e-8af1-4d34ee543d01
+[2026-03-30 16:14:42.471] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:42.471] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:42.471] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:14:47.221] [info] Receiving AI task over IPC... job: 4e692af1-693e-4412-be42-ce6fc3afefb6
+[2026-03-30 16:14:47.221] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:47.221] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:47.221] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:14:59.749] [info] Receiving AI task over IPC... job: f88b7e4c-55a0-476c-b563-95f0a668d215
+[2026-03-30 16:14:59.749] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:14:59.749] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:14:59.749] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 16:15:08.390] [info] KBot UDS: shutdown requested
+[2026-03-30 16:18:17.553] [info] Worker mode: listening on stdin
+[2026-03-30 16:18:17.554] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:18:17.554] [info] Starting KBot UDS on 4001
+[2026-03-30 16:18:17.554] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:18:17.557] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:25:59.989] [info] Worker mode: listening on stdin
+[2026-03-30 16:25:59.989] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:25:59.989] [info] Starting KBot UDS on 4001
+[2026-03-30 16:25:59.989] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:25:59.991] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:26:00.394] [info] KBot UDS client connected
+[2026-03-30 16:26:00.411] [info] Receiving AI task over IPC... job: 72a9bd20-f0e1-4669-9fed-1eab1418d36f
+[2026-03-30 16:26:00.412] [info] kbot ai: attached 1 text source file(s)
+[2026-03-30 16:26:00.412] [info] Dry run triggered for kbot ai
+[2026-03-30 16:26:00.419] [info] Receiving AI task over IPC... job: 2f6a510c-a0ab-49c0-b33f-e9c711384fb1
+[2026-03-30 16:26:00.421] [info] kbot ai: attached 2 text source file(s)
+[2026-03-30 16:26:00.421] [info] Dry run triggered for kbot ai
+[2026-03-30 16:26:00.428] [info] Receiving AI task over IPC... job: afa8a89b-fffb-4281-bd3e-bb8559954150
+[2026-03-30 16:26:00.430] [info] kbot ai: attached 1 text source file(s)
+[2026-03-30 16:26:00.431] [info] Dry run triggered for kbot ai
+[2026-03-30 16:26:00.431] [info] KBot UDS: shutdown requested
+[2026-03-30 16:28:38.434] [info] Worker mode: listening on stdin
+[2026-03-30 16:28:38.434] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:28:38.434] [info] Starting KBot UDS on 4001
+[2026-03-30 16:28:38.434] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:28:38.436] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:28:38.826] [info] KBot UDS client connected
+[2026-03-30 16:28:38.843] [info] Receiving AI task over IPC... job: 7f79167e-52b6-4512-8911-b0a839f586e5
+[2026-03-30 16:28:38.845] [info] kbot ai: attached 1 text source file(s)
+[2026-03-30 16:28:38.845] [info] Dry run triggered for kbot ai
+[2026-03-30 16:28:38.860] [info] Receiving AI task over IPC... job: c09c9473-b485-4be8-b486-cc962bd2c0bb
+[2026-03-30 16:28:38.862] [info] kbot ai: attached 2 text source file(s)
+[2026-03-30 16:28:38.862] [info] Dry run triggered for kbot ai
+[2026-03-30 16:28:38.877] [info] Receiving AI task over IPC... job: d62adfe2-da61-487e-8334-995b8be16fe1
+[2026-03-30 16:28:38.878] [info] kbot ai: attached 1 text source file(s)
+[2026-03-30 16:28:38.879] [info] Dry run triggered for kbot ai
+[2026-03-30 16:28:38.879] [info] KBot UDS: shutdown requested
+[2026-03-30 16:59:34.076] [info] Worker mode: listening on stdin
+[2026-03-30 16:59:34.076] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 16:59:34.076] [info] Starting KBot UDS on 4001
+[2026-03-30 16:59:34.077] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 16:59:34.079] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 16:59:34.469] [info] KBot UDS client connected
+[2026-03-30 16:59:34.486] [info] Receiving AI task over IPC... job: 519e967e-56a4-4a71-809f-136933d94ed8
+[2026-03-30 16:59:34.486] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 16:59:34.487] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 16:59:34.487] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 17:00:14.497] [info] Worker mode: listening on stdin
+[2026-03-30 17:00:14.497] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:00:14.497] [info] Starting KBot UDS on 4001
+[2026-03-30 17:00:14.498] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:00:14.499] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:00:14.893] [info] KBot UDS client connected
+[2026-03-30 17:00:14.909] [info] Receiving AI task over IPC... job: 3006bf61-d7eb-4d9d-86d6-e37215063fc4
+[2026-03-30 17:00:14.910] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 17:00:14.910] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 17:00:14.910] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 17:00:31.188] [info] Worker mode: listening on stdin
+[2026-03-30 17:00:31.188] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:00:31.188] [info] Starting KBot UDS on 4001
+[2026-03-30 17:00:31.189] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:00:31.190] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:00:31.585] [info] KBot UDS client connected
+[2026-03-30 17:00:31.602] [info] Receiving AI task over IPC... job: 0b7b9050-9b76-42cc-9497-38d43f8aca43
+[2026-03-30 17:00:31.602] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 17:00:31.602] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 17:00:31.602] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 17:04:47.337] [info] Worker mode: listening on stdin
+[2026-03-30 17:04:47.338] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:04:47.338] [info] Starting KBot UDS on 4001
+[2026-03-30 17:04:47.338] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:04:47.340] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:04:47.737] [info] KBot UDS client connected
+[2026-03-30 17:04:47.754] [info] Receiving AI task over IPC... job: cb1aa07c-b18f-4108-84a3-b7fe03762257
+[2026-03-30 17:04:47.754] [info] kbot-ai IPC: llm_timeout_ms=300000
+[2026-03-30 17:04:47.754] [info] LLMClient: HTTP timeout set to 300000 ms
+[2026-03-30 17:04:47.754] [info] LLMClient: calling ChatCompletion (prompt chars=1242)
+[2026-03-30 17:05:51.250] [info] LLMClient: ChatCompletion returned (HTTP 200)
+[2026-03-30 17:05:51.256] [info] KBot UDS: shutdown requested
+[2026-03-30 17:08:58.839] [info] Worker mode: listening on stdin
+[2026-03-30 17:08:58.839] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:08:58.839] [info] Starting KBot UDS on 4001
+[2026-03-30 17:08:58.840] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:08:58.841] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:08:59.227] [info] KBot UDS client connected
+[2026-03-30 17:08:59.244] [info] Receiving AI task over IPC... job: 86832d9f-bdc2-4c26-97fa-37dd27762432
+[2026-03-30 17:08:59.244] [info] kbot-ai IPC: llm_timeout_ms=30000
+[2026-03-30 17:08:59.244] [info] LLMClient: HTTP timeout set to 30000 ms
+[2026-03-30 17:08:59.244] [info] LLMClient: calling ChatCompletion (prompt chars=1366)
+[2026-03-30 17:09:05.102] [info] LLMClient: ChatCompletion returned (HTTP 200)
+[2026-03-30 17:09:05.104] [info] KBot UDS: shutdown requested
+[2026-03-30 17:10:32.200] [info] Worker mode: listening on stdin
+[2026-03-30 17:10:32.200] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:10:32.200] [info] Starting KBot UDS on 4001
+[2026-03-30 17:10:32.201] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:10:32.202] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:10:32.604] [info] KBot UDS client connected
+[2026-03-30 17:10:32.620] [info] Receiving AI task over IPC... job: b7377068-8ea3-406b-a98d-85f780e329d2
+[2026-03-30 17:10:32.620] [info] kbot-ai IPC: llm_timeout_ms=30000
+[2026-03-30 17:10:32.620] [info] LLMClient: HTTP timeout set to 30000 ms
+[2026-03-30 17:10:32.620] [info] LLMClient: calling ChatCompletion (prompt chars=1366)
+[2026-03-30 17:10:41.653] [info] LLMClient: ChatCompletion returned (HTTP 200)
+[2026-03-30 17:10:41.656] [info] KBot UDS: shutdown requested
+[2026-03-30 17:11:05.144] [info] Worker mode: listening on stdin
+[2026-03-30 17:11:05.144] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:11:05.144] [info] Starting KBot UDS on 4001
+[2026-03-30 17:11:05.145] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:11:05.146] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:11:05.537] [info] KBot UDS client connected
+[2026-03-30 17:11:05.554] [info] Receiving AI task over IPC... job: 96c3bbfc-f1a7-469e-881d-35149592acdc
+[2026-03-30 17:11:05.554] [info] kbot-ai IPC: llm_timeout_ms=30000
+[2026-03-30 17:11:05.554] [info] LLMClient: HTTP timeout set to 30000 ms
+[2026-03-30 17:11:05.554] [info] LLMClient: calling ChatCompletion (prompt chars=1366)
+[2026-03-30 17:11:05.646] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): openai/gpt-5o is not a valid model ID (E_APIERROR:0x02)
+[2026-03-30 17:11:05.646] [error] AI Task Failed: liboai::Response::CheckResponse(): openai/gpt-5o is not a valid model ID (E_APIERROR:0x02)
+[2026-03-30 17:11:05.647] [info] KBot UDS: shutdown requested
+[2026-03-30 17:12:51.211] [info] Worker mode: listening on stdin
+[2026-03-30 17:12:51.211] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:12:51.211] [info] Starting KBot UDS on 4001
+[2026-03-30 17:12:51.212] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:12:51.214] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:12:51.609] [info] KBot UDS client connected
+[2026-03-30 17:12:51.626] [info] Receiving AI task over IPC... job: df92e2ce-7b25-4a26-80f3-a8415914affd
+[2026-03-30 17:12:51.626] [info] kbot-ai IPC: llm_timeout_ms=30000
+[2026-03-30 17:12:51.626] [info] LLMClient: HTTP timeout set to 30000 ms
+[2026-03-30 17:12:51.626] [info] LLMClient: calling ChatCompletion (prompt chars=1366)
+[2026-03-30 17:12:58.230] [info] LLMClient: ChatCompletion returned (HTTP 200)
+[2026-03-30 17:12:58.233] [info] KBot UDS: shutdown requested
+[2026-03-30 17:28:05.126] [info] Worker mode: listening on stdin
+[2026-03-30 17:28:05.126] [info] Worker mode: UDS Server active on 4001
+[2026-03-30 17:28:05.126] [info] Starting KBot UDS on 4001
+[2026-03-30 17:28:05.127] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-03-30 17:28:05.129] [info] KBot UDS ready; waiting for connections…
+[2026-03-30 17:28:05.512] [info] KBot UDS client connected
+[2026-03-30 17:28:05.516] [info] Receiving AI task over IPC... job: 94be6fae-db40-4fef-a828-e9cb0b8aeab9
+[2026-03-30 17:28:05.516] [info] kbot-ai IPC: llm_timeout_ms=30000
+[2026-03-30 17:28:05.517] [info] LLMClient: HTTP timeout set to 30000 ms
+[2026-03-30 17:28:05.517] [info] LLMClient: calling ChatCompletion (prompt chars=1366)
+[2026-03-30 17:28:11.067] [info] LLMClient: ChatCompletion returned (HTTP 200)
+[2026-03-30 17:28:11.070] [info] Wrote completion to C:\Users\zx\Desktop\polymech\polymech-mono\packages\kbot\cpp\a.json
+[2026-03-30 17:28:11.072] [info] KBot UDS: shutdown requested
+[2026-04-15 11:32:11.482] [info] Worker mode: listening on stdin
+[2026-04-15 11:32:11.483] [info] Worker mode: UDS Server active on 4001
+[2026-04-15 11:32:11.483] [info] Starting KBot UDS on 4001
+[2026-04-15 11:32:11.483] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-04-15 11:32:11.485] [info] KBot UDS ready; waiting for connections…
+[2026-04-15 11:32:11.867] [info] KBot UDS client connected
+[2026-04-15 11:32:11.881] [info] Receiving AI task over IPC... job: 2c385b83-538a-47e9-b320-1089f11f721f
+[2026-04-15 11:32:11.881] [info] LLMClient: calling ChatCompletion (prompt chars=60)
+[2026-04-15 11:32:12.127] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)
+[2026-04-15 11:32:12.128] [error] AI Task Failed: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)
+[2026-04-15 11:33:56.320] [info] Worker mode: listening on stdin
+[2026-04-15 11:33:56.320] [info] Worker mode: UDS Server active on 4001
+[2026-04-15 11:33:56.320] [info] Starting KBot UDS on 4001
+[2026-04-15 11:33:56.321] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-04-15 11:33:56.322] [info] KBot UDS ready; waiting for connections…
+[2026-04-15 11:33:56.707] [info] KBot UDS client connected
+[2026-04-15 11:33:56.717] [info] Receiving AI task over IPC... job: d59f02a1-0608-4de5-980d-8425a8408a35
+[2026-04-15 11:33:56.718] [info] LLMClient: calling ChatCompletion (prompt chars=60)
+[2026-04-15 11:33:56.955] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)
+[2026-04-15 11:33:56.955] [error] AI Task Failed: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)
+[2026-04-15 11:34:24.126] [info] Worker mode: listening on stdin
+[2026-04-15 11:34:24.126] [info] Worker mode: UDS Server active on 4001
+[2026-04-15 11:34:24.126] [info] Starting KBot UDS on 4001
+[2026-04-15 11:34:24.127] [info] KBot UDS: bound TCP 127.0.0.1:4001
+[2026-04-15 11:34:24.129] [info] KBot UDS ready; waiting for connections…
+[2026-04-15 11:34:24.515] [info] KBot UDS client connected
+[2026-04-15 11:34:24.528] [info] Receiving AI task over IPC... job: 01a52aac-1f7d-4f88-b038-2aed372d5399
+[2026-04-15 11:34:24.529] [info] LLMClient: calling ChatCompletion (prompt chars=60)
+[2026-04-15 11:34:24.618] [error] LLMClient::execute_chat: Exception caught: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)
+[2026-04-15 11:34:24.618] [error] AI Task Failed: liboai::Response::CheckResponse(): User not found. (E_APIERROR:0x02)

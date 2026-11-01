@@ -1,0 +1,56 @@
+{
+  "resize": {
+    "name": "Resize Images",
+    "command": "pm-media",
+    "args": "resize --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_resized.&{SRC_EXT}\"",
+    "description": "Resize images"
+  },
+  "watermark": {
+    "name": "Add Watermark",
+    "command": "pm-media",
+    "args": "watermark --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --watermark=\"&{POLYMECH-ROOT}/nordin-ex/branding/logos/polymech-saw-ex.svg\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_watermarked.&{SRC_EXT}\"",
+    "description": "Add watermark to images"
+  },
+  "background-remove": {
+    "name": "Remove Background",
+    "command": "pm-media",
+    "args": "background:remove --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_bg_removed.&{SRC_EXT}\"",
+    "description": "Remove background from images"
+  },
+  "background-remove-bria": {
+    "name": "Remove Background (Bria AI)",
+    "command": "pm-media",
+    "args": "background:remove:bria --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_bria_bg_removed.&{SRC_EXT}\"",
+    "description": "Remove background using Bria AI"
+  },
+  "convert": {
+    "name": "Convert Format",
+    "command": "pm-media",
+    "args": "convert --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_converted.jpg\"",
+    "description": "Convert image format"
+  },
+  "pdf2jpg": {
+    "name": "PDF to JPG",
+    "command": "pm-media",
+    "args": "pdf2jpg --alt=true --logLevel=info --input=\"$(FullName)\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_page.jpg\"",
+    "description": "Convert PDF pages to JPG images"
+  },
+  "svg2jpg": {
+    "name": "SVG to JPG",
+    "command": "pm-media",
+    "args": "svg2jpg --alt=true --logLevel=info --src=\"$(FullName)/**/*.svg\" --dst=\"&{SRC_DIR}/&{SRC_NAME}.jpg\"",
+    "description": "Convert SVG to JPG"
+  },
+  "crop-foreground": {
+    "name": "Crop Foreground",
+    "command": "pm-media",
+    "args": "crop-foreground --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_cropped.&{SRC_EXT}\"",
+    "description": "Crop to foreground content"
+  },
+  "resize-square": {
+    "name": "Resize to Square",
+    "command": "pm-media",
+    "args": "resize --alt=true --logLevel=info --src=\"$(FullName)/**/*.+(&{IMAGES})\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_sq.&{SRC_EXT}\" --width=1980 --square --fillColor=white",
+    "description": "Resize images to square format (1980x1980) with white background"
+  }
+}

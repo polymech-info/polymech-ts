@@ -1,0 +1,163 @@
+import * as path from 'path';
+import { z } from 'zod';
+import { Logger } from "tslog";
+import * as winston from 'winston';
+import TransportStream from 'winston-transport';
+import { SeqTransport } from '@datalust/winston-seq';
+import { createStream } from "rotating-file-stream";
+import { CONFIG_DEFAULT } from '@polymech/commons';
+import { sync as read } from '@polymech/fs/read';
+import { sync as write } from '@polymech/fs/write';
+import { sync as exists } from '@polymech/fs/exists';
+export let logger = createLogger('osr-ai-tools');
+export const TLogLevelNameSchema = z.enum(["silly", "trace", "debug", "info", "warn", "error", "fatal"]);
+export var LogLevelEx;
+(function (LogLevelEx) {
+    LogLevelEx[LogLevelEx["silly"] = 0] = "silly";
+    LogLevelEx[LogLevelEx["trace"] = 1] = "trace";
+    LogLevelEx[LogLevelEx["debug"] = 2] = "debug";
+    LogLevelEx[LogLevelEx["info"] = 3] = "info";
+    LogLevelEx[LogLevelEx["warn"] = 4] = "warn";
+    LogLevelEx[LogLevelEx["error"] = 5] = "error";
+    LogLevelEx[LogLevelEx["fatal"] = 6] = "fatal";
+})(LogLevelEx || (LogLevelEx = {}));
+export var ELogTargets;
+(function (ELogTargets) {
+    ELogTargets[ELogTargets["Console"] = 1] = "Console";
+    ELogTargets[ELogTargets["FileText"] = 2] = "FileText";
+    ELogTargets[ELogTargets["FileJson"] = 4] = "FileJson";
+    ELogTargets[ELogTargets["Seq"] = 8] = "Seq";
+})(ELogTargets || (ELogTargets = {}));
+export function createLogger(name, options) {
+    return new Logger({
+        name,
+        type: 'pretty',
+        ...options,
+    });
+}
+export const defaultLogger = createLogger('DefaultLogger', {
+    minLevel: LogLevelEx.info
+});
+class JsonArrayFileTransport extends TransportStream {
+    filename;
+    constructor(opts) {
+        super(opts);
+        opts.filename = opts.filename;
+        this.filename = opts.filename || 'logs.json';
+        setImmediate(() => this.emit('opened'));
+    }
+    log(info, next) {
+        setImmediate(() => this.emit('logged', info));
+        const { level, message, exception, stack, ...props } = info;
+        const fileExists = exists(this.filename);
+        const existingLogs = fileExists
+            ? read(this.filename, 'json')
+            : [];
+        const entry = {
+            level: info.level,
+            message: info.message,
+            timestamp: new Date().toISOString(),
+            ...info
+        };
+        existingLogs.push(entry);
+        write(this.filename, existingLogs);
+        next();
+    }
+    close() {
+        setImmediate(() => this.emit('closed'));
+    }
+    flush() {
+        return new Promise((resolve, reject) => {
+            resolve(true);
+        });
+    }
+}
+class TSLogTransport extends TransportStream {
+    constructor(opts) {
+        super(opts);
+        setImmediate(() => this.emit('opened'));
+    }
+    log(info, next) {
+        setImmediate(() => this.emit('logged', info));
+        const { level, message, exception, stack, ...props } = info;
+        defaultLogger.info(info);
+        next();
+    }
+}
+export const winstonLogger = (name, file, targets = ELogTargets.Console | ELogTargets.FileJson) => {
+    const logger = winston.createLogger({
+        defaultMeta: { service: name },
+        level: 'debug',
+        transports: []
+    });
+    if (targets & ELogTargets.Console) {
+        //logger.add(new TSLogTransport({}))
+        logger.add(new winston.transports.Console({
+            format: winston.format.combine(winston.format.timestamp({ format: 'MM/DD/YYYY hh:mm:ss.SSS' }), 
+            ///winston.format.json(),
+            winston.format.colorize(), winston.format.printf(info => {
+                let message = null;
+                try {
+                    message = JSON.stringify(info.message);
+                }
+                catch (e) {
+                }
+                return `[${info.level}] [${name}] | message: ${message.substring(0, 200)}`;
+            }))
+        }));
+    }
+    if (targets & ELogTargets.FileText) {
+        logger.add(new winston.transports.File({
+            format: winston.format.combine(winston.format.timestamp(), winston.format.timestamp({ format: 'MM/DD/YYYY hh:mm:ss.SSS' }), winston.format.json(), winston.format.printf(info => {
+                return JSON.stringify(info, null, 2);
+            })),
+            dirname: path.parse(file).dir,
+            filename: path.parse(file).base
+        }));
+    }
+    if (targets & ELogTargets.FileJson) {
+        logger.add(new JsonArrayFileTransport({
+            filename: file
+        }));
+    }
+    if (targets & ELogTargets.Seq) {
+        const config = CONFIG_DEFAULT();
+        if (config.seq) {
+            logger.add(new SeqTransport({
+                ...config.seq,
+                onError: (e => { })
+            }));
+        }
+    }
+    return logger;
+};
+export const createFileLogger = (logger, level, file) => {
+    const rfs = createStream(file, {
+        size: "10M", // rotate every 10 MegaBytes written
+        interval: "1d", // rotate daily
+        compress: "gzip", // compress rotated files
+    });
+    const log = new Logger({
+        type: "json",
+        attachedTransports: [
+            (logObj) => {
+                rfs.write(JSON.stringify(logObj) + "\n");
+            },
+        ],
+    });
+    return log;
+};
+export const toolLoggerTS = (name, options) => {
+    let log = createLogger(name);
+    //log.settings.minLevel = options.logLevel
+    log = createFileLogger(log, options.logLevel, path.join(options.logs, `tools-${name}.json`));
+    return log;
+};
+export const toolLogger = (name, options = { logs: process.cwd() }) => {
+    const logPath = path.resolve(path.join(options.logs || './', `tools-${name}.json`));
+    const log = winstonLogger(name, logPath, ELogTargets.Console);
+    return log;
+};
+export * from './types.js';
+export * from './types_kbot.js';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxLQUFLLElBQUksTUFBTSxNQUFNLENBQUE7QUFDNUIsT0FBTyxFQUFFLENBQUMsRUFBRSxNQUFNLEtBQUssQ0FBQTtBQUV2QixPQUFPLEVBQWtCLE1BQU0sRUFBRSxNQUFNLE9BQU8sQ0FBQTtBQUU5QyxPQUFPLEtBQUssT0FBTyxNQUFNLFNBQVMsQ0FBQTtBQUNsQyxPQUFPLGVBQWUsTUFBTSxtQkFBbUIsQ0FBQTtBQUMvQyxPQUFPLEVBQUUsWUFBWSxFQUFDLE1BQU0sdUJBQXVCLENBQUE7QUFDbkQsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLHNCQUFzQixDQUFBO0FBRW5ELE9BQU8sRUFBRSxjQUFjLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUNsRCxPQUFPLEVBQUUsSUFBSSxJQUFJLElBQUksRUFBRSxNQUFNLG1CQUFtQixDQUFBO0FBQ2hELE9BQU8sRUFBRSxJQUFJLElBQUksS0FBSyxFQUFFLE1BQU0sb0JBQW9CLENBQUE7QUFDbEQsT0FBTyxFQUFFLElBQUksSUFBSSxNQUFNLEVBQUUsTUFBTSxxQkFBcUIsQ0FBQTtBQUlwRCxNQUFNLENBQUMsSUFBSSxNQUFNLEdBQW9CLFlBQVksQ0FBQyxjQUFjLENBQUMsQ0FBQTtBQUNqRSxNQUFNLENBQUMsTUFBTSxtQkFBbUIsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsT0FBTyxFQUFFLE9BQU8sRUFBRSxPQUFPLEVBQUUsTUFBTSxFQUFFLE1BQU0sRUFBRSxPQUFPLEVBQUUsT0FBTyxDQUFDLENBQUMsQ0FBQTtBQUV4RyxNQUFNLENBQU4sSUFBWSxVQVFYO0FBUkQsV0FBWSxVQUFVO0lBQ2xCLDZDQUFLLENBQUE7SUFDTCw2Q0FBSyxDQUFBO0lBQ0wsNkNBQUssQ0FBQTtJQUNMLDJDQUFJLENBQUE7SUFDSiwyQ0FBSSxDQUFBO0lBQ0osNkNB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

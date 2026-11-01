@@ -1,0 +1,44 @@
+import { QuickAction } from '../constants';
+interface ImageLightboxProps {
+    isOpen: boolean;
+    onClose: () => void;
+    imageUrl: string;
+    imageTitle: string;
+    originalImageId?: string;
+    onPromptSubmit?: (prompt: string) => void;
+    onPublish?: (option: 'overwrite' | 'new' | 'version', imageUrl: string, title: string, description?: string, parentId?: string, collectionIds?: string[]) => void;
+    isGenerating?: boolean;
+    isPublishing?: boolean;
+    showPrompt?: boolean;
+    showPublish?: boolean;
+    generatedImageUrl?: string;
+    currentIndex?: number;
+    totalCount?: number;
+    onNavigate?: (direction: 'prev' | 'next') => void;
+    onPreload?: (direction: 'prev' | 'next') => void;
+    showWizardFeatures?: boolean;
+    promptTemplates?: Array<{
+        name: string;
+        template: string;
+    }>;
+    onApplyTemplate?: (template: string) => void;
+    onSaveTemplate?: () => void;
+    onDeleteTemplate?: (index: number) => void;
+    onOptimizePrompt?: () => void;
+    isOptimizing?: boolean;
+    onMicrophoneToggle?: () => void;
+    isRecording?: boolean;
+    isTranscribing?: boolean;
+    showQuickPublish?: boolean;
+    onQuickPublish?: () => void;
+    prompt?: string;
+    onPromptChange?: (value: string) => void;
+    quickActions?: QuickAction[];
+    promptHistory?: string[];
+    historyIndex?: number;
+    onNavigateHistory?: (direction: 'up' | 'down') => void;
+    onManualPromptEdit?: () => void;
+    onOpenInWizard?: () => void;
+}
+export default function ImageLightbox({ isOpen, onClose, imageUrl, imageTitle, originalImageId, onPromptSubmit, onPublish, isGenerating, isPublishing, showPrompt, showPublish, generatedImageUrl, currentIndex, totalCount, onNavigate, onPreload, showWizardFeatures, promptTemplates, onApplyTemplate, onSaveTemplate, onDeleteTemplate, onOptimizePrompt, isOptimizing, onMicrophoneToggle, isRecording, isTranscribing, showQuickPublish, onQuickPublish, prompt: externalPrompt, onPromptChange, promptHistory, historyIndex, onNavigateHistory, onManualPromptEdit, onOpenInWizard, quickActions }: ImageLightboxProps): import("react/jsx-runtime").JSX.Element;
+export {};

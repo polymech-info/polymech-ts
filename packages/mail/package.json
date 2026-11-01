@@ -1,0 +1,58 @@
+{
+  "name": "@polymech/mail",
+  "version": "0.2.0",
+  "main": "dist-in/index.js",
+  "typings": "dist-in/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist-in/index.d.ts",
+      "import": "./dist-in/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "pm-mail": "dist-in/main.js"
+  },
+  "dependencies": {
+    "@polymech/commons": "file:../commons",
+    "@polymech/core": "file:../core",
+    "@polymech/fs": "file:../fs",
+    "@polymech/log": "file:../log",
+    "@types/node": "^22.19.7",
+    "@types/nodemailer": "^7.0.9",
+    "@types/yargs": "^17.0.35",
+    "imapflow": "^1.2.7",
+    "nodemailer": "^8.0.7",
+    "tslog": "^4.10.2",
+    "yargs": "^18.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "tslint --project=./tsconfig.json",
+    "build": "tsc -p .",
+    "dev": "tsc -p . --declaration -w",
+    "typings": "tsc --declaration",
+    "docs": "npx typedoc src/index.ts"
+  },
+  "homepage": "https://git.polymech.org/polymech/polymech-mono",
+  "repository": {
+    "type": "git",
+    "url": "://git.polymech.org/polymech/polymech-mono.git"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "ISC",
+  "keywords": [
+    "typescript"
+  ],
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}

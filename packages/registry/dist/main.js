@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+import { defaults } from './_cli.js';
+defaults();
+import { cli } from './cli.js';
+import { register as registerInfo } from './commands/info.js';
+registerInfo(cli);
+const argv = cli.argv;
+if (argv.help) {
+    cli.showHelp();
+    process.exit();
+}
+else if (argv.v || argv.version) {
+    process.exit();
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9tYWluLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sV0FBVyxDQUFDO0FBQUMsUUFBUSxFQUFFLENBQUE7QUFDaEQsT0FBTyxFQUFFLEdBQUcsRUFBRSxNQUFNLFVBQVUsQ0FBQTtBQUU5QixPQUFPLEVBQUUsUUFBUSxJQUFJLFlBQVksRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBQUMsWUFBWSxDQUFDLEdBQUcsQ0FBQyxDQUFBO0FBRWhGLE1BQU0sSUFBSSxHQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUM7QUFFM0IsSUFBSSxJQUFJLENBQUMsSUFBSSxFQUFFO0lBQ1gsR0FBRyxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQ2YsT0FBTyxDQUFDLElBQUksRUFBRSxDQUFDO0NBQ2xCO0tBQU0sSUFBSSxJQUFJLENBQUMsQ0FBQyxJQUFJLElBQUksQ0FBQyxPQUFPLEVBQUU7SUFDL0IsT0FBTyxDQUFDLElBQUksRUFBRSxDQUFDO0NBQ2xCIn0=

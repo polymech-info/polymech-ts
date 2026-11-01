@@ -1,0 +1,22 @@
+import { logger } from '../index.js';
+import { defaults } from '../_cli.js';
+import { yargsOptions, zodSchema, googleMaps } from '../lib/googlemaps.js';
+let options = (yargs) => yargsOptions(yargs);
+export const register = (cli) => {
+    return cli.command('googlemaps <verb>', 'Search GoogleMaps', options, async (argv) => {
+        defaults();
+        if (argv.help) {
+            return;
+        }
+        let opts = null;
+        try {
+            opts = zodSchema().parse(argv);
+        }
+        catch (e) {
+            logger.error('Invalid options', e.message, e.issues);
+            return;
+        }
+        return await googleMaps(opts);
+    });
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ29vZ2xlbWFwcy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYW5kcy9nb29nbGVtYXBzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxhQUFhLENBQUE7QUFDcEMsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLFlBQVksQ0FBQTtBQUNyQyxPQUFPLEVBQUcsWUFBWSxFQUFFLFNBQVMsRUFBRSxVQUFVLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQTtBQUczRSxJQUFJLE9BQU8sR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFLENBQUMsWUFBWSxDQUFDLEtBQUssQ0FBQyxDQUFBO0FBRXRELE1BQU0sQ0FBQyxNQUFNLFFBQVEsR0FBRyxDQUFDLEdBQWEsRUFBRSxFQUFFO0lBQ3RDLE9BQU8sR0FBRyxDQUFDLE9BQU8sQ0FBQyxtQkFBbUIsRUFBRSxtQkFBbUIsRUFBRSxPQUFjLEVBQUUsS0FBSyxFQUFFLElBQVMsRUFBZ0IsRUFBRTtRQUMzRyxRQUFRLEVBQUUsQ0FBQTtRQUNWLElBQUksSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO1lBQUMsT0FBTTtRQUFDLENBQUM7UUFFekIsSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFBO1FBQ2YsSUFBSSxDQUFDO1lBQ0QsSUFBSSxHQUFHLFNBQVMsRUFBRSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQXVCLENBQUE7UUFDeEQsQ0FBQztRQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUM7WUFDVCxNQUFNLENBQUMsS0FBSyxDQUFDLGlCQUFpQixFQUFFLENBQUMsQ0FBQyxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFBO1lBQ3BELE9BQU07UUFDVixDQUFDO1FBQ0QsT0FBTyxNQUFNLFVBQVUsQ0FBQyxJQUFJLENBQUMsQ0FBQTtJQUNqQyxDQUFDLENBQUMsQ0FBQTtBQUNOLENBQUMsQ0FBQSJ9

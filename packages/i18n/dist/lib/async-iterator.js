@@ -1,0 +1,77 @@
+import { JSONPath } from 'jsonpath-plus';
+import pThrottle from 'p-throttle';
+import pMap from 'p-map';
+export const isNumber = async (input) => (/^-?\d+(\.\d+)?$/.test(input));
+export const isBoolean = async (input) => /^(true|false)$/i.test(input);
+export const isValidString = async (input) => !(input.trim() !== '');
+export const testFilters = (filters) => {
+    return async (input) => {
+        for (const filter of filters) {
+            if (await filter(input)) {
+                return false;
+            }
+        }
+        return true;
+    };
+};
+export const defaultFilters = (filters = []) => [
+    isNumber, isBoolean, isValidString, ...filters
+];
+export async function transformObject(obj, transform, path, throttleDelay, concurrentTasks, errorCallback, testCallback) {
+    const paths = JSONPath({ path, json: obj, resultType: 'pointer' });
+    await pMap(paths, async (jsonPointer) => {
+        const keys = jsonPointer.slice(1).split('/');
+        await transformPath(obj, keys, transform, throttleDelay, concurrentTasks, jsonPointer, errorCallback, testCallback);
+    }, { concurrency: concurrentTasks });
+}
+export async function transformPath(obj, keys, transform, throttleDelay, concurrentTasks, currentPath, errorCallback, testCallback) {
+    let current = obj;
+    for (let i = 0; i < keys.length - 1; i++) {
+        current = current[keys[i]];
+    }
+    const lastKey = keys[keys.length - 1];
+    const throttle = pThrottle({
+        limit: 1,
+        interval: throttleDelay,
+    });
+    if (typeof lastKey === 'string' && lastKey !== '') {
+        try {
+            const newKey = isValidString(lastKey) && !isNumber(lastKey) ? await throttle(transform)(lastKey, currentPath) : lastKey;
+            if (newKey !== lastKey) {
+                current[newKey] = current[lastKey];
+                delete current[lastKey];
+            }
+            if (typeof current[newKey] === 'string' && current[newKey] !== '') {
+                if (await testCallback(current[newKey], `${currentPath}/${lastKey}`)) {
+                    current[newKey] = await throttle(transform)(current[newKey], `${currentPath}/${lastKey}`);
+                }
+            }
+            else if (typeof current[newKey] === 'object' && current[newKey] !== null) {
+                await transformObject(current[newKey], transform, '$.*', throttleDelay, concurrentTasks, errorCallback, testCallback);
+            }
+        }
+        catch (error) {
+            errorCallback(currentPath, lastKey, error);
+        }
+    }
+}
+const exampleTransformFunction = async (input, path) => {
+    if (input === 'random')
+        throw new Error('API error');
+    return input.toUpperCase();
+};
+export const defaultError = (path, value, error) => {
+    // logger.error(`Error at path: ${path}, value: ${value}, error: ${error}`)
+};
+export const defaultOptions = (options = {}) => {
+    return {
+        transform: exampleTransformFunction,
+        path: options.path || '$[*][0,1,2]',
+        throttleDelay: 10,
+        concurrentTasks: 1,
+        errorCallback: defaultError,
+        filterCallback: testFilters(defaultFilters()),
+        ...options
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXN5bmMtaXRlcmF0b3IuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvbGliL2FzeW5jLWl0ZXJhdG9yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxlQUFlLENBQUE7QUFDeEMsT0FBTyxTQUFTLE1BQU0sWUFBWSxDQUFBO0FBQ2xDLE9BQU8sSUFBSSxNQUFNLE9BQU8sQ0FBQTtBQWdCeEIsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFXLEtBQUssRUFBRSxLQUFhLEVBQUUsRUFBRSxDQUFDLENBQUMsaUJBQWlCLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUE7QUFDeEYsTUFBTSxDQUFDLE1BQU0sU0FBUyxHQUFXLEtBQUssRUFBRSxLQUFhLEVBQUUsRUFBRSxDQUFDLGlCQUFpQixDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQTtBQUN2RixNQUFNLENBQUMsTUFBTSxhQUFhLEdBQVcsS0FBSyxFQUFFLEtBQWEsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQTtBQUVwRixNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUcsQ0FBQyxPQUFpQixFQUFrQixFQUFFO0lBQzdELE9BQU8sS0FBSyxFQUFFLEtBQWEsRUFBRSxFQUFFO1FBQzNCLEtBQUssTUFBTSxNQUFNLElBQUksT0FBTyxFQUFFLENBQUM7WUFDM0IsSUFBSSxNQUFNLE1BQU0sQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDO2dCQUN0QixPQUFPLEtBQUssQ0FBQztZQUNqQixDQUFDO1FBQ0wsQ0FBQztRQUNELE9BQU8sSUFBSSxDQUFDO0lBQ2hCLENBQUMsQ0FBQztBQUNOLENBQUMsQ0FBQztBQUVGLE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRyxDQUFDLFVBQW9CLEVBQUUsRUFBRSxFQUFFLENBQ3JEO0lBQ0ksUUFBUSxFQUFFLFNBQVMsRUFB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

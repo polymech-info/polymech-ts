@@ -1,0 +1,29 @@
+[% include "product_variables.osr" %]
+
+[%js%]
+const _pathIn = path.resolve(PRODUCT_ROOT + './bazar/output.html');
+const product = readFile(_pathIn);
+
+const $ = cheerio.load(product, {
+    xmlMode: true
+});
+
+$('a').each(function () {
+    $(this).attr("style", "color:#4C74B9");
+})
+
+$('table').each(function () {
+    $(this).attr("style", "display:table;width:auto;margin-left:auto;margin-right:auto");
+})
+/*
+$('img').each(function () {
+    $(this).css({
+        "border-radius" : "4px"
+    });
+})
+*/
+
+let output = readFile('${root}/osr/bazar/product_begin.html');
+output = substitute(output, {product:$.html()});
+return output;
+[%endjs%]

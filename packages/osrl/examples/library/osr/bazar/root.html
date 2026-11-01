@@ -1,0 +1,27 @@
+---
+title: Tests - Basics
+nav: kb
+menu:
+  kb:
+    parent: tests
+    weight: 20
+toc: true
+nb: 3
+fCat: 54
+---
+
+# vars
+
+[% capture sCat %][[fCat]][% endcapture %]
+
+- sCat : [sCat]
+
+- DST_DIR: [[DST_DIR]]
+
+- fCat : [[fCat]]
+
+[% render "xlsx.osr" file:"./specs.xlsx" html:true cat:[sCat] %]
+
+[%- i18n %]
+[%- include "product_features.md" -%]
+[%- i18n-end %]

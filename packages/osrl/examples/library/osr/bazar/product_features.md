@@ -1,0 +1,5 @@
+- All parts are precision manufactured, using modern CNC and manual machines
+- Smooth and precise plunging experience
+- The plunger has a replaceable bronze tip
+- 2 mold interfaces: cone for press, and M20 thread interface
+- Heat-shield and insulation

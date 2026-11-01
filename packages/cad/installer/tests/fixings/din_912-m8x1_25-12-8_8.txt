@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"DIN 912 - d M8 x p 1.25 - l 12 - 8.8";"";
+"MATERIAL";"Steel";"";
+"DESIGN";"Hexagon socket head screw DIN 912 - M8 x 1.25 - 12 - 8.8";"";
+"TraceParts.PartNumber";"10-11062001-154695";"";
+"STANDARD";"DIN 912";"";
+"TraceParts.PartLanguage";"en";"";
+"OMNICLASS23";"23.13.23.11.13.19";"";
+"TraceParts.InstanceId";"10-11062001-154695E17UVKZ1M7OQIY9CQ8VRXCWN7";"";
+"TraceParts.PartTitle";"Hexagon socket head screw";"";
+"NOTE";"Class: 8.8; grade: A";"";
+"TraceParts.PartVersion";"1.7.9";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStandardAcronym";"DIN";"";

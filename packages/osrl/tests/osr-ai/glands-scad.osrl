@@ -1,0 +1,3 @@
+[% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}-glands.md" %]
+    Create a set of metric cable glands, for SCAD     
+[% osr-ai-end %]

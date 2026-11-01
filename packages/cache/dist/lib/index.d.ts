@@ -1,0 +1,12 @@
+export declare const cache_path: (_namespace: string) => string;
+export declare const fileAsBuffer: (path: string) => Buffer;
+export declare const file_hash: (path: string, opts?: any, namespace?: string) => any;
+export declare const object_hash: (opts?: any, namespace?: string) => any;
+export declare const file_name_hash: (path: string, opts?: any, namespace?: string) => any;
+export declare const set_cached: (path: string, opts: any, namespace: string, data: any, metadata?: any) => Promise<any>;
+export declare const set_cached_object: (opts: any, namespace: string, data: any, metadata?: any) => Promise<any>;
+export declare const get_cache_key: (path: string, opts?: any, namespace?: string) => Promise<any>;
+export declare const get_cached: (path: string, opts?: any, namespace?: string) => Promise<any>;
+export declare const get_cached_object: (opts?: any, namespace?: string) => Promise<any>;
+export declare const rm_cached_object: (opts?: any, namespace?: string) => Promise<any>;
+export declare const get_path_cached: (path: string, opts?: any, namespace?: string) => Promise<any>;

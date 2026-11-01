@@ -1,0 +1,288 @@
+[
+  {
+    "$ref": "#/definitions/osr-tasks:osrl",
+    "definitions": {
+      "osr-tasks:osrl": {
+        "type": "object",
+        "properties": {
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "silly",
+              "trace",
+              "debug",
+              "info",
+              "warn",
+              "error",
+              "fatal"
+            ],
+            "default": "info"
+          },
+          "root": {
+            "type": "string",
+            "default": "C:\\Users\\mc007\\Desktop\\osr\\osr-tasks"
+          },
+          "cwd": {
+            "type": "string",
+            "default": "C:\\Users\\mc007\\Desktop\\osr\\osr-tasks"
+          },
+          "env": {
+            "type": "string",
+            "default": "hugo-debug"
+          },
+          "format": {
+            "type": "string",
+            "default": "html"
+          },
+          "language": {
+            "type": "string",
+            "default": "osr"
+          },
+          "output": {
+            "type": "string",
+            "default": ""
+          },
+          "template": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "string",
+            "default": "${OSR_ROOT}/osr-templates/osrl/.osrl.json"
+          },
+          "plugins": {
+            "type": "string",
+            "default": "${OSR_ROOT}/osr-templates/osrl/.osrl.json"
+          },
+          "cache": {
+            "type": "boolean",
+            "default": true
+          },
+          "module": {
+            "type": "string",
+            "default": "osr-site"
+          },
+          "variables": {
+            "allOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "targetLanguage": {
+                    "type": "string",
+                    "enum": [
+                      "en",
+                      "pt",
+                      "bg",
+                      "cs",
+                      "da",
+                      "de",
+                      "el",
+                      "es",
+                      "et",
+                      "fi",
+                      "fr",
+                      "hu",
+                      "id",
+                      "it",
+                      "ja",
+                      "ko",
+                      "lt",
+                      "lv",
+                      "nb",
+                      "nl",
+                      "pl",
+                      "ro",
+                      "ru",
+                      "sk",
+                      "sl",
+                      "sv",
+                      "tr",
+                      "uk",
+                      "zh"
+                    ],
+                    "default": "en"
+                  },
+                  "sourceLanguage": {
+                    "type": "string",
+                    "enum": [
+                      "en",
+                      "pt",
+                      "bg",
+                      "cs",
+                      "da",
+                      "de",
+                      "el",
+                      "es",
+                      "et",
+                      "fi",
+                      "fr",
+                      "hu",
+                      "id",
+                      "it",
+                      "ja",
+                      "ko",
+                      "lt",
+                      "lv",
+                      "nb",
+                      "nl",
+                      "pl",
+                      "ro",
+                      "ru",
+                      "sk",
+                      "sl",
+                      "sv",
+                      "tr",
+                      "uk",
+                      "zh",
+                      "en-GB",
+                      "en-US",
+                      "pt-BR",
+                      "pt-PT"
+                    ],
+                    "default": "en"
+                  },
+                  "i18n": {
+                    "type": "string",
+                    "default": "C:\\Users\\mc007\\Desktop\\osr"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": {}
+              }
+            ],
+            "default": {
+              "targetLanguage": "en",
+              "sourceLanguage": "en",
+              "i18n": "C:\\Users\\mc007\\Desktop\\osr"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "ICompileOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  },
+  {
+    "$ref": "#/definitions/osr-tasks:osrl",
+    "definitions": {
+      "osr-tasks:osrl": {
+        "type": "object",
+        "properties": {
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "silly",
+              "trace",
+              "debug",
+              "info",
+              "warn",
+              "error",
+              "fatal"
+            ],
+            "default": "info"
+          },
+          "sourceLanguage": {
+            "type": "string",
+            "enum": [
+              "en",
+              "pt",
+              "bg",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "es",
+              "et",
+              "fi",
+              "fr",
+              "hu",
+              "id",
+              "it",
+              "ja",
+              "ko",
+              "lt",
+              "lv",
+              "nb",
+              "nl",
+              "pl",
+              "ro",
+              "ru",
+              "sk",
+              "sl",
+              "sv",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "default": "en"
+          },
+          "languages": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/osr-tasks:osrl/properties/sourceLanguage"
+                }
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "default": [
+              "en"
+            ]
+          },
+          "src": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "taskPrefix": {
+            "type": "string",
+            "default": "content"
+          },
+          "taskSuffix": {
+            "type": "string",
+            "default": ""
+          },
+          "tasksBefore": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "tasksAfter": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "watchContent": {
+            "type": "boolean",
+            "default": false
+          },
+          "clear": {
+            "type": "boolean",
+            "default": false
+          },
+          "debugWatch": {
+            "type": "boolean",
+            "default": false
+          },
+          "onCompile": {},
+          "onCompiled": {},
+          "onCompileDone": {}
+        },
+        "additionalProperties": false,
+        "description": "ICompileTaskOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

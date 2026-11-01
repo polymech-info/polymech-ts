@@ -1,0 +1,9 @@
+{
+    "devOrigins": [
+        "http://localhost:5173",
+        "http://localhost:8080"
+    ],
+    "apiDocs": [
+        "https://proxy.scalar.com"
+    ]
+}

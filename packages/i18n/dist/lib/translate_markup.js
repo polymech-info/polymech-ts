@@ -1,0 +1,30 @@
+import { OSR_CACHE } from '@polymech/commons';
+import { get_cached, set_cached } from '@polymech/cache';
+import { sync as read } from "@polymech/fs/read";
+import { sync as write } from "@polymech/fs/write";
+import { MODULE_NAME } from '../constants.js';
+import { translateDeepL, getTranslation } from './translate_commons.js';
+export const translateMarkup = async (src, dst, options) => {
+    const osr_cache = OSR_CACHE();
+    const cached = await get_cached(src, { keys: options.keys, filters: options.filters }, MODULE_NAME);
+    if (osr_cache && cached && options.cache) {
+        return cached;
+    }
+    const srcContent = read(src);
+    let translations = await translateDeepL(srcContent, options.srcLang, options.dstLang, {
+        free_api: false,
+        auth_key: options.api_key
+    }, options, src);
+    translations = getTranslation(translations);
+    if (osr_cache && options.cache) {
+        await set_cached(src, { keys: options.keys, filters: options.filters }, MODULE_NAME, translations);
+    }
+    if (translations) {
+        write(dst, translations);
+    }
+    else {
+        return false;
+    }
+    return translations;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJhbnNsYXRlX21hcmt1cC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvdHJhbnNsYXRlX21hcmt1cC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sbUJBQW1CLENBQUE7QUFDN0MsT0FBTyxFQUFFLFVBQVUsRUFBRSxVQUFVLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQTtBQUN4RCxPQUFPLEVBQUUsSUFBSSxJQUFJLElBQUksRUFBRSxNQUFNLG1CQUFtQixDQUFBO0FBQ2hELE9BQU8sRUFBRSxJQUFJLElBQUksS0FBSyxFQUFFLE1BQU0sb0JBQW9CLENBQUE7QUFFbEQsT0FBTyxFQUFFLFdBQVcsRUFBRSxNQUFNLGlCQUFpQixDQUFBO0FBQzdDLE9BQU8sRUFBRSxjQUFjLEVBQUUsY0FBYyxFQUFFLE1BQU0sd0JBQXdCLENBQUE7QUFFdkUsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHLEtBQUssRUFDaEMsR0FBVyxFQUNYLEdBQVcsRUFDWCxPQUFpQixFQUFFLEVBQUU7SUFDckIsTUFBTSxTQUFTLEdBQUcsU0FBUyxFQUFFLENBQUE7SUFDN0IsTUFBTSxNQUFNLEdBQUcsTUFBTSxVQUFVLENBQUMsR0FBRyxFQUFFLEVBQUUsSUFBSSxFQUFFLE9BQU8sQ0FBQyxJQUFJLEVBQUUsT0FBTyxFQUFFLE9BQU8sQ0FBQyxPQUFPLEVBQUUsRUFBRSxXQUFXLENBQUMsQ0FBQztJQUNwRyxJQUFJLFNBQVMsSUFBSSxNQUFNLElBQUksT0FBTyxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQ3ZDLE9BQU8sTUFBTSxDQUFBO0lBQ2pCLENBQUM7SUFDRCxNQUFNLFVBQVUsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFXLENBQUE7SUFDdEMsSUFBSSxZQUFZLEdBQUcsTUFBTSxjQUFjLENBQUMsVUFBVSxFQUM5QyxPQUFPLENBQUMsT0FBTyxFQUNmLE9BQU8sQ0FBQyxPQUFPLEVBQ2Y7UUFDSSxRQUFRLEVBQUUsS0FBSztRQUNmLFFBQVEsRUFBRSxPQUFPLENBQUMsT0FBTztLQUNyQixFQUFFLE9BQU8sRUFBRSxHQUFHLENBQVEsQ0FBQTtJQUVsQyxZQUFZLEdBQUcsY0FBYyxDQUFDLFlBQVksQ0FBQyxDQUFBO0lBQzNDLElBQUksU0FBUyxJQUFJLE9BQU8sQ0FBQyxLQUFLLEVBQUUsQ0FBQztRQUM3QixNQUFNLFVBQVUsQ0FBQyxHQUFHLEVBQUUsRUFBRSxJQUFJLEVBQUUsT0FBTyxDQUFDLElBQUksRUFBRSxPQUFPLEVBQUUsT0FBTyxDQUFDLE9BQU8sRUFBRSxFQUFFLFdBQVcsRUFBRSxZQUFZLENBQUMsQ0FBQTtJQUN0RyxDQUFDO0lBQ0QsSUFBSSxZQUFZLEVBQUUsQ0FBQztRQUNmLEtBQUssQ0FBQyxHQUFHLEVBQUUsWUFBWSxDQUFDLENBQUE7SUFDNUIsQ0FBQztTQUFNLENBQUM7UUFDSixPQUFPLEtBQUssQ0FBQTtJQUNoQixDQUFDO0lBQ0QsT0FBTyxZQUFZLENBQUE7QUFDdkIsQ0FBQyxDQUFBIn0=

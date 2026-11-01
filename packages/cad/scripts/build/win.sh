@@ -1,0 +1,1 @@
+npx nexe .\main.js osr-cad.exe --build --verbose

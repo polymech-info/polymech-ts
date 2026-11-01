@@ -1,0 +1,43 @@
+import * as path from 'node:path';
+import { CONFIG_DEFAULT, CONFIG_DEFAULT_PATH, resolve } from '@polymech/commons';
+import { sync as exists } from '@polymech/fs/exists';
+import { sync as read } from '@polymech/fs/read';
+import { logger } from './index.js';
+import { env_vars } from './utils/env.js';
+export const loadConfig = (options) => {
+    if (options.config) {
+        try {
+            const configPath = path.resolve(resolve(options.config, false, env_vars()));
+            if (exists(configPath)) {
+                const parsedConfig = read(configPath, 'json');
+                return parsedConfig;
+            }
+            else {
+                logger.error({ configPath }, `Config file not found: ${configPath}`);
+            }
+        }
+        catch (error) {
+            logger.error({ err: error.message }, `Failed to parse config JSON: ${error.message}`);
+        }
+    }
+    else {
+        // 1. OSR-CONFIG env / $HOME/.osr/.config.json
+        const defaultPath = path.resolve(CONFIG_DEFAULT_PATH());
+        const config = CONFIG_DEFAULT();
+        if (config)
+            return config;
+        // 2. cwd/.config.json
+        const cwdPath = path.join(process.cwd(), '.config.json');
+        if (exists(cwdPath)) {
+            logger.debug({ configPath: cwdPath }, `Loading config from cwd: ${cwdPath}`);
+            return read(cwdPath, 'json');
+        }
+        logger.error({
+            tried: [defaultPath, cwdPath],
+            envKey: 'OSR-CONFIG',
+            envValue: process.env['OSR-CONFIG'] ?? process.env['OSR_CONFIG'] ?? null,
+        }, `Config not found — tried: ${defaultPath}, ${cwdPath}`);
+        return false;
+    }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL2NvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEtBQUssSUFBSSxNQUFNLFdBQVcsQ0FBQTtBQUNqQyxPQUFPLEVBQUUsY0FBYyxFQUFFLG1CQUFtQixFQUFFLE9BQU8sRUFBRSxNQUFNLG1CQUFtQixDQUFBO0FBQ2hGLE9BQU8sRUFBRSxJQUFJLElBQUksTUFBTSxFQUFFLE1BQU0scUJBQXFCLENBQUE7QUFDcEQsT0FBTyxFQUFFLElBQUksSUFBSSxJQUFJLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUVoRCxPQUFPLEVBQUUsTUFBTSxFQUFHLE1BQU0sWUFBWSxDQUFBO0FBQ3BDLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQTtBQUV6QyxNQUFNLENBQUMsTUFBTSxVQUFVLEdBQUcsQ0FBQyxPQUFxQixFQUFFLEVBQUU7SUFDaEQsSUFBSSxPQUFPLENBQUMsTUFBTSxFQUFFLENBQUM7UUFDakIsSUFBSSxDQUFDO1lBQ0QsTUFBTSxVQUFVLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLE1BQU0sRUFBQyxLQUFLLEVBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQyxDQUFBO1lBQ3pFLElBQUssTUFBTSxDQUFDLFVBQVUsQ0FBQyxFQUFHLENBQUM7Z0JBQ3ZCLE1BQU0sWUFBWSxHQUFHLElBQUksQ0FBQyxVQUFVLEVBQUMsTUFBTSxDQUFDLENBQUE7Z0JBQzVDLE9BQU8sWUFBWSxDQUFBO1lBQ3ZCLENBQUM7aUJBQUksQ0FBQztnQkFDRixNQUFNLENBQUMsS0FBSyxDQUFDLEVBQUUsVUFBVSxFQUFFLEVBQUUsMEJBQTBCLFVBQVUsRUFBRSxDQUFDLENBQUE7WUFDeEUsQ0FBQztRQUNMLENBQUM7UUFBQyxPQUFPLEtBQVMsRUFBRSxDQUFDO1lBQ2pCLE1BQU0sQ0FBQyxLQUFLLENBQUMsRUFBRSxHQUFHLEVBQUUsS0FBSyxDQUFDLE9BQU8sRUFBRSxFQUFFLGdDQUFnQyxLQUFLLENBQUMsT0FBTyxFQUFFLENBQUMsQ0FBQTtRQUN6RixDQUFDO0lBQ0wsQ0FBQztTQUFNLENBQUM7UUFDSiw4Q0FBOEM7UUFDOUMsTUFBTSxXQUFXLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxtQkFBbUIsRUFBRSxDQUFDLENBQUE7UUFDdkQsTUFBTSxNQUFNLEdBQUcsY0FBYyxFQUFTLENBQUE7UUFDdEMsSUFBSSxNQUFNO1lBQUUsT0FBTyxNQUFNLENBQUE7UUFFekIsc0JBQXNCO1FBQ3RCLE1BQU0sT0FBTyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxFQUFFLGNBQWMsQ0FBQyxDQUFBO1FBQ3hELElBQUksTUFBTSxDQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUM7WUFDbEIsTUFBTSxDQUFDLEtBQUssQ0FBQyxFQUFFLFVBQVUsRUFBRSxPQUFPLEVBQUUsRUFBRSw0QkFBNEIsT0FBTyxFQUFFLENBQUMsQ0FBQTtZQUM1RSxPQUFPLElBQUksQ0FBQyxPQUFPLEVBQUUsTUFBTSxDQUFDLENBQUE7UUFDaEMsQ0FBQztRQUVELE1BQU0sQ0FBQyxLQUFLLENBQ1I7WUFDSSxLQUFLLEVBQUUsQ0FBQyxXQUFXLEVBQUUsT0FBTyxDQUFDO1lBQzdCLE1BQU0sRUFBRSxZQUFZO1lBQ3BCLFFBQVEsRUFBRSxPQUFPLENBQUMsR0FBRyxDQUFDLFlBQVksQ0FBQyxJQUFJLE9BQU8sQ0FBQyxHQUFHLENBQUMsWUFBWSxDQUFDLElBQUksSUFBSTtTQUMzRSxFQUNELDZCQUE2QixXQUFXLEtBQUssT0FBTyxFQUFFLENBQ3pELENBQUE7UUFDRCxPQUFPLEtBQUssQ0FBQTtJQUNoQixDQUFDO0FBQ0wsQ0FBQyxDQUFBIn0=

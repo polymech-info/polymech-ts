@@ -1,0 +1,446 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - HTML",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=false",
+                "--dry=false",
+                "--logLevel=trace",
+                "--configuration=test",
+                "--src='./tests/drive/400*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(html)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Edrawings",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--src='./tests/html/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(html)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - BOM",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=false",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(xlsx)'"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Pack - Cabinet",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=false",
+                "--pack=true",
+                "--logLevel=debug",
+                "--src='./tests/cabinet/vintage*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/packed'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test:Drive:JSON",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=false",
+                "--logLevel=trace",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - ModelReader - Lydia36",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='${OSR_ROOT}/products/products/extrusion/lydia-v3.5/cad/*Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - Props - Cas",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/cas/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - STEP",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--debug=true",
+                "--hidden=false",
+                "--verbose=true",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(jpg)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - JPG - PhotoView",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(jpg)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - CAS - STEP:NoEnclosure",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/cas/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(step)'",
+                //"--configuration='NoEnclosure'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - CAS - STEP: All Configurations",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/cas/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(step|html)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Flexibot - STEP: All Configurations",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='${OSR_ROOT}/flexi-bot/cad/storch-150/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(step)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Drive - Configrations",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}-configs.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - CAS - Configrations to HTML",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/cas/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(html)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Alt - Drive - JSON",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--alt=true",
+                "--src='./tests/drive/*.+(SLDASM)'",
+                "--dst='&{SRC_DIR}/&{SRC_NAME}.+(json)'"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test PRoot/Katbot - JSON",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--alt=false",
+                "--src='${PRODUCT_ROOT}/products/injection/katbot/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test PRoot/SPRCB650 - JSON",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "sw",
+                "--cache=true",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--alt=false",
+                "--src='${PRODUCT_ROOT}/products/sheetpress/sheetpress-cell-rcA-x/cad/Global*.+(SLDASM)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(json)'"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Slice",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "slice",
+                "--cache=false",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/print/Global*.+(3mf)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(gcode)'",
+                "--saveAsProfile='${SRC_DIR}/profile.json'",
+                "--profile='${SRC_DIR}/profile.json'",
+                "--saveArgs='${SRC_DIR}/slice.sh'",
+                "--log='${SRC_DIR}/last.log'",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test - Slice - Profiles",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\dist\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "slice",
+                "--cache=false",
+                "--dry=false",
+                "--debug=true",
+                "--verbose=true",
+                "--src='./tests/print/Global*.+(3mf)'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(gcode)'",
+                "--saveAsProfile='${SRC_DIR}/profile.json'",
+                "--profile='${OSR_PROFILES}/print/tests/profile.json'",
+                "--saveArgs='${SRC_DIR}/slice.sh'",
+                "--log='${SRC_DIR}/last.log'",
+            ]
+        }
+    ]
+}

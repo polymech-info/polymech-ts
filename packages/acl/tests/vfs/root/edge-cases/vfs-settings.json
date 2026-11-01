@@ -1,0 +1,66 @@
+{
+    "owner": "3bb4cfbf-318b-44d3-a9d3-35680e738421",
+    "groups": [
+        {
+            "name": "empty-group",
+            "members": []
+        },
+        {
+            "name": "multi-a",
+            "members": [
+                "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb"
+            ]
+        },
+        {
+            "name": "multi-b",
+            "members": [
+                "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb"
+            ]
+        }
+    ],
+    "acl": [
+        {
+            "group": "empty-group",
+            "path": "/shared",
+            "permissions": [
+                "read",
+                "write",
+                "list",
+                "mkdir",
+                "delete"
+            ]
+        },
+        {
+            "group": "ghost-group",
+            "path": "/docs",
+            "permissions": [
+                "read",
+                "list"
+            ]
+        },
+        {
+            "group": "multi-a",
+            "path": "/shared",
+            "permissions": [
+                "read",
+                "list"
+            ]
+        },
+        {
+            "group": "multi-b",
+            "path": "/shared",
+            "permissions": [
+                "write",
+                "mkdir"
+            ]
+        },
+        {
+            "group": "multi-b",
+            "path": "/docs",
+            "permissions": [
+                "read",
+                "list"
+            ]
+        }
+    ]
+}

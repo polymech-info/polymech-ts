@@ -1,0 +1,11 @@
+/**
+ * @polymech/acl — Type definitions
+ *
+ * Pure ESM, zero external dependencies.
+ * All methods are async (native Promise).
+ */
+// Result constructors
+export const ok = (data) => ({ ok: true, code: 'OK', data });
+export const okVoid = Object.freeze({ ok: true, code: 'OK', data: undefined });
+export const err = (code, message) => ({ ok: false, code, message });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW50ZXJmYWNlcy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9pbnRlcmZhY2VzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7OztHQUtHO0FBaUNILHNCQUFzQjtBQUN0QixNQUFNLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBSSxJQUFPLEVBQVksRUFBRSxDQUFDLENBQUMsRUFBRSxFQUFFLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLENBQUMsQ0FBQztBQUM3RSxNQUFNLENBQUMsTUFBTSxNQUFNLEdBQWdCLE1BQU0sQ0FBQyxNQUFNLENBQUMsRUFBRSxFQUFFLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLFNBQVMsRUFBRSxDQUFnQixDQUFDO0FBQzNHLE1BQU0sQ0FBQyxNQUFNLEdBQUcsR0FBRyxDQUFDLElBQW9CLEVBQUUsT0FBZSxFQUFVLEVBQUUsQ0FBQyxDQUFDLEVBQUUsRUFBRSxFQUFFLEtBQUssRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLENBQUMsQ0FBQyJ9

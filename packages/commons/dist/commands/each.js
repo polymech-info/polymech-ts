@@ -1,0 +1,23 @@
+import { logger } from '../logger.js';
+import { yargsOptions as yargsOptionsEach, zodSchema as zodSchemaEach, each } from '../lib/each.js';
+import { yargsOptions as yargsOptionsRun, zodSchema as zodSchemaRun, run } from '../lib/run.js';
+export const registerCommand = (cli, name, description, options, zodSchema, main) => {
+    return cli.command(name, description, options, async (argv) => {
+        if (argv.help) {
+            return;
+        }
+        let opts = null;
+        try {
+            opts = zodSchema().parse(argv);
+        }
+        catch (e) {
+            logger.error(`Error parsing options: ${name}`, e.message);
+        }
+        return await main(opts, argv);
+    });
+};
+export const registerCommands = (cli) => {
+    registerCommand(cli, 'each', 'each', yargsOptionsEach, zodSchemaEach, each);
+    registerCommand(cli, 'run', 'run', yargsOptionsRun, zodSchemaRun, run);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZWFjaC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYW5kcy9lYWNoLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxjQUFjLENBQUE7QUFDckMsT0FBTyxFQUFFLFlBQVksSUFBSSxnQkFBZ0IsRUFBRSxTQUFTLElBQUksYUFBYSxFQUFFLElBQUksRUFBRSxNQUFNLGdCQUFnQixDQUFBO0FBQ25HLE9BQU8sRUFBRSxZQUFZLElBQUksZUFBZSxFQUFFLFNBQVMsSUFBSSxZQUFZLEVBQUUsR0FBRyxFQUFFLE1BQU0sZUFBZSxDQUFBO0FBRS9GLE1BQU0sQ0FBQyxNQUFNLGVBQWUsR0FBRyxDQUMzQixHQUFhLEVBQ2IsSUFBSSxFQUNKLFdBQVcsRUFDWCxPQUFPLEVBQ1AsU0FBK0IsRUFDL0IsSUFBNEMsRUFBRSxFQUFFO0lBQ2hELE9BQU8sR0FBRyxDQUFDLE9BQU8sQ0FBQyxJQUFJLEVBQUUsV0FBVyxFQUFFLE9BQU8sRUFBRSxLQUFLLEVBQUUsSUFBbUIsRUFBZ0IsRUFBRTtRQUN2RixJQUFJLElBQUksQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUFDLE9BQU07UUFBQyxDQUFDO1FBQ3pCLElBQUksSUFBSSxHQUFHLElBQUksQ0FBQTtRQUNmLElBQUksQ0FBQztZQUNELElBQUksR0FBRyxTQUFTLEVBQUUsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUE7UUFDbEMsQ0FBQztRQUFDLE9BQU8sQ0FBQyxFQUFFLENBQUM7WUFDVCxNQUFNLENBQUMsS0FBSyxDQUFDLDBCQUEwQixJQUFJLEVBQUUsRUFBRSxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUE7UUFDN0QsQ0FBQztRQUNELE9BQU8sTUFBTSxJQUFJLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFBO0lBQ2pDLENBQUMsQ0FBQyxDQUFBO0FBQ04sQ0FBQyxDQUFBO0FBRUQsTUFBTSxDQUFDLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxHQUFhLEVBQUUsRUFBRTtJQUM5QyxlQUFlLENBQUMsR0FBRyxFQUFFLE1BQU0sRUFBRSxNQUFNLEVBQUUsZ0JBQWdCLEVBQUUsYUFBYSxFQUFFLElBQUksQ0FBQyxDQUFBO0lBQzNFLGVBQWUsQ0FBQyxHQUFHLEVBQUUsS0FBSyxFQUFFLEtBQUssRUFBRSxlQUFlLEVBQUUsWUFBWSxFQUFFLEdBQUcsQ0FBQyxDQUFBO0FBQzFFLENBQUMsQ0FBQSJ9

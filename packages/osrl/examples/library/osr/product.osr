@@ -1,0 +1,9 @@
+[% include "product_header_jekyll.osr" %]
+
+[% if config.show.badges %]
+    {% include product_badges.html %}
+[%endif%]
+
+[% if config.show.authors %]
+[% include "authors.osr" authors:product.authors showHeader:true %]
+[%endif%]

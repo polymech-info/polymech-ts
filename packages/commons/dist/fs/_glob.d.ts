@@ -1,0 +1,10 @@
+import { GlobOptions } from 'glob';
+export declare const files: (cwd: any, glob: any, options?: any) => [];
+export declare const filesEx: (cwd: any, glob: any, options?: GlobOptions) => [];
+import { PATH_INFO } from '../types_common.js';
+export { globBase } from './glob-base.js';
+export { globParent } from './glob-parent.js';
+export declare const getExtensions: (glob: string) => string[];
+export declare const forward_slash: (path: any) => any;
+export declare const pathInfoEx: (src: string, altToken?: boolean, globOptions?: GlobOptions) => PATH_INFO;
+export declare const pathInfo: (src: string, altToken?: boolean, cwd?: string) => PATH_INFO;

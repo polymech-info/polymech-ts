@@ -1,0 +1,34 @@
+<h4 style="text-align:center"> Product Accessoires </h4>
+[%js%]
+
+process.on('unhandledRejection', (reason) => {
+    console.error('Unhandled rejection, reason: ', reason);
+    debugger;
+});
+
+const cache_key = 'magento-' + store.product.slug;
+
+return cacache.get.info(CACHE,cache_key).then((cache)=>{
+    if(cache){
+        return cacache.get(CACHE, cache_key).then((cached)=>{
+            return cached.data.toString();
+        })
+    }
+
+    return magento.parts(config.magento.user,config.magento.password,config.magento.url,store.product.magentoCategory, global).then((products)=>{
+        console.log('get magento products');
+        products = html.container.wrap(products.map((i)=> {
+            if(!i || !i.media_gallery_entries){
+                return null;
+            }
+            const url = i.custom_attributes.find((a) => a.attribute_code ==='url_key').value;
+            const name = i.custom_attributes.find((a) => a.attribute_code ==='meta_title').value;
+            const image = `${MAGENTO_URL}/media/catalog/product/${i.media_gallery_entries[0].file}`;
+            return html.container.item(html.image(image,`${MAGENTO_URL}/${url}.html`),html.styles.thumb, name);
+        }));
+        cacache.put(CACHE,cache_key,products);
+        return products;        
+    });
+});
+
+[%endjs%]

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+import { defaults } from './_cli.js';
+defaults();
+import { cli } from './cli.js';
+import { register as registerInfo } from './commands/info.js';
+registerInfo(cli);
+import { register as registerTest } from './commands/test.js';
+registerTest(cli);
+import { register as registerTypes } from './commands/types.js';
+registerTypes(cli);
+import { register as registerSASearch } from './commands/googlemaps.js';
+registerSASearch(cli);
+const argv = cli.argv;
+if (argv.help) {
+    cli.showHelp(true);
+    process.exit();
+}
+else if (argv.v || argv.version) {
+    process.exit();
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9tYWluLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sV0FBVyxDQUFDO0FBQUMsUUFBUSxFQUFFLENBQUE7QUFDaEQsT0FBTyxFQUFFLEdBQUcsRUFBRSxNQUFNLFVBQVUsQ0FBQTtBQUU5QixPQUFPLEVBQUUsUUFBUSxJQUFJLFlBQVksRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBQUMsWUFBWSxDQUFDLEdBQUcsQ0FBQyxDQUFBO0FBQ2hGLE9BQU8sRUFBRSxRQUFRLElBQUksWUFBWSxFQUFFLE1BQU0sb0JBQW9CLENBQUM7QUFBQyxZQUFZLENBQUMsR0FBRyxDQUFDLENBQUE7QUFDaEYsT0FBTyxFQUFFLFFBQVEsSUFBSSxhQUFhLEVBQUUsTUFBTSxxQkFBcUIsQ0FBQztBQUFDLGFBQWEsQ0FBQyxHQUFHLENBQUMsQ0FBQTtBQUNuRixPQUFPLEVBQUUsUUFBUSxJQUFJLGdCQUFnQixFQUFFLE1BQU0sMEJBQTBCLENBQUM7QUFBQyxnQkFBZ0IsQ0FBQyxHQUFHLENBQUMsQ0FBQTtBQUc5RixNQUFNLElBQUksR0FBUSxHQUFHLENBQUMsSUFBSSxDQUFDO0FBRzNCLElBQUksSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO0lBQ1osR0FBRyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQTtJQUNsQixPQUFPLENBQUMsSUFBSSxFQUFFLENBQUE7QUFDbEIsQ0FBQztLQUFNLElBQUksSUFBSSxDQUFDLENBQUMsSUFBSSxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7SUFDaEMsT0FBTyxDQUFDLElBQUksRUFBRSxDQUFBO0FBQ2xCLENBQUMifQ==

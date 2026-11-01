@@ -1,0 +1,9 @@
+product_id: asterix-jw
+preview: ${product_preview}
+_buy: "mailto:sales@plastic-hub.com?subject=Inquiry%20-%20${slug}"
+teaser: "OSR - Mini - Shredder - ''"
+products: false
+overview_drawing: true
+featuresText: true
+
+

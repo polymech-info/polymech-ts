@@ -1,0 +1,65 @@
+[
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-mini\\cad\\lower-support\\Global.SLDASM"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\PressPlate-Top\\TopPress-Plate.SLDASM",
+    "IsLaser": "1",
+    "Weight": "80461.77"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\LowerRibs\\1_RibA_x1_10mm_FERRO.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\LowerRibs\\2_RibB_x1_10mm_FERRO.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\LowerRibs\\3_Mount_x2_10mm_FERRO.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\LowerRibs\\LowerRibs.SLDASM"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\components\\Rails\\11_Mount_x8_10mm_FERRO.SLDPRT"
+  },
+  {
+    "File Path": "c:\\solidworks data\\browser\\din\\bolts and screws\\hex bolts and screws\\hex bolt gradeb_din.sldprt"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\PressPlate-Bottom\\6_Side_x4_5mm_FERRO.DXF.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\PressPlate-Bottom\\Lower Platen Matrix Assembly Light.SLDASM"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\components\\Rails\\SBR20UU.sldprt"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\PressPlate-Bottom\\Bottom-PressPlate.SLDASM",
+    "IsLaser": "1"
+  },
+  {
+    "File Path": "c:\\solidworks data\\browser\\ansi metric\\retaining rings\\external\\reinforced e-ring external retaining ring_am.sldprt"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\components\\BottleJack\\Parts\\Assembly section 1 Adrian.SLDASM"
+  },
+  {
+    "File Path": "C:\\Users\\mc007\\Desktop\\ph3\\products\\products\\sheetpress\\cassandra-light\\cad\\components\\BottleJack\\Bottle Jack Assembly.SLDASM"
+  },
+  {
+    "File Path": "C:\\SOLIDWORKS Data\\browser\\DIN\\washers\\plain washers\\plain washer 6902 type abc_din.sldprt"
+  },
+  {
+    "File Path": "C:\\SOLIDWORKS Data\\browser\\DIN\\nuts\\hex nuts - prevailing torque\\prevailing torque nut style 1 insert_din.sldprt"
+  },
+  {
+    "File Path": "C:\\SOLIDWORKS Data\\browser\\DIN\\washers\\plain washers\\plain washer grade c_din.sldprt"
+  },
+  {
+    "File Path": "C:\\SOLIDWORKS Data\\browser\\DIN\\bolts and screws\\hex bolts - structural\\hex head structural bolt_din.sldprt"
+  },
+  {
+    "File Path": "C:\\SOLIDWORKS Data\\browser\\DIN\\nuts\\hex nuts\\hex nut gradec_din.sldprt"
+  }
+]

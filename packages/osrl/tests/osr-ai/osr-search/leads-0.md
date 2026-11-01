@@ -1,0 +1,159 @@
+##  Polígono Industrial Can Vinyals
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Can+Vinyals,+08181+Sentmenat,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sentmenat) (Note: There may not be a specific Wikipedia page for Can Vinyals; this link directs to the town of Sentmenat)
+- Size of Population: Information not readily available
+- Type of Industries: Various manufacturing and logistics companies
+- Next major city / town: [Sentmenat](https://en.wikipedia.org/wiki/Sentmenat)
+- Distance to Sentmenat (Spain, Barcelona): Approximately 3 kilometers
+
+##  Polígono Industrial Can Canyameres
+- [Link to Google Maps](https://www.google.com/maps?q=Pol%C3%ADgono+Industrial+Can+Canyameres,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_Can_Canyameres) *(Note: If no specific Wikipedia page exists, this will link to the general Wikipedia page for industrial areas in Barcelona)*
+- Size of Population: Not typically applicable as it is an industrial area.
+- Type of industries: Manufacturing, logistics, automotive, electronics
+- Next major city/town: [Sabadell](https://en.wikipedia.org/wiki/Sabadell)
+- Distance to Sentmenat (Spain, Barcelona): Approximately 9 kilometers
+
+##  Polígono Industrial Can Roqueta
+- [Link to Google Maps](https://maps.google.com/?q=Polígono+Industrial+Can+Roqueta,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sabadell) (Note: Polígono Industrial Can Roqueta is located in Sabadell, and there is no specific Wikipedia page for the industrial park itself)
+- Size of Population: Not applicable (industrial area)
+- Type of Industries: Manufacturing, logistics, and technology companies
+- Next major city / town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 9 kilometers
+
+##  Polígono Industrial Can Jardí
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Can+Jard%C3%AD,+Barcelona,+Spain)
+- [Link to Wikipedia](https://ca.wikipedia.org/wiki/Pol%C3%ADgon_industrial_de_Can_Jard%C3%AD)
+- Size of Population: Information not commonly available for industrial zones
+- Type of Industries: Technology, manufacturing, logistics
+- Next major city / town: Rubí (Barcelona)
+- Distance to Sentmenat (Spain, Barcelona): Approximately 27 kilometers
+
+##  Polígono Industrial Ca n’Ametller
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Ca+n%E2%80%99Ametller,+08195+Sant+Cugat+del+Vall%C3%A8s,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sant_Cugat_del_Vall%C3%A8s) *(page for Sant Cugat del Vallès, the municipality that encompasses Polígono Industrial Ca n’Ametller)*
+- Size of Population: Not specifically available for the industrial polygon, but [Sant Cugat del Vallès](https://es.wikipedia.org/wiki/Sant_Cugat_del_Vall%C3%A8s) has about 90,000 inhabitants as of the latest census.
+- Type of industries: Includes technology firms, logistics companies, manufacturing businesses, and various service providers.
+- Next major city / town: [Sant Cugat del Vallès](https://en.wikipedia.org/wiki/Sant_Cugat_del_Vall%C3%A8s)
+- Distance to Sentmenat (Spain, Barcelona): Approximately 30 kilometers
+
+##  Polígono Industrial Santiga
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Santiga/@41.5385,2.1779,15z/data=!4m6!3m5!1s0x12a49fcd8e74d8b7:0x2811246b612fadda!4b1!8m2!3d41.5368171!4d2.1729497)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_Santiga) *(Note: This link may need to be created or verified as it may not exist)*
+- Size of Population: Approx. 0 (mainly industrial, no residential population)
+- Type of industries: Manufacturing, logistics, distribution, automotive, electronics
+- Next major city / town: Barberà del Vallès and Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 17 kilometers
+
+##  Polígono Industrial La Clota
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+La+Clota,+08184,+Barcelona,+Spain)
+- Wikipedia: (Not available)
+- Size of Population: Data not specifically available for the industrial park
+- Type of Industries: Manufacturing, Logistics, Automotive
+- Next major city/town: Barcelona
+- Distance to Sentmenat (Spain, Barcelona): Approximately 3 kilometers
+
+##  Polígono Industrial Can Torrella
+- [Link to Google Maps](https://www.google.com/maps/search/Pol%C3%ADgono+Industria+Can+Torrella/@41.624709,2.1343518,15z)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sentmenat)
+- Size of Population: Not specifically documented (Polígono Industrial information typically does not include population data as they are primarily industrial areas)
+- Type of industries: Various light and heavy industries including manufacturing, logistics, and distribution centers
+- Next major city / town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 2 kilometers
+
+##  Polígono Industrial Polizur
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Polizur,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_industrial)
+- Size of Population: Information not typically available for industrial zones
+- Type of industries: Various (logistics, manufacturing, technology)
+- Next major city / town: Sentmenat
+- Distance to Sentmenat (Spain, Barcelona): Approximately 3 kilometers
+
+##  Polígono Industrial Santiga Sud
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Santiga+Sud,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_Santiga_Sud)
+- Size of Population: Not specifically applicable since it's an industrial area.
+- Type of Industries: Manufacturing, Logistics, Automotive, Food Processing, and Warehousing.
+- Next major city / town: Barberà del Vallès
+- Distance to Sentmenat (Spain, Barcelona): Approximately 15 kilometers
+
+##  Polígono Industrial Els Dolors
+- [Link to Google Maps](https://www.google.com/maps?q=Pol%C3%ADgono+Industrial+Els+Dolors&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiHkenu2PjzAhWogP0HHQGWCXIQ_AUoAXoECAEQAw)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrials) *(Note: There may not be a specific Wikipedia page for this industrial area)*
+- Size of Population: Not typically applicable, as industrial polygons usually consist of workplaces rather than residences.
+- Type of industries: Various manufacturing, logistics, warehousing, and service industries.
+- Next major city/town: Barcelona
+- Distance to Sentmenat (Spain, Barcelona): Approximately 27 kilometers
+
+##  Polígono Industrial Can Magre
+- [Link to Google Maps](https://goo.gl/maps/k6VZc8P1zEqAf8Zg6)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sentmenat)
+- Size of Population: Not specifically available for Polígono Industrial Can Magre, refer to Sentmenat's population.
+- Type of Industries: Predominantly manufacturing and logistics.
+- Next Major City / Town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 3 kilometers
+
+##  Polígono Industrial Llevant
+- [Link to Google Maps](https://www.google.com/maps/place/Polígono+Industrial+Llevant,+Barcelona,+Spain)
+- [Link to Wikipedia](https://en.wikipedia.org/wiki/Barcelona) *(Note: There is no specific Wikipedia page for Polígono Industrial Llevant, but this links to the broader Barcelona entry)*
+- Size of Population: Not directly applicable, as it is an industrial park
+- Type of Industries: Manufacturing, logistics, warehousing, and various service industries
+- Next major city / town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 8 kilometers
+
+##  Polígono Industrial Sud-Est
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Sud-Est,+Barcelona,+Spain)
+- Wikipedia page: *No available link specifically for Polígono Industrial Sud-Est*.
+- Size of Population: *Data not available*.
+- Type of Industries: Various manufacturing, logistics, automotive, and services industries.
+- Next Major City / Town: Barcelona.
+- Distance to Sentmenat (Spain, Barcelona): Approximately 15 kilometers.
+
+##  Polígono Industrial Can Mir
+- [Link to Google Maps](https://www.google.com/maps?q=Pol%C3%ADgono+Industrial+Can+Mir,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sentmenat) (Note: Direct information about Polígono Industrial Can Mir might be limited)
+- Size of Population: Information not specifically available, typically associated with the population of Sentmenat
+- Type of industries: Manufacturing, warehousing, logistics, and light industry
+- Next major city / town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 3 kilometers
+
+##  Polígono Industrial La Romànica
+- [Link to Google Maps](https://www.google.com/maps/place/La+Rom%C3%A0nica,+08292+Sabadell,+Barcelona,+Spain/)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Sabadell) *(Note: There might not be a specific article for Polígono Industrial La Romànica, but it is part of Sabadell)*
+- Size of Population: Specific population data for Polígono Industrial La Romànica is generally not available. Refer to the population of Sabadell, which is approximately 211,000 as of 2020.
+- Type of industries: Various, including manufacturing, logistics, and services.
+- Next major city / town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 8 kilometers
+
+##  Polígono Industrial El Congost
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+El+Congost,+Barcelona,+Spain/)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_El_Congost) *(Note: Wikipedia page might not exist)*
+- Size of Population: N/A (industrial area, not a residential population)
+- Type of Industries: Manufacturing, logistics, automotive, technology, and textiles
+- Next major city / town: Granollers
+- Distance to Sentmenat (Spain, Barcelona): Approximately 20 kilometers
+
+##  Polígono Industrial Pla de la Bruguera
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Pla+de+la+Bruguera,+08211+Castellar+del+Vall%C3%A8s,+Barcelona/@41.6174922,2.084216,15z/)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Castellar_del_Vall%C3%A8s) *(Note: Specific Wikipedia page for Polígono Industrial Pla de la Bruguera may not be available, linked to the municipality instead)*
+- Size of Population: Approximately  24,451 (as part of Castellar del Vallès, 2021)
+- Type of Industries: Manufacturing, Textiles, Automotive, Electronics
+- Next Major City / Town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 7 kilometers
+
+##  Polígono Industrial Riu d'Or
+- [Link to Google Maps](https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Riu+d'Or,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_Riu_d'Or) (Note: Actual Wikipedia page may not exist)
+- Size of Population: Not Applicable (Industrial Area)
+- Type of Industries: Manufacturing, Logistics, Warehousing
+- Next Major City / Town: Sabadell
+- Distance to Sentmenat (Spain, Barcelona): Approximately 10 kilometers
+
+##  Polígono Industrial El Bruguer
+- [Link to Google Maps](https://www.google.com/maps?q=Pol%C3%ADgono+Industrial+El+Bruguer,+Barcelona,+Spain)
+- [Link to Wikipedia](https://es.wikipedia.org/wiki/Pol%C3%ADgono_Industrial_El_Bruguer) (Note: This page does not currently exist, this is a sample link.)
+- Size of Population: No residential population
+- Type of industries: Manufacturing, logistics, automotive, warehousing
+- Next major city / town: Barberà del Vallès
+- Distance to Sentmenat (Spain, Barcelona) (in kilometers): Approximately 14 km

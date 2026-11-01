@@ -1,0 +1,21 @@
+[% js  %]
+console.log('fCat', cat);
+console.log('file', file);
+const _path = lookup(file);
+const h = html;
+if (!fs.exists(_path)) {
+  console.error("file doesn't exists", file);
+  // try global item config (temp, for moulds)
+  if (global.private && global.private.specs) {
+    data = markdownTable(global.private.specs);
+    return md2html(data);
+  }
+  return '';
+} else {
+  const t = global;
+  let data = xlsx.parse(_path);
+  data[0].data = data[0].data.filter((d) => !!d.length);
+  data = markdownTable(data[0].data);
+  return md2html(data);
+}
+[% endjs %]

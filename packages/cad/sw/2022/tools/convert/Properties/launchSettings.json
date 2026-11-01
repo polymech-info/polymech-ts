@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "--source=\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\shared\\electronics\\enclosures\\vintage-vertical-edc\\Cabinet-EDC-Flex.SLDASM\" --target=\"C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\cabinet\\packed\" --configuration=\"Default\" --view=\"*Render\" --hidden=false --quality=2 --renderer=solidworks --rebuild  --pack\r\n\r\n",
+      "nativeDebugging": false
+    }
+  }
+}

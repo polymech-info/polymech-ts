@@ -1,0 +1,80 @@
+{
+  "fs": [
+    {
+      "name": "list_files",
+      "description": "List all files in a directory",
+      "category": "fs"
+    },
+    {
+      "name": "read_files",
+      "description": "Reads files in a directory with a given pattern",
+      "category": "fs"
+    },
+    {
+      "name": "remove_file",
+      "description": "Remove a file at given path",
+      "category": "fs"
+    },
+    {
+      "name": "rename_file",
+      "description": "Rename or move a file or directory",
+      "category": "fs"
+    },
+    {
+      "name": "modify_project_files",
+      "description": "Modify existing project files",
+      "category": "fs"
+    },
+    {
+      "name": "create_file",
+      "description": "Creates a file, given a path and content",
+      "category": "fs"
+    },
+    {
+      "name": "file_exists",
+      "description": "check if a file or folder exists",
+      "category": "fs"
+    },
+    {
+      "name": "read_file",
+      "description": "read a file, at given a path",
+      "category": "fs"
+    }
+  ],
+  "npm": [
+    {
+      "name": "build_project",
+      "description": "Build project using pnpm build command",
+      "category": "npm"
+    },
+    {
+      "name": "run_npm",
+      "description": "Run an npm/pnpm command",
+      "category": "npm"
+    },
+    {
+      "name": "install_dependency",
+      "description": "Install a dependency using npm",
+      "category": "npm"
+    }
+  ],
+  "git": [
+    {
+      "name": "init_repository",
+      "description": "Initialize a new git repository",
+      "category": "git"
+    },
+    {
+      "name": "commit_files_git",
+      "description": "Commit files using git",
+      "category": "git"
+    }
+  ],
+  "terminal": [
+    {
+      "name": "execute_command",
+      "description": "Execute a terminal command and capture output",
+      "category": "terminal"
+    }
+  ]
+}

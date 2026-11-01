@@ -1,0 +1,434 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Photo sharing app design system - modern gradients and glass effects */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+    --card-glass: 0 0% 100% / 0.8;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 280 100% 70%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 193 76% 59%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 193 100% 70%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Photo sharing specific tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(193 76% 59%), hsl(262 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(262 83% 58% / 0.05) 100%);
+    --glass-bg: hsl(0 0% 100% / 0.8);
+    --glass-border: hsl(240 5.9% 90%);
+    --photo-shadow: 0 25px 50px -12px hsl(262 83% 58% / 0.15);
+    --glow-shadow: 0 0 40px hsl(262 83% 58% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Body Background Variables - Light Mode Defaults */
+    --body-bg: hsl(var(--background));
+    --body-bg-gradient: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(262 83% 58% / 0.05) 100%);
+    --body-bg-cover: transparent;
+    --body-font-weight: 400;
+    --body-letter-spacing: normal;
+    --body-bg-image: none;
+    --body-bg-image-size: cover;
+  }
+
+  .dark {
+    /* Material Design dark theme base - #121212 */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    /* Surface elevation system following Material Design */
+    --card: 0 0% 9%;
+    /* 1dp elevation = base + 5% white overlay */
+    --card-foreground: 0 0% 95%;
+    --card-glass: 0 0% 12% / 0.8;
+    /* Higher elevation surfaces */
+
+    --popover: 0 0% 11%;
+    /* 2dp elevation = base + 7% white overlay */
+    --popover-foreground: 0 0% 95%;
+
+    /* Accessible primary colors for dark theme */
+    --primary: 270 91% 75%;
+    /* Lighter for better accessibility */
+    --primary-foreground: 0 0% 10%;
+    --primary-glow: 280 100% 80%;
+
+    --secondary: 0 0% 15%;
+    /* 3dp elevation = base + 8% white overlay */
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    /* Better contrast for muted text */
+
+    --accent: 270 91% 75%;
+    --accent-foreground: 0 0% 10%;
+    --accent-glow: 280 100% 80%;
+
+    --destructive: 0 70% 50%;
+    /* More accessible red */
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 270 91% 75%;
+
+    /* Material Design elevation surfaces */
+    --surface-1dp: 0 0% 9%;
+    /* Cards, switches */
+    --surface-2dp: 0 0% 11%;
+    /* App bars (resting) */
+    --surface-3dp: 0 0% 12%;
+    /* Refresh indicator, search bar (resting) */
+    --surface-4dp: 0 0% 13%;
+    /* App bars (scrolled) */
+    --surface-6dp: 0 0% 14%;
+    /* FAB (resting), snackbars */
+    --surface-8dp: 0 0% 15%;
+    /* Menus, cards (picked up), switches (thumb) */
+    --surface-12dp: 0 0% 16%;
+    /* FAB (pressed) */
+    --surface-16dp: 0 0% 17%;
+    /* Navigation drawer, modal bottom sheets */
+    --surface-24dp: 0 0% 18%;
+    /* Dialogs */
+
+    /* Photo sharing specific tokens for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 75%), hsl(280 100% 80%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 91% 75%), hsl(260 85% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(270 91% 75% / 0.1) 100%);
+    --glass-bg: hsl(0 0% 12% / 0.4);
+    --glass-border: hsl(270 91% 75% / 0.2);
+    --photo-shadow: 0 25px 50px -12px hsl(270 91% 75% / 0.25);
+    --glow-shadow: 0 0 40px hsl(270 91% 75% / 0.3);
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 270 91% 75%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 270 91% 75%;
+
+    /* Body Background Variables */
+    --body-bg: hsl(var(--background));
+    --body-bg-gradient: var(--gradient-hero);
+    --body-bg-cover: url('/home-background.jpg');
+    --body-font-weight: 400;
+    --body-letter-spacing: normal;
+    --body-bg-image: url('/pattern-dark.png');
+    --body-bg-image-size: 140px;
+    /* Adjust as needed for pattern density */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    height: 100%;
+    background-color: var(--body-bg);
+    background-image: var(--body-bg-gradient);
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      height: 100%;
+      z-index: -5;
+      background: var(--body-bg-gradient);
+      pointer-events: none;
+    }
+
+    &:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      height: 100%;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      z-index: -10;
+      background-color: var(--body-bg);
+      background-image: var(--body-bg-gradient), var(--body-bg-cover);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: initial;
+      transition: background .2s linear;
+      background-size: cover;
+      pointer-events: none;
+    }
+  }
+
+  body {
+    /* @apply bg-background text-foreground; - Removing bg-background as it's handled by html/body layers now */
+    @apply text-foreground;
+    background: none;
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--body-letter-spacing);
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+    /* Changed from 9999 to avoid stacking issues with modals */
+
+    &:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      height: 100%;
+      background-attachment: initial;
+      background-color: transparent;
+      background-image: var(--body-bg-image);
+      background-size: var(--body-bg-image-size);
+      background-repeat: repeat;
+      z-index: -5;
+      pointer-events: none;
+    }
+
+    &:not(.app-init) * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+
+  /* Custom thin scrollbar */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 20px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Force background transparency in dark mode to show global pattern */
+  .dark .bg-background {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+@layer components {
+
+  /* Ensure links in prose content are clickable and styled */
+  .prose a {
+    @apply text-primary hover:text-primary/80 underline hover:no-underline transition-colors cursor-pointer;
+  }
+
+  .prose a:visited {
+    @apply text-primary/70;
+  }
+
+  /* Enhanced prose table styling */
+  .prose table {
+    @apply w-full border-collapse border border-border;
+  }
+
+  .prose thead {
+    @apply bg-muted/50;
+  }
+
+  .prose th {
+    @apply border border-border px-4 py-2 text-left font-semibold;
+  }
+
+  .prose td {
+    @apply border border-border px-4 py-2;
+  }
+
+  .prose tbody tr:hover {
+    @apply bg-muted/30;
+  }
+
+  /* Heading styles */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    scroll-margin-top: 5rem; /* offset for fixed top nav (56px) + breathing room */
+  }
+
+  .prose h1 {
+    @apply text-2xl font-bold mb-4 mt-6;
+  }
+
+  .prose h2 {
+    @apply text-xl font-bold mb-3 mt-5;
+  }
+
+  .prose h3 {
+    @apply font-semibold mb-2 mt-4;
+  }
+
+  .prose h4 {
+    @apply text-lg font-semibold mb-2 mt-3;
+  }
+
+  /* List styles */
+  .prose ul {
+    @apply list-disc pl-6 mb-4;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+
+  .prose li {
+    @apply mb-1;
+  }
+
+  /* Code blocks */
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground font-medium;
+  }
+
+  .prose pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto mb-4 text-foreground;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 text-foreground font-normal;
+  }
+
+  /* Blockquotes */
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4;
+  }
+
+  /* Paragraphs */
+  .prose p {
+    @apply mb-4;
+  }
+
+  /* Horizontal rules */
+  .prose hr {
+    @apply border-t border-border my-6;
+  }
+
+  /* Strong/Bold */
+  .prose strong {
+    @apply font-bold;
+  }
+
+  /* Emphasis/Italic */
+  .prose em {
+    @apply italic;
+  }
+}
+
+/* TikTok-style Video Player Overrides */
+@layer components {
+
+  /* Force Vidstack video to use object-contain for full video display */
+  [data-media-player] video {
+    object-fit: contain !important;
+    object-position: center !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Constrain video player to viewport */
+  [data-media-player] {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  /* Email Widget Overrides (Design View) */
+  /* Fix for "font-size: 0" hack in email templates causing invisible text in editor */
+  .html-widget-container .long-text {
+    font-size: 12px;
+    /* The inline style from the widget prop will override this if valid */
+  }
+
+  /* 
+     Reset email table structure for Editor View 
+     - Makes the gray structural background transparent
+     - Allows widgets to take full width of their container in the editor
+  */
+  .html-widget-container .vb-outer {
+    background-color: transparent !important;
+    height: auto !important;
+  }
+
+  .html-widget-container .vb-outer div {
+    max-width: 100% !important;
+  }
+
+  .html-widget-container table {
+    max-width: 100% !important;
+  }
+
+  /* RJSF Textarea Dark Mode Fix */
+  /* Textareas inherit browser defaults which show white in dark mode */
+  textarea {
+    @apply bg-background text-foreground;
+  }
+}

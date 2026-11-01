@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../polymech-mono/packages/fs"
+		}
+	],
+	"settings": {}
+}

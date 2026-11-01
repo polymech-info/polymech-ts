@@ -1,0 +1,64 @@
+{
+  "imports": [
+    {
+      "file": "./widget.osrl",
+      "parent": "tests/templates/source.md"
+    },
+    {
+      "file": "C:\\Users\\mc007\\Desktop\\osr/osrl/tests/templates/widgets/xthumb.osrl",
+      "parent": "tests/templates/source.md"
+    }
+  ],
+  "variables": {
+    "OSR_ROOT": "C:\\Users\\mc007\\Desktop\\osr",
+    "OSR_TEMP": "C:\\Users\\mc007\\AppData\\Local\\Temp\\osr",
+    "PRODUCT_ROOT": "./tests/templates//",
+    "OA_ROOT": "C:\\Users\\mc007\\Desktop\\ph3\\pp-next2",
+    "KB_ROOT": "C:\\Users\\mc007\\Desktop\\osr\\osr-kb-next",
+    "OSR_CACHE": "C:\\Users\\mc007\\.osr\\cache",
+    "OSR_LIBRARY": "C:\\Users\\mc007\\Desktop\\osr\\osr-machines",
+    "OSR_LIBRARY_MACHINES": "C:\\Users\\mc007\\Desktop\\osr\\osr-machines",
+    "OSR_USER_ASSETS": "C:\\Users\\mc007\\Desktop\\osr\\osr-user-assets",
+    "OSR_PRIVATE": "C:\\Users\\mc007\\.osr\\",
+    "OSR_TEMPLATES": "C:\\Users\\mc007\\Desktop\\osr\\osr-templates",
+    "OSR_CONTENT": "C:\\Users\\mc007\\Desktop\\osr\\osr-content",
+    "OSR_PROFILES": "C:\\Users\\mc007\\Desktop\\osr\\osr-profiles",
+    "OSR_CUSTOMER_DRIVE": "G:\\",
+    "expand": "true",
+    "root": "./tests/templates",
+    "env": "library",
+    "format2": "html",
+    "logLevel": "trace",
+    "var-area": "Sentmenat",
+    "var-location": "(Spain,Barcelona)",
+    "targetLanguage": "en",
+    "sourceLanguage": "en",
+    "cwd": "C:\\Users\\mc007\\Desktop\\osr\\osrl",
+    "abs_url": "https://assets.osr-plastic.org",
+    "CACHE": "./tests/templates/cache/",
+    "CACHE_URL": "https://assets.osr-plastic.org/cache/",
+    "GIT_REPO": "https://git.osr-plastic.org/osr-plastic/osr-machines",
+    "_OSR_MACHINES_ASSETS_URL": "https://assets.osr-plastic.org/machines/",
+    "OSR_MACHINES_ASSETS_URL": "https://assets.osr-plastic.org/machines/",
+    "PRODUCTS_ASSETS_URL": "https://assets.osr-plastic.org/machines/",
+    "OSR_FILES_WEB": "https://files.osr-plastic.org/files/osr-machines",
+    "PRODUCTS_FILES_URL": "https://files.polymech.io/files/machines/",
+    "DISCORD": "https://discord.gg/s8K7yKwBRc"
+  },
+  "includes": [
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\src\\data",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\templates\\site",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\templates\\shared",
+    "C:\\Users\\mc007\\Desktop\\osr\\products\\company\\campaign\\widgets",
+    "C:\\Users\\mc007\\Desktop\\osr\\products\\company\\campaign\\content",
+    "C:\\Users\\mc007\\Desktop\\osr\\products\\company\\campaign\\data",
+    "C:\\Users\\mc007\\Desktop\\osr\\products\\company\\commons",
+    "C:\\Users\\mc007\\Desktop\\osr\\products\\company\\commons\\widgets",
+    "C:\\Users\\mc007\\Desktop\\osr\\osr-templates\\osrl\\widgets",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\osr",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\osr\\widgets",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\_includes",
+    "C:\\Users\\mc007\\Desktop\\osr\\osrl\\tests\\templates\\widgets"
+  ]
+}

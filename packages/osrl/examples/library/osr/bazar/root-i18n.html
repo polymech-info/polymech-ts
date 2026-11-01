@@ -1,0 +1,10 @@
+[% capture my_images %]
+    [%- render "product_features.md" -%]
+[% endcapture %]
+# vars
+
+[[ my_images | i18n]]
+
+[%- i18n -%][%- i18n-end -%]
+
+#end

@@ -1,0 +1,56 @@
+[package]
+name = "tauri-app"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [ "macos-private-api", "protocol-asset", "devtools"] }
+tauri-plugin-opener = "2.5.0"
+tauri-plugin-dialog = "2.4.0"
+tauri-plugin-fs = "2.0.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+pathdiff = "0.2.3"
+dirs = "5.0.1"
+rand = "0.8"
+tauri-plugin-deep-link = "2.4.3"
+tauri-plugin-store = "2.4.0"
+tauri-plugin-log = "2.7.0"
+url = "2.5.7"
+nanoid = "0.4.0"
+image = "0.25.8"
+glob = "0.3.3"
+tauri-plugin-notification = "2.3.1"
+log = "0.4"
+tauri-plugin-os = "2"
+
+# Desktop-only dependencies (these may cause OpenSSL issues on Android)
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-http = "2.0.0"
+tauri-plugin-upload = "2.3.1"
+tauri-plugin-aptabase = "1.0.0"
+arboard = "3.6.1"
+clap = "4.5.48"
+clap_derive = "4.5.47"
+tauri-plugin-shell = "2.3.1"
+tauri-plugin-process = "2.3.0"
+tauri-plugin-clipboard-manager = "2.3.0"
+
+# Android-specific dependencies with rustls for TLS
+[target.'cfg(any(target_os = "android", target_os = "ios"))'.dependencies]
+tauri-plugin-http = { version = "2.0.0", features = ["rustls-tls"], default-features = false }
+

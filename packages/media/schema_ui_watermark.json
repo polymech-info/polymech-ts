@@ -1,0 +1,97 @@
+{
+  "ui:submitButtonOptions": {
+    "props": {
+      "disabled": false,
+      "className": "btn btn-info"
+    },
+    "norender": false,
+    "submitText": "Submit"
+  },
+  "src": {
+    "ui:description": "FILE|FOLDER|GLOB - Source file(s) to add watermark to",
+    "ui:title": "Src"
+  },
+  "dst": {
+    "ui:description": "FILE|FOLDER|GLOB - Destination for watermarked files",
+    "ui:title": "Dst"
+  },
+  "debug": {
+    "ui:description": "Enable internal debug messages",
+    "ui:title": "Debug",
+    "ui:placeholder": false
+  },
+  "alt": {
+    "ui:description": "Use alternate tokenizer, & instead of $",
+    "ui:title": "Alt",
+    "ui:placeholder": false
+  },
+  "dry": {
+    "ui:description": "Run without conversion",
+    "ui:title": "Dry",
+    "ui:placeholder": false
+  },
+  "verbose": {
+    "ui:description": "Show internal messages",
+    "ui:title": "Verbose",
+    "ui:placeholder": false
+  },
+  "logLevel": {
+    "ui:description": "Log level: warn, info, debug, error",
+    "ui:title": "Loglevel",
+    "ui:placeholder": "info"
+  },
+  "cache": {
+    "ui:description": "Skip processing if target file already exists",
+    "ui:title": "Cache",
+    "ui:placeholder": true
+  },
+  "watermark": {
+    "ui:description": "Watermark content: text string or path to image file (PNG, JPG, SVG)",
+    "ui:title": "Watermark"
+  },
+  "position": {
+    "ui:description": "Position of watermark",
+    "ui:title": "Position",
+    "ui:placeholder": "bottom-right"
+  },
+  "margin": {
+    "ui:description": "Margin from edges in pixels",
+    "ui:title": "Margin",
+    "ui:placeholder": 24
+  },
+  "opacity": {
+    "ui:description": "Opacity of watermark (0-1)",
+    "ui:title": "Opacity",
+    "ui:placeholder": 0.85
+  },
+  "sizePct": {
+    "ui:description": "Size of image watermark as percentage of base image width (0-1)",
+    "ui:title": "Sizepct",
+    "ui:placeholder": 0.2
+  },
+  "fontSize": {
+    "ui:description": "Font size for text watermark in pixels",
+    "ui:title": "Fontsize",
+    "ui:placeholder": 48
+  },
+  "color": {
+    "ui:description": "Text color (hex format, e.g., #ffffff)",
+    "ui:title": "Color",
+    "ui:placeholder": "#ffffff"
+  },
+  "fontFamily": {
+    "ui:description": "Font family for text watermark",
+    "ui:title": "Fontfamily",
+    "ui:placeholder": "Arial"
+  },
+  "strokeColor": {
+    "ui:description": "Text stroke color (hex format, e.g., #000000)",
+    "ui:title": "Strokecolor",
+    "ui:placeholder": "#000000"
+  },
+  "strokeWidth": {
+    "ui:description": "Text stroke width in pixels",
+    "ui:title": "Strokewidth",
+    "ui:placeholder": 2
+  }
+}

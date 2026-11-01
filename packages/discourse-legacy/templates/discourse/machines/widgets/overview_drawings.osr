@@ -1,0 +1,27 @@
+[%- if product.showDimensions !=false -%]
+    <h4 style="text-align: center;">Dimensions</h4>
+    <a href="[[product.product_dimensions]]">
+        <p style="text-align: center">
+            <img style="max-height:500px" src="[[product.product_dimensions]]">
+        </p>
+    </a>
+    <hr/>
+[%- endif -%]
+[%- if product.showParts !=false -%]
+<div style="padding:16px; text-align: center; ">
+    <div class="ty-vendor-plans">
+        <div class="ty-grid-list__item" style="float: left;border: 1px gray;">
+            <h4 style="text-align: center; ">Parts</h4>
+            <a href="[[product.product_parts]]">
+                <p style="text-align: center">
+                    <img style="max-height:500px" src="[[product.product_parts]]">
+                </p>
+            </a>
+        </div>
+        <div class="ty-grid-list__item" style="float: left;text-align: left;border: 1px gray;margin:auto">
+        <p style="text-align: center">[% include 'product_parts.osr' %]</p>
+        </div>
+    </div>
+    </div>
+</div>
+[%- endif -%]

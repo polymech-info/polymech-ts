@@ -1,0 +1,45 @@
+
+### Resources
+
+[% if product.forum -%]
+- [Forum]([[product.forum]])
+[% endif %]
+[%- if product.download -%]
+- [Download]([[product.download]])
+[% endif %]
+[%- if product.firmware -%]
+- [Firmware]([[product.firmware]])
+[%- endif %]
+[%- if product.Preview3d -%]
+[%- if product.edrawings -%]
+- [3D-Preview]([[product.edrawings]])
+[% else %]
+- [3D-Preview]([[OSR_MACHINES_ASSETS_URL]]/[[product.product_rel_min]]/resources/edrawings.html)
+[% endif -%]
+- [Source Code Repository]([[GIT_REPO]]/src/branch/master/[[product.rel]])
+[%-endif-%]
+[%- if product.hasSpec -%]
+- [Specification PDF]([[OSR_MACHINES_ASSETS_URL]]/[[product.product_rel_min]]/resources/spec.pdf)
+[%- endif -%]
+[% if product.howtoSection %]
+- [How-tos]([[product.howtoSection]])
+[%- endif -%]
+[% if product.library %]
+- [Library]([[product.library]])
+[% endif %]
+<hr/>
+[%- if config.show.wiki -%]
+    [%- if product.wiki_articles -%]
+<h4>Wiki Articles</h4>
+[%- include "product_wiki.osr" category:product.wiki_articles -%]
+    [%- else -%]
+    [%- endif -%]
+[%- else -%]
+[%- endif -%]
+[%- if config.show.forum -%]
+    [%- if product.forumCategory -%]
+<h4>Forum Posts</h4>
+[%- include "product_forum.osr" category:product.forumCategory -%]
+    [%- endif -%]
+[%- endif -%]
+[%- include "extra_resources.md" -%]

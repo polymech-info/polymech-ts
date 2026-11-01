@@ -1,0 +1,18 @@
+[%js%]
+let p = PRODUCT_ROOT;
+const _path = path.resolve(PRODUCT_ROOT + './specs.xlsx'); 
+if(!fs.exists(_path)){
+    console.warn('cant find specs', _path)
+    return
+}
+let data = xlsx.parse(_path);
+data[0].data = data[0].data.filter((d)=>d.length >0);
+data = markdownTable(data[0].data);
+if(html){
+    return md2html(data);
+}else{
+
+    data;
+
+}
+[%endjs%]

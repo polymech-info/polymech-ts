@@ -1,0 +1,53 @@
+{
+  "name": "@polymech/registry",
+  "description": "",
+  "version": "0.1.0",
+  "typings": "index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "polymech-registry": "main.js"
+  },
+  "dependencies": {
+    "@keyv/sqlite": "^4.0.6",
+    "@polymech/commons": "file:../commons",
+    "@polymech/core": "file:../core",
+    "@polymech/fs": "file:../fs",
+    "@polymech/log": "file:../log",
+    "@types/node": "^24.10.1",
+    "env-var": "^7.0.1",
+    "keyv": "^5.5.4",
+    "keyv-file": "^5.3.3",
+    "p-map": "^4.0.0",
+    "tslog": "^4.10.2",
+    "typescript": "^4.9.5",
+    "yargs": "^18.0.0"
+  },
+  "scripts": {
+    "test": "tsc; mocha --full-trace mocha \"spec/**/*.spec.js\"",
+    "test-with-coverage": "istanbul cover node_modules/.bin/_mocha -- 'spec/**/*.spec.js'",
+    "lint": "tslint --project=./tsconfig.json",
+    "build": "tsc -p .",
+    "dev": "tsc -p . --declaration -w",
+    "typings": "tsc --declaration",
+    "docs": "npx typedoc src/index.ts",
+    "dev-test-watch": "mocha-typescript-watch"
+  },
+  "homepage": "https://git.osr-plastic.org/plastichub/lib-content",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/plastichub/lib-content.git"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "typescript"
+  ]
+}

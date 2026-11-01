@@ -1,0 +1,17 @@
+{
+	"extends": "../typescript-config/base.json",
+	"include": [
+		"src/**/*.ts",
+		"tests/**/*.ts"
+	],
+	"files": [
+		"src/index.ts"
+	],
+	"compilerOptions": {
+		"allowJs": true,
+		"declarationDir": "./dist",
+		"outDir": "./dist",
+		"sourceMap": true,
+		"preserveConstEnums": true
+	},
+}

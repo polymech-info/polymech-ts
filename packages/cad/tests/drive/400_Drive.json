@@ -1,0 +1,24 @@
+[
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.SLDASM",
+    "IsLaser": "1",
+    "Total Bounding Box Length": "929.22",
+    "Total Bounding Box Width": "590.49",
+    "Total Bounding Box Thickness": "146.11",
+    "Total Bounding Box Volume": "80172719.16"
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\Round_Bar_Handle.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\HandleMount.SLDPRT"
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\HubAxle.SLDPRT",
+    "Based On": "HubAxle",
+    "Weight": "301.18"
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.SLDASM"
+  }
+]

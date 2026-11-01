@@ -1,0 +1,20 @@
+{
+  "translate-es": {
+    "name": "Translate to Spanish (es)",
+    "command": "pm-i18n",
+    "args": "translate --src=\"$(FullName)\" --dstLang='es'",
+    "description": "Translate file to Spanish (auto-detects source language)"
+  },
+  "translate-fr": {
+    "name": "Translate to French (fr)",
+    "command": "pm-i18n",
+    "args": "translate --src=\"$(FullName)\" --dstLang='fr'",
+    "description": "Translate file to French (auto-detects source language)"
+  },
+  "translate-en": {
+    "name": "Translate to English (en)",
+    "command": "pm-i18n",
+    "args": "translate --src=\"$(FullName)\" --dstLang='en'",
+    "description": "Translate file to English (auto-detects source language)"
+  }
+}

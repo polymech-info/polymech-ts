@@ -1,0 +1,32 @@
+{
+  "resize": {
+    "name": "Product Description",
+    "command": "kbot-d",
+    "args": "modify --prompt=\"&{POLYMECH-ROOT}/nordin-exe/templates/product-description.md\" --alt=true --logLevel=3 --include=\"$(FullName)\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_description.md\" --mode=completion",
+    "description": "Generate product description"
+  },
+  "transcribe": {
+    "name": "Transcribe Audio",
+    "command": "kbot-d",
+    "args": "transcribe --include=\"$(FullName)\" --alt=true --dst=\"&{SRC_DIR}/&{SRC_NAME}.md\"",
+    "description": "Transcribe audio file"
+  },
+  "remove-background": {
+    "name": "Remove Background",
+    "command": "kbot-d",
+    "args": "image \"remove the background\" --alt=true --include=\"$(FullName)\" --dst=\"&{SRC_DIR}/&{SRC_NAME}_no_bg.png\"",
+    "description": "Remove background from an image"
+  },
+  "create-as-image": {
+    "name": "Create as Image",
+    "command": "kbot-d",
+    "args": "image --alt=true --prompt=\"$(FullName)\" --dst=\"&{SRC_DIR}/&{SRC_NAME}.png\"",
+    "description": "Create an image from a text file"
+  },
+  "edit-image-gui": {
+    "name": "Edit Image GUI",
+    "command": "kbot-d",
+    "args": "image --alt=true --gui=true --include=\"$(FullName)\" --dst=\"&{SRC_DIR}/&{SRC_NAME}.png\"",
+    "description": "Edit an image using a GUI"
+  }
+}

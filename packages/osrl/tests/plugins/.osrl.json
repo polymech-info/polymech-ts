@@ -1,0 +1,66 @@
+{
+    "includes": [
+        "${PRODUCT_ROOT}",
+        "${PRODUCT_ROOT}/templates/site/",
+        "${PRODUCT_ROOT}/templates/shared/",
+        "${root}/osr",
+        "${root}/osr/widgets",
+        "${root}/_includes",        
+        "${root}/templates/site/",
+        "./widgets"
+    ],
+    "variables": {
+        "PRODUCT_ROOT": "${root}/${product}/",
+        "abs_url": "https://assets.osr-plastic.org",
+        "CACHE": "${root}/cache/",
+        "CACHE_URL": "${abs_url}/cache/",
+        "GIT_REPO": "https://git.osr-plastic.org/osr-plastic/osr-machines",
+        "OSR_MACHINES_ASSETS_URL":"https://assets.osr-plastic.org/machines/",
+        "PRODUCTS_ASSETS_URL":"https://assets.osr-plastic.org/machines/${product}",
+        "OSR_FILES_WEB":"https://files.osr-plastic.org/files/osr-machines",
+        "PRODUCTS_FILES_URL":"${OSR_FILES_WEB}/${product_rel}",
+        "DISCORD":"https://discord.gg/s8K7yKwBRc"
+    },
+    "env": {
+        "bazar":{
+            "includes": [
+                "${PRODUCT_ROOT}/templates/bazar",
+                "${PRODUCT_ROOT}/templates/shared/",
+                "${root}/osr",
+                "${root}/osr/widgets",
+                "${PRODUCT_ROOT}"                
+            ],
+            "variables": {
+                "abs_url": "https://dev.osr-plastic.org/"
+            }
+        },
+        "bazar-release":{
+            "includes": [
+                "${PRODUCT_ROOT}/templates/bazar",
+                "${PRODUCT_ROOT}/templates/shared/",
+                "${root}/osr",
+                "${root}/osr/widgets",
+                "${PRODUCT_ROOT}"                
+            ],
+            "variables": {
+                "abs_url": "https://plastic-hub.com/",
+                "OSR_MACHINES_ASSETS_URL":"https://assets.osr-plastic.org/machines/"
+            }
+        },
+        "hugo-debug":{
+            "includes": [
+                "${PRODUCT_ROOT}/templates/bazar",
+                "${PRODUCT_ROOT}/templates/shared/",
+                "${root}/osr",
+                "${root}/osr/widgets",
+                "${PRODUCT_ROOT}"                
+            ],
+            "variables": {
+                "abs_url": "https://plastic-hub.com/",
+                "OSR_MACHINES_ASSETS_URL":"https://assets.osr-plastic.org:433"
+            }
+        }
+        
+    }
+
+}

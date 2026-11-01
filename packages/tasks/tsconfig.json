@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES2020",
+		"allowJs": true,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"alwaysStrict": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"inlineSourceMap": false,
+		"sourceMap": true,
+		"pretty": false,
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true
+	},
+	"include": [
+		"./index.ts",
+		"./src/main.ts",
+		"./library.ts",
+		"./Gruntfile.ts",
+		"./tasks/**/*.ts"
+	]
+}

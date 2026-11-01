@@ -1,0 +1,25 @@
+{% capture my_images %}
+    {{ 'images_rel("${ROOT}/assets/","${ROOT}")' | jsexp }}
+{% endcapture %}
+
+My Images : {{my_images}}
+
+{% for item in my_images %}
+    item : {{item}}
+{% endfor %}
+
+Scope : {{ 'JSON.stringify(scope,null,2)' | jsexp }}
+
+[% js %]
+<script>
+	let images = images_rel("${ROOT}/assets/", "${ROOT}");
+    return images.map((i)=>`image : ${i}`).join('\n');
+</script>
+[%endjs%]
+
+
+[% js %]
+<script>
+	return YAML.stringify(scope);
+</script>
+[%endjs%]

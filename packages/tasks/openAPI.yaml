@@ -1,0 +1,165 @@
+components:
+  schemas:
+    ICompileOptions:
+      type: object
+      properties:
+        logLevel:
+          type: string
+          enum: &a2
+            - silly
+            - trace
+            - debug
+            - info
+            - warn
+            - error
+            - fatal
+          default: info
+        root:
+          type: string
+          default: C:\Users\mc007\Desktop\osr\osr-tasks
+        cwd:
+          type: string
+          default: C:\Users\mc007\Desktop\osr\osr-tasks
+        env:
+          type: string
+          default: hugo-debug
+        format:
+          type: string
+          default: html
+        language:
+          type: string
+          default: osr
+        output:
+          type: string
+          default: ""
+        template:
+          type: string
+        profile:
+          type: string
+          default: ${OSR_ROOT}/osr-templates/osrl/.osrl.json
+        plugins:
+          type: string
+          default: ${OSR_ROOT}/osr-templates/osrl/.osrl.json
+        cache:
+          type: boolean
+          default: true
+        module:
+          type: string
+          default: osr-site
+        variables:
+          allOf:
+            - type: object
+              properties:
+                targetLanguage:
+                  type: string
+                  enum: &a1
+                    - en
+                    - pt
+                    - bg
+                    - cs
+                    - da
+                    - de
+                    - el
+                    - es
+                    - et
+                    - fi
+                    - fr
+                    - hu
+                    - id
+                    - it
+                    - ja
+                    - ko
+                    - lt
+                    - lv
+                    - nb
+                    - nl
+                    - pl
+                    - ro
+                    - ru
+                    - sk
+                    - sl
+                    - sv
+                    - tr
+                    - uk
+                    - zh
+                  default: en
+                sourceLanguage:
+                  anyOf:
+                    - type: string
+                      enum: *a1
+                    - type: string
+                      enum:
+                        - en-GB
+                        - en-US
+                        - pt-BR
+                        - pt-PT
+                  default: en
+                i18n:
+                  type: string
+                  default: C:\Users\mc007\Desktop\osr
+            - type: object
+              additionalProperties:
+                nullable: true
+          default:
+            targetLanguage: en
+            sourceLanguage: en
+            i18n: C:\Users\mc007\Desktop\osr
+      description: ICompileOptions
+    ICompileTaskOptions:
+      type: object
+      properties:
+        logLevel:
+          type: string
+          enum: *a2
+          default: info
+        sourceLanguage:
+          type: string
+          enum: *a1
+          default: en
+        languages:
+          anyOf:
+            - type: array
+              items:
+                type: string
+                enum: *a1
+            - type: string
+          default:
+            - en
+        src:
+          type: array
+          items:
+            type: string
+          default: []
+        taskPrefix:
+          type: string
+          default: content
+        taskSuffix:
+          type: string
+          default: ""
+        tasksBefore:
+          type: array
+          items:
+            type: string
+          default: []
+        tasksAfter:
+          type: array
+          items:
+            type: string
+          default: []
+        watchContent:
+          type: boolean
+          default: false
+        clear:
+          type: boolean
+          default: false
+        debugWatch:
+          type: boolean
+          default: false
+        onCompile:
+          nullable: true
+        onCompiled:
+          nullable: true
+        onCompileDone:
+          nullable: true
+      description: ICompileTaskOptions
+  parameters: {}

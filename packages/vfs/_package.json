@@ -1,0 +1,78 @@
+{
+    "name": "@plastichub/osr-vfs",
+    "version": "0.0.1",
+    "description": "Virtual File System Lib & CLI",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "help": "node build/main.js --help",
+        "build": "tsc -p .",
+        "dev": "tsc -w -p .",
+        "publish": "npm publish --access public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://git.osr-plastic.org/osr-plastic/osr-vfs.git"
+    },
+    "author": "PlasticHub",
+    "bin": {
+        "osr-vfs": "main.js"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@plastichub/core": "^0.2.6",
+        "@plastichub/fs": "^0.13.39",
+        "@plastichub/osr-cache": "^0.3.8",
+        "@plastichub/osr-commons": "file:../osr-commons",
+        "@plastichub/osr-sync": "^0.1.8",
+        "@types/cacache": "^15.0.1",
+        "@types/is-glob": "^4.0.1",
+        "@types/ssh2-sftp-client": "^9.0.0",
+        "add": "^2.0.6",
+        "axios": "^0.21.1",
+        "bluebird": "^3.7.2",
+        "cacache": "^17.0.5",
+        "duration-timestamp": "^2.3.0",
+        "errlop": "^2.1.0",
+        "escape-html": "^1.0.3",
+        "fast-glob": "^3.1.1",
+        "filenamify": "^4.1.0",
+        "glob-base": "^0.3.0",
+        "is-glob": "^4.0.1",
+        "md5": "^2.3.0",
+        "moment": "^2.30.1",
+        "native-promise-pool": "^3.0.0",
+        "parse-glob": "^2.0.1",
+        "regexp.escape": "^1.1.0",
+        "sanitize-filename": "^1.6.3",
+        "slash": "^3.0.0",
+        "slugify": "^1.4.6",
+        "source-map-support": "^0.5.16",
+        "ssh2-sftp-client": "^9.0.4",
+        "tslint": "^5.10.0",
+        "typescript": "^3.9.10",
+        "which": "^2.0.2",
+        "yargonaut": "^1.1.4",
+        "yargs": "^15.4.1"
+    },
+    "devDependencies": {
+        "@bevry/links": "^1.2.0",
+        "@bevry/update-contributors": "^1.23.0",
+        "@types/moment": "^2.13.0",
+        "@types/node": "^13.13.52",
+        "@types/node-fetch": "^2.6.12",
+        "@types/pretty": "^2.0.3",
+        "@types/which": "^1.3.2",
+        "@types/yargs": "^13.0.12",
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
+        "@typescript-eslint/parser": "^2.34.0",
+        "assert-helpers": "^6.19.0",
+        "eslint": "^6.8.0",
+        "eslint-config-bevry": "^3.29.0",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-prettier": "^3.4.1",
+        "prettier": "^2.8.8"
+    }
+}

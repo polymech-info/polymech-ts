@@ -1,0 +1,430 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/MD/Glossary",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--logLevel=debug",
+                "--cache=false",
+                "--glossary=true",
+                "--formality=more",
+                "--src='./tests/EN/glossary-*.md'",
+                "--dstI='./tests/EN/glossary-*.md'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/DE",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='EN'",
+                "--srcLang='DE'",
+                "--filters=Hugo",
+                "--debug",
+                "--src='./tests/DE/*.md'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Text",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='FR'",
+                "--srcLang='DE'",
+                "--logLevel=debug",
+                "--text='Auf die inneren Werte kommt es an :)'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/toml",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--keys='name'",
+                "--src='./tests/*.toml'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/ Hugo Toml",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='FR'",
+                "--srcLang='EN'",
+                "--debug",
+                "--noCache",
+                "--keys='name'",
+                "--src='./tests/toml/menus*.toml'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.${DST_LANG}${SRC_EXT}'"
+
+
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/ Hugo Toml - Single",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='FR'",
+                "--srcLang='EN'",
+                "--debug",
+                "--noCache",
+                "--keys='name'",
+                "--src='./tests/_toml/menus.en.toml'",
+                "--dst='./tests/_toml/${SRC_NAME.0}.${DST_LANG}${SRC_EXT}'",
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests YAML - Single",
+            "skipFiles": [],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--glossary",
+                "--noCache",
+                "--keys='translation'",
+                "--src='./tests/yml/en2.yaml'",
+                "--dst='./tests/yml/de2.yaml'",
+            ],
+            "cwd": "${workspaceFolder}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate:YAML:CreateGlossary",
+            "skipFiles": [],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+            "args": [
+                "translate",
+                "--dstLang=de",
+                "--srcLang=en",
+                "--debug",
+                "--glossary",
+                "--createGlossary=true",
+                "--logLevel=debug",
+                "--cache=false",
+                "--stdout=true",
+                "--keys=translation",
+                "--src='./tests/yml/en2.yaml'",
+                "--dst='./tests/yml/de2.yaml'",
+            ],
+            "cwd": "${workspaceFolder}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/toml",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--keys='name'",
+                "--src='./tests/*.toml'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "translate:xlsx",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='ES'",
+                "--srcLang='EN'",
+                "--debug=false",
+                "--src='./tests/EN/xls/specs-shredder.xlsx'",
+                "--query='$[*][0,1,2,3,4]'",
+                "--cache=false",
+                "--logLevel=trace"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/xlsx - AIt",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/lib/async-iterator-test.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std",
+            "sourceMaps": true
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/hugo/xlsx",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='ES,FR,DE,IT'",
+                "--srcLang='EN'",
+                "--debug",
+                "--src='./tests/hugo/*-en.xlsx'",
+                "--query='$[*][0,1]'",
+                "--cache=false",
+                "--dst='./tests/hugo/${SRC_NAME-0}-${DST_LANG}.xlsx'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/xlsx - DE",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--src='./tests/EN/xls/specs*.xlsx'",
+                "--query='$[*][0,1]'",
+                "--cache=false"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Tests/cs-cart-cats",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--cache=false",
+                "--keys='category'",
+                "--src=\"${OSR_CACHE}/cs-cart/latest/en/categories.json\"",
+                "--dst=\"${OSR_CACHE}/cs-cart/latest/${DST_LANG}/${SRC_NAME}${SRC_EXT}\""
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Glossary - Create - EN->DE",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "glossary",
+                "create",
+                "--name='pp'",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug=true",
+                "--src='${OSR_ROOT}/osr-i18n-store/glossary/en/de/*.csv'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Academy",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--cwd=../hugoplayground2/src",
+                "--src=../hugoplayground2/src/academy/**/*.md",
+                "--filters='Hugo'",
+                "--dst=../osr-kb-test/src/academy/de/${SRC_REL}/${SRC_NAME}${SRC_EXT}"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - Academy - ES",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='ES'",
+                "--srcLang='EN'",
+                "--debug",
+                "--cwd=../hugoplayground2/src",
+                "--src=../hugoplayground2/src/academy/**/*.md",
+                "--dst='${OSR_ROOT}/osr-string-exchange/academy/${DST_LANG}/${SRC_REL}/${SRC_NAME}${SRC_EXT}'"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Translate - CS-CART - Products",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "translate",
+                "--dstLang='DE'",
+                "--srcLang='EN'",
+                "--debug",
+                "--keys=full_description,short_description",
+                "--src=\"${OSR_CACHE}/cs-cart/latest/en/*.json\"",
+                "--dst=\"${OSR_CACHE}/cs-cart/latest/${DST_LANG}/${SRC_NAME}${SRC_EXT}\""
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}

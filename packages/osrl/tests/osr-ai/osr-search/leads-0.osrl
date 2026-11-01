@@ -1,0 +1,26 @@
+[% assign area = "Sentmenat" %]
+[% assign location = "(Spain, Barcelona)" %]
+
+[% osr-ai model:"gpt-4o" cache:false gui:false logLevel:"warn" filters:"code,JSONParse" dst:"${SRC_DIR}/${SRC_NAME}-sentmenat.json" assign:"areas" %]
+    - List 20 'polygonos' (industrial areas) next to [[area]] [[location]]
+    - as json array
+    - dont comment
+[% osr-ai-end %]
+
+[%- for area_item in areas %]
+##  [[area_item]]
+[%- capture area_query -%]
+    List essential geo data [[area_item]] [[location]], as Markdown bullet list, with links, dont add a chapter:
+    - Link to Google Maps
+    - Link to Wikipedia
+    - Size of Population
+    - type of industries
+    - Next major city / town
+    - Distance to [[area]] [[location]] (in kilometers)
+[%- endcapture -%]
+[%- osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code" assign:"area_result" -%]
+    [[-area_query-]]
+[%- osr-ai-end -%]
+[[-area_result-]]
+
+[%- endfor -%]

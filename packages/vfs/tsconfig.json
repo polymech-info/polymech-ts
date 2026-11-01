@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES5",
+		"allowJs": false,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"alwaysStrict": true,
+		"inlineSourceMap": true,
+		"outDir": "./",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"pretty": true,
+		"baseUrl": "./src",
+		"rootDir": "./src",
+		"watch": false,
+		"allowSyntheticDefaultImports": true
+	},
+	"compileOnSave": false,	
+	"filesGlob": [
+		"./src/**/*.ts"
+	],
+	"files": [
+		"./src/index.ts",
+		"./src/main.ts"
+	]
+}

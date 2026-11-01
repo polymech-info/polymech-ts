@@ -1,0 +1,7 @@
+[%js%]
+let p = PRODUCT_ROOT;
+const _path = path.resolve(PRODUCT_ROOT + './parts.xlsx');
+const data = xlsx.parse(_path);
+data[0].data = data[0].data.filter((d) => !!d.length);
+return md2html(markdownTable(data[0].data));
+[%endjs%]

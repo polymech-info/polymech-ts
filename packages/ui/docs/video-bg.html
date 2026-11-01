@@ -1,0 +1,45 @@
+<div class="relative flex flex-col justify-end overflow-hidden bg-gray-100 dark:bg-gray-900 bg-cover bg-center"
+    style="min-height: 500px; max-height: 80vh; background-image: url('https://service.polymech.info/api/images/render?url=https%3A%2F%2Fytoadlpbdguriiccjnip.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fpictures%2F3bb4cfbf-318b-44d3-a9d3-35680e738421%2F1772547102918-version.png&width=1280&format=avif');">
+    <video class="absolute inset-0 w-full h-full object-cover"
+        src="http://localhost:3333/api/videos/jobs/1cb36a43-e781-40da-bee8-b0e82b156bf4/hls/playlist.m3u8"
+        poster="https://service.polymech.info/api/images/render?url=https%3A%2F%2Fytoadlpbdguriiccjnip.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fpictures%2F3bb4cfbf-318b-44d3-a9d3-35680e738421%2F1772547102918-version.png&width=1280&format=avif"
+        preload="metadata" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+    <!-- Pause/Play toggle (WCAG 2.2.2) -->
+    <button
+        onclick="var v=this.closest('div').querySelector('video'); if(v.paused){v.play();this.textContent='⏸'}else{v.pause();this.textContent='▶'}"
+        class="absolute top-3 right-3 z-20 bg-black/40 hover:bg-black/60 text-white rounded-full w-9 h-9 flex items-center justify-center text-sm transition-colors"
+        aria-label="Pause or play background video" title="Pause/Play video">⏸</button>
+
+    <div class="relative z-10 w-full pt-16 sm:pt-20 pb-4 sm:pb-6">
+        <div class="bg-black/10 dark:bg-black/60 px-5 sm:px-8 lg:px-10 py-6 sm:py-8">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white drop-shadow-lg max-w-4xl">
+                Polymer Processing Equipment &amp; Engineering Solutions
+            </h1>
+            <p class="mt-2 sm:mt-3 text-sm sm:text-base lg:text-lg text-gray-200 drop-shadow max-w-3xl">
+                Extrusion, compounding &amp; recycling systems for education, labs, and small-scale production — backed
+                by our knowledgebase, custom software, and manufacturing services.
+            </p>
+            <div class="mt-4 sm:mt-5 flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+                <a href="/categories/products"
+                    class="inline-block text-center bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white font-semibold py-2.5 sm:py-2 px-5 rounded-md transition-colors">
+                    Explore Products
+                </a>
+                <a href="/user/cgo/pages/about-contact"
+                    class="inline-block text-center bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-semibold py-2.5 sm:py-2 px-5 rounded-md transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reduced-motion: pause video for users who prefer less motion (WCAG) -->
+<style>
+    @media (prefers-reduced-motion: reduce) {
+        video {
+            display: none !important;
+        }
+    }
+</style>

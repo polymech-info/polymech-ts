@@ -1,0 +1,1 @@
+kbot "as short and descriptive text, format tool_category:function(param,?param):short description, function_foo(param?):short description, ... , write to tools.md" --glob="tools.json"

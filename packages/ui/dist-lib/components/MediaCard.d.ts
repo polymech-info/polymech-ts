@@ -1,0 +1,30 @@
+import { default as React } from 'react';
+import { MediaType } from '../lib/mediaRegistry';
+interface MediaCardProps {
+    id: string;
+    pictureId?: string;
+    url: string;
+    thumbnailUrl?: string | null;
+    title: string;
+    author: string;
+    authorId: string;
+    likes: number;
+    comments: number;
+    isLiked?: boolean;
+    description?: string | null;
+    type: MediaType;
+    meta?: any;
+    responsive?: any;
+    onClick?: (id: string) => void;
+    onLike?: () => void;
+    onDelete?: () => void;
+    onEdit?: (id: string) => void;
+    created_at?: string;
+    authorAvatarUrl?: string | null;
+    showContent?: boolean;
+    job?: any;
+    variant?: 'grid' | 'feed';
+    apiUrl?: string;
+}
+declare const MediaCard: React.FC<MediaCardProps>;
+export default MediaCard;

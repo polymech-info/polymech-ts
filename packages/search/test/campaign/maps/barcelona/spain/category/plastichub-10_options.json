@@ -1,0 +1,34 @@
+{
+  "query": "plastichub",
+  "engine": "google_maps",
+  "type": "search",
+  "q": "plastichub",
+  "ll": "@41.6911354,2.1652746,13z",
+  "google_domain": "google.com",
+  "hl": "en",
+  "api_key": "hidden",
+  "cache": false,
+  "category": "category",
+  "dst": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\search\\test\\campaign\\maps\\barcelona\\spain\\category\\plastichub-10.xls",
+  "env_key": "OSR-CONFIG",
+  "findEMail": false,
+  "geocode_key": "hidden",
+  "headless": true,
+  "language": "en",
+  "limit": 5,
+  "logLevel": "info",
+  "meta": true,
+  "searchCache": false,
+  "searchCoord": "@41.3825802,2.1770730,13z",
+  "searchFrom": "barcelona, spain",
+  "source": {
+    "category": [
+      "plastichub"
+    ]
+  },
+  "zoom": 13,
+  "index": "C:\\Users\\zx\\Desktop\\osr\\osr-directory\\meta\\index.json",
+  "store": "C:\\Users\\zx\\Desktop\\osr\\osr-directory\\meta\\index.db",
+  "openai": "hidden",
+  "bigdata": "hidden"
+}

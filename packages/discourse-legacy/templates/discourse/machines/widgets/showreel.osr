@@ -1,0 +1,7 @@
+[%js%]
+if(fs.images(`${PRODUCT_ROOT}/media/products`).length){
+    const t = html.thumbs(`${abs_url}/${product}/media/products`,`${PRODUCT_ROOT}/media/products`);
+    return `<h4 style="text-align:center">Products done with ${store.product.name}</h4>
+    ${t}`;
+}
+[%endjs%]

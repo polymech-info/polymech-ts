@@ -1,0 +1,222 @@
+[
+  {
+    "code": 0,
+    "command": "model-reader.exe  --source=\"C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.SLDASM\" --target=\"C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.json\"",
+    "messages": [
+      "Changed Configuration: Default",
+      "Serialized to C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.json",
+      "Serialized Tree to C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.tree.json"
+    ],
+    "src": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+    "target": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.json",
+    "failed": false,
+    "options": {
+      "src": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+      "dst": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\*.+(json)",
+      "debug": false,
+      "verbose": true,
+      "dry": false,
+      "cache": false,
+      "hidden": "true",
+      "renderer": "Solidworks",
+      "alt": false,
+      "quality": 2,
+      "logLevel": "trace",
+      "width": "1024",
+      "height": "1024",
+      "script": "convert.exe",
+      "sw": 2024,
+      "swv": 32,
+      "configuration": "Default",
+      "report": "${SRC_DIR}/cad-report-${CONFIGURATION}.json",
+      "pack": false,
+      "light": false,
+      "rebuild": false,
+      "save": false,
+      "variables": {
+        "SRC_PATH": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+        "SRC_DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "SRC_NAME": "*",
+        "SRC_FILE_NAME": "*.+(SLDASM)",
+        "SRC_FILE_EXT": "+(SLDASM)",
+        "SRC_IS_FILE": false,
+        "SRC_IS_FOLDER": false,
+        "SRC_IS_EXPRESSION": false,
+        "SRC_IS_GLOB": true,
+        "SRC_GLOB": "*.+(SLDASM)",
+        "SRC_GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "SRC_FILES": [
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/SubAssembly.SLDASM"
+        ],
+        "DST_PATH": "${SRC_DIR}/${SRC_NAME}.+(json)",
+        "DST_DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "DST_NAME": "*",
+        "DST_FILE_NAME": "\\*.+(json)",
+        "DST_FILE_EXT": "+(json)",
+        "DST_IS_FILE": false,
+        "DST_IS_FOLDER": false,
+        "DST_IS_EXPRESSION": false,
+        "DST_IS_GLOB": true,
+        "DST_GLOB": "\\*.+(json)",
+        "DST_GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "DST_FILES": []
+      },
+      "view": "Render",
+      "args": "",
+      "bom-config": "Default",
+      "bom-detail": 1,
+      "bom-type": 2,
+      "bom-images": false,
+      "srcInfo": {
+        "PATH": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+        "DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "*",
+        "FILE_NAME": "*.+(SLDASM)",
+        "FILE_EXT": "+(SLDASM)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "*.+(SLDASM)",
+        "GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "FILES": [
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/SubAssembly.SLDASM"
+        ]
+      },
+      "dstInfo": {
+        "PATH": "${SRC_DIR}/${SRC_NAME}.+(json)",
+        "DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "*",
+        "FILE_NAME": "\\*.+(json)",
+        "FILE_EXT": "+(json)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "\\*.+(json)",
+        "GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "FILES": []
+      }
+    }
+  },
+  {
+    "code": 0,
+    "command": "model-reader.exe  --source=\"C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.SLDASM\" --target=\"C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.json\"",
+    "messages": [
+      "Failed to change configuration C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.SLDASM : Default",
+      "Serialized to C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.json",
+      "Serialized Tree to C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.tree.json"
+    ],
+    "src": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/SubAssembly.SLDASM",
+    "target": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.json",
+    "failed": false,
+    "options": {
+      "src": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+      "dst": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\*.+(json)",
+      "debug": false,
+      "verbose": true,
+      "dry": false,
+      "cache": false,
+      "hidden": "true",
+      "renderer": "Solidworks",
+      "alt": false,
+      "quality": 2,
+      "logLevel": "trace",
+      "width": "1024",
+      "height": "1024",
+      "script": "convert.exe",
+      "sw": 2024,
+      "swv": 32,
+      "configuration": "Default",
+      "report": "${SRC_DIR}/cad-report-${CONFIGURATION}.json",
+      "pack": false,
+      "light": false,
+      "rebuild": false,
+      "save": false,
+      "variables": {
+        "SRC_PATH": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+        "SRC_DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "SRC_NAME": "*",
+        "SRC_FILE_NAME": "*.+(SLDASM)",
+        "SRC_FILE_EXT": "+(SLDASM)",
+        "SRC_IS_FILE": false,
+        "SRC_IS_FOLDER": false,
+        "SRC_IS_EXPRESSION": false,
+        "SRC_IS_GLOB": true,
+        "SRC_GLOB": "*.+(SLDASM)",
+        "SRC_GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "SRC_FILES": [
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/SubAssembly.SLDASM"
+        ],
+        "DST_PATH": "${SRC_DIR}/${SRC_NAME}.+(json)",
+        "DST_DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "DST_NAME": "*",
+        "DST_FILE_NAME": "\\*.+(json)",
+        "DST_FILE_EXT": "+(json)",
+        "DST_IS_FILE": false,
+        "DST_IS_FOLDER": false,
+        "DST_IS_EXPRESSION": false,
+        "DST_IS_GLOB": true,
+        "DST_GLOB": "\\*.+(json)",
+        "DST_GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "DST_FILES": []
+      },
+      "view": "Render",
+      "args": "",
+      "bom-config": "Default",
+      "bom-detail": 1,
+      "bom-type": 2,
+      "bom-images": false,
+      "srcInfo": {
+        "PATH": "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/*.+(SLDASM)",
+        "DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "*",
+        "FILE_NAME": "*.+(SLDASM)",
+        "FILE_EXT": "+(SLDASM)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "*.+(SLDASM)",
+        "GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "FILES": [
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+          "C:/Users/zx/Desktop/osr/osr-cad/tests/drive/SubAssembly.SLDASM"
+        ]
+      },
+      "dstInfo": {
+        "PATH": "${SRC_DIR}/${SRC_NAME}.+(json)",
+        "DIR": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "*",
+        "FILE_NAME": "\\*.+(json)",
+        "FILE_EXT": "+(json)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "\\*.+(json)",
+        "GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "FILES": []
+      }
+    }
+  }
+]

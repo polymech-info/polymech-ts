@@ -1,0 +1,20 @@
+import { logger } from '../index.js';
+import { types } from '../lib/index.js';
+const defaultOptions = (yargs) => {
+    return yargs.option('debug', {
+        default: 'false',
+        describe: 'debug messages'
+    });
+};
+let options = (yargs) => defaultOptions(yargs);
+export const register = (cli) => {
+    return cli.command('types', 'generate types', options, async (argv) => {
+        if (argv.help) {
+            return;
+        }
+        logger.settings.minLevel = argv.logLevel || 2;
+        logger.info('generating types');
+        types();
+    });
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHlwZXMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29tbWFuZHMvdHlwZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0EsT0FBTyxFQUFFLE1BQU0sRUFBRSxNQUFNLGFBQWEsQ0FBQTtBQUNwQyxPQUFPLEVBQUUsS0FBSyxFQUFFLE1BQU0saUJBQWlCLENBQUE7QUFFdkMsTUFBTSxjQUFjLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRTtJQUN2QyxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUMsT0FBTyxFQUFFO1FBQ3pCLE9BQU8sRUFBRSxPQUFPO1FBQ2hCLFFBQVEsRUFBRSxnQkFBZ0I7S0FDN0IsQ0FBQyxDQUFBO0FBQ04sQ0FBQyxDQUFDO0FBRUYsSUFBSSxPQUFPLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRSxDQUFDLGNBQWMsQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUV6RCxNQUFNLENBQUMsTUFBTSxRQUFRLEdBQUcsQ0FBQyxHQUFhLEVBQUUsRUFBRTtJQUN0QyxPQUFPLEdBQUcsQ0FBQyxPQUFPLENBQUMsT0FBTyxFQUFFLGdCQUFnQixFQUFFLE9BQU8sRUFBRSxLQUFLLEVBQUUsSUFBbUIsRUFBRSxFQUFFO1FBQ2pGLElBQUksSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO1lBQUMsT0FBTTtRQUFDLENBQUM7UUFDekIsTUFBTSxDQUFDLFFBQVEsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFFBQWUsSUFBSSxDQUFDLENBQUE7UUFDcEQsTUFBTSxDQUFDLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxDQUFBO1FBQy9CLEtBQUssRUFBRSxDQUFBO0lBQ1gsQ0FBQyxDQUFDLENBQUE7QUFDTixDQUFDLENBQUEifQ==

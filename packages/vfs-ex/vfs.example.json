@@ -1,0 +1,28 @@
+[
+  {
+    "name": "local-documents",
+    "type": "local",
+    "path": "./documents"
+  },
+  {
+    "name": "rclone-gdrive",
+    "type": "rclone",
+    "path": "",
+    "url": "http://localhost:5572",
+    "username": "admin",
+    "password": "password123",
+    "remote": "gdrive:",
+    "timeout": 30000,
+    "retries": 3
+  },
+  {
+    "name": "rclone-s3",
+    "type": "rclone", 
+    "path": "",
+    "url": "http://localhost:5572",
+    "remote": "s3:my-bucket",
+    "timeout": 60000,
+    "retries": 5
+  }
+]
+

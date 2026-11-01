@@ -1,0 +1,13 @@
+{
+    "blockedIPs": [
+        "192.168.1.100",
+        "10.0.0.50"
+    ],
+    "blockedUserIds": [
+        "user_banned_123",
+        "user_spam_456"
+    ],
+    "blockedTokens": [
+        "Bearer malicious_token_xyz"
+    ]
+}

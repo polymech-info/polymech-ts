@@ -1,0 +1,67 @@
+[
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\400_Drive.SLDASM",
+    "IsLaser": "1",
+    "Total Bounding Box Length": "929.22",
+    "Total Bounding Box Width": "590.49",
+    "Total Bounding Box Thickness": "146.11",
+    "Total Bounding Box Volume": "80172719.16",
+    "Catalog": null,
+    "Configurations": null,
+    "Based On": null,
+    "Weight": null,
+    "Finish": null
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\Round_Bar_Handle.SLDPRT",
+    "IsLaser": null,
+    "Total Bounding Box Length": null,
+    "Total Bounding Box Width": null,
+    "Total Bounding Box Thickness": null,
+    "Total Bounding Box Volume": null,
+    "Catalog": null,
+    "Configurations": null,
+    "Based On": null,
+    "Weight": null,
+    "Finish": null
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\HubAxle.SLDPRT",
+    "IsLaser": null,
+    "Total Bounding Box Length": null,
+    "Total Bounding Box Width": null,
+    "Total Bounding Box Thickness": null,
+    "Total Bounding Box Volume": null,
+    "Catalog": null,
+    "Configurations": null,
+    "Based On": "HubAxle",
+    "Weight": "301.18",
+    "Finish": null
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\HandleMount.SLDPRT",
+    "IsLaser": null,
+    "Total Bounding Box Length": null,
+    "Total Bounding Box Width": null,
+    "Total Bounding Box Thickness": null,
+    "Total Bounding Box Volume": null,
+    "Catalog": null,
+    "Configurations": null,
+    "Based On": null,
+    "Weight": null,
+    "Finish": null
+  },
+  {
+    "File Path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\SubAssembly.SLDASM",
+    "IsLaser": null,
+    "Total Bounding Box Length": null,
+    "Total Bounding Box Width": null,
+    "Total Bounding Box Thickness": null,
+    "Total Bounding Box Volume": null,
+    "Catalog": null,
+    "Configurations": null,
+    "Based On": null,
+    "Weight": null,
+    "Finish": null
+  }
+]

@@ -1,0 +1,365 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images : JPG - Resize - Percent",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--src='./tests/images/in/*.+(jpg)'",
+                "--dst='./tests/images/out/'",
+                "--percent=80",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images : ARW - Resize",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--src='./tests/images/in/*.+(arw)'",
+                "--dst='./tests/images/out/'",
+                "--width=2000",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images : JPG - Resize Inplace",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--src='./tests/images/in/*.+(jpg)'",
+                "--width=2000",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Glob : Resize Inplace ",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--alt=true",
+                "--src='./tests/images/in/*.+(jpg)'",
+                "--dst='./tests/images/in2/*.+(jpg)'",
+                "--width=2000",
+                "--minSize=1670016",
+                "--minWidth=1900",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images : JPG - Resize - Percent - WebP",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--src='./tests/images/in/**/*.+(jpg)'",
+                "--dst='./tests/images/out/*.+(webp)'",
+                "--percent=80",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Convert : WebP -> Jpg",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "convert",
+                "--src='./tests/images/in_webp/*.+(webp)'",
+                "--dst='./tests/images/out_jpg/*.+(jpg)'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Convert - Single : WebP -> Jpg",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "convert",
+                "--src='./tests/images/in_webp/DSC01177.webp'",
+                "--dst='./tests/images/out_jpg/DSC01177.jpg'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Convert - Single - Expr : WebP -> Jpg",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "convert",
+                "--src='./tests/images/in_webp/DSC01177.webp'",
+                "--dst='${SRC_DIR}/${SRC_NAME}.+(jpg|png)'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Resize - Alt - Single",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--alt=true",
+                "--percent=80",
+                "--src='./tests/images/in/DSC01177.JPG'",
+                "--dst='&{SRC_DIR}/&{SRC_NAME}_medium.+(jpg)'",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+            
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Resize All Square - Glob",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--width=1000",
+                "--height=1000",
+                "--fit=contain",
+                "--src='./tests/images/in/**/*.+(jpg)'",
+                "--dst='./tests/images/out_square/.+(jpg|webp)'",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Images Resize All Square - Default",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--width=1000",
+                "--height=1000",
+                "--fit=contain",
+                "--src='./tests/images/in/**/*.+(jpg)'",
+                "--_dst='${SRC_DIR}/${SRC_NAME}-thumb.webp'",
+                "--dst='./tests/images/out_square/${SRC_NAME}-thumb.png'",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test File with Glob",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--width=1000",
+                "--fit=contain",
+                "--alt=true",
+                "--src='./tests/images/in/DSC01301.JPG/**/*.+(&{IMAGES})'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Resize Bazar",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program2": "${workspaceFolder}\\main.js",
+            "program": "C:\\Users\\mc007\\AppData\\Roaming\\npm\\node_modules\\@plastichub\\osr-media\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "resize",
+                "--minWidth=1900",
+                "--width=1980",
+                "--fit=contain",
+                "--src='${OSR_ROOT}/pp-bazar/${YYYY}/${MM}/**/*.+(${IMAGES})'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Watermark",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "program2": "C:\\Users\\mc007\\AppData\\Roaming\\npm\\node_modules\\@plastichub\\osr-media\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "watermark",
+                "--src='./tests/images/watermark-in/**/*.+(${IMAGES})'",
+                "--debug=true"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Video:Convert - MP4 -> MP3",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "video",
+                "convert",
+                "--src='./tests/assets/*.+(mp4)'",
+                "--dst='./tests/audio/${SRC_NAME}-audio.mp3'",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Video:Convert - MP4 -> JPG",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "video",
+                "convert",
+                "--src='./tests/assets/*.+(mp4)'",
+                "--dst='./tests/video/${SRC_NAME}/${SRC_NAME}-%03d.jpg'",
+                "--fps=30",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Video:JPG -> MP4",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\main.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "args": [
+                "video",
+                "merge",
+                "--src='./tests/video/tt-1/*.jpg'",
+                "--dst='./tests/video/out/out.mp4'",
+                "--interval=1",
+                "--logLevel=debug"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "outputCapture": "std"
+        }
+    ]
+}

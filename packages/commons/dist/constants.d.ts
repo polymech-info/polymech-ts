@@ -1,0 +1,11 @@
+export declare const MODULE_NAME = "OSR-Commons";
+export declare const PROFILE_FILE_NAME = ".osrl.json";
+export declare const OA_LATEST = "${OSR_ROOT}/osr-directory/pp/${YYYY}_${MM}.json";
+export declare const OA_LATEST_INVALID = "${OSR_ROOT}/osr-directory/pp/${YYYY}_${MM}_INVALID.json";
+export declare const OA_LATEST_CENSORED = "${OSR_ROOT}/osr-directory/pp/${YYYY}_${MM}_CENSORED.json";
+export declare const OA_LATEST_MERGED = "${OSR_ROOT}/osr-directory/pp/${YYYY}_${MM}_MERGED.json";
+export declare const PP_BAZAR_LATEST_INDEX = "${OSR_ROOT}/pp-bazar/${YYYY}/${MM}/index.json";
+export declare const PP_BAZAR_LATEST_INDEX_MERGED = "${OSR_ROOT}/pp-bazar/${YYYY}/${MM}/index_merged.json";
+export declare const API_NAMESPACE = "@polymech";
+export declare const API_PREFIX = "polymech";
+export declare const API_PREFIX_NEXT = "polymech";

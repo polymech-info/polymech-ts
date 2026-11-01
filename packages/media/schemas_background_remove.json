@@ -1,0 +1,93 @@
+[
+  {
+    "$ref": "#/definitions/background-remove",
+    "definitions": {
+      "background-remove": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1,
+            "description": "FILE|FOLDER|GLOB - Source file(s) to remove background from"
+          },
+          "dst": {
+            "type": "string",
+            "description": "FILE|FOLDER|GLOB - Destination for processed files"
+          },
+          "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable internal debug messages"
+          },
+          "alt": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use alternate tokenizer, & instead of $"
+          },
+          "dry": {
+            "type": "boolean",
+            "default": false,
+            "description": "Run without conversion"
+          },
+          "verbose": {
+            "type": "boolean",
+            "default": false,
+            "description": "Show internal messages"
+          },
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "warn",
+              "info",
+              "debug",
+              "error"
+            ],
+            "default": "info",
+            "description": "Log level: warn, info, debug, error"
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "Replicate API key (or set REPLICATE_API_TOKEN env var)"
+          },
+          "model": {
+            "type": "string",
+            "default": "lucataco/remove-bg:95fcc2a26d3899cd6c2691c900465aaeff466285a65c14638cc5f36f34befaf1",
+            "description": "Background removal model to use"
+          },
+          "alpha_matting": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable alpha matting for better edge refinement"
+          },
+          "alpha_matting_foreground_threshold": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500,
+            "default": 270,
+            "description": "Alpha matting foreground threshold"
+          },
+          "alpha_matting_background_threshold": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 10,
+            "description": "Alpha matting background threshold"
+          },
+          "alpha_matting_erode_size": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 50,
+            "default": 10,
+            "description": "Alpha matting erode size"
+          }
+        },
+        "required": [
+          "src"
+        ],
+        "additionalProperties": true,
+        "description": "IBackgroundRemoveOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

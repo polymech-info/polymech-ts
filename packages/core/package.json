@@ -1,0 +1,74 @@
+{
+  "name": "@polymech/core",
+  "version": "0.2.6",
+  "license": "BSD",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "https://git.osr-plastic.org/osr-plastic/osr-core/blob/master/LICENSE"
+    }
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./iterator": {
+      "import": "./dist/iterator.js",
+      "require": "./dist/iterator.cjs"
+    },
+    "./strings": {
+      "import": "./dist/strings.js",
+      "require": "./dist/strings.js"
+    },
+    "./primitives": {
+      "import": "./dist/primitives.js",
+      "require": "./dist/primitives.js"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "require": "./dist/types.js"
+    },
+    "./constants": {
+      "import": "./dist/constants.js",
+      "require": "./dist/constants.js"
+    },
+    "./objects": {
+      "import": "./dist/objects.js",
+      "require": "./dist/objects.js"
+    },
+    "./aspects_simple": {
+      "import": "./dist/aspects_simple.js",
+      "require": "./dist/aspects_simple.js"
+    }
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/osr-plastic/osr-core.git"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "tslog": "^3.3.3",
+    "type-fest": "^4.37.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "../typescript-config",
+    "@types/node": "^22.12.0",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "test": "tsc && mocha build/test",
+    "build": "tsc -p . --declaration",
+    "start": "node build/index.js",
+    "typings": "tsc -p . --declaration",
+    "dev": "tsc -p . --declaration -w"
+  },
+  "modules": [],
+  "readmeFilename": "Readme.md"
+}

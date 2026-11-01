@@ -1,0 +1,77 @@
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { resolveQuery, readStdin } from '../input';
+import { detectAndHandle } from '../../commands/handlers';
+import { sync as exists } from '@polymech/fs/exists';
+import { sync as read } from '@polymech/fs/read';
+vi.mock('@polymech/fs/exists');
+vi.mock('@polymech/fs/read');
+vi.mock('../../commands/handlers');
+vi.mock('path', async () => {
+    const actual = await vi.importActual('path');
+    return {
+        ...actual,
+        resolve: vi.fn((p) => p),
+        extname: vi.fn(() => '.txt')
+    };
+});
+describe('input utilities', () => {
+    let mockStdin;
+    beforeEach(() => {
+        vi.resetAllMocks();
+        mockStdin = {
+            isTTY: true,
+            on: vi.fn(),
+        };
+        Object.defineProperty(process, 'stdin', {
+            value: mockStdin,
+            writable: true
+        });
+    });
+    afterEach(() => {
+        vi.restoreAllMocks();
+    });
+    describe('resolveQuery', () => {
+        it('should handle file path query', async () => {
+            const mockOptions = { query: 'test.txt' };
+            vi.mocked(exists).mockReturnValue(true);
+            vi.mocked(read).mockReturnValue(Buffer.from('file content'));
+            vi.mocked(detectAndHandle).mockResolvedValue('processed file content');
+            const result = await resolveQuery(mockOptions);
+            expect(result).toBe('processed file content');
+            expect(detectAndHandle).toHaveBeenCalled();
+        });
+        it('should return direct query if not file path', async () => {
+            const mockOptions = { query: 'direct query' };
+            vi.mocked(exists).mockReturnValue(false);
+            const result = await resolveQuery(mockOptions);
+            expect(result).toBe('direct query');
+        });
+        it('should throw error if no query provided', async () => {
+            await expect(resolveQuery({})).rejects.toThrow('No query provided');
+        });
+    });
+    describe('readStdin', () => {
+        it('should handle TTY input', async () => {
+            mockStdin.isTTY = true;
+            const result = await readStdin();
+            expect(result).toEqual(Buffer.from(''));
+            expect(mockStdin.on).not.toHaveBeenCalled();
+        });
+        it('should handle non-TTY input', async () => {
+            mockStdin.isTTY = false;
+            const mockData = Buffer.from('test input');
+            // Simulate data events
+            mockStdin.on.mockImplementation((event, callback) => {
+                if (event === 'data')
+                    callback(mockData);
+                if (event === 'end')
+                    callback();
+            });
+            const result = await readStdin();
+            expect(result).toEqual(mockData);
+            expect(mockStdin.on).toHaveBeenCalledWith('data', expect.any(Function));
+            expect(mockStdin.on).toHaveBeenCalledWith('end', expect.any(Function));
+        });
+    });
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5wdXQudGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy91dGlscy9fX3Rlc3RzX18vaW5wdXQudGVzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLEVBQUUsRUFBRSxNQUFNLEVBQUUsRUFBRSxFQUFFLFVBQVUsRUFBRSxTQUFTLEVBQUUsTUFBTSxRQUFRLENBQUE7QUFDeEUsT0FBTyxFQUFFLFlBQVksRUFBRSxTQUFTLEVBQUUsTUFBTSxVQUFVLENBQUE7QUFDbEQsT0FBTyxFQUFFLGVBQWUsRUFBRSxNQUFNLHlCQUF5QixDQUFBO0FBQ3pELE9BQU8sRUFBRSxJQUFJLElBQUksTUFBTSxFQUFFLE1BQU0scUJBQXFCLENBQUE7QUFDcEQsT0FBTyxFQUFFLElBQUksSUFBSSxJQUFJLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUdoRCxFQUFFLENBQUMsSUFBSSxDQUFDLHFCQUFxQixDQUFDLENBQUE7QUFDOUIsRUFBRSxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxDQUFBO0FBQzVCLEVBQUUsQ0FBQyxJQUFJLENBQUMseUJBQXlCLENBQUMsQ0FBQTtBQUNsQyxFQUFFLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxLQUFLLElBQUksRUFBRTtJQUN6QixNQUFNLE1BQU0sR0FBRyxNQUFNLEVBQUUsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDLENBQUE7SUFDNUMsT0FBTztRQUNMLEdBQUcsTUFBYTtRQUNoQixPQUFPLEVBQUUsRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBQ3hCLE9BQU8sRUFBRSxFQUFFLENBQUMsRUFBRSxDQUFDLEdBQUcsRUFBRSxDQUFDLE1BQU0sQ0FBQztLQUM3QixDQUFBO0FBQ0gsQ0FBQyxDQUFDLENBQUE7QUFFRixRQUFRLENBQUMsaUJBQWlCLEVBQUUsR0FBRyxFQUFFO0lBQy9CLElBQUksU0FBYyxDQUFBO0lBRWxCLFVBQVUsQ0FBQyxHQUFHLEVBQUU7UUFDZCxFQUFFLENBQUMsYUFBYSxFQUFFLENBQUE7UUFDbEIsU0FBUyxHQUFHO1lBQ1YsS0FBSyxFQUFFLElBQUk7WUFDWCxFQUFFLEVBQUUsRUFBRSxDQUFDLEVBQUUsRUFBRTtTQUNaLENBQUE7UUFDRCxNQUFNLENBQUMsY0FBYyxDQUFDLE9BQU8sRUFBRSxPQUFPLEVBQUU7WUFDdEMsS0FBSyxFQUFFLFNBQVM7WUFDaEIsUUFBUSxFQUFFLElBQUk7U0FDZixDQUFDLENBQUE7SUFDSixDQUFDLENBQUMsQ0FBQTtJQUVGLFNBQVMsQ0FBQyxHQUFHLEVBQUU7UUFDYixFQUFFLENBQUMsZUFBZSxFQUFFLENBQUE7SUFDdEIsQ0FBQyxDQUFDLENBQUE7SUFFRixRQUFRLENBQUMsY0FBYyxFQUFFLEdBQUcsRUFBRTtRQUM1QixFQUFFLENBQUMsK0JBQStCLEVBQUUsS0FBSyxJQUFJLEVBQUU7WUFDN0MsTUFBTSxXQUFXLEdBQUcsRUFBRSxLQUFLLEVBQUUsVUFBVSxFQUFFLENBQUE7WUFDekMsRUFBRSxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUMsQ0FBQyxlQUFlLENBQUMsSUFBSSxDQUFDLENBQUE7WUFDdkMsRUFBRSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQyxlQUFlLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQyxDQUFBO1lBQzVELEVBQUUsQ0FBQyxNQUFNLENBQUMsZUFBZSxDQUFDLENBQUMsaUJBQWlCLENBQUMsd0JBQXdCLENBQUMsQ0FBQTtZQUV0RSxNQUFNLE1BQU0sR0FBRyxNQUFNLFlBQVksQ0FBQyxXQUFXLENBQUMsQ0FBQTtZQUU5QyxNQUFNLENBQUMsTUFBTSxDQUFDLENBQUMsSUFBSSxDQUFDLHdCQUF3QixDQUFDLENBQUE7WUFDN0MsTUFBTSxDQUFDLGVBQWUsQ0FBQyxDQUFDLGdCQUFnQixFQUFFLENBQUE7UUFDNUMsQ0FBQyxDQUFDLENBQUE7UUFFRixFQUFFLENBQUMsNkNBQTZDLEVBQUUsS0FBSyxJQUFJLEVBQUU7WUFDM0QsTUFBTSxXQUFXLEdBQUcsRUFBRSxLQUFLLEVBQUUsY0FBYyxFQUFFLENBQUE7WUFDN0MsRUFBRSxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUMsQ0FBQyxlQUFlLENBQUMsS0FBSyxDQUFDLENBQUE7WUFDeEMsTUFBTSxNQUFNLEdBQUcsTUFBTSxZQUFZLENBQUMsV0FBVyxDQUFDLENBQUE7WUFDOUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQTtRQUNyQyxDQUFDLENBQUMsQ0FBQTtRQUVGLEVBQUUsQ0FBQyx5Q0FBeUMsRUFBRSxLQUFLLElBQUksRUFBRTtZQUN2RCxNQUFNLE1BQU0sQ0FBQyxZQUFZLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLG1CQUFtQixDQUFDLENBQUE7UUFDckUsQ0FBQyxDQUFDLENBQUE7SUFDSixDQUFDLENBQUMsQ0FBQTtJQUVGLFFBQVEsQ0FBQyxXQUFXLEVBQUUsR0FBRyxFQUFFO1FBQ3pCLEVBQUUsQ0FBQyx5QkFBeUIsRUFBRSxLQUFLLElBQUksRUFBRTtZQUN2QyxTQUFTLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQTtZQUV0QixNQUFNLE1BQU0sR0FBRyxNQUFNLFNBQVMsRUFBRSxDQUFBO1lBRWhDLE1BQU0sQ0FBQyxNQUFNLENBQUMsQ0FBQyxPQUFPLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFBO1lBQ3ZDLE1BQU0sQ0FBQyxTQUFTLENBQUMsRUFBRSxDQUFDLENBQUMsR0FBRyxDQUFDLGdCQUFnQixFQUFFLENBQUE7UUFDN0MsQ0FBQyxDQUFDLENBQUE7UUFFRixFQUFFLENBQUMsNkJBQTZCLEVBQUUsS0FBSyxJQUFJLEVBQUU7WUFDM0MsU0FBUyxDQUFDLEtBQUssR0FBRyxLQUFLLENBQUE7WUFDdkIsTUFBTSxRQUFRLEdBQUcsTUFBTSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQTtZQUUxQyx1QkFBdUI7WUFDdkIsU0FBUyxDQUFDLEVBQUUsQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDLEtBQUssRUFBRSxRQUFRLEVBQUUsRUFBRTtnQkFDbEQsSUFBSSxLQUFLLEtBQUssTUFBTTtvQkFBRSxRQUFRLENBQUMsUUFBUSxDQUFDLENBQUE7Z0JBQ3hDLElBQUksS0FBSyxLQUFLLEtBQUs7b0JBQUUsUUFBUSxFQUFFLENBQUE7WUFDakMsQ0FBQyxDQUFDLENBQUE7WUFFRixNQUFNLE1BQU0sR0FBRyxNQUFNLFNBQVMsRUFBRSxDQUFBO1lBRWhDLE1BQU0sQ0FBQyxNQUFNLENBQUMsQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUE7WUFDaEMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxvQkFBb0IsQ0FBQyxNQUFNLEVBQUUsTUFBTSxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFBO1lBQ3ZFLE1BQU0sQ0FBQyxTQUFTLENBQUMsRUFBRSxDQUFDLENBQUMsb0JBQW9CLENBQUMsS0FBSyxFQUFFLE1BQU0sQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQTtRQUN4RSxDQUFDLENBQUMsQ0FBQTtJQUNKLENBQUMsQ0FBQyxDQUFBO0FBQ0osQ0FBQyxDQUFDLENBQUEifQ==

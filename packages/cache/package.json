@@ -1,0 +1,54 @@
+{
+  "name": "@polymech/cache",
+  "description": "",
+  "version": "0.4.8",
+  "typings": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./lib": {
+      "import": "./dist/lib/index.js",
+      "require": "./dist/lib/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@polymech/commons": "file:../commons",
+    "@polymech/core": "file:../core",
+    "@polymech/fs": "file:../fs",
+    "@polymech/log": "file:../log",
+    "@types/node": "^22.10.2",
+    "cacache": "^19.0.1",
+    "md5": "^2.3.0",
+    "p-map": "^7.0.3",
+    "ssri": "^10.0.1",
+    "yargs": "^17.7.2"
+  },
+  "scripts": {
+    "test": "tsc; mocha --full-trace mocha \"spec/**/*.spec.js\"",
+    "test-with-coverage": "istanbul cover node_modules/.bin/_mocha -- 'spec/**/*.spec.js'",
+    "lint": "tslint --project=./tsconfig.json",
+    "build": "tsc -p .",
+    "dev": "tsc -p . --declaration -w",
+    "typings": "tsc --declaration",
+    "docs": "npx typedoc src/index.ts",
+    "dev-test-watch": "mocha-typescript-watch"
+  },
+  "homepage": "https://git.osr-plastic.org/osr-plastic/osr-cache",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/osr-plastic/osr-cache"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "typescript"
+  ]
+}

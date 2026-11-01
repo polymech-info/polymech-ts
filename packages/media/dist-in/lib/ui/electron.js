@@ -1,0 +1,55 @@
+import * as path from 'path';
+import { sync as write } from '@polymech/fs/write';
+import { sync as read } from '@polymech/fs/read';
+import { substitute } from '@polymech/commons';
+const htmlFilePathIn = path.resolve('./web-ui/_prompt.html');
+const htmlFilePathOut = path.resolve('./web-ui/prompt.html');
+import { Helper } from './../process/index.js';
+// Legacy function for backward compatibility
+export const web_prompt = async (prompt, dst, variables = {}) => {
+    write(htmlFilePathOut, substitute(false, read(htmlFilePathIn), {
+        QUERY: prompt,
+        DST: dst,
+        ...variables
+    }));
+    const electronPath = path.join(process.cwd(), './node_modules/electron/dist/electron.exe');
+    const mainPath = path.join(process.cwd(), 'dist-in/lib/ui/electron/main.js');
+    const p = await Helper.runBin(process.cwd(), electronPath, '', [`"${mainPath}"`]);
+    const content = p.messages.find((m) => m.type === 'content');
+    return content;
+};
+// New schema-based UI function
+export const renderSchemaUI = async (options) => {
+    // Write config to a temporary file that main process can read
+    const configPath = path.resolve('./web-ui/temp-config.json');
+    const config = {
+        schema: options.schema,
+        uiSchema: options.uiSchema || {},
+        formData: options.formData || {},
+        title: options.title || 'Configuration',
+        cliOptions: options.cliOptions || {}
+    };
+    write(configPath, JSON.stringify(config, null, 2));
+    const electronPath = path.join(process.cwd(), './node_modules/electron/dist/electron.exe');
+    const mainPath = path.join(process.cwd(), 'dist-in/lib/ui/electron/main.js');
+    console.log('renderSchemaUI: Starting Electron...');
+    console.log('electronPath:', electronPath);
+    console.log('mainPath:', mainPath);
+    console.log('configPath:', configPath);
+    console.log('config:', config);
+    const p = await Helper.runBin('', electronPath, '', [`"${mainPath}"`, `--config="${configPath}"`]);
+    console.log('renderSchemaUI: Electron process result:', p);
+    const content = p.messages.find((m) => m.type === 'content');
+    // Cleanup temp file
+    try {
+        const fs = await import('fs');
+        if (fs.existsSync(configPath)) {
+            fs.unlinkSync(configPath);
+        }
+    }
+    catch (e) {
+        // Ignore cleanup errors
+    }
+    return content;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZWxlY3Ryb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvbGliL3VpL2VsZWN0cm9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sS0FBSyxJQUFJLE1BQU0sTUFBTSxDQUFBO0FBRTVCLE9BQU8sRUFBRSxJQUFJLElBQUksS0FBSyxFQUFFLE1BQU0sb0JBQW9CLENBQUE7QUFDbEQsT0FBTyxFQUFFLElBQUksSUFBSSxJQUFJLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUNoRCxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sbUJBQW1CLENBQUE7QUFFOUMsTUFBTSxjQUFjLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyx1QkFBdUIsQ0FBQyxDQUFBO0FBQzVELE1BQU0sZUFBZSxHQUFHLElBQUksQ0FBQyxPQUFPLENBQUMsc0JBQXNCLENBQUMsQ0FBQTtBQUU1RCxPQUFPLEVBQUUsTUFBTSxFQUFFLE1BQU0sdUJBQXVCLENBQUE7QUFVOUMsNkNBQTZDO0FBQzdDLE1BQU0sQ0FBQyxNQUFNLFVBQVUsR0FBRyxLQUFLLEVBQUUsTUFBYyxFQUFFLEdBQVUsRUFBRSxZQUFnQixFQUFFLEVBQUUsRUFBRTtJQUUvRSxLQUFLLENBQUMsZUFBZSxFQUFFLFVBQVUsQ0FBQyxLQUFLLEVBQUUsSUFBSSxDQUFDLGNBQWMsQ0FBVyxFQUN2RTtRQUNJLEtBQUssRUFBRSxNQUFNO1FBQ2IsR0FBRyxFQUFFLEdBQUc7UUFDUixHQUFHLFNBQVM7S0FDZixDQUFDLENBQUMsQ0FBQTtJQUNILE1BQU0sWUFBWSxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxFQUFFLDJDQUEyQyxDQUFDLENBQUE7SUFDMUYsTUFBTSxRQUFRLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsR0FBRyxFQUFFLEVBQUUsaUNBQWlDLENBQUMsQ0FBQztJQUM3RSxNQUFNLENBQUMsR0FBRyxNQUFNLE1BQU0s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

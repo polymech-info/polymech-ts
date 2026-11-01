@@ -1,0 +1,23 @@
+{
+    "name": "@polymech/shared",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./config": "./dist/config/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc -w"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@hono/zod-openapi": "^1.1.5",
+        "@turf/turf": "^7.3.4",
+        "zod": "^4.3.6"
+    }
+}

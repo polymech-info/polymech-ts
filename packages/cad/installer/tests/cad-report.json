@@ -1,0 +1,94 @@
+[
+  {
+    "code": 0,
+    "command": "model-reader.exe  --source=\"C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad\\Global-Katbot-Pro.SLDASM\" --target=\"C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad\\Global-Katbot-Pro.json\"",
+    "messages": [
+      "Serialize to C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad\\Global-Katbot-Pro.json\r\n"
+    ],
+    "src": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM",
+    "target": "C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad\\Global-Katbot-Pro.json",
+    "failed": false,
+    "options": {
+      "src": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM",
+      "dst": "C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+      "debug": false,
+      "verbose": true,
+      "dry": false,
+      "skip": true,
+      "hidden": "true",
+      "renderer": "Solidworks",
+      "alt": true,
+      "quality": 2,
+      "logLevel": "trace",
+      "close": "true",
+      "script": "convert.exe",
+      "sw": 2022,
+      "configuration": "Default",
+      "report": "${SRC_DIR}/cad-report.json",
+      "variables": {
+        "SRC_PATH": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM",
+        "SRC_DIR": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad",
+        "SRC_NAME": "Global-Katbot-Pro",
+        "SRC_FILE_NAME": "Global-Katbot-Pro.SLDASM",
+        "SRC_FILE_EXT": "SLDASM",
+        "SRC_IS_FILE": true,
+        "SRC_IS_FOLDER": false,
+        "SRC_IS_EXPRESSION": false,
+        "SRC_IS_GLOB": false,
+        "SRC_FILES": [
+          "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM"
+        ],
+        "DST_PATH": "&{SRC_DIR}/&{SRC_NAME}.+(json)",
+        "DST_DIR": "C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad",
+        "DST_NAME": "&{SRC_NAME}",
+        "DST_FILE_NAME": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "DST_FILE_EXT": "+(json)",
+        "DST_IS_FILE": false,
+        "DST_IS_FOLDER": false,
+        "DST_IS_EXPRESSION": false,
+        "DST_IS_GLOB": true,
+        "DST_GLOB": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "DST_GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "DST_FILES": []
+      },
+      "view": "Render",
+      "args": "",
+      "bom-config": "Default",
+      "bom-detail": 1,
+      "bom-type": 2,
+      "bom-images": false,
+      "srcInfo": {
+        "PATH": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM",
+        "DIR": "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad",
+        "NAME": "Global-Katbot-Pro",
+        "FILE_NAME": "Global-Katbot-Pro.SLDASM",
+        "FILE_EXT": "SLDASM",
+        "IS_FILE": true,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": false,
+        "FILES": [
+          "C:/Users/mc007/Desktop/osr/p2/products/injection/katbot-pro-mega-beta/cad/Global-Katbot-Pro.SLDASM"
+        ]
+      },
+      "dstInfo": {
+        "PATH": "&{SRC_DIR}/&{SRC_NAME}.+(json)",
+        "DIR": "C:\\Users\\mc007\\Desktop\\osr\\p2\\products\\injection\\katbot-pro-mega-beta\\cad",
+        "NAME": "&{SRC_NAME}",
+        "FILE_NAME": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "FILE_EXT": "+(json)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "FILES": []
+      }
+    }
+  }
+]

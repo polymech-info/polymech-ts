@@ -1,0 +1,54 @@
+import { tools } from '../lib/tools/tools.js';
+import { ListCommandSchema } from '../zod_schemas.js';
+import { sync as write } from '@polymech/fs/write';
+import { toYargs } from '@polymech/commons/schemas';
+export const options = (yargs) => toYargs(yargs, ListCommandSchema);
+export const signature = (definition) => {
+    const { properties } = definition.parameters;
+    const requiredKeys = definition.parameters.required || [];
+    const params = Object.entries(properties).map(([key, val]) => {
+        const isRequired = requiredKeys.includes(key);
+        const isOptional = !!val.optional || !isRequired;
+        return isOptional ? `?${key}` : key;
+    });
+    return `(${params.join(", ")})`;
+};
+export function format(category, data) {
+    const lines = [`## ${category}\n`];
+    data.forEach(definition => {
+        const functionName = definition.name;
+        const args = `${signature(definition)}`;
+        const summary = definition.description;
+        lines.push(`- ${functionName}${args}: ${summary}`);
+    });
+    return lines.join("\n");
+}
+export const list = async (argv, options) => {
+    const getCategorizedTools = (category, options) => {
+        const toolsArray = tools[category](process.cwd(), options);
+        return toolsArray.map(tool => ({
+            name: tool.function.name,
+            description: tool.function.description,
+            category,
+            parameters: tool.function.parameters
+        }));
+    };
+    const toolsList = {
+        email: getCategorizedTools('email', options),
+        search: getCategorizedTools('search', options),
+        interact: getCategorizedTools('email', options),
+        fs: getCategorizedTools('fs', options),
+        npm: getCategorizedTools('npm', options),
+        git: getCategorizedTools('git', options),
+        terminal: getCategorizedTools('terminal', options)
+    };
+    //write(argv.output + '.json', Object.keys(toolsList).map((k,v)=>format(k,v as any)).join('\n') );
+    const shortDescription = Object.keys(toolsList).map((value) => {
+        return format(value, toolsList[value]);
+    }).join('\n\n');
+    if (argv.output) {
+        write(argv.output, JSON.stringify(toolsList, null, 2));
+        write(argv.output + '.md', shortDescription);
+    }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYW5kcy9saXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sRUFBRSxLQUFLLEVBQUUsTUFBTSx1QkFBdUIsQ0FBQTtBQUU3QyxPQUFPLEVBQUUsaUJBQWlCLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUNyRCxPQUFPLEVBQUUsSUFBSSxJQUFJLEtBQUssRUFBRSxNQUFNLG9CQUFvQixDQUFBO0FBQ2xELE9BQU8sRUFBRSxPQUFPLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQTtBQUVuRCxNQUFNLENBQUMsTUFBTSxPQUFPLEdBQUcsQ0FBQyxLQUFXLEVBQUUsRUFBRSxDQUFDLE9BQU8sQ0FBQyxLQUFLLEVBQUUsaUJBQWlCLENBQUMsQ0FBQTtBQWlCekUsTUFBTSxDQUFDLE1BQU0sU0FBUyxHQUFHLENBQUMsVUFBd0IsRUFBVSxFQUFFO0lBQzFELE1BQU0sRUFBRSxVQUFVLEVBQUUsR0FBRyxVQUFVLENBQUMsVUFBVSxDQUFDO0lBQzdDLE1BQU0sWUFBWSxHQUFHLFVBQVUsQ0FBQyxVQUFVLENBQUMsUUFBUSxJQUFJLEVBQUUsQ0FBQztJQUMxRCxNQUFNLE1BQU0sR0FBRyxNQUFNLENBQUMsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsR0FBRyxFQUFFLEdBQUcsQ0FBQyxFQUFFLEVBQUU7UUFDekQsTUFBTSxVQUFVLEdBQUcsWUFBWSxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsQ0FBQztRQUM5QyxNQUFNLFVBQVUsR0FBRyxDQUFDLENBQUMsR0FBRyxDQUFDLFFBQVEsSUFBSSxDQUFDLFVBQVUsQ0FBQztRQUNqRCxPQUFPLFVBQVUsQ0FBQyxDQUFDLENBQUMsSUFBSSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsR0FBRyxDQUFDO0lBQ3hDLENBQUMsQ0FBQyxDQUFDO0lBQ0gsT0FBTyxJQUFJLE1BQU0sQ0FBQyxJQUFJ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

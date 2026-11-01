@@ -1,0 +1,93 @@
+---
+permalink: /system/testosr
+---
+
+# Examples
+
+## Retrieve Environment variables
+
+- NUMBER_OF_PROCESSORS = [% js %]
+
+return os.env.get('NUMBER_OF_PROCESSORS')
+  // Throws an error if the DB_PASSWORD variable is not set (optional)
+  .required()
+  // Decode DB_PASSWORD from base64 to a utf8 string (optional)
+  // .convertFromBase64()
+  // Call asString (or other APIs) to get the variable value (required)
+  // see for more : https://github.com/evanshortiss/env-var/tree/master/lib/accessors
+  .asString();
+[%endjs%]
+
+## Directory listing using fs.iterator (provides mime and directory sizes)
+
+[% js %]
+const _path = path.resolve('./');
+const nodes = fs.iterator('.',{matching:'*.md',
+    flags:fs.EIteratorFlags.MIME
+});
+return nodes.items.map((e)=>{
+    return `- ${e.item.name} - ${fs.slash(e.path)} - ${e.item.type} - ${e.item.mime} | Size : ${fs.sizeToString(e.item.size)}`;
+}).join("\n");
+[%endjs%]
+
+## Directory listing using simple glob (relative)
+
+[% js %]
+// native fast-glob
+const _path = path.resolve('./');
+const nodes = fs.glob.sync('*.md');
+return nodes.map((e)=>{
+    return `- ${e}`
+}).join("\n");
+
+[%endjs%]
+
+## Directory listing using built in glob (absolute)
+
+[% js %]
+// native fast-glob
+const _path = path.resolve('./');
+const nodes = fs.dir('../','*.js');
+return nodes.map((e)=>{
+    // remove path.relative for absolute ! : return `${e}`
+    return '- ' + path.relative('../',`${e}`);
+}).join("\n");
+
+[%endjs%]
+## Embedded SVG from file
+
+<div style="max-width:80%">
+[% js %]
+// dosnt work in markdown preview on gh & gitea!
+// return readFile('./product.svg');
+[%endjs%]
+</div>
+
+## Embedded XLSX from file
+
+```js
+const _path = path.resolve('./content.xlsx');
+const data = xlsx.parse(_path);
+return markdownTable(data[0].data);
+```
+
+[%js%]
+const _path = path.resolve('./content.xlsx');
+const data = xlsx.parse(_path);
+return markdownTable(data[0].data);
+[%endjs%]
+
+Where the JSON data looks as follows:
+
+```js
+const data = xlsx.parse(path.resolve('./content.xlsx'));
+return JSON.stringify(data,null,2);
+```
+
+```json
+[%js%]
+const _path = path.resolve('./content.xlsx');
+const data = xlsx.parse(_path);
+return JSON.stringify(data,null,2);
+[%endjs%]
+```

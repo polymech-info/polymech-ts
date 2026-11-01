@@ -1,0 +1,16 @@
+export const defaults = () => {
+    const DefaultCommand = 'salamander';
+    if (process.argv.length === 2) {
+        process.argv.push(DefaultCommand);
+    }
+    process.on('unhandledRejection', (reason) => {
+        console.error('Unhandled rejection, reason: ', reason);
+    });
+};
+export const sanitize = (argv) => {
+    return {
+        ...argv,
+        logLevel: argv.logLevel || 'info'
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiX2NsaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9fY2xpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBQyxNQUFNLFFBQVEsR0FBRyxHQUFHLEVBQUU7SUFDekIsTUFBTSxjQUFjLEdBQUcsWUFBWSxDQUFDO0lBQ3BDLElBQUksT0FBTyxDQUFDLElBQUksQ0FBQyxNQUFNLEtBQUssQ0FBQyxFQUFFLENBQUM7UUFDNUIsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsY0FBYyxDQUFDLENBQUM7SUFDdEMsQ0FBQztJQUNELE9BQU8sQ0FBQyxFQUFFLENBQUMsb0JBQW9CLEVBQUUsQ0FBQyxNQUFjLEVBQUUsRUFBRTtRQUNoRCxPQUFPLENBQUMsS0FBSyxDQUFDLCtCQUErQixFQUFFLE1BQU0sQ0FBQyxDQUFBO0lBQzFELENBQUMsQ0FBQyxDQUFBO0FBQ04sQ0FBQyxDQUFBO0FBRUQsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHLENBQUMsSUFBUyxFQUFPLEVBQUU7SUFDdkMsT0FBTztRQUNILEdBQUcsSUFBSTtRQUNQLFFBQVEsRUFBRSxJQUFJLENBQUMsUUFBUSxJQUFJLE1BQU07S0FDcEMsQ0FBQTtBQUNMLENBQUMsQ0FBQSJ9

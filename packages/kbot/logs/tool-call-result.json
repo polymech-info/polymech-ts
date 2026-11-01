@@ -1,0 +1,1025 @@
+[
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:20:14.133Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6MjA6MTQuNzQ2WiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:20:18.526Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:20:18.529Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot"
+    },
+    "timestamp": "2025-04-02T19:20:21.397Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:22:04.736Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6MjI6MDYuNzM3WiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:22:09.399Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:22:11.156Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:22:14.412Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:22:16.560Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:23:57.443Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6MjM6NTkuMjE3WiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:01.816Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:02.980Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:05.913Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:27.010Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6MjQ6MjguOTk0WiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:31.805Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:32.915Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:35.107Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:36.964Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:38.924Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:24:40.077Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:44.409Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:46.114Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:47.268Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:48.542Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:50.230Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:51.287Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:24:52.374Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:25:33.849Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6MjU6MzUuMjEwWiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:25:38.124Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:25:39.388Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:42.174Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:43.442Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:45.051Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:46.118Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:47.306Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:49.058Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:50.265Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:51.696Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:54.152Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:25:55.282Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:27:26.127Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "{\"test\":\"data\",\"timestamp\":\"2025-04-02T19:27:27.682Z\"}"
+      }
+    },
+    "timestamp": "2025-04-02T19:27:29.663Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:27:30.814Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:33.811Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:35.338Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:36.722Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:37.918Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:39.340Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:27:40.508Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:28:27.731Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-02T19:29:19.540Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDJUMTk6Mjk6MjAuOTk4WiJ9"
+      }
+    },
+    "timestamp": "2025-04-02T19:29:24.289Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:29:25.522Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-02T19:29:27.281Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-02T19:29:29.631Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-04T21:46:59.554Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDRUMjE6NDc6MDEuMTg1WiJ9"
+      }
+    },
+    "timestamp": "2025-04-04T21:47:04.079Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-04T21:47:05.385Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-04T21:47:08.824Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-06T14:35:06.606Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDZUMTQ6MzU6MDguMjYzWiJ9"
+      }
+    },
+    "timestamp": "2025-04-06T14:35:11.262Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-06T14:35:11.266Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:13.924Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:15.360Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:16.641Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:17.713Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:18.815Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:20.220Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:21.392Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:22.399Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T14:35:23.662Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-06T15:42:04.973Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-06T15:42:06.813Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDZUMTU6NDI6MDguMzIwWiJ9"
+      }
+    },
+    "timestamp": "2025-04-06T15:42:10.967Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-06T15:42:12.162Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T15:42:14.382Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-06T22:28:08.504Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDZUMjI6Mjg6MDkuNzg1WiJ9"
+      }
+    },
+    "timestamp": "2025-04-06T22:28:12.339Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-06T22:28:12.344Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-06T22:28:15.771Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:43.670Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMDdUMTc6MDg6NDUuNDUxWiJ9"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:47.705Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:48.986Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:50.718Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:53.402Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:55.847Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-07T17:08:57.876Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-07T17:09:02.159Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-07T17:09:03.479Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-07T17:09:04.525Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-18T07:18:26.510Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "{\"test\":\"data\",\"timestamp\":\"2025-04-18T07:18:28.120Z\"}"
+      }
+    },
+    "timestamp": "2025-04-18T07:18:29.628Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-18T07:18:31.176Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:18:34.294Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-18T07:29:23.036Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "eyJ0ZXN0IjoiZGF0YSIsInRpbWVzdGFtcCI6IjIwMjUtMDQtMThUMDc6Mjk6MjUuMTA4WiJ9"
+      },
+      "reason": "Write the given test data to a json file"
+    },
+    "timestamp": "2025-04-18T07:29:29.232Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-18T07:29:29.238Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:29:32.187Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:29:34.253Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:29:35.739Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-04-18T07:47:22.108Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "{\"test\":\"data\",\"timestamp\":\"2025-04-18T07:47:24.209Z\"}"
+      }
+    },
+    "timestamp": "2025-04-18T07:47:25.823Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-04-18T07:47:27.394Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:47:30.508Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-04-18T07:47:32.097Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\units\\tools.test.md"
+      }
+    },
+    "timestamp": "2025-06-05T18:46:08.490Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json",
+        "content": "{\"test\":\"data\",\"timestamp\":\"2025-06-05T18:46:10.027Z\"}"
+      }
+    },
+    "timestamp": "2025-06-05T18:46:12.013Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "file": {
+        "path": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data\\test-data.json"
+      }
+    },
+    "timestamp": "2025-06-05T18:46:13.116Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-06-05T18:46:15.665Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-06-05T18:46:17.616Z",
+    "service": "collector:onFunctionCallResult"
+  },
+  {
+    "level": "debug",
+    "message": {
+      "directory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\tests\\unit\\test-data"
+    },
+    "timestamp": "2025-06-05T18:46:20.580Z",
+    "service": "collector:onFunctionCallResult"
+  }
+]

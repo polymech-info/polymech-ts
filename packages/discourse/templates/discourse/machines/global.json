@@ -1,0 +1,33 @@
+{
+    "vendor_name": "Plastic Hub",
+    "vendor_website": "https://plastic-hub.com/",
+    "vendor_products_external": "https://plastic-hub.com/products/",
+    "vendor_instagram": "https://www.instagram.com/osr_plastic/",
+    "_vendor_youtube": "https://www.youtube.com/channel/UCuWDxJtV2pf5BefHEy09Cew/featured?view_as=subscriber",
+    "vendor_github": "https://git.osr-plastic.org/osr-plastic",
+    "vendor_contact_email": "mailto:sales2@plastic-hub.com",
+    "vendor_whatsapp": "tel:0034691952287",
+    "vendor_facebook": "https://www.facebook.com/plastichubcat/",
+    "vendor_blog": "https://precious-plastic.org/",
+    "vendor_discord": "https://discord.gg/vR5d6ShTez",
+    "author_link_pp": "https://preciousplastic.com/",
+    "author_link": "https://osr-plastic.org",
+    "site": "https://precious-plastic.org/",
+    "OSR_HOWTOS_ROOT_URL": "https://osr-plastic.org/howtos/",
+    "OSR_HOWTOS_PATH": "../../ph3/pp-next2/howtos",
+    "OSR_FILES_WEB":"http://files.osr-plastic.org/files/osr-machines/",
+    "OSR_MACHINES_ASSETS_URL":"https://assets.osr-plastic.org/machines/",
+    "show": {
+        "badges": false,
+        "authors": true,
+        "head": true,
+        "debug": false,
+        "wiki": false,
+        "forum": false,
+        "others": false,
+        "howtos":false,
+        "instagram":false,
+        "shipping":true,
+        "payment_terms":true
+    }
+}

@@ -1,0 +1,37 @@
+# main menu
+[[main]]
+name = "About"
+url = "about/"
+weight = 5
+hidden= true
+
+[[main]]
+name = "Products"
+url = "product/"
+weight = 1
+
+[[main]]
+name = "Projects"
+url = "project/"
+weight = 2
+
+[[main]]
+name = "Services"
+url = "service/"
+weight = 3
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 7
+
+# footer menu
+[[footer]]
+name = "Terms of Service"
+url = "terms/"
+weight = 1
+
+[[footer]]
+name = "Privacy Policy"
+url = "privacy-policy/"
+weight = 2

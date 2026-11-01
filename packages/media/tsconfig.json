@@ -1,0 +1,25 @@
+{
+	"extends": "../typescript-config/base.json",
+	"compilerOptions": {
+		"outDir": "./dist-in",
+		"rootDir": "src",
+		"baseUrl": ".",
+		"allowJs": true,
+		"esModuleInterop": true,
+		"composite": false,
+		"importHelpers": false,
+		"inlineSourceMap": true,
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	},
+	"files": [
+		"src/index.ts",
+		"src/main.ts",
+		"src/lib/ui/electron/main.ts",
+		"src/lib/ui/electron/preload.ts",
+		"src/lib/ui/electron/renderer.ts"
+	]
+}

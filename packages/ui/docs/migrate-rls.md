@@ -1,0 +1,192 @@
+# Backup from Supabase → Restore to plain Postgres
+
+> **Status**: Active — in-flight migration from Supabase to plain Postgres + Zitadel  
+> **Goal**: One correct, portable snapshot restorable on any plain Postgres instance with RLS intact.
+
+---
+
+## Why a raw dump doesn't work on plain Postgres
+
+A `pg_dump` of a Supabase project contains things that don't exist on vanilla Postgres:
+
+| Problem | Where it appears | Effect |
+|:---|:---|:---|
+| `\restrict` / `\unrestrict` tokens | Line 1 and last line of every dump | `psql` errors on unknown meta-command |
+| `auth.users` table | FK constraints (`REFERENCES auth.users(id)`) | restore fails — schema `auth` doesn't exist |
+| `auth.uid()` function | RLS policies, trigger functions | policies fail to create |
+| `authenticated`, `anon`, `service_role` roles | `TO authenticated` in policies | role not found error |
+
+All four are solved before the first `psql` command runs — no manual file editing required.
+
+---
+
+## How it works on plain Postgres
+
+`cli-ts/schemas/auth_setup.sql` creates:
+
+- `anon`, `authenticated`, `service_role` roles — so `TO authenticated` in policies parses cleanly
+- `auth.uid()` — a real function that reads `current_setting('app.current_user_id', true)::uuid`
+- `auth.role()`, `auth.jwt()` stubs for any policy that calls them
+
+`cli-ts/schemas/auth_users.sql` creates `auth.users` with all 34 columns that Supabase's `pg_dump` emits in its `COPY` statement — no column-mismatch errors on restore.
+
+`backup-site` strips `\restrict`/`\unrestrict` tokens automatically after every dump.
+
+**Result:** the structure dump restores as-is, RLS policies compile and evaluate against the session variable the server sets at request start — no policy rewriting, no policy dropping.
+
+---
+
+## Step 1 — Take the backup
+
+```bash
+pm-cli-cms backup-site --type all --include-auth --target ./backups/service.polymech.info
+```
+
+Produces three files in `backups/service.polymech.info/backups/db/`:
+
+| File | Contents |
+|:---|:---|
+| `structure-YY_MM_DD.sql` | Full public schema (DDL + RLS + indexes). Tokens already stripped. |
+| `data-YY_MM_DD.sql` | All public data. `vfs_index` + `vfs_document_chunks` rows excluded (see below). |
+| `auth-users-YY_MM_DD.sql` | `auth.users` rows only (ids, emails, hashed passwords). Tokens already stripped. |
+
+> The `26_04_10` backup in `backups/service.polymech.info/backups/db/` is the current clean baseline — tokens already stripped, ready to restore.
+
+---
+
+## Step 2 — One-time target setup (per Postgres instance)
+
+Run these once on any new target. Both scripts are idempotent (`CREATE IF NOT EXISTS`).
+
+```bash
+# Roles + auth.uid() + auth schema
+psql "$TARGET_DATABASE_URL" -f cli-ts/schemas/auth_setup.sql
+
+# auth.users table (34-column definition matching pg_dump output)
+psql "$TARGET_DATABASE_URL" -f cli-ts/schemas/auth_users.sql
+```
+
+---
+
+## Step 3 — Restore
+
+```bash
+# 1. Seed auth.users rows (must come before public schema — FK targets must exist)
+psql "$TARGET_DATABASE_URL" \
+  -f backups/service.polymech.info/backups/db/auth-users-26_04_10.sql
+
+# 2. Restore public schema (RLS policies restore as-is, auth.uid() already exists)
+pm-cli-cms db-import \
+  --schema backups/service.polymech.info/backups/db/structure-26_04_10.sql \
+  --env ./server/.env.production
+
+# 3. Restore public data
+pm-cli-cms db-import \
+  --data backups/service.polymech.info/backups/db/data-26_04_10.sql \
+  --env ./server/.env.production
+```
+
+**Full wipe + restore** — `--clear` drops/recreates `public` only; the `auth` schema is untouched:
+
+```bash
+psql "$TARGET_DATABASE_URL" -f backups/service.polymech.info/backups/db/auth-users-26_04_10.sql
+
+pm-cli-cms db-import \
+  --schema backups/service.polymech.info/backups/db/structure-26_04_10.sql \
+  --data   backups/service.polymech.info/backups/db/data-26_04_10.sql \
+  --clear \
+  --env ./server/.env.production
+```
+
+---
+
+## Step 4 — Verify
+
+```sql
+-- Public tables present
+SELECT tablename FROM pg_tables WHERE schemaname = 'public' ORDER BY 1;
+
+-- vfs_index structure present, data empty (intentional)
+\d public.vfs_index
+\d public.vfs_document_chunks
+
+-- auth.uid() resolves (returns NULL — no session var set yet, expected)
+SELECT auth.uid();
+
+-- RLS policies present
+SELECT tablename, policyname FROM pg_policies WHERE schemaname = 'public' ORDER BY 1, 2;
+
+-- auth.users rows seeded
+SELECT id, email, created_at FROM auth.users ORDER BY created_at;
+
+-- Row counts
+SELECT
+  (SELECT count(*) FROM public.posts)    AS posts,
+  (SELECT count(*) FROM public.pictures) AS pictures,
+  (SELECT count(*) FROM public.pages)    AS pages,
+  (SELECT count(*) FROM public.places)   AS places;
+```
+
+---
+
+## Notes
+
+### Tables excluded from data dumps by default
+
+| Table | Reason |
+|:---|:---|
+| `vfs_index` | Can be huge; re-populated by the VFS indexer |
+| `vfs_document_chunks` | Embedding vectors; re-generated by the vectorisation pipeline |
+
+To include them: `--exclude-data-tables ""`
+
+### How RLS works without Supabase
+
+| Layer | Supabase | Plain Postgres (this setup) |
+|:---|:---|:---|
+| `auth.uid()` | GoTrue JWT claim injected by PostgREST | `current_setting('app.current_user_id', true)::uuid` |
+| Set by | PostgREST on every request | Server: `SET LOCAL app.current_user_id = $1` at request start (application pool) |
+| Service pool | `postgres` superuser → bypasses RLS | Same — bypasses RLS |
+| Policy syntax | Unchanged | Unchanged — no rewriting needed |
+
+### Stripping `\restrict` tokens from existing dumps
+
+Going forward `backup-site` handles this automatically. For any dump already on disk:
+
+```bash
+# bash
+sed -i '/^\\(un\)\?restrict /d' file.sql
+
+# PowerShell
+(Get-Content file.sql) -replace '(?m)^\\(un)?restrict\s+\S+\s*$','' | Set-Content file.sql
+```
+
+### Duplicating this baseline to another instance
+
+```bash
+# One-time setup on staging
+psql "$STAGING_DATABASE_URL" -f cli-ts/schemas/auth_setup.sql
+psql "$STAGING_DATABASE_URL" -f cli-ts/schemas/auth_users.sql
+
+# Seed users + restore
+psql "$STAGING_DATABASE_URL" -f backups/service.polymech.info/backups/db/auth-users-26_04_10.sql
+
+pm-cli-cms db-import \
+  --schema backups/service.polymech.info/backups/db/structure-26_04_10.sql \
+  --data   backups/service.polymech.info/backups/db/data-26_04_10.sql \
+  --clear \
+  --env ./server/.env.staging
+```
+
+---
+
+## Future: when Zitadel is the only auth provider
+
+`server/src/commons/zitadel.ts` + `postgres.ts` are already live. `resolveAppUserId()` maps Zitadel `sub` → `profiles.user_id` UUID with `auth.users` as an optional fallback (guarded by `hasAuthUsersTable()`).
+
+When ready to fully drop the Supabase user store:
+
+1. Ensure all active users have `profiles.zitadel_sub` set.
+2. `auth.users` is now a plain Postgres table — keep it as a thin identity table or migrate emails into `profiles`.
+3. Update `REFERENCES auth.users(id)` FKs in migrations to point to `public.profiles(user_id)` if dropping it.
+4. `auth.uid()` already reads from `app.current_user_id` — no policy changes needed.

@@ -1,0 +1,23 @@
+{
+  "Image": "Imagen",
+  "Wizard": "Asistente",
+  "Settings": "Configuración",
+  "Google AI API Key": "Clave API de Google AI",
+  "API key configured": "Clave API configurada",
+  "API key required for image generation": "Clave API requerida para generar imágenes",
+  "Get your API key from": "Obtén tu clave API desde",
+  "Google AI Studio": "Google AI Studio",
+  "Theme": "Tema",
+  "Choose your preferred color scheme": "Elige tu esquema de colores preferido",
+  "Save Settings": "Guardar configuración",
+  "Generate Image": "Generar imagen",
+  "Generating...": "Generando...",
+  "Styles": "Estilos",
+  "Actions": "Acciones",
+  "Output File Path": "Ruta del archivo de salida",
+  "Browse": "Examinar",
+  "Select Images (or Drop Here)": "Seleccionar imágenes (o arrastrar aquí)",
+  "Templates": "Plantillas",
+  "No templates saved yet": "No hay plantillas guardadas aún",
+  "Manage": "Gestionar"
+}

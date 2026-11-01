@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\2022\\tools\\props\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B995D9-D885-48EF-86A5-889B9E7BA643}|model-reader.csproj|c:\\users\\mc007\\desktop\\osr\\osr-cad\\sw\\2022\\tools\\props\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B995D9-D885-48EF-86A5-889B9E7BA643}|model-reader.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\2022\\tools\\props\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\2022\\tools\\props\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAuwFEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:14:35.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - "9"
+
+script:
+- npm run test
+
+after_success:
+- ./node_modules/.bin/codecov

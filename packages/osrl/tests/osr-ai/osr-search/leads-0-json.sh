@@ -1,0 +1,1 @@
+osr-ai prompt --cache=false --filters=code --logLevel=debug --query="Convert to json, replace commas with dashes" --source="./leads-0.md" --gui=false --dst="./leads-0.json"

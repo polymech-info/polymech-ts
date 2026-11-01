@@ -1,0 +1,31 @@
+
+{% if recurse_test %}
+Name : {{name}}
+{% else %}
+
+### Test Array:
+
+{% for item in items %}
+    Item[items] = {{item}}          
+{% endfor %}
+
+### Test Array with Objects
+
+{% for item in objects %}
+    item[att] = {{item.att}}
+{% endfor %}
+
+{% endif %}
+
+{% include 'footer.html' %}
+
+### Markdown test
+
+{% include 'markdown.md.liquid' %}
+
+### CSV Test
+
+{% include 'parts.csv' %}
+
+5 * 100 = {{ number | times: 100}}
+

@@ -1,0 +1,31 @@
+{
+  "extends": "../typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./dist-in",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "composite": false,
+    "inlineSourceMap": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "allowUnusedLabels": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "target": "ES2019"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-in"
+  ]
+}

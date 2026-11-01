@@ -1,0 +1,27 @@
+[
+    {
+        "country": "Brazil",
+        "capital": "Brasília",
+        "population": 213993437
+    },
+    {
+        "country": "Japan",
+        "capital": "Tokyo",
+        "population": 125836021
+    },
+    {
+        "country": "Nigeria",
+        "capital": "Abuja",
+        "population": 216746934
+    },
+    {
+        "country": "Germany",
+        "capital": "Berlin",
+        "population": 83240525
+    },
+    {
+        "country": "Australia",
+        "capital": "Canberra",
+        "population": 26130634
+    }
+]

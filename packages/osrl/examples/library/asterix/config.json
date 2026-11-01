@@ -1,0 +1,41 @@
+{
+    "slug": "asterix-sm-morren",
+    "name": "Asterix - JW-Machines",
+    "category": "shredder",
+    "status": "rev-1",
+    "code": "ASM",
+    "version": "1.1",
+    "product_parts": "${abs_url}/${product_rel}/drawings/parts.jpg",
+    "product_dimensions": "${abs_url}/${product_rel}/drawings/dimensions.jpg",
+    "product_perspective": "${abs_url}/${product_rel}/renderings/perspective.jpg",
+    "download": "http://files.osr-plastic.org/files/machines/shredder/${slug}/",
+    "firmware": "http://files.osr-plastic.org/firmware/http://files.osr-plastic.org/files/firmware/asterix_max/",
+    "showParts":false,
+    "forumCategory":false,
+    "cscartId":2,
+    "authors": [
+        {
+            "name": "PlasticHub S.L.",
+            "url": "${author_link}"
+        },
+        {
+            "name": "Jason Knight",
+            "url": "https://www.mandin.earth/"
+        },
+        {
+            "name": "Jeffrey Wiecherink",
+            "url": "https://jw-machines.com"
+        }
+    ],
+    "osr": {
+        "version": "0.3"
+    },
+    "production": {
+        "cam": [
+            {
+                "name": "Base-Plate",
+                "url": "https://a360.co/3F1eDdS"
+            }
+        ]
+    }
+}

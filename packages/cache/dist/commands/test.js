@@ -1,0 +1,50 @@
+import * as path from 'path';
+import { sync as read } from '@polymech/fs/read';
+import { substitute } from '@polymech/core/strings';
+import { DEFAULT_ROOTS } from '@polymech/commons';
+import { logger } from '../index.js';
+import { defaults } from '../_cli.js';
+import { get_cached, set_cached } from '../lib/index.js';
+const defaultOptions = (yargs) => {
+    return yargs.option('debug', {
+        default: 'false',
+        describe: 'debug messages'
+    }).option('verb', {
+        description: 'test verb : file|folder'
+    }).option('src', {
+        description: 'raw source file',
+        default: './tests/src.json'
+    }).option('dst', {
+        description: 'dst output path, supports XLS|CSV|HTML',
+        default: './tests/dst.json'
+    }).option('env_key', {
+        default: 'OSR-CONFIG',
+        describe: 'Environment key to the config path'
+    });
+};
+let options = (yargs) => defaultOptions(yargs);
+export const register = (cli) => {
+    return cli.command('test <verb>', 'Test commands', options, async (argv) => {
+        defaults();
+        if (argv.help) {
+            return;
+        }
+        const args = argv;
+        const opts = {
+            verb: argv.verb,
+            src: path.resolve(substitute(args.src, DEFAULT_ROOTS)),
+            dst: path.resolve(substitute(args.dst, DEFAULT_ROOTS))
+        };
+        if (!opts.verb) {
+            logger.error('No verb specified');
+            return;
+        }
+        if (opts.verb === 'file') {
+            const src = read(opts.src, 'json');
+            const hashed = await get_cached(opts.src, { a: 1 }, 'tests');
+            const shashed = await set_cached(opts.src, { a: 1 }, 'tests', src);
+        }
+        logger.debug(`Reading OSR Config with key "${argv.env_key}"`, opts);
+    });
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb21tYW5kcy90ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sS0FBSyxJQUFJLE1BQU0sTUFBTSxDQUFBO0FBQzVCLE9BQU8sRUFBRSxJQUFJLElBQUksSUFBSSxFQUFFLE1BQU0sbUJBQW1CLENBQUE7QUFDaEQsT0FBTyxFQUFFLFVBQVUsRUFBRSxNQUFNLHdCQUF3QixDQUFBO0FBQ25ELE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQTtBQUNqRCxPQUFPLEVBQUUsTUFBTSxFQUFFLE1BQU0sYUFBYSxDQUFBO0FBQ3BDLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxZQUFZLENBQUE7QUFDckMsT0FBTyxFQUFFLFVBQVUsRUFBRSxVQUFVLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQTtBQUV4RCxNQUFNLGNBQWMsR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFO0lBQ3ZDLE9BQU8sS0FBSyxDQUFDLE1BQU0sQ0FBQyxPQUFPLEVBQUU7UUFDekIsT0FBTyxFQUFFLE9BQU87UUFDaEIsUUFBUSxFQUFFLGdCQUFnQjtLQUM3QixDQUFDLENBQUMsTUFBTSxDQUFDLE1BQU0sRUFBRTtRQUNkLFdBQVcsRUFBRSx5QkFBeUI7S0FDekMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxLQUFLLEVBQUU7UUFDYixXQUFXLEVBQUUsaUJBQWlCO1FBQzlCLE9BQU8sRUFBRSxrQkFBa0I7S0FDOUIsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxLQUFLLEVBQUU7UUFDYixXQUFXLEVBQUUsd0NBQXdDO1FBQ3JELE9BQU8sRUFBRSxrQkFBa0I7S0FDOUIsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTLEVBQUU7UUFDakIsT0FBTyxFQUFFLFlBQVk7UUFDckIsUUFBUSxFQUFFLG9DQUFvQztLQUNqRCxDQUFDLENBQUM7QUFDUCxDQUFDLENBQUM7QUFFRixJQUFJLE9BQU8sR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFLENBQUMsY0FBYyxDQUFDLEtBQUssQ0FBQyxDQUFDO0FBR3pELE1BQU0sQ0FBQyxNQUFNLFFBQVEsR0FBRyxDQUFDLEdBQWEsRUFBRSxFQUFFO0lBQ3RDLE9BQU8sR0FBRyxDQUFDLE9BQU8sQ0FBQyxhQUFhLEVBQUUsZUFBZSxFQUFFLE9BQU8sRUFBRSxLQUFLLEVBQUUsSUFBbUIsRUFBRSxFQUFFO1FBRXRGLFFBQVEsRUFBRSxDQUFDO1FBQ1gsSUFBSSxJQUFJLENBQUMsSUFBSSxFQUFFLENBQUM7WUFBQyxPQUFPO1FBQUMsQ0FBQztRQUMxQixNQUFNLElBQUksR0FBUSxJQUFJLENBQUM7UUFFdkIsTUFBTSxJQUFJLEdBQUc7WUFDVCxJQUFJLEVBQUUsSUFBSSxDQUFDLElBQUk7WUFDZixHQUFHLEVBQUUsSUFBSSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxhQUFhLENBQUMsQ0FBQztZQUN0RCxHQUFHLEVBQUUsSUFBSSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxhQUFhLENBQUMsQ0FBQztTQUN6RCxDQUFDO1FBRUYsSUFBSSxDQUFDLElBQUksQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUNiLE1BQU0sQ0FBQyxLQUFLLENBQUMsbUJBQW1CLENBQUMsQ0FBQztZQUNsQyxPQUFPO1FBQ1gsQ0FBQztRQUVELElBQUksSUFBSSxDQUFDLElBQUksS0FBSyxNQUFNLEVBQUUsQ0FBQztZQUV2QixNQUFNLEdBQUcsR0FBRyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxNQUFNLENBQUMsQ0FBQztZQUNuQyxNQUFNLE1BQU0sR0FBRyxNQUFNLFVBQVUsQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFFLEVBQUUsQ0FBQyxFQUFFLENBQUMsRUFBRSxFQUFFLE9BQU8sQ0FBQyxDQUFBO1lBQzVELE1BQU0sT0FBTyxHQUFHLE1BQU0sVUFBVSxDQUFDLElBQUksQ0FBQyxHQUFHLEVBQUUsRUFBRSxDQUFDLEVBQUUsQ0FBQyxFQUFFLEVBQUUsT0FBTyxFQUFFLEdBQUcsQ0FBQyxDQUFBO1FBQ3RFLENBQUM7UUFDRCxNQUFNLENBQUMsS0FBSyxDQUFDLGdDQUFnQyxJQUFJLENBQUMsT0FBTyxHQUFHLEVBQUUsSUFBSSxDQUFDLENBQUM7SUFDeEUsQ0FBQyxDQUFDLENBQUM7QUFDUCxDQUFDLENBQUMifQ==

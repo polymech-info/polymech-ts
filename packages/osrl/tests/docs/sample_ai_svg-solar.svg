@@ -1,0 +1,77 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" style="background:#000; border:1px solid #000">
+  <defs>
+    <path id="orbit1" d="M300,300 m-50,0 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0"/>
+    <path id="orbit2" d="M300,300 m-80,0 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0"/>
+    <path id="orbit3" d="M300,300 m-110,0 a110,110 0 1,0 220,0 a110,110 0 1,0 -220,0"/>
+    <path id="orbit4" d="M300,300 m-140,0 a140,140 0 1,0 280,0 a140,140 0 1,0 -280,0"/>
+    <path id="orbit5" d="M300,300 m-170,0 a170,170 0 1,0 340,0 a170,170 0 1,0 -340,0"/>
+    <path id="orbit6" d="M300,300 m-210,0 a210,210 0 1,0 420,0 a210,210 0 1,0 -420,0"/>
+    <path id="orbit7" d="M300,300 m-250,0 a250,250 0 1,0 500,0 a250,250 0 1,0 -500,0"/>
+    <path id="orbit8" d="M300,300 m-280,0 a280,280 0 1,0 560,0 a280,280 0 1,0 -560,0"/>
+  </defs>
+  <circle cx="300" cy="300" r="30" fill="yellow"/>
+  <a xlink:href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">
+    <circle r="5" fill="gray">
+      <animateMotion dur="30s" repeatCount="indefinite">
+        <mpath href="#orbit1"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Venus" target="_blank">
+    <circle r="7" fill="orange">
+      <animateMotion dur="50s" repeatCount="indefinite">
+        <mpath href="#orbit2"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Earth" target="_blank">
+    <circle r="8" fill="blue">
+      <animateMotion dur="70s" repeatCount="indefinite">
+        <mpath href="#orbit3"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Mars" target="_blank">
+    <circle r="6" fill="red">
+      <animateMotion dur="90s" repeatCount="indefinite">
+        <mpath href="#orbit4"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Jupiter" target="_blank">
+    <circle r="14" fill="brown">
+      <animateMotion dur="110s" repeatCount="indefinite">
+        <mpath href="#orbit5"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Saturn" target="_blank">
+    <circle r="12" fill="gold">
+      <animateMotion dur="130s" repeatCount="indefinite">
+        <mpath href="#orbit6"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Uranus" target="_blank">
+    <circle r="10" fill="lightblue">
+      <animateMotion dur="150s" repeatCount="indefinite">
+        <mpath href="#orbit7"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <a xlink:href="https://en.wikipedia.org/wiki/Neptune" target="_blank">
+    <circle r="10" fill="darkblue">
+      <animateMotion dur="170s" repeatCount="indefinite">
+        <mpath href="#orbit8"/>
+      </animateMotion>
+    </circle>
+  </a>
+  <use href="#orbit1" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit2" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit3" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit4" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit5" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit6" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit7" stroke="white" stroke-width="0.5"/>
+  <use href="#orbit8" stroke="white" stroke-width="0.5"/>
+</svg>

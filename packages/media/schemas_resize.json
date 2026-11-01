@@ -1,0 +1,182 @@
+[
+  {
+    "$ref": "#/definitions/resize",
+    "definitions": {
+      "resize": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1,
+            "description": "FILE|FOLDER|GLOB - Source file(s) to resize"
+          },
+          "dst": {
+            "type": "string",
+            "description": "FILE|FOLDER|GLOB - Destination for resized files"
+          },
+          "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable internal debug messages"
+          },
+          "alt": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use alternate tokenizer, & instead of $"
+          },
+          "dry": {
+            "type": "boolean",
+            "default": false,
+            "description": "Run without conversion"
+          },
+          "verbose": {
+            "type": "boolean",
+            "default": false,
+            "description": "Show internal messages"
+          },
+          "width": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Resize image width"
+          },
+          "height": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Resize image height"
+          },
+          "minHeight": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Resize image minimum height"
+          },
+          "minWidth": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Resize image minimum width"
+          },
+          "minSize": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Resize image size (bytes)"
+          },
+          "percent": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1000,
+            "description": "Resize image in percent (width)"
+          },
+          "square": {
+            "type": "boolean",
+            "default": false,
+            "description": "Fit image within width for 1:1 aspect ratio without cropping"
+          },
+          "fillColor": {
+            "type": "string",
+            "default": "white",
+            "description": "Fill color for square backgrounds (default: white)"
+          },
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "warn",
+              "info",
+              "debug",
+              "error"
+            ],
+            "default": "info",
+            "description": "Log level: warn, info, debug, error"
+          },
+          "fit": {
+            "type": "string",
+            "enum": [
+              "cover",
+              "contain",
+              "fill",
+              "inside",
+              "outside"
+            ],
+            "description": "How the image should be resized to fit both provided dimensions"
+          },
+          "position": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Position, gravity or strategy to use when fit is cover or contain"
+          },
+          "background": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "r": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 255
+                  },
+                  "g": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 255
+                  },
+                  "b": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 255
+                  },
+                  "alpha": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "r",
+                  "g",
+                  "b"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "Background color when using a fit of contain"
+          },
+          "kernel": {
+            "type": "string",
+            "enum": [
+              "nearest",
+              "cubic",
+              "mitchell",
+              "lanczos2",
+              "lanczos3"
+            ],
+            "description": "The kernel to use for image reduction"
+          },
+          "withoutEnlargement": {
+            "type": "boolean",
+            "default": false,
+            "description": "Do not enlarge if the width or height are already less than the specified dimensions"
+          },
+          "withoutReduction": {
+            "type": "boolean",
+            "default": false,
+            "description": "Do not reduce if the width or height are already greater than the specified dimensions"
+          },
+          "fastShrinkOnLoad": {
+            "type": "boolean",
+            "default": true,
+            "description": "Take greater advantage of the JPEG and WebP shrink-on-load feature"
+          }
+        },
+        "required": [
+          "src"
+        ],
+        "additionalProperties": true,
+        "description": "IResizeOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

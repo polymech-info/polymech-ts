@@ -1,0 +1,80 @@
+{
+  "assembly": {
+    "Components": [
+      {
+        "Name": "Round_Bar_Handle-1",
+        "Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\Round_Bar_Handle.SLDPRT",
+        "IsSuppressed": false
+      }
+    ]
+  },
+  "root": {
+    "Name": "SubAssembly",
+    "Children": [
+      {
+        "Name": "Round_Bar_Handle-1",
+        "Children": null,
+        "Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\Round_Bar_Handle.SLDPRT",
+        "Parent": null,
+        "Properties": {
+          "Handle_length-600mm": {},
+          "Central Axis - 180mm": {}
+        },
+        "Equations": {
+          "Bar-Diameter": 25.0
+        },
+        "Mass": {
+          "Mass": 0.15530605906608932,
+          "Density": 999.9999999999999,
+          "Volume": 0.00015530605906608933,
+          "SurfaceArea": 0.03168953034393582,
+          "CenterOfMassX": 7.384812771164415E-35,
+          "CenterOfMassY": -0.0036070999289966703,
+          "CenterOfMassZ": 0.15582000449633035
+        },
+        "Box": {
+          "MinX": -0.1233194594870661,
+          "MinY": 1.3577481265200646,
+          "MinZ": -0.3621085323902564,
+          "MaxX": -0.08216364765760065,
+          "MaxY": 1.8479033206794013,
+          "MaxZ": -0.29999688486956866
+        },
+        "Material": {
+          "Material": "",
+          "Materials": ""
+        },
+        "States": {},
+        "LaserParts": null,
+        "IsSuppressed": false,
+        "activeConfiguration": null
+      }
+    ],
+    "Path": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\drive\\SubAssembly.SLDASM",
+    "Parent": null,
+    "Properties": {
+      "Default": {}
+    },
+    "Equations": {},
+    "Mass": {
+      "Mass": 0.15530605906608932,
+      "Density": 999.9999999999999,
+      "Volume": 0.00015530605906608933,
+      "SurfaceArea": 0.03168953034393582,
+      "CenterOfMassX": -0.10877928088117333,
+      "CenterOfMassY": 1.6014247321573716,
+      "CenterOfMassZ": -0.31691562565816417
+    },
+    "Box": null,
+    "Material": {
+      "Round_Bar_Handle-1": ""
+    },
+    "States": {},
+    "LaserParts": null,
+    "IsSuppressed": false,
+    "activeConfiguration": "Default"
+  },
+  "Configurations": {
+    "Default": {}
+  }
+}

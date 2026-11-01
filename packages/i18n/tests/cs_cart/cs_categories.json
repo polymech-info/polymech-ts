@@ -1,0 +1,57 @@
+[
+  {
+    "category_id": "26",
+    "parent_id": "0",
+    "id_path": "26",
+    "category": "Plastic",
+    "position": "140",
+    "status": "A",
+    "company_id": "0",
+    "storefront_id": "0",
+    "product_count": "0",
+    "seo_name": "plastic",
+    "seo_path": "",
+    "description": ""
+  },  {
+    "category_id": "25",
+    "parent_id": "0",
+    "id_path": "25",
+    "category": "Moulds",
+    "position": "130",
+    "status": "A",
+    "company_id": "0",
+    "storefront_id": "0",
+    "product_count": "1",
+    "seo_name": "moulds-en",
+    "seo_path": "",
+    "description": ""
+  },
+  {
+    "category_id": "23",
+    "parent_id": "0",
+    "id_path": "23",
+    "category": "Shredder",
+    "position": "110",
+    "status": "A",
+    "company_id": "0",
+    "storefront_id": "0",
+    "product_count": "9",
+    "seo_name": "discontinued",
+    "seo_path": "",
+    "description": ""
+  },
+  {
+    "category_id": "23",
+    "parent_id": "0",
+    "id_path": "23",
+    "category": "Extrusion",
+    "position": "110",
+    "status": "A",
+    "company_id": "0",
+    "storefront_id": "0",
+    "product_count": "9",
+    "seo_name": "discontinued",
+    "seo_path": "",
+    "description": ""
+  }
+]

@@ -1,0 +1,3 @@
+import { substitute as _substitute, substituteAlt } from "@polymech/core/strings";
+export const substitute = (alt, template, vars) => alt ? substituteAlt(template, vars) : _substitute(template, vars);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy91dGlsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxVQUFVLElBQUksV0FBVyxFQUFFLGFBQWEsRUFBRyxNQUFNLHdCQUF3QixDQUFBO0FBQ2xGLE1BQU0sQ0FBQyxNQUFNLFVBQVUsR0FBRyxDQUFDLEdBQVcsRUFBRSxRQUFlLEVBQUUsSUFBMkIsRUFBRSxFQUFFLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxhQUFhLENBQUMsUUFBUSxFQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxXQUFXLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxDQUFBIn0=

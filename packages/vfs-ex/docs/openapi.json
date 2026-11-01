@@ -1,0 +1,761 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "bun-hono-boilerplate"
+  },
+  "paths": {
+    "/api/comment/{commentId}": {
+      "get": {
+        "tags": [
+          "Comment"
+        ],
+        "summary": "Get comment by ID",
+        "description": "Retrieve a comment by its ID",
+        "parameters": [
+          {
+            "name": "commentId",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the comment to retrieve",
+            "schema": {
+              "type": "string",
+              "format": "ulid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/comment": {
+      "get": {
+        "tags": [
+          "Comment"
+        ],
+        "summary": "List comments",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Comment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "comment": {
+        "tags": [
+          "Comment"
+        ],
+        "summary": "Create a new comment",
+        "description": "Create a new comment with the provided data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string",
+                    "description": "The content of the comment"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Comment created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Comment"
+        ],
+        "summary": "Update an existing comment",
+        "description": "Update a comment with the provided data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "ulid",
+                    "description": "The ID of the comment to update"
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The new content of the comment"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Comment updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health/api": {
+      "get": {
+        "summary": "Health check",
+        "description": "Responds if the app is up and running",
+        "responses": {
+          "200": {
+            "description": "App is up and running",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/post/{postId}": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "summary": "Get post by ID",
+        "description": "Retrieve a post by its ID",
+        "parameters": [
+          {
+            "name": "postId",
+            "in": "path",
+            "required": true,
+            "description": "The ID of the post to retrieve",
+            "schema": {
+              "type": "string",
+              "format": "ulid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/post": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "summary": "List posts",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Post"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Post"
+        ],
+        "summary": "Create a new post",
+        "description": "Create a new post with the provided data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "The title of the post"
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The content of the post"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Post created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Post"
+        ],
+        "summary": "Update an existing post",
+        "description": "Update a post with the provided data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "ulid",
+                    "description": "The ID of the post to update"
+                  },
+                  "title": {
+                    "type": "string",
+                    "description": "The new title of the post"
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The new content of the post"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Post updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vfs/ls/{mount}/{path}": {
+      "get": {
+        "summary": "List files and directories",
+        "tags": [
+          "VFS"
+        ],
+        "description": "List files and directories at a given path",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "glob",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of files and directories"
+          },
+          "404": {
+            "description": "Mount or directory not found"
+          }
+        }
+      }
+    },
+    "/vfs/write/{mount}/{path}": {
+      "put": {
+        "summary": "Write file content",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Write or update file content (for editor saves)",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File written successfully"
+          },
+          "404": {
+            "description": "Mount not found"
+          }
+        }
+      }
+    },
+    "/vfs/upload/{mount}/{path}": {
+      "post": {
+        "summary": "Upload file",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Upload a file to the specified path",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File uploaded successfully"
+          },
+          "404": {
+            "description": "Mount not found"
+          }
+        }
+      }
+    },
+    "/vfs/delete/{mount}/{path}": {
+      "delete": {
+        "summary": "Delete file or directory",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Delete a file or directory at the specified path",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File or directory deleted successfully"
+          },
+          "404": {
+            "description": "Mount, file, or directory not found"
+          }
+        }
+      }
+    },
+    "/vfs/mkdir/{mount}/{path}": {
+      "post": {
+        "summary": "Create directory",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Create a directory at the specified path",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Directory created successfully"
+          },
+          "404": {
+            "description": "Mount not found"
+          }
+        }
+      }
+    },
+    "/vfs/read/{mount}/{path}": {
+      "get": {
+        "summary": "Read file content",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Read the content of a file",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File content",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Mount or file not found"
+          }
+        }
+      }
+    },
+    "/vfs/get/{mount}/{path}": {
+      "get": {
+        "summary": "Get file with HTTP range support",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Serve a file with proper MIME type, caching headers, and HTTP range support for large files",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Range",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "HTTP Range header for partial content requests"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Full file content"
+          },
+          "206": {
+            "description": "Partial content (range request)"
+          },
+          "404": {
+            "description": "Mount or file not found"
+          },
+          "416": {
+            "description": "Range not satisfiable"
+          }
+        }
+      }
+    },
+    "/vfs/stat/{mount}/{path}": {
+      "get": {
+        "summary": "Get file or directory metadata",
+        "tags": [
+          "VFS"
+        ],
+        "description": "Get metadata for a file or directory at a given path",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "mount",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File or directory metadata"
+          },
+          "404": {
+            "description": "Mount, file, or directory not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Comment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "ulid",
+            "description": "The ID of the comment"
+          },
+          "commentId": {
+            "type": "string",
+            "description": "The ID of the comment the comment belongs to"
+          },
+          "userId": {
+            "type": "string",
+            "description": "The ID of the user who created the comment"
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the comment"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time when the comment was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time when the comment was last updated"
+          }
+        }
+      },
+      "CreateCommentRequest": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The content of the comment",
+            "required": true
+          }
+        }
+      },
+      "UpdateCommentRequest": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The content of the comment",
+            "required": false
+          }
+        }
+      },
+      "Post": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "ulid",
+            "description": "The ID of the post"
+          },
+          "userId": {
+            "type": "string",
+            "description": "The ID of the user who created the post"
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the post"
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the post"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time when the post was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time when the post was last updated"
+          }
+        }
+      },
+      "CreatePostRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the post",
+            "required": true
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the post",
+            "required": true
+          }
+        }
+      },
+      "UpdatePostRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the post",
+            "required": false
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the post",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

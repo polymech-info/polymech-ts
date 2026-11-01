@@ -1,0 +1,9 @@
+- id: read_more
+  translation: Chamber Size
+
+- id: address
+  translation: Capacity
+
+- id: injection_machine
+  translation: Injection Machine
+

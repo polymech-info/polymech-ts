@@ -1,0 +1,85 @@
+{
+  "name": "@polymech/discourse",
+  "description": "",
+  "version": "0.1.9",
+  "typings": "index.d.ts",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "main.js",
+  "main": "main.js",
+  "bin": {
+    "pm-discourse": "main.js"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "@polymech/cache": "file:../cache",
+    "@polymech/commons": "file:../commons",
+    "@polymech/core": "file:../core",
+    "@polymech/fs": "file:../fs",
+    "@polymech/media": "file:../media",
+    "@polymech/registry": "file:../registry",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^14.17.5",
+    "@types/yargs": "^17.0.11",
+    "axios": "^0.27.2",
+    "bluebird": "^3.7.2",
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.12",
+    "chokidar": "^3.5.3",
+    "download": "^8.0.0",
+    "env-var": "^7.1.1",
+    "escape-html": "^1.0.3",
+    "fast-glob": "^3.3.0",
+    "filenamify": "^4.3.0",
+    "find-up": "^5.0.0",
+    "front-matter": "^4.0.2",
+    "generate-password": "^1.7.0",
+    "glob-base": "^0.3.0",
+    "isomorphic-unfetch": "^4.0.2",
+    "js-base64": "^3.7.2",
+    "js-beautify": "^1.14.9",
+    "json-to-pretty-yaml": "^1.2.2",
+    "markdown-it": "^13.0.1",
+    "md5": "^2.3.0",
+    "moment": "^2.29.4",
+    "native-promise-pool": "^3.19.0",
+    "pretty": "^2.0.0",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "sanitize-filename": "^1.6.3",
+    "showdown": "^2.1.0",
+    "simple-git": "^3.19.1",
+    "slugify": "^1.6.6",
+    "tslog": "^3.3.4",
+    "turndown": "^7.1.2",
+    "typescript": "^4.3.5",
+    "uri-js": "^4.4.1",
+    "yargs": "^17.5.1"
+  },
+  "scripts": {
+    "test": "tsc; mocha --full-trace mocha \"spec/**/*.spec.js\"",
+    "test-with-coverage": "istanbul cover node_modules/.bin/_mocha -- 'spec/**/*.spec.js'",
+    "lint": "tslint --project=./tsconfig.json",
+    "build": "tsc -p . --declaration",
+    "dev": "tsc -p . --declaration -w",
+    "typings": "tsc --declaration",
+    "docs": "npx typedoc src/index.ts",
+    "dev-test-watch": "mocha-typescript-watch",
+    "typesafe-i18n": "typesafe-i18n",
+    "link-dev": "sh scripts/link-dev.sh"
+  },
+  "homepage": "https://git.osr-plastic.org/plastichub/lib-content",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/plastichub/lib-content.git"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "typescript"
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "src": "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM",
+    "target": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive-test.html",
+    "options": {
+      "src": "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400*.+(SLDASM)",
+      "dst": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive\\400*-.+(html)",
+      "debug": false,
+      "verbose": false,
+      "dry": false,
+      "cache": true,
+      "hidden": "true",
+      "renderer": "Solidworks",
+      "alt": false,
+      "quality": 2,
+      "logLevel": "info",
+      "width": "1024",
+      "height": "1024",
+      "script": "convert.exe",
+      "sw": 2022,
+      "swv": 30,
+      "configuration": "test",
+      "report": "${SRC_DIR}/cad-report-${CONFIGURATION}.json",
+      "variables": {
+        "SRC_PATH": "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400*.+(SLDASM)",
+        "SRC_DIR": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "SRC_NAME": "400*",
+        "SRC_FILE_NAME": "400*.+(SLDASM)",
+        "SRC_FILE_EXT": "+(SLDASM)",
+        "SRC_IS_FILE": false,
+        "SRC_IS_FOLDER": false,
+        "SRC_IS_EXPRESSION": false,
+        "SRC_IS_GLOB": true,
+        "SRC_GLOB": "400*.+(SLDASM)",
+        "SRC_GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "SRC_FILES": [
+          "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM"
+        ],
+        "DST_PATH": "${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(html)",
+        "DST_DIR": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "DST_NAME": "400*-",
+        "DST_FILE_NAME": "\\400*-.+(html)",
+        "DST_FILE_EXT": "+(html)",
+        "DST_IS_FILE": false,
+        "DST_IS_FOLDER": false,
+        "DST_IS_EXPRESSION": false,
+        "DST_IS_GLOB": true,
+        "DST_GLOB": "\\400*-.+(html)",
+        "DST_GLOB_EXTENSIONS": [
+          "html"
+        ],
+        "DST_FILES": []
+      },
+      "view": "Render",
+      "args": "",
+      "bom-config": "Default",
+      "bom-detail": 1,
+      "bom-type": 2,
+      "bom-images": false,
+      "srcInfo": {
+        "PATH": "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400*.+(SLDASM)",
+        "DIR": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "400*",
+        "FILE_NAME": "400*.+(SLDASM)",
+        "FILE_EXT": "+(SLDASM)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "400*.+(SLDASM)",
+        "GLOB_EXTENSIONS": [
+          "SLDASM"
+        ],
+        "FILES": [
+          "C:/Users/mc007/Desktop/osr/osr-cad/tests/drive/400_Drive.SLDASM"
+        ]
+      },
+      "dstInfo": {
+        "PATH": "${SRC_DIR}/${SRC_NAME}-${CONFIGURATION}.+(html)",
+        "DIR": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive",
+        "NAME": "400*-",
+        "FILE_NAME": "\\400*-.+(html)",
+        "FILE_EXT": "+(html)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "\\400*-.+(html)",
+        "GLOB_EXTENSIONS": [
+          "html"
+        ],
+        "FILES": []
+      }
+    }
+  }
+]

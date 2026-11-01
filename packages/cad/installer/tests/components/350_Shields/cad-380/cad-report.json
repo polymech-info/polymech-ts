@@ -1,0 +1,96 @@
+[
+  {
+    "code": 0,
+    "command": "model-reader.exe  --source=\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\360_ExtrusionShield.SLDASM\" --target=\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\360_ExtrusionShield.json\"",
+    "messages": [
+      "Serialize to C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\360_ExtrusionShield.json\r\n"
+    ],
+    "src": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM",
+    "target": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\360_ExtrusionShield.json",
+    "failed": false,
+    "options": {
+      "src": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM",
+      "dst": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+      "debug": false,
+      "verbose": true,
+      "dry": false,
+      "skip": true,
+      "hidden": "true",
+      "renderer": "Solidworks",
+      "alt": true,
+      "quality": 2,
+      "logLevel": "trace",
+      "close": "true",
+      "width": "1024",
+      "height": "1024",
+      "script": "convert.exe",
+      "sw": 2022,
+      "configuration": "Default",
+      "report": "${SRC_DIR}/cad-report.json",
+      "variables": {
+        "SRC_PATH": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM",
+        "SRC_DIR": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380",
+        "SRC_NAME": "360_ExtrusionShield",
+        "SRC_FILE_NAME": "360_ExtrusionShield.SLDASM",
+        "SRC_FILE_EXT": "SLDASM",
+        "SRC_IS_FILE": true,
+        "SRC_IS_FOLDER": false,
+        "SRC_IS_EXPRESSION": false,
+        "SRC_IS_GLOB": false,
+        "SRC_FILES": [
+          "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM"
+        ],
+        "DST_PATH": "&{SRC_DIR}/&{SRC_NAME}.+(json)",
+        "DST_DIR": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380",
+        "DST_NAME": "&{SRC_NAME}",
+        "DST_FILE_NAME": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "DST_FILE_EXT": "+(json)",
+        "DST_IS_FILE": false,
+        "DST_IS_FOLDER": false,
+        "DST_IS_EXPRESSION": false,
+        "DST_IS_GLOB": true,
+        "DST_GLOB": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "DST_GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "DST_FILES": []
+      },
+      "view": "Render",
+      "args": "",
+      "bom-config": "Default",
+      "bom-detail": 1,
+      "bom-type": 2,
+      "bom-images": false,
+      "srcInfo": {
+        "PATH": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM",
+        "DIR": "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380",
+        "NAME": "360_ExtrusionShield",
+        "FILE_NAME": "360_ExtrusionShield.SLDASM",
+        "FILE_EXT": "SLDASM",
+        "IS_FILE": true,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": false,
+        "FILES": [
+          "C:/Users/mc007/Desktop/osr/products/products/components/350_Shields/cad-380/360_ExtrusionShield.SLDASM"
+        ]
+      },
+      "dstInfo": {
+        "PATH": "&{SRC_DIR}/&{SRC_NAME}.+(json)",
+        "DIR": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380",
+        "NAME": "&{SRC_NAME}",
+        "FILE_NAME": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "FILE_EXT": "+(json)",
+        "IS_FILE": false,
+        "IS_FOLDER": false,
+        "IS_EXPRESSION": false,
+        "IS_GLOB": true,
+        "GLOB": "\\&{SRC_DIR}\\&{SRC_NAME}.+(json)",
+        "GLOB_EXTENSIONS": [
+          "json"
+        ],
+        "FILES": []
+      }
+    }
+  }
+]

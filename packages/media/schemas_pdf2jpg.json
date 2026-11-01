@@ -1,0 +1,58 @@
+[
+  {
+    "$ref": "#/definitions/pdf2jpg",
+    "definitions": {
+      "pdf2jpg": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Path to the input PDF file"
+          },
+          "output": {
+            "type": "string",
+            "description": "Output path template (e.g., output/page_{PAGE}.png)"
+          },
+          "dpi": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "default": 300,
+            "description": "Resolution for the output images"
+          },
+          "scale": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "default": 2,
+            "description": "Scaling factor to apply before rendering (e.g., 2 for 2x size)"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "jpg"
+            ],
+            "default": "jpg",
+            "description": "Output image format"
+          },
+          "startPage": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "description": "First page to convert (1-based index)"
+          },
+          "endPage": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "description": "Last page to convert (1-based index)"
+          }
+        },
+        "required": [
+          "input"
+        ],
+        "additionalProperties": true,
+        "description": "IPdf2JpgOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

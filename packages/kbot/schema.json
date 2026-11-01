@@ -1,0 +1,264 @@
+[
+  {
+    "$ref": "#/definitions/kbot",
+    "definitions": {
+      "kbot": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "default": ".",
+            "description": "Target directory"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "The prompt. Supports file paths and environment variables."
+          },
+          "output": {
+            "type": "string",
+            "description": "Optional output path for modified files (Tool mode only)"
+          },
+          "dst": {
+            "type": "string",
+            "description": "Optional destination path for the result, will substitute ${MODEL_NAME} and ${ROUTER} in the path. Optional, used for \"completion\" mode"
+          },
+          "append": {
+            "type": "string",
+            "enum": [
+              "concat",
+              "merge",
+              "replace"
+            ],
+            "description": "How to handle output if --dst file already exists: \"concat\" (append) or \"merge\" (try to merge structures if possible, otherwise append). Only used if --dst is specified."
+          },
+          "wrap": {
+            "type": "string",
+            "enum": [
+              "meta",
+              "none"
+            ],
+            "default": "none",
+            "description": "Specify how to wrap the output, \"meta (file name, absolute path, cwd)\" or \"none\"."
+          },
+          "each": {
+            "type": "string",
+            "description": "Iterate over items, supported: GLOB | Path to JSON File | array of strings (comma separated). To test different models, use --each=\"gpt-3.5-turbo,gpt-4o\", the actual string will exposed as variable `ITEM`, eg: --dst=\"${ITEM}-output.md\""
+          },
+          "disable": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [],
+            "description": "Disable tools categories, eg: --disable=fs,git,interact,terminal,search,web,email,user"
+          },
+          "disableTools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [],
+            "description": "List of specific tools to disable"
+          },
+          "tools": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "default": [
+              "fs",
+              "git",
+              "interact",
+              "terminal",
+              "search",
+              "web",
+              "email",
+              "user"
+            ],
+            "description": "List of tools to use. Can be built-in tool names or paths to custom tool files. Default: fs,git,interact,terminal,search,web,email,user"
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Comma separated glob patterns or paths, eg --include=src/*.tsx,src/*.ts --include=package.json"
+          },
+          "exclude": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Comma separated glob patterns or paths, eg --exclude=src/*.tsx,src/*.ts --exclude=package.json"
+          },
+          "globExtension": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "match-cpp"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "Specify a glob extension behavior. Available presets: match-cpp. Also accepts a custom glob pattern with variables like ${SRC_DIR}, ${SRC_NAME}, ${SRC_EXT}. E.g., \"match-cpp\" or \"${SRC_DIR}/${SRC_NAME}*.cpp\""
+          },
+          "api_key": {
+            "type": "string",
+            "description": "Explicit API key to use"
+          },
+          "model": {
+            "type": "string",
+            "description": "AI model to use for processing. Available models:\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m OpenRouter models:\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\nai21/jamba-large-1.7 | paid\naion-labs/aion-1.0 | paid\naion-labs/aion-1.0-mini | paid\naion-labs/aion-2.0 | paid\naion-labs/aion-rp-llama-3.1-8b | paid\nalfredpros/codellama-7b-instruct-solidity | paid\nallenai/molmo-2-8b | paid\nallenai/olmo-2-0325-32b-instruct | paid\nallenai/olmo-3-32b-think | paid\nallenai/olmo-3-7b-instruct | paid\nallenai/olmo-3-7b-think | paid\nallenai/olmo-3.1-32b-instruct | paid\nallenai/olmo-3.1-32b-think | paid\namazon/nova-2-lite-v1 | paid\namazon/nova-lite-v1 | paid\namazon/nova-micro-v1 | paid\namazon/nova-premier-v1 | paid\namazon/nova-pro-v1 | paid\nanthropic/claude-3-haiku | paid\nanthropic/claude-3.5-haiku | paid\nanthropic/claude-3.5-sonnet | paid\nanthropic/claude-3.7-sonnet | paid\nanthropic/claude-3.7-sonnet:thinking | paid\nanthropic/claude-haiku-4.5 | paid\nanthropic/claude-opus-4 | paid\nanthropic/claude-opus-4.1 | paid\nanthropic/claude-opus-4.5 | paid\nanthropic/claude-opus-4.6 | paid\nanthropic/claude-sonnet-4 | paid\nanthropic/claude-sonnet-4.5 | paid\nanthropic/claude-sonnet-4.6 | paid\narcee-ai/coder-large | paid\narcee-ai/maestro-reasoning | paid\narcee-ai/spotlight | paid\narcee-ai/trinity-large-preview:free | free\narcee-ai/trinity-mini | paid\narcee-ai/trinity-mini:free | free\narcee-ai/virtuoso-large | paid\nopenrouter/auto | paid\nbaidu/ernie-4.5-21b-a3b | paid\nbaidu/ernie-4.5-21b-a3b-thinking | paid\nbaidu/ernie-4.5-300b-a47b | paid\nbaidu/ernie-4.5-vl-28b-a3b | paid\nbaidu/ernie-4.5-vl-424b-a47b | paid\nopenrouter/bodybuilder | paid\nbytedance-seed/seed-1.6 | paid\nbytedance-seed/seed-1.6-flash | paid\nbytedance-seed/seed-2.0-lite | paid\nbytedance-seed/seed-2.0-mini | paid\nbytedance/ui-tars-1.5-7b | paid\ncohere/command-a | paid\ncohere/command-r-08-2024 | paid\ncohere/command-r-plus-08-2024 | paid\ncohere/command-r7b-12-2024 | paid\ndeepcogito/cogito-v2.1-671b | paid\ndeepseek/deepseek-chat | paid\ndeepseek/deepseek-chat-v3-0324 | paid\ndeepseek/deepseek-chat-v3.1 | paid\ndeepseek/deepseek-v3.1-terminus | paid\ndeepseek/deepseek-v3.2 | paid\ndeepseek/deepseek-v3.2-exp | paid\ndeepseek/deepseek-v3.2-speciale | paid\ndeepseek/deepseek-r1 | paid\ndeepseek/deepseek-r1-0528 | paid\ndeepseek/deepseek-r1-distill-llama-70b | paid\ndeepseek/deepseek-r1-distill-qwen-32b | paid\neleutherai/llemma_7b | paid\nessentialai/rnj-1-instruct | paid\nopenrouter/free | paid\nalpindale/goliath-120b | paid\ngoogle/gemini-2.0-flash-001 | paid\ngoogle/gemini-2.0-flash-lite-001 | paid\ngoogle/gemini-2.5-flash | paid\ngoogle/gemini-2.5-flash-lite | paid\ngoogle/gemini-2.5-flash-lite-preview-09-2025 | paid\ngoogle/gemini-2.5-pro | paid\ngoogle/gemini-2.5-pro-preview-05-06 | paid\ngoogle/gemini-2.5-pro-preview | paid\ngoogle/gemini-3-flash-preview | paid\ngoogle/gemini-3-pro-preview | paid\ngoogle/gemini-3.1-flash-lite-preview | paid\ngoogle/gemini-3.1-pro-preview | paid\ngoogle/gemini-3.1-pro-preview-customtools | paid\ngoogle/gemma-2-27b-it | paid\ngoogle/gemma-2-9b-it | paid\ngoogle/gemma-3-12b-it | paid\ngoogle/gemma-3-12b-it:free | free\ngoogle/gemma-3-27b-it | paid\ngoogle/gemma-3-27b-it:free | free\ngoogle/gemma-3-4b-it | paid\ngoogle/gemma-3-4b-it:free | free\ngoogle/gemma-3n-e2b-it:free | free\ngoogle/gemma-3n-e4b-it | paid\ngoogle/gemma-3n-e4b-it:free | free\ngoogle/gemini-2.5-flash-image | paid\ngoogle/gemini-3.1-flash-image-preview | paid\ngoogle/gemini-3-pro-image-preview | paid\nibm-granite/granite-4.0-h-micro | paid\ninception/mercury | paid\ninception/mercury-2 | paid\ninception/mercury-coder | paid\ninflection/inflection-3-pi | paid\ninflection/inflection-3-productivity | paid\nkwaipilot/kat-coder-pro | paid\nliquid/lfm-2.2-6b | paid\nliquid/lfm-2-24b-a2b | paid\nliquid/lfm2-8b-a1b | paid\nliquid/lfm-2.5-1.2b-instruct:free | free\nliquid/lfm-2.5-1.2b-thinking:free | free\nmeta-llama/llama-guard-3-8b | paid\nanthracite-org/magnum-v4-72b | paid\nmancer/weaver | paid\nmeituan/longcat-flash-chat | paid\nmeta-llama/llama-3-70b-instruct | paid\nmeta-llama/llama-3-8b-instruct | paid\nmeta-llama/llama-3.1-405b | paid\nmeta-llama/llama-3.1-70b-instruct | paid\nmeta-llama/llama-3.1-8b-instruct | paid\nmeta-llama/llama-3.2-11b-vision-instruct | paid\nmeta-llama/llama-3.2-1b-instruct | paid\nmeta-llama/llama-3.2-3b-instruct | paid\nmeta-llama/llama-3.2-3b-instruct:free | free\nmeta-llama/llama-3.3-70b-instruct | paid\nmeta-llama/llama-3.3-70b-instruct:free | free\nmeta-llama/llama-4-maverick | paid\nmeta-llama/llama-4-scout | paid\nmeta-llama/llama-guard-4-12b | paid\nmicrosoft/phi-4 | paid\nminimax/minimax-m1 | paid\nminimax/minimax-m2 | paid\nminimax/minimax-m2-her | paid\nminimax/minimax-m2.1 | paid\nminimax/minimax-m2.5 | paid\nminimax/minimax-m2.5:free | free\nminimax/minimax-m2.7 | paid\nminimax/minimax-01 | paid\nmistralai/mistral-large | paid\nmistralai/mistral-large-2407 | paid\nmistralai/mistral-large-2411 | paid\nmistralai/codestral-2508 | paid\nmistralai/devstral-2512 | paid\nmistralai/devstral-medium | paid\nmistralai/devstral-small | paid\nmistralai/ministral-14b-2512 | paid\nmistralai/ministral-3b-2512 | paid\nmistralai/ministral-8b-2512 | paid\nmistralai/mistral-7b-instruct-v0.1 | paid\nmistralai/mistral-large-2512 | paid\nmistralai/mistral-medium-3 | paid\nmistralai/mistral-medium-3.1 | paid\nmistralai/mistral-nemo | paid\nmistralai/mistral-small-24b-instruct-2501 | paid\nmistralai/mistral-small-3.1-24b-instruct | paid\nmistralai/mistral-small-3.1-24b-instruct:free | free\nmistralai/mistral-small-3.2-24b-instruct | paid\nmistralai/mistral-small-2603 | paid\nmistralai/mistral-small-creative | paid\nmistralai/mixtral-8x22b-instruct | paid\nmistralai/mixtral-8x7b-instruct | paid\nmistralai/pixtral-large-2411 | paid\nmistralai/mistral-saba | paid\nmistralai/voxtral-small-24b-2507 | paid\nmoonshotai/kimi-k2 | paid\nmoonshotai/kimi-k2-0905 | paid\nmoonshotai/kimi-k2-thinking | paid\nmoonshotai/kimi-k2.5 | paid\nmorph/morph-v3-fast | paid\nmorph/morph-v3-large | paid\ngryphe/mythomax-l2-13b | paid\nnex-agi/deepseek-v3.1-nex-n1 | paid\nnousresearch/hermes-3-llama-3.1-405b | paid\nnousresearch/hermes-3-llama-3.1-405b:free | free\nnousresearch/hermes-3-llama-3.1-70b | paid\nnousresearch/hermes-4-405b | paid\nnousresearch/hermes-4-70b | paid\nnousresearch/hermes-2-pro-llama-3-8b | paid\nnvidia/llama-3.1-nemotron-70b-instruct | paid\nnvidia/llama-3.3-nemotron-super-49b-v1.5 | paid\nnvidia/nemotron-3-nano-30b-a3b | paid\nnvidia/nemotron-3-nano-30b-a3b:free | free\nnvidia/nemotron-3-super-120b-a12b | paid\nnvidia/nemotron-3-super-120b-a12b:free | free\nnvidia/nemotron-nano-12b-v2-vl | paid\nnvidia/nemotron-nano-12b-v2-vl:free | free\nnvidia/nemotron-nano-9b-v2 | paid\nnvidia/nemotron-nano-9b-v2:free | free\nopenai/gpt-audio | paid\nopenai/gpt-audio-mini | paid\nopenai/gpt-3.5-turbo | paid\nopenai/gpt-3.5-turbo-0613 | paid\nopenai/gpt-3.5-turbo-16k | paid\nopenai/gpt-3.5-turbo-instruct | paid\nopenai/gpt-4 | paid\nopenai/gpt-4-0314 | paid\nopenai/gpt-4-turbo | paid\nopenai/gpt-4-1106-preview | paid\nopenai/gpt-4-turbo-preview | paid\nopenai/gpt-4.1 | paid\nopenai/gpt-4.1-mini | paid\nopenai/gpt-4.1-nano | paid\nopenai/gpt-4o | paid\nopenai/gpt-4o-2024-05-13 | paid\nopenai/gpt-4o-2024-08-06 | paid\nopenai/gpt-4o-2024-11-20 | paid\nopenai/gpt-4o:extended | paid\nopenai/gpt-4o-audio-preview | paid\nopenai/gpt-4o-search-preview | paid\nopenai/gpt-4o-mini | paid\nopenai/gpt-4o-mini-2024-07-18 | paid\nopenai/gpt-4o-mini-search-preview | paid\nopenai/gpt-5 | paid\nopenai/gpt-5-chat | paid\nopenai/gpt-5-codex | paid\nopenai/gpt-5-image | paid\nopenai/gpt-5-image-mini | paid\nopenai/gpt-5-mini | paid\nopenai/gpt-5-nano | paid\nopenai/gpt-5-pro | paid\nopenai/gpt-5.1 | paid\nopenai/gpt-5.1-chat | paid\nopenai/gpt-5.1-codex | paid\nopenai/gpt-5.1-codex-max | paid\nopenai/gpt-5.1-codex-mini | paid\nopenai/gpt-5.2 | paid\nopenai/gpt-5.2-chat | paid\nopenai/gpt-5.2-pro | paid\nopenai/gpt-5.2-codex | paid\nopenai/gpt-5.3-chat | paid\nopenai/gpt-5.3-codex | paid\nopenai/gpt-5.4 | paid\nopenai/gpt-5.4-mini | paid\nopenai/gpt-5.4-nano | paid\nopenai/gpt-5.4-pro | paid\nopenai/gpt-oss-120b | paid\nopenai/gpt-oss-120b:free | free\nopenai/gpt-oss-20b | paid\nopenai/gpt-oss-20b:free | free\nopenai/gpt-oss-safeguard-20b | paid\nopenai/o1 | paid\nopenai/o1-pro | paid\nopenai/o3 | paid\nopenai/o3-deep-research | paid\nopenai/o3-mini | paid\nopenai/o3-mini-high | paid\nopenai/o3-pro | paid\nopenai/o4-mini | paid\nopenai/o4-mini-deep-research | paid\nopenai/o4-mini-high | paid\nperplexity/sonar | paid\nperplexity/sonar-deep-research | paid\nperplexity/sonar-pro | paid\nperplexity/sonar-pro-search | paid\nperplexity/sonar-reasoning-pro | paid\nprime-intellect/intellect-3 | paid\nqwen/qwen-plus-2025-07-28 | paid\nqwen/qwen-plus-2025-07-28:thinking | paid\nqwen/qwen-vl-max | paid\nqwen/qwen-vl-plus | paid\nqwen/qwen-max | paid\nqwen/qwen-plus | paid\nqwen/qwen-turbo | paid\nqwen/qwen-2.5-7b-instruct | paid\nqwen/qwen2.5-coder-7b-instruct | paid\nqwen/qwen2.5-vl-32b-instruct | paid\nqwen/qwen2.5-vl-72b-instruct | paid\nqwen/qwen-2.5-vl-7b-instruct | paid\nqwen/qwen3-14b | paid\nqwen/qwen3-235b-a22b | paid\nqwen/qwen3-235b-a22b-2507 | paid\nqwen/qwen3-235b-a22b-thinking-2507 | paid\nqwen/qwen3-30b-a3b | paid\nqwen/qwen3-30b-a3b-instruct-2507 | paid\nqwen/qwen3-30b-a3b-thinking-2507 | paid\nqwen/qwen3-32b | paid\nqwen/qwen3-4b:free | free\nqwen/qwen3-8b | paid\nqwen/qwen3-coder-30b-a3b-instruct | paid\nqwen/qwen3-coder | paid\nqwen/qwen3-coder:free | free\nqwen/qwen3-coder-flash | paid\nqwen/qwen3-coder-next | paid\nqwen/qwen3-coder-plus | paid\nqwen/qwen3-max | paid\nqwen/qwen3-max-thinking | paid\nqwen/qwen3-next-80b-a3b-instruct | paid\nqwen/qwen3-next-80b-a3b-instruct:free | free\nqwen/qwen3-next-80b-a3b-thinking | paid\nqwen/qwen3-vl-235b-a22b-instruct | paid\nqwen/qwen3-vl-235b-a22b-thinking | paid\nqwen/qwen3-vl-30b-a3b-instruct | paid\nqwen/qwen3-vl-30b-a3b-thinking | paid\nqwen/qwen3-vl-32b-instruct | paid\nqwen/qwen3-vl-8b-instruct | paid\nqwen/qwen3-vl-8b-thinking | paid\nqwen/qwen3.5-397b-a17b | paid\nqwen/qwen3.5-plus-02-15 | paid\nqwen/qwen3.5-122b-a10b | paid\nqwen/qwen3.5-27b | paid\nqwen/qwen3.5-35b-a3b | paid\nqwen/qwen3.5-9b | paid\nqwen/qwen3.5-flash-02-23 | paid\nqwen/qwq-32b | paid\nqwen/qwen-2.5-72b-instruct | paid\nqwen/qwen-2.5-coder-32b-instruct | paid\nrelace/relace-apply-3 | paid\nrelace/relace-search | paid\nundi95/remm-slerp-l2-13b | paid\nsao10k/l3-lunaris-8b | paid\nsao10k/l3-euryale-70b | paid\nsao10k/l3.1-70b-hanami-x1 | paid\nsao10k/l3.1-euryale-70b | paid\nsao10k/l3.3-euryale-70b | paid\nstepfun/step-3.5-flash | paid\nstepfun/step-3.5-flash:free | free\nswitchpoint/router | paid\ntencent/hunyuan-a13b-instruct | paid\nthedrummer/cydonia-24b-v4.1 | paid\nthedrummer/rocinante-12b | paid\nthedrummer/skyfall-36b-v2 | paid\nthedrummer/unslopnemo-12b | paid\ntngtech/deepseek-r1t2-chimera | paid\nalibaba/tongyi-deepresearch-30b-a3b | paid\nupstage/solar-pro-3 | paid\ncognitivecomputations/dolphin-mistral-24b-venice-edition:free | free\nmicrosoft/wizardlm-2-8x22b | paid\nwriter/palmyra-x5 | paid\nx-ai/grok-3 | paid\nx-ai/grok-3-beta | paid\nx-ai/grok-3-mini | paid\nx-ai/grok-3-mini-beta | paid\nx-ai/grok-4 | paid\nx-ai/grok-4-fast | paid\nx-ai/grok-4.1-fast | paid\nx-ai/grok-4.20-beta | paid\nx-ai/grok-4.20-multi-agent-beta | paid\nx-ai/grok-code-fast-1 | paid\nxiaomi/mimo-v2-flash | paid\nxiaomi/mimo-v2-omni | paid\nxiaomi/mimo-v2-pro | paid\nz-ai/glm-4-32b | paid\nz-ai/glm-4.5 | paid\nz-ai/glm-4.5-air | paid\nz-ai/glm-4.5-air:free | free\nz-ai/glm-4.5v | paid\nz-ai/glm-4.6 | paid\nz-ai/glm-4.6v | paid\nz-ai/glm-4.7 | paid\nz-ai/glm-4.7-flash | paid\nz-ai/glm-5 | paid\nz-ai/glm-5-turbo | paid\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m OpenAI models:\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\nbabbage-002\nchatgpt-image-latest\ndall-e-2\ndall-e-3\ndavinci-002\ngpt-3.5-turbo\ngpt-3.5-turbo-0125\ngpt-3.5-turbo-1106\ngpt-3.5-turbo-16k\ngpt-3.5-turbo-instruct\ngpt-3.5-turbo-instruct-0914\ngpt-4\ngpt-4-0125-preview\ngpt-4-0613\ngpt-4-1106-preview\ngpt-4-turbo\ngpt-4-turbo-2024-04-09\ngpt-4-turbo-preview\ngpt-4.1\ngpt-4.1-2025-04-14\ngpt-4.1-mini\ngpt-4.1-mini-2025-04-14\ngpt-4.1-nano\ngpt-4.1-nano-2025-04-14\ngpt-4o\ngpt-4o-2024-05-13\ngpt-4o-2024-08-06\ngpt-4o-2024-11-20\ngpt-4o-audio-preview\ngpt-4o-audio-preview-2024-12-17\ngpt-4o-audio-preview-2025-06-03\ngpt-4o-mini\ngpt-4o-mini-2024-07-18\ngpt-4o-mini-audio-preview\ngpt-4o-mini-audio-preview-2024-12-17\ngpt-4o-mini-realtime-preview\ngpt-4o-mini-realtime-preview-2024-12-17\ngpt-4o-mini-search-preview\ngpt-4o-mini-search-preview-2025-03-11\ngpt-4o-mini-transcribe\ngpt-4o-mini-transcribe-2025-03-20\ngpt-4o-mini-transcribe-2025-12-15\ngpt-4o-mini-tts\ngpt-4o-mini-tts-2025-03-20\ngpt-4o-mini-tts-2025-12-15\ngpt-4o-realtime-preview\ngpt-4o-realtime-preview-2024-12-17\ngpt-4o-realtime-preview-2025-06-03\ngpt-4o-search-preview\ngpt-4o-search-preview-2025-03-11\ngpt-4o-transcribe\ngpt-4o-transcribe-diarize\ngpt-5\ngpt-5-2025-08-07\ngpt-5-chat-latest\ngpt-5-codex\ngpt-5-mini\ngpt-5-mini-2025-08-07\ngpt-5-nano\ngpt-5-nano-2025-08-07\ngpt-5-pro\ngpt-5-pro-2025-10-06\ngpt-5-search-api\ngpt-5-search-api-2025-10-14\ngpt-5.1\ngpt-5.1-2025-11-13\ngpt-5.1-chat-latest\ngpt-5.1-codex\ngpt-5.1-codex-max\ngpt-5.1-codex-mini\ngpt-5.2\ngpt-5.2-2025-12-11\ngpt-5.2-chat-latest\ngpt-5.2-codex\ngpt-5.2-pro\ngpt-5.2-pro-2025-12-11\ngpt-5.3-chat-latest\ngpt-5.3-codex\ngpt-5.4\ngpt-5.4-2026-03-05\ngpt-5.4-mini\ngpt-5.4-mini-2026-03-17\ngpt-5.4-nano\ngpt-5.4-nano-2026-03-17\ngpt-5.4-pro\ngpt-5.4-pro-2026-03-05\ngpt-audio\ngpt-audio-1.5\ngpt-audio-2025-08-28\ngpt-audio-mini\ngpt-audio-mini-2025-10-06\ngpt-audio-mini-2025-12-15\ngpt-image-1\ngpt-image-1-mini\ngpt-image-1.5\ngpt-realtime\ngpt-realtime-1.5\ngpt-realtime-2025-08-28\ngpt-realtime-mini\ngpt-realtime-mini-2025-10-06\ngpt-realtime-mini-2025-12-15\no1\no1-2024-12-17\no1-pro\no1-pro-2025-03-19\no3\no3-2025-04-16\no3-mini\no3-mini-2025-01-31\no4-mini\no4-mini-2025-04-16\no4-mini-deep-research\no4-mini-deep-research-2025-06-26\nomni-moderation-2024-09-26\nomni-moderation-latest\nsora-2\nsora-2-pro\ntext-embedding-3-large\ntext-embedding-3-small\ntext-embedding-ada-002\ntts-1\ntts-1-1106\ntts-1-hd\ntts-1-hd-1106\nwhisper-1\n-----\n\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m Deepseek models:\u001b[22m\u001b[39m\n\u001b[35m\u001b[1m\u001b[22m\u001b[39m\ndeepseek-chat\ndeepseek-reasoner\n-----\n"
+          },
+          "router": {
+            "type": "string",
+            "default": "openrouter",
+            "description": "Router to use: openai, openrouter or deepseek"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "completion",
+              "tools",
+              "assistant",
+              "responses",
+              "custom"
+            ],
+            "default": "tools",
+            "description": "Chat completion mode:\n\t completion, tools, assistant.\n          \u001b[32m\u001b[1mcompletion\u001b[22m\u001b[39m: no support for tools, please use --dst parameter to save the output.\n          \u001b[32m\u001b[1mtools\u001b[22m\u001b[39m: allows for tools to be used, eg 'save to ./output.md'. Not all models support this mode.\n          \u001b[32m\u001b[1mresponses\u001b[22m\u001b[39m: allows for responses to be used, eg 'save to ./output.md'. Not all models support this mode.\n          \u001b[32m\u001b[1massistant\u001b[22m\u001b[39m: : allows documents (PDF, DOCX, ...) to be added but dont support tools. Use --dst to save the output. Supported files :\n          \u001b[32m\u001b[1mcustom\u001b[22m\u001b[39m: custom mode\n      "
+          },
+          "logLevel": {
+            "type": "number",
+            "default": 4,
+            "description": "Logging level for the application"
+          },
+          "profile": {
+            "type": "string",
+            "description": "Path to profile for variables. Supports environment variables."
+          },
+          "baseURL": {
+            "type": "string",
+            "description": "Base URL for the API, set via --router or directly"
+          },
+          "config": {
+            "type": "string",
+            "description": "Path to JSON configuration file (API keys). Supports environment variables."
+          },
+          "dump": {
+            "type": "string",
+            "description": "Create a script"
+          },
+          "preferences": {
+            "type": "string",
+            "default": "C:\\Users\\zx\\.osr\\preferences.md",
+            "description": "Path to preferences file, eg: location, your email address, gender, etc. Supports environment variables."
+          },
+          "logs": {
+            "type": "string",
+            "default": ".kbot",
+            "description": "Logging directory"
+          },
+          "stream": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable streaming (verbose LLM output)"
+          },
+          "alt": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use alternate tokenizer & instead of $"
+          },
+          "env": {
+            "type": "string",
+            "default": "default",
+            "description": "Environment (in profile)"
+          },
+          "variables": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "default": {}
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "JSON",
+                    "JSONUnescape",
+                    "JSONPretty",
+                    "AlphaSort",
+                    "code",
+                    "JSONParse",
+                    "trim",
+                    "markdown"
+                  ]
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "array"
+              }
+            ],
+            "default": "",
+            "description": "List of filters to apply to the output.\n         Used only in completion mode and a given output file specified with --dst. \n         It unwraps by default any code or data in Markdown. \n         Choices:\n\tJSON,JSONUnescape,JSONPretty,AlphaSort,code,JSONParse,trim,markdown\n"
+          },
+          "query": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null,
+            "description": "JSONPath query to be used to transform input objects"
+          },
+          "dry": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "default": false,
+            "description": "Dry run - only write out parameters without making API calls"
+          },
+          "format": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {}
+            ],
+            "description": "Format for structured outputs. Can be a Zod schema, a Zod schema string, a JSON schema string, or a path to a JSON file."
+          }
+        },
+        "additionalProperties": true,
+        "description": "IKBotOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

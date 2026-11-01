@@ -1,0 +1,1 @@
+node main.js compile --alt=true --source="./tests/sal-test.osrl"  --env=bazar --output="&{SRC_DIR}/&{SRC_NAME}.md" --logLevel=info

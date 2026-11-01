@@ -1,0 +1,989 @@
+{
+  "Tischlerei Sammer by SilberHolz GmbH": {
+    "position": 1,
+    "title": "Tischlerei Sammer by SilberHolz GmbH",
+    "place_id": "ChIJLZ4LuP_0c0cRYnw6HpVv6jQ",
+    "data_id": "0x4773f4ffb80b9e2d:0x34ea6f951e3a7c62",
+    "data_cid": "3812982720770505826",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x4773f4ffb80b9e2d%3A0x34ea6f951e3a7c62&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x4773f4ffb80b9e2d%3A0x34ea6f951e3a7c62&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 48.116841099999995,
+      "longitude": 13.870642799999999
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJLZ4LuP_0c0cRYnw6HpVv6jQ",
+    "provider_id": "/g/11c5b1m2f4",
+    "rating": 5,
+    "reviews": 36,
+    "type": "Furniture maker",
+    "types": [
+      "Furniture maker",
+      "Service establishment",
+      "Millwork shop"
+    ],
+    "type_id": "furniture_maker",
+    "type_ids": [
+      "furniture_maker",
+      "establishment_service",
+      "millwork_shop"
+    ],
+    "open_state": "Closed ⋅ Opens 7 AM Mon",
+    "hours": "Closed ⋅ Opens 7 AM Mon",
+    "operating_hours": {
+      "sunday": "Closed",
+      "monday": "7 AM–12 PM",
+      "tuesday": "7 AM–12 PM",
+      "wednesday": "7 AM–12 PM",
+      "thursday": "7 AM–12 PM",
+      "friday": "7 AM–12 PM",
+      "saturday": "Closed"
+    },
+    "phone": "+43 664 4622465",
+    "website": "https://sammer.co.at/",
+    "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNSPCcwpnqqNptaMhkJw3d-bWtZQS2trNpiplZq=w140-h92-k-no",
+    "page": 0,
+    "geo": {
+      "latitude": 48.116841099999995,
+      "longitude": 13.870642799999999,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Austria",
+      "countryCode": "AT",
+      "principalSubdivision": "Oberosterreich",
+      "principalSubdivisionCode": "AT-4",
+      "city": "Edt bei Lambach",
+      "locality": "Pennewang",
+      "postcode": "",
+      "plusCode": "8FWM4V8C+P7",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Austria",
+            "description": "country in Central Europe",
+            "isoName": "Austria",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "AT",
+            "wikidataId": "Q40",
+            "geonameId": 2782113
+          },
+          {
+            "name": "Oberosterreich",
+            "description": "federal state in the North of Austria",
+            "isoName": "Oberosterreich",
+            "order": 5,
+            "adminLevel": 4,
+            "isoCode": "AT-4",
+            "wikidataId": "Q41967",
+            "geonameId": 2769848
+          },
+          {
+            "name": "Wels-Land District",
+            "description": "district of Austria",
+            "order": 7,
+            "adminLevel": 6,
+            "wikidataId": "Q660544",
+            "geonameId": 2761523
+          },
+          {
+            "name": "Edt bei Lambach",
+            "description": "municipality in Wels-Land District, Upper Austria, Austria",
+            "order": 8,
+            "adminLevel": 8,
+            "wikidataId": "Q677339",
+            "geonameId": 7872183
+          },
+          {
+            "name": "Pennewang",
+            "description": "municipality in Wels-Land District, Upper Austria, Austria",
+            "order": 9,
+            "adminLevel": 8,
+            "wikidataId": "Q591405",
+            "geonameId": 2769131
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Vienna",
+            "description": "time zone",
+            "order": 2
+          },
+          {
+            "name": "Western Austria",
+            "order": 4,
+            "wikidataId": "Q23241"
+          },
+          {
+            "name": "Hausruckviertel",
+            "description": "geographic region",
+            "order": 6,
+            "wikidataId": "Q701590"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "meta": {
+        "title": "Tischlerei | SilberHolz",
+        "url": "https://www.silberholz.at/kategorien/tischlerei",
+        "description": "SilberHolz verbindet die traditionelle Tischlerarbeit mit modernsten Fertigungsverfahren und Maschinen."
+      },
+      "og": {},
+      "images": [
+        {
+          "src": "https://sammer.co.at/themes/silberholz/img/logo.svg"
+        },
+        {
+          "src": "https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
+        },
+        {
+          "src": "https://sammer.co.at/themes/silberholz/img/logo-claim.svg"
+        },
+        {
+          "src": "https://sammer.co.at/themes/silberholz/img/klimabuendnis-logo.png"
+        }
+      ],
+      "keywords": [],
+      "links": [],
+      "allLinks": [
+        "tel:+436644622465",
+        "mailto:info@silberholz.at",
+        "https://www.silberholz.at/sites/default/files/downloads/Tischlerei_Silberholz_Folder_NOV22.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/Folder_A4_SilberHolz_Schlafhu%CC%88tte.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/SiHo_PK23_SCREEN_22022023.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/SiHo_Huetten_SCREEN_22022023.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/SiHo_SG23.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/siho_tischlerei_folder_web.pdf",
+        "https://www.silberholz.at/sites/default/files/downloads/SiHo_SKK_2023_web.pdf",
+        "https://www.facebook.com/silberholz.at",
+        "https://www.instagram.com/silberholz_offenhausen",
+        "https://www.youtube.com/channel/UCfiuaoc3Bw4wbmJFxY9UwFg",
+        "http://eepurl.com/hSFvkH",
+        "tel:+4372476710",
+        "mailto:verkauf@silberholz.at"
+      ],
+      "instagram": "https://www.instagram.com/silberholz_offenhausen",
+      "facebook": "https://www.facebook.com/silberholz.at",
+      "youtube": "https://www.youtube.com/channel/UCfiuaoc3Bw4wbmJFxY9UwFg",
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "name": "SilberHolz",
+              "url": "https://www.silberholz.at/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.silberholz.at/suche?suchbegriff={search_term_string}",
+                  "inLanguage": "de"
+                },
+                "query": "https://www.silberholz.at/suche?suchbegriff={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "inLanguage": "de"
+            }
+          ]
+        }
+      ]
+    },
+    "instagram": "https://www.instagram.com/silberholz_offenhausen",
+    "facebook": "https://www.facebook.com/silberholz.at",
+    "youtube": "https://www.youtube.com/channel/UCfiuaoc3Bw4wbmJFxY9UwFg",
+    "email": "info@silberholz.at"
+  },
+  "Tischlerei 3werk GbR": {
+    "position": 20,
+    "title": "Tischlerei 3werk GbR",
+    "place_id": "ChIJayLlRexfpUcRWi4hE09tuw4",
+    "data_id": "0x47a55fec45e5226b:0xebb6d4f13212e5a",
+    "data_cid": "1061562323566669402",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47a55fec45e5226b%3A0xebb6d4f13212e5a&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47a55fec45e5226b%3A0xebb6d4f13212e5a&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 52.211926399999996,
+      "longitude": 10.5029647
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJayLlRexfpUcRWi4hE09tuw4",
+    "provider_id": "/g/11j5kt1pqg",
+    "rating": 5,
+    "reviews": 21,
+    "type": "Cabinet maker",
+    "types": [
+      "Cabinet maker"
+    ],
+    "type_id": "cabinet_maker",
+    "type_ids": [
+      "cabinet_maker"
+    ],
+    "address": "Leiferder Weg 44a, 38122 Braunschweig, Germany",
+    "open_state": "Closed ⋅ Opens 8 AM Mon",
+    "hours": "Closed ⋅ Opens 8 AM Mon",
+    "operating_hours": {
+      "sunday": "Closed",
+      "monday": "8 AM–5 PM",
+      "tuesday": "8 AM–5 PM",
+      "wednesday": "8 AM–5 PM",
+      "thursday": "8 AM–5 PM",
+      "friday": "8 AM–5 PM",
+      "saturday": "Closed"
+    },
+    "website": "http://www.tischlerei3werk.de/",
+    "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOkz8ws3CneS7U2gRJFZ0VMou3-10qbKrNw26DZ=w92-h92-k-no",
+    "page": 0,
+    "geo": {
+      "latitude": 52.211926399999996,
+      "longitude": 10.5029647,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "principalSubdivision": "Lower Saxony",
+      "principalSubdivisionCode": "DE-NI",
+      "city": "Braunschweig",
+      "locality": "Braunschweig",
+      "postcode": "38122",
+      "plusCode": "9F4G6G63+Q5",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Germany",
+            "description": "country in central Europe",
+            "isoName": "Germany",
+            "order": 4,
+            "adminLevel": 2,
+            "isoCode": "DE",
+            "wikidataId": "Q183",
+            "geonameId": 2921044
+          },
+          {
+            "name": "Lower Saxony",
+            "description": "state in North-West of Germany",
+            "isoName": "Lower Saxony",
+            "order": 5,
+            "adminLevel": 4,
+            "isoCode": "DE-NI",
+            "wikidataId": "Q1197",
+            "geonameId": 2862926
+          },
+          {
+            "name": "Brunswick Government Region",
+            "description": "former entity of Lower Saxony, Germany",
+            "order": 6,
+            "adminLevel": 5,
+            "wikidataId": "Q314240"
+          },
+          {
+            "name": "Braunschweig",
+            "description": "city in Lower Saxony, Germany",
+            "order": 8,
+            "adminLevel": 6,
+            "wikidataId": "Q2773",
+            "geonameId": 2945024
+          },
+          {
+            "name": "Sudwest",
+            "order": 10,
+            "adminLevel": 9,
+            "wikidataId": "Q106850375"
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "North European Plain",
+            "description": "geomorphological region in Europe",
+            "order": 2,
+            "wikidataId": "Q560549"
+          },
+          {
+            "name": "Europe/Berlin",
+            "description": "time zone",
+            "order": 3
+          },
+          {
+            "name": "Verkehrsverbund Region Braunschweig",
+            "description": "transit district in the Braunschweig area, Germany",
+            "order": 7,
+            "wikidataId": "Q2514431"
+          },
+          {
+            "name": "Braunschweig (electoral district)",
+            "description": "federal electoral district of Germany",
+            "order": 9,
+            "wikidataId": "Q1008020"
+          },
+          {
+            "name": "38122",
+            "description": "postal code",
+            "order": 11
+          }
+        ]
+      }
+    },
+    "meta": {
+      "meta": {
+        "title": "3werk | tischlerei 3 werk",
+        "url": "https://tischlerei3werk.de/"
+      },
+      "og": {
+        "type": "website",
+        "title": "3werk | tischlerei 3 werk",
+        "description": "Herzlich Willkommen bei der Tischlerei 3werk. Wir fertigen einzigartige und maßangefertigte Massivholzmöbel. Für den Innenausbau planen und bieten wir für Ihre individuellen Wünsche Lösungen. Kreative Unikate im Kunsthandwerk runden unser Portfolio ab. Wir sind drei Tischlermeister und Holzgestalter aus Braunschweig und leben in der Tischlerei 3werk gemeinsam unsere Leidenschaft für Holz und Handwerk. Gern realisieren … 3werk Weiterlesen »",
+        "url": "https://tischlerei3werk.de/",
+        "site_name": "tischlerei 3 werk",
+        "image": "http://tischlerei3werk.de/wp-content/uploads/2020/04/glyph-logo_May2016_klein.png"
+      },
+      "images": [
+        {
+          "src": "https://tischlerei3werk.de/wp-content/uploads/2021/03/logo_internet.jpg"
+        },
+        {
+          "src": "https://tischlerei3werk.de/wp-content/uploads/2021/03/logo_internet.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/04/glyph-logo_May2016_klein.png"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/CBAP4489.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_1-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_2-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_6-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/12/IMG_6697-scaled.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Treppenschrank_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Treppenschrank_2.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Garderobe_Flur.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Esstisch_gebeizt_1-scaled.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/hifi_moebel.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/RJAH7194-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/04/esstisch_2-1019x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/QDVR6569-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/OZBC7766-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/WUNE1863.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Bett_Esche_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5458-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5454-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5463-768x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Hochbett_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/XSMW8447-576x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/VDTD1710-1024x576.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Schiebetor_2.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Schiebetor_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5939-768x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5947-768x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/Holzwangentreppe_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/UAUK0285-1024x679.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2022/06/carportverkleidung_1.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/VVSU5541-576x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/FJTQ9916-1024x576.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/WGGM4163-1024x768.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_4-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_5-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_7-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_8-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/Hand_elke_1_klein-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/Hand_elke_detail_klein-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr_4_1_k.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr_4_2_k.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr_5_6-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr_5_5-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr6_1-683x1024.jpg"
+        },
+        {
+          "src": "http://tischlerei3werk.de/wp-content/uploads/2020/02/nr6_3-683x1024.jpg"
+        }
+      ],
+      "keywords": [],
+      "links": [],
+      "allLinks": [
+        "https://tischlerei3werk.de/",
+        "https://tischlerei3werk.de/#Moebelbau",
+        "http://tischlerei3werk.de/#Innenausbau",
+        "https://tischlerei3werk.de/#Holzbildhauerei",
+        "https://tischlerei3werk.de/#Kontakt",
+        "mailto:info@tischlerei3werk.de",
+        "https://www.instagram.com/tischlerei3werk/",
+        "https://www.instagram.com/j_b_visual/",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/CBAP4489.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_1-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_2-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_6-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/12/IMG_6697-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Treppenschrank_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Treppenschrank_2.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Garderobe_Flur.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Esstisch_gebeizt_1-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/hifi_moebel.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/RJAH7194.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/04/esstisch_2.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/QDVR6569.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/OZBC7766.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/WUNE1863.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Bett_Esche_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5458-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5454-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5463-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Hochbett_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/XSMW8447.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/VDTD1710.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Schiebetor_2.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Schiebetor_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5939-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/IMG_5947-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/Holzwangentreppe_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/UAUK0285.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2022/06/carportverkleidung_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/VVSU5541.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/FJTQ9916.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/WGGM4163.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_4-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_5-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_7-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2021/01/Rabennest_8-scaled.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/Hand_elke_1_klein.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/Hand_elke_detail_klein.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr_4_1_k.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr_4_2_k.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr_5_6.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr_5_5.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr6_1.jpg",
+        "https://tischlerei3werk.de/wp-content/uploads/2020/02/nr6_3.jpg",
+        "http://tischlerei3werk.de/?page_id=75",
+        "https://wpastra.com/"
+      ],
+      "instagram": "https://www.instagram.com/tischlerei3werk/",
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://tischlerei3werk.de/",
+              "url": "https://tischlerei3werk.de/",
+              "name": "3werk | tischlerei 3 werk",
+              "isPartOf": {
+                "@id": "https://tischlerei3werk.de/#website"
+              },
+              "about": {
+                "@id": "https://tischlerei3werk.de/#organization"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://tischlerei3werk.de/#primaryimage"
+              },
+              "image": {
+                "@id": "https://tischlerei3werk.de/#primaryimage"
+              },
+              "thumbnailUrl": "http://tischlerei3werk.de/wp-content/uploads/2020/04/glyph-logo_May2016_klein.png",
+              "datePublished": "2021-03-06T11:10:37+00:00",
+              "dateModified": "2022-12-19T09:38:28+00:00",
+              "breadcrumb": {
+                "@id": "https://tischlerei3werk.de/#breadcrumb"
+              },
+              "inLanguage": "de-DE",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://tischlerei3werk.de/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "de-DE",
+              "@id": "https://tischlerei3werk.de/#primaryimage",
+              "url": "https://tischlerei3werk.de/wp-content/uploads/2020/04/glyph-logo_May2016_klein.png",
+              "contentUrl": "https://tischlerei3werk.de/wp-content/uploads/2020/04/glyph-logo_May2016_klein.png",
+              "width": 50,
+              "height": 50
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://tischlerei3werk.de/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Startseite"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://tischlerei3werk.de/#website",
+              "url": "https://tischlerei3werk.de/",
+              "name": "tischlerei 3 werk",
+              "description": "möbel | innenausbau &amp; mehr ",
+              "publisher": {
+                "@id": "https://tischlerei3werk.de/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://tischlerei3werk.de/?s={search_term_string}"
+                  },
+                  "query-input": "required name=search_term_string"
+                }
+              ],
+              "inLanguage": "de-DE"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://tischlerei3werk.de/#organization",
+              "name": "Tischlerei 3werk GbR",
+              "url": "https://tischlerei3werk.de/",
+              "sameAs": [],
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "de-DE",
+                "@id": "https://tischlerei3werk.de/#/schema/logo/image/",
+                "url": "https://tischlerei3werk.de/wp-content/uploads/2020/01/3Werk_logo.png",
+                "contentUrl": "https://tischlerei3werk.de/wp-content/uploads/2020/01/3Werk_logo.png",
+                "width": 915,
+                "height": 330,
+                "caption": "Tischlerei 3werk GbR"
+              },
+              "image": {
+                "@id": "https://tischlerei3werk.de/#/schema/logo/image/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "instagram": "https://www.instagram.com/tischlerei3werk/",
+    "email": "info@tischlerei3werk.de"
+  },
+  "Innenausbau Tischlerei H. W. Gröf GmbH": {
+    "position": 19,
+    "title": "Innenausbau Tischlerei H. W. Gröf GmbH",
+    "place_id": "ChIJEYCmjhfCuEcRZs30uOHHX1U",
+    "data_id": "0x47b8c2178ea68011:0x555fc7e1b8f4cd66",
+    "data_cid": "6151855388296007014",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47b8c2178ea68011%3A0x555fc7e1b8f4cd66&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47b8c2178ea68011%3A0x555fc7e1b8f4cd66&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 51.4595233,
+      "longitude": 6.9282192
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJEYCmjhfCuEcRZs30uOHHX1U",
+    "provider_id": "/g/1td9v5xx",
+    "rating": 5,
+    "reviews": 62,
+    "unclaimed_listing": true,
+    "type": "Cabinet maker",
+    "types": [
+      "Cabinet maker",
+      "Carpenter"
+    ],
+    "type_id": "cabinet_maker",
+    "type_ids": [
+      "cabinet_maker",
+      "carpenter"
+    ],
+    "address": "Aktienstraße 51, 45359 Essen, Germany",
+    "open_state": "Closed ⋅ Opens 8 AM Mon",
+    "hours": "Closed ⋅ Opens 8 AM Mon",
+    "operating_hours": {
+      "sunday": "Closed",
+      "monday": "8 AM–4:30 PM",
+      "tuesday": "8 AM–4:30 PM",
+      "wednesday": "8 AM–4:30 PM",
+      "thursday": "8 AM–4:30 PM",
+      "friday": "8 AM–2 PM",
+      "saturday": "Closed"
+    },
+    "phone": "+49 201 680640",
+    "website": "http://www.tischlerei-groef.de/",
+    "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOq4lupWglF9-Gu7H4qSM1t5FqcFBMcon4GQUE7=w128-h92-k-no",
+    "page": 0,
+    "geo": {
+      "latitude": 51.4595233,
+      "longitude": 6.9282192,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "principalSubdivision": "Nordrhein-Westfalen",
+      "principalSubdivisionCode": "DE-NW",
+      "city": "Essen",
+      "locality": "Essen",
+      "postcode": "45359",
+      "plusCode": "9F38FW5H+R7",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Germany",
+            "description": "country in central Europe",
+            "isoName": "Germany",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "DE",
+            "wikidataId": "Q183",
+            "geonameId": 2921044
+          },
+          {
+            "name": "Nordrhein-Westfalen",
+            "description": "state in Germany",
+            "isoName": "Nordrhein-Westfalen",
+            "order": 4,
+            "adminLevel": 4,
+            "isoCode": "DE-NW",
+            "wikidataId": "Q1198",
+            "geonameId": 2861876
+          },
+          {
+            "name": "Dusseldorf Government Region",
+            "description": "government region of North Rhine-Westphalia, Germany",
+            "order": 6,
+            "adminLevel": 5,
+            "wikidataId": "Q7926",
+            "geonameId": 2934245
+          },
+          {
+            "name": "Essen",
+            "description": "city in North Rhine-Westphalia, Germany",
+            "order": 8,
+            "adminLevel": 6,
+            "wikidataId": "Q2066",
+            "geonameId": 2928810
+          },
+          {
+            "name": "Stadtbezirk IV",
+            "description": "human settlement in Germany",
+            "order": 10,
+            "adminLevel": 9,
+            "wikidataId": "Q54803600"
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Berlin",
+            "description": "time zone",
+            "order": 2
+          },
+          {
+            "name": "Verkehrsverbund Rhein-Ruhr",
+            "order": 5
+          },
+          {
+            "name": "Ruhr",
+            "description": "urban area in North Rhine-Westphalia, Germany",
+            "order": 7,
+            "wikidataId": "Q151993",
+            "geonameId": 2843198
+          },
+          {
+            "name": "constituency for the Bundestag election Mulheim – Essen I",
+            "description": "federal electoral district of Germany",
+            "order": 9,
+            "wikidataId": "Q1008430"
+          },
+          {
+            "name": "45359",
+            "description": "postal code",
+            "order": 11
+          }
+        ]
+      }
+    },
+    "meta": {
+      "meta": {
+        "title": "Start - Groef Innenausbau - Tischlerei",
+        "url": "https://tischlerei-groef.de/",
+        "description": "Die Tischlerei Gröf ist ein seit 1886 bestehendes Familienunternehmen mit Sitz in Essen-Schönebeck."
+      },
+      "og": {
+        "type": "website",
+        "title": "Start - Groef Innenausbau - Tischlerei",
+        "description": "Die Tischlerei Gröf ist ein seit 1886 bestehendes Familienunternehmen mit Sitz in Essen-Schönebeck.",
+        "url": "https://tischlerei-groef.de/",
+        "site_name": "Groef Innenausbau - Tischlerei"
+      },
+      "images": [
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/logo-schwarz.jpg"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2021/03/groef-bedeutet-frei-1.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2021/03/groef-bedeutet-frei-1.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2021/03/groef-bedeutet-frei-1.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2021/03/groef-bedeutet-frei-1.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2021/03/groef-bedeutet-frei-1.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/px-groef_planen.webp"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/px-groef_kundendienst.webp"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/px-groef_faq.webp"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/logo-schwarz.jpg"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/Composite-Logo-Club07_Boss-1024x752.png"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2020/11/logo-schwarz.jpg"
+        },
+        {
+          "src": "https://tischlerei-groef.de/wp-content/uploads/2023/03/groef_popup.jpg"
+        }
+      ],
+      "keywords": [],
+      "links": [],
+      "allLinks": [
+        "tel:+49201680640",
+        "mailto:info@tischlerei-groef.de%20",
+        "https://de-de.facebook.com/tischlerei.groef",
+        "https://www.houzz.de/experten/tischler-und-schreiner/tischlerei-groef-pfvwde-pf~186659142",
+        "https://tischlerei-groef.de",
+        "https://tischlerei-groef.de/",
+        "https://tischlerei-groef.de/ueber-uns/",
+        "https://tischlerei-groef.de/leistungen/",
+        "https://tischlerei-groef.de/leistungen/wohnen-lesen-arbeiten/",
+        "https://tischlerei-groef.de/leistungen/moebel-nach-mass-stauraumloesungen-verkleidungen/",
+        "https://tischlerei-groef.de/leistungen/kuechen-baeder/",
+        "https://tischlerei-groef.de/leistungen/empfangstheken-buero-und-praxiseinrichtungen/",
+        "https://tischlerei-groef.de/leistungen/tueren-fenster-haustueren/",
+        "https://tischlerei-groef.de/leistungen/terrassen-garten-outdoormoebel/",
+        "https://tischlerei-groef.de/service/",
+        "https://tischlerei-groef.de/service/beratung-planung-visualisierung/",
+        "https://tischlerei-groef.de/service/kundendienst-reparaturservice-sicherheitstechnik/",
+        "https://tischlerei-groef.de/service/katalog-downloads-faqs-jobs/",
+        "https://tischlerei-groef.de/aktuelles/",
+        "https://tischlerei-groef.de/kontakt/",
+        "https://tischlerei-groef.de/impressum/",
+        "https://tischlerei-groef.de/datenschutz/",
+        "tel:+4915157998078",
+        "https://tischlerei-groef.de/wp-content/uploads/2021/03/Imagebroschuere-2021.pdf",
+        "https://www.rot-weiss-essen.de/sponsoring/partner/club07/"
+      ],
+      "facebook": "https://de-de.facebook.com/tischlerei.groef",
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://tischlerei-groef.de/",
+              "url": "https://tischlerei-groef.de/",
+              "name": "Start - Groef Innenausbau - Tischlerei",
+              "isPartOf": {
+                "@id": "https://tischlerei-groef.de/#website"
+              },
+              "about": {
+                "@id": "https://tischlerei-groef.de/#organization"
+              },
+              "datePublished": "2020-11-30T13:39:23+00:00",
+              "dateModified": "2022-08-22T14:04:50+00:00",
+              "description": "Die Tischlerei Gröf ist ein seit 1886 bestehendes Familienunternehmen mit Sitz in Essen-Schönebeck.",
+              "breadcrumb": {
+                "@id": "https://tischlerei-groef.de/#breadcrumb"
+              },
+              "inLanguage": "de-DE",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://tischlerei-groef.de/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://tischlerei-groef.de/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Startseite"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://tischlerei-groef.de/#website",
+              "url": "https://tischlerei-groef.de/",
+              "name": "Groef Innenausbau - Tischlerei",
+              "description": "Innenausbau - Tischlerei",
+              "publisher": {
+                "@id": "https://tischlerei-groef.de/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://tischlerei-groef.de/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "de-DE"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://tischlerei-groef.de/#organization",
+              "name": "Groef Innenausbau - Tischlerei",
+              "url": "https://tischlerei-groef.de/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "de-DE",
+                "@id": "https://tischlerei-groef.de/#/schema/logo/image/",
+                "url": "https://tischlerei-groef.de/wp-content/uploads/2020/11/logo-schwarz.jpg",
+                "contentUrl": "https://tischlerei-groef.de/wp-content/uploads/2020/11/logo-schwarz.jpg",
+                "width": 800,
+                "height": 303,
+                "caption": "Groef Innenausbau - Tischlerei"
+              },
+              "image": {
+                "@id": "https://tischlerei-groef.de/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://de-de.facebook.com/tischlerei.groef",
+                "https://www.houzz.de/experten/tischler-und-schreiner/tischlerei-groef-pfvwde-pf~186659142"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "facebook": "https://de-de.facebook.com/tischlerei.groef",
+    "email": "info@tischlerei-groef.de"
+  }
+}

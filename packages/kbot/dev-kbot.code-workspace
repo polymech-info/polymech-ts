@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../commons"
+		},
+		{
+			"path": "../i18n"
+		},
+		{
+			"path": "../deepl-mark"
+		},
+		{
+			"path": "../xblox"
+		},
+		{
+			"path": "../media"
+		},
+		{
+			"path": "../acl"
+		},
+		{
+			"path": "../sync"
+		}
+	],
+	"settings": {}
+}

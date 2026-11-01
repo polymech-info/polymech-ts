@@ -1,0 +1,35 @@
+{
+    "includes": [
+        "${root}/osr",
+        "${root}/osr/bazar"
+    ],
+    "variables": {
+        "PRODUCT_ROOT": "${root}/${product}/",
+        "abs_url": "https://plastic-hub.com/",
+        "CACHE": "${root}/cache/",
+        "CACHE_URL": "${abs_url}/cache/",
+        "GIT_REPO": "https://git.osr-plastic.org/osr-plastic/pp-next"
+    },
+    "env": {
+        "bazar": {
+            "includes": [
+                "${root}/osr",
+                "${root}/osr/widgets",
+                "${root}/osr/bazar"
+            ],
+            "variables": {
+                "abs_url": "https://dev.osr-plastic.org/"
+            }
+        },
+        "bazar-release": {
+            "includes": [
+                "${root}/osr",
+                "${root}/osr/widgets",
+                "${PRODUCT_ROOT}"
+            ],
+            "variables": {
+                "abs_url": "https://plastic-hub.com/"
+            }
+        }
+    }
+}

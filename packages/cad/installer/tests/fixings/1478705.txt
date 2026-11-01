@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-02082024-061534";"";
+"REFERENCE";"05M100150CNB";"";
+"TraceParts.PartTitle";"Cap Nuts";"";
+"TraceParts.InstanceId";"90-02082024-061534CEU08JYTYDZV9OFVU5LDTG7FZ";"";
+"SUPPLIER";"Essentra Components";"";
+"DESIGN";"Cap Nut M10 17.0 mm 18.0 mm";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.0";"";

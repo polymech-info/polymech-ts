@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Edit Box</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="form-group">
+            <label for="editBox">Prompt</label>
+            <textarea class="form-control" id="textArea" rows="5">Add JSDoc comments : </textarea>
+        </div>
+        <div class="form-group">
+            <label for="promptTemplates">Prompt Templates</label>
+            <select class="form-control" id="promptTemplates"></select>
+        </div>
+        <div class="form-group">
+            <label for="chatGptModels">ChatGPT Models</label>
+            <select  class="form-control" id="chatGptModels"></select>
+        </div>
+        <div class="form-group">
+            <label for="chatGptModels">Files</label>
+            <ul>
+                ${FILES}
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <label for="saveAs">Save As : <span>C:\Users\mc007\Downloads\HSM-1000L.pdf.md</span></label>
+            <button id="_saveAs" class="btn btn-primary">Save As</button>    
+        </div>
+
+        <button id="okButton" class="btn btn-primary">OK</button>        
+        <button id="_filePicker" class="btn btn-primary">Files</button>
+    </div>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            const data = {
+                "promptTemplates": [
+                    "Extract all data, as Markdown table",
+                    'extract all items, with price ("importe"), unit price ("precio"), name, thickness ("Espesor Calidad Aca"), material (st37 = 304L, st37 = steel), quantity("Cantidad"), as csv, only "CED*',
+                    "Template 3"
+                ],
+                "chatGptModels": [
+                    "gpt-3.5-turbo",
+                    "gpt-4o",
+                    "davinci"
+                ]
+            }
+            const promptTemplates  = ["Extract all data, as Markdown table","Extract all items, \r\n\r\nthese are the columns : \r\n- name ('Referencia')\r\n- thickness ('Espesor')\r\n- material ('Cantidad', st37 = 304L, st37 = steel),\r\n- quantity('Cantidad')\r\n- unit price ('precio')\r\n- price ('importe')\r\n\r\nas csv"]
+            const MODELS = 
+            const _model = "${MODEL}"
+
+            const promptTemplatesDropdown = document.getElementById('promptTemplates');
+            
+            promptTemplates.forEach(template => {
+                const option = document.createElement('option');
+                option.value = template;
+                option.textContent = template;
+                promptTemplatesDropdown.appendChild(option);
+            });
+
+            const chatGptModelsDropdown = document.getElementById('chatGptModels');
+            MODELS.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model;
+                option.textContent = model;
+                option.selected = model === _model
+                chatGptModelsDropdown.appendChild(option);
+            });
+            
+            document.getElementById('_filePicker').addEventListener('click', () => {})
+            
+            document.getElementById('_saveAs').addEventListener('click', async () => {
+                const saveAs = await ipc.send('show-save-dialog')
+                console.log('save as',saveAs)
+            })
+            
+            document.getElementById('okButton').addEventListener('click', () => {
+                const textAreaValue = document.getElementById('textArea').value;
+                const selectedTemplate = promptTemplatesDropdown.value;
+                const selectedModel = chatGptModelsDropdown.value;
+                const result = {
+                    textAreaValue,
+                    selectedTemplate,
+                    selectedModel
+                };
+                const event = new CustomEvent('contentRetrieved', { detail: result });
+                document.dispatchEvent(event);
+                ipc.send('content', result)
+            });
+
+
+            promptTemplatesDropdown.addEventListener('change', (event) => {
+                const selectedTemplateContent = event.target.value;
+                document.getElementById('textArea').value = selectedTemplateContent;
+            });
+        });
+    </script>
+</body>
+
+</html>

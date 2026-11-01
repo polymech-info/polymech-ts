@@ -1,0 +1,204 @@
+{
+  "assembly": {
+    "Components": [
+      {
+        "Name": "362_ShieldSeg_x2_1mm_INOX-1",
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\362_ShieldSeg_x2_1mm_INOX.SLDPRT",
+        "IsSuppressed": true
+      },
+      {
+        "Name": "361_Shield_x2_1mm_INOX-2",
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\361_Shield_x2_1mm_INOX.SLDPRT",
+        "IsSuppressed": false
+      },
+      {
+        "Name": "361_Shield_x2_1mm_INOX-3",
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\361_Shield_x2_1mm_INOX.SLDPRT",
+        "IsSuppressed": false
+      },
+      {
+        "Name": "Mirror362_ShieldSeg_x2_1mm_INOX1-5",
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\Mirror362_ShieldSeg_x2_1mm_INOX1.SLDPRT",
+        "IsSuppressed": false
+      }
+    ]
+  },
+  "root": {
+    "Name": "360_ExtrusionShield",
+    "Children": [
+      {
+        "Name": "362_ShieldSeg_x2_1mm_INOX-1",
+        "Children": null,
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\362_ShieldSeg_x2_1mm_INOX.SLDPRT",
+        "Parent": null,
+        "Properties": null,
+        "Equations": null,
+        "Mass": null,
+        "Box": null,
+        "Material": null,
+        "activeConfiguration": null
+      },
+      {
+        "Name": "361_Shield_x2_1mm_INOX-2",
+        "Children": null,
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\361_Shield_x2_1mm_INOX.SLDPRT",
+        "Parent": null,
+        "Properties": {
+          "Default": {},
+          "Myriad": {},
+          "L36": {},
+          "PHv2": {},
+          "Katbot": {}
+        },
+        "Equations": {
+          "DiameterInner": 99.7,
+          "D1@Sketch1": 99.7,
+          "BarrelDiameter": 38.0,
+          "D2@Sketch1": 38.0
+        },
+        "Mass": {
+          "Mass": 0.007895857338143046,
+          "Density": 999.9999999999999,
+          "Volume": 7.895857338143046E-06,
+          "SurfaceArea": 0.01655740616906358,
+          "CenterOfMassX": 0.000994933739345878,
+          "CenterOfMassY": 1.0021963650592724E-16,
+          "CenterOfMassZ": 1.9695132333348637E-17
+        },
+        "Box": {
+          "MinX": -0.22104175697566658,
+          "MinY": 0.0547589787178733,
+          "MinZ": -0.17433365041689008,
+          "MaxX": -0.2070417569756665,
+          "MaxY": 0.15445897871787334,
+          "MaxZ": -0.05982880889399568
+        },
+        "Material": {
+          "Material": "",
+          "Material Database": ""
+        },
+        "activeConfiguration": null
+      },
+      {
+        "Name": "361_Shield_x2_1mm_INOX-3",
+        "Children": null,
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\361_Shield_x2_1mm_INOX.SLDPRT",
+        "Parent": null,
+        "Properties": {
+          "Default": {},
+          "Myriad": {},
+          "L36": {},
+          "PHv2": {},
+          "Katbot": {}
+        },
+        "Equations": {
+          "DiameterInner": 99.7,
+          "D1@Sketch1": 99.7,
+          "BarrelDiameter": 38.0,
+          "D2@Sketch1": 38.0
+        },
+        "Mass": {
+          "Mass": 0.007895857338143046,
+          "Density": 999.9999999999999,
+          "Volume": 7.895857338143046E-06,
+          "SurfaceArea": 0.01655740616906358,
+          "CenterOfMassX": 0.000994933739345878,
+          "CenterOfMassY": 1.0021963650592724E-16,
+          "CenterOfMassZ": 1.9695132333348637E-17
+        },
+        "Box": {
+          "MinX": -0.49704175697566655,
+          "MinY": 0.05475897871787329,
+          "MinZ": -0.17433365041689008,
+          "MaxX": -0.48304175697566654,
+          "MaxY": 0.15445897871787334,
+          "MaxZ": -0.05982880889399568
+        },
+        "Material": {
+          "Material": "",
+          "Material Database": ""
+        },
+        "activeConfiguration": null
+      },
+      {
+        "Name": "Mirror362_ShieldSeg_x2_1mm_INOX1-5",
+        "Children": null,
+        "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\Mirror362_ShieldSeg_x2_1mm_INOX1.SLDPRT",
+        "Parent": null,
+        "Properties": {
+          "Default": {},
+          "ELZ-Max": {},
+          "Katbot-Pro": {},
+          "Myriad": {},
+          "L36": {},
+          "PHv2": {}
+        },
+        "Equations": {},
+        "Mass": {
+          "Mass": 0.09976353783388864,
+          "Density": 999.9999999999999,
+          "Volume": 9.976353783388864E-05,
+          "SurfaceArea": 0.2021148400879868,
+          "CenterOfMassX": 0.0001855385143597503,
+          "CenterOfMassY": 0.00029596015199951205,
+          "CenterOfMassZ": -0.14504510666018558
+        },
+        "Box": {
+          "MinX": -0.49704175697566655,
+          "MinY": 0.05360897871787329,
+          "MinZ": -0.17566155603602618,
+          "MaxX": -0.2070417569756664,
+          "MaxY": 0.15560897871787338,
+          "MaxZ": -0.058191502198101
+        },
+        "Material": {
+          "Material": "",
+          "Material Database": ""
+        },
+        "activeConfiguration": null
+      }
+    ],
+    "Path": "C:\\Users\\mc007\\Desktop\\osr\\products\\products\\components\\350_Shields\\cad-380\\360_ExtrusionShield.SLDASM",
+    "Parent": null,
+    "Properties": {
+      "Default": {},
+      "ELZ-Max": {},
+      "Katbot-Pro": {},
+      "Myriad": {},
+      "L36": {},
+      "PHv2": {},
+      "40D-360": {}
+    },
+    "Equations": {
+      "Diameter": 100.0
+    },
+    "Mass": {
+      "Mass": 0.1155552525101747,
+      "Density": 999.9999999999999,
+      "Volume": 0.00011555525251017472,
+      "SurfaceArea": 0.23522965242611396,
+      "CenterOfMassX": -0.3520806993854855,
+      "CenterOfMassY": 0.10435346431086938,
+      "CenterOfMassZ": -0.1169210467282727
+    },
+    "Box": null,
+    "Material": {
+      "361_Shield_x2_1mm_INOX-2": "",
+      "361_Shield_x2_1mm_INOX-2 Material Database": "",
+      "361_Shield_x2_1mm_INOX-3": "",
+      "361_Shield_x2_1mm_INOX-3 Material Database": "",
+      "Mirror362_ShieldSeg_x2_1mm_INOX1-5": "",
+      "Mirror362_ShieldSeg_x2_1mm_INOX1-5 Material Database": ""
+    },
+    "activeConfiguration": null
+  },
+  "Configurations": {
+    "Default": {},
+    "ELZ-Max": {},
+    "Katbot-Pro": {},
+    "Myriad": {},
+    "L36": {},
+    "PHv2": {},
+    "40D-360": {}
+  }
+}

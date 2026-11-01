@@ -1,0 +1,304 @@
+{
+    "geo": {
+        "city": "Sentmenat",
+        "latitude": 41.609375199999995,
+        "locality": "Sentmenat",
+        "plusCode": "8FH4J45R+QR",
+        "postcode": "",
+        "continent": "Europe",
+        "longitude": 2.1421068,
+        "countryCode": "ES",
+        "countryName": "Spain",
+        "localityInfo": {
+            "informative": [
+                {
+                    "name": "Europe",
+                    "order": 1,
+                    "isoCode": "EU",
+                    "isoName": "Europe",
+                    "geonameId": 6255148,
+                    "wikidataId": "Q46",
+                    "description": "continent in the Northern Hemisphere"
+                },
+                {
+                    "name": "Europe/Madrid",
+                    "order": 3,
+                    "description": "time zone"
+                },
+                {
+                    "name": "Iberian Peninsula",
+                    "order": 4,
+                    "geonameId": 2267430,
+                    "wikidataId": "Q12837",
+                    "description": "peninsula located in the extreme southwest of Europe"
+                },
+                {
+                    "name": "Catalan countries",
+                    "order": 6,
+                    "wikidataId": "Q234963",
+                    "description": "territories where Catalan is the native language"
+                },
+                {
+                    "name": "Catalan as own language in Catalonia",
+                    "order": 8
+                },
+                {
+                    "name": "Ambit metropolita de Barcelona",
+                    "order": 10,
+                    "wikidataId": "Q249461",
+                    "description": "region (vegueria) of Catalonia"
+                }
+            ],
+            "administrative": [
+                {
+                    "name": "Spain",
+                    "order": 2,
+                    "isoCode": "ES",
+                    "isoName": "Spain",
+                    "geonameId": 2510769,
+                    "adminLevel": 2,
+                    "wikidataId": "Q29",
+                    "description": "constitutional monarchy in Southwest Europe"
+                },
+                {
+                    "name": "East",
+                    "order": 5,
+                    "adminLevel": 3
+                },
+                {
+                    "name": "Catalunya",
+                    "order": 7,
+                    "isoCode": "ES-CT",
+                    "isoName": "Catalunya",
+                    "geonameId": 3336901,
+                    "adminLevel": 4,
+                    "wikidataId": "Q5705",
+                    "description": "nationality and autonomous community of Spain"
+                },
+                {
+                    "name": "Provincia de Barcelona",
+                    "order": 9,
+                    "isoCode": "ES-B",
+                    "isoName": "Provincia de Barcelona",
+                    "geonameId": 3128759,
+                    "adminLevel": 6,
+                    "wikidataId": "Q81949",
+                    "description": "province in Catalonia, Spain"
+                },
+                {
+                    "name": "Valles Occidental",
+                    "order": 11,
+                    "adminLevel": 7,
+                    "wikidataId": "Q13948",
+                    "description": "Catalan comarca (county) in the vegueria (region) of Barcelona"
+                },
+                {
+                    "name": "Sentmenat",
+                    "order": 12,
+                    "geonameId": 3109165,
+                    "adminLevel": 8,
+                    "wikidataId": "Q13943",
+                    "description": "municipality in the comarca of the Vallès Occidental in Catalonia, Spain"
+                }
+            ]
+        },
+        "continentCode": "EU",
+        "principalSubdivision": "Catalunya",
+        "principalSubdivisionCode": "ES-CT",
+        "localityLanguageRequested": "en"
+    },
+    "meta": {},
+    "page": 0,
+    "type": "Machine shop",
+    "hours": "Closed · Opens 9 AM Mon",
+    "phone": "+34 691 95 22 87",
+    "title": "Plastic Hub",
+    "types": [
+        "Machine shop"
+    ],
+    "address": "Carrer Can Peric, 11, 1B, 08181 Sentmenat, Barcelona, Spain",
+    "data_id": "0x12a4eb80cfabbbfd:0x2cd16f2aff436ed",
+    "type_id": "machine_shop",
+    "website": "https://polymech.io/es",
+    "data_cid": "201842789891454701",
+    "place_id": "ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "position": 2,
+    "type_ids": [
+        "machine_shop"
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S=w92-h92-k-no",
+    "extensions": [
+        {
+            "accessibility": [
+                "Wheelchair accessible entrance"
+            ]
+        },
+        {
+            "crowd": [
+                "LGBTQ+ friendly",
+                "Transgender safespace"
+            ]
+        }
+    ],
+    "open_state": "Closed · Opens 9 AM Mon",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_photos&hl=en",
+    "provider_id": "/g/11rxv42q_7",
+    "google_media": {
+        "photos": [
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S=w4000-h4000-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S=w203-h203-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOGxIU6O0QqbLMqWw19uMXXecAYHYxOkH2Tpdiu=w6000-h4000-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOGxIU6O0QqbLMqWw19uMXXecAYHYxOkH2Tpdiu=w203-h135-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOGxIU6O0QqbLMqWw19uMXXecAYHYxOkH2Tpdiu&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipPh6Iv-vhwYwHuK52ditXEnSa-g4bspLCx8v11H=w6000-h4000-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPh6Iv-vhwYwHuK52ditXEnSa-g4bspLCx8v11H=w203-h135-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipPh6Iv-vhwYwHuK52ditXEnSa-g4bspLCx8v11H&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipNDMwnNWhw0X8tZeMNwdcYfDFPwunNUSf_C8BXX=w1918-h1080-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNDMwnNWhw0X8tZeMNwdcYfDFPwunNUSf_C8BXX=w203-h114-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipNDMwnNWhw0X8tZeMNwdcYfDFPwunNUSf_C8BXX&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOWsJcMBrfVBdQpXG6mHxOSyTLxIK8seM6cbPCZ=w1315-h740-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOWsJcMBrfVBdQpXG6mHxOSyTLxIK8seM6cbPCZ=w203-h114-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOWsJcMBrfVBdQpXG6mHxOSyTLxIK8seM6cbPCZ&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipMUhHwttDhH9vBwl3sDf-qe4e36c2qLC9fP3DJp=w3066-h2953-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMUhHwttDhH9vBwl3sDf-qe4e36c2qLC9fP3DJp=w203-h195-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipMUhHwttDhH9vBwl3sDf-qe4e36c2qLC9fP3DJp&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipPi797NYjST6z0p6HyBeYcXougsrhH76KuIbbJ1=w1754-h2369-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPi797NYjST6z0p6HyBeYcXougsrhH76KuIbbJ1=w203-h274-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipPi797NYjST6z0p6HyBeYcXougsrhH76KuIbbJ1&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipPojxfCrPbLPrYburkpvLiqNQd438QL6MJIFriQ=w1080-h1080-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPojxfCrPbLPrYburkpvLiqNQd438QL6MJIFriQ=w203-h203-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipPojxfCrPbLPrYburkpvLiqNQd438QL6MJIFriQ&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOgQ4f-pnqIHMF4g1eZa7aJaiAZwbg5Gsdd59h9=w1676-h1676-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOgQ4f-pnqIHMF4g1eZa7aJaiAZwbg5Gsdd59h9=w203-h203-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOgQ4f-pnqIHMF4g1eZa7aJaiAZwbg5Gsdd59h9&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipNS_6N6KCGPBIfDiuSEuFx9gMqiwzyVYzV4p8iN=w1980-h1320-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNS_6N6KCGPBIfDiuSEuFx9gMqiwzyVYzV4p8iN=w203-h135-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipNS_6N6KCGPBIfDiuSEuFx9gMqiwzyVYzV4p8iN&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipPaI1AakZx0gr4Liqh9m6WcJA9TyqRaUFo7e1rU=w1080-h1079-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPaI1AakZx0gr4Liqh9m6WcJA9TyqRaUFo7e1rU=w203-h202-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipPaI1AakZx0gr4Liqh9m6WcJA9TyqRaUFo7e1rU&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipMuqKDNkGlwkvJoNon8qRqJ0hkFmcX9v8r34nO9=w2230-h2216-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMuqKDNkGlwkvJoNon8qRqJ0hkFmcX9v8r34nO9=w203-h201-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipMuqKDNkGlwkvJoNon8qRqJ0hkFmcX9v8r34nO9&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipMXO5bDqn2Mrlhxoij4huVOjefpNon2m5poVYws=w2976-h1680-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMXO5bDqn2Mrlhxoij4huVOjefpNon2m5poVYws=w203-h114-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipMXO5bDqn2Mrlhxoij4huVOjefpNon2m5poVYws&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipNelbtLodPWxZYzhDLOn9DHKnsmHoEfpZZPzSL0=w1677-h1676-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNelbtLodPWxZYzhDLOn9DHKnsmHoEfpZZPzSL0=w203-h202-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipNelbtLodPWxZYzhDLOn9DHKnsmHoEfpZZPzSL0&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOlw6wXzEp9-5cMCXVTEiyZQFn19kDIyLxgfivq=w1320-h1980-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOlw6wXzEp9-5cMCXVTEiyZQFn19kDIyLxgfivq=w203-h304-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOlw6wXzEp9-5cMCXVTEiyZQFn19kDIyLxgfivq&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipMPeFgKsDj6HhESW-I0g2Q3nCq42jUPG0NkrS6C=w1980-h2640-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMPeFgKsDj6HhESW-I0g2Q3nCq42jUPG0NkrS6C=w203-h270-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipMPeFgKsDj6HhESW-I0g2Q3nCq42jUPG0NkrS6C&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOMETnLT43RNTq2nJUw7eEr-0G1LyQL0BxV-Gy9=w3000-h4000-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOMETnLT43RNTq2nJUw7eEr-0G1LyQL0BxV-Gy9=w203-h270-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOMETnLT43RNTq2nJUw7eEr-0G1LyQL0BxV-Gy9&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipNgM_7ChYMZ22gY6qG4Lcw8BZ-3cAMc4uV9AIck=w2048-h1365-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNgM_7ChYMZ22gY6qG4Lcw8BZ-3cAMc4uV9AIck=w203-h135-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipNgM_7ChYMZ22gY6qG4Lcw8BZ-3cAMc4uV9AIck&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOi1mkaUYcHxCwEjVX_LgUnu_HR9lCUzI7lDC6v=w749-h749-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOi1mkaUYcHxCwEjVX_LgUnu_HR9lCUzI7lDC6v=w203-h203-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOi1mkaUYcHxCwEjVX_LgUnu_HR9lCUzI7lDC6v&engine=google_maps_photo_meta"
+            },
+            {
+                "image": "https://lh3.googleusercontent.com/p/AF1QipOcNLwz4zUThMwZmWizqEmUWOQMKA9OFlyiy19W=w1320-h1980-k-no",
+                "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOcNLwz4zUThMwZmWizqEmUWOQMKA9OFlyiy19W=w203-h304-k-no",
+                "photo_meta_serpapi_link": "https://serpapi.com/search.json?data_id=AF1QipOcNLwz4zUThMwZmWizqEmUWOQMKA9OFlyiy19W&engine=google_maps_photo_meta"
+            }
+        ],
+        "categories": [
+            {
+                "id": "CgIgAQ",
+                "title": "All"
+            },
+            {
+                "id": "CgIYEg",
+                "title": "Inside"
+            },
+            {
+                "id": "CgIgARICEAE",
+                "title": "By owner"
+            },
+            {
+                "id": "CgIgARICCAI",
+                "title": "Street View & 360°"
+            }
+        ],
+        "search_metadata": {
+            "id": "6922fd178c60cafc34ff25d8",
+            "status": "Success",
+            "created_at": "2025-11-23 12:24:55 UTC",
+            "processed_at": "2025-11-23 12:24:55 UTC",
+            "json_endpoint": "https://serpapi.com/searches/04613d1aa4fa487f/6922fd178c60cafc34ff25d8.json",
+            "raw_html_file": "https://serpapi.com/searches/04613d1aa4fa487f/6922fd178c60cafc34ff25d8.html",
+            "total_time_taken": 0.2,
+            "prettify_html_file": "https://serpapi.com/searches/04613d1aa4fa487f/6922fd178c60cafc34ff25d8.prettify",
+            "google_maps_photos_url": "https://www.google.com/maps/rpc/photo/listentityphotos?hl=en&pb=!1e2!3m3!1s0x12a4eb80cfabbbfd:0x2cd16f2aff436ed!9e0!11s!5m58!2m2!1i203!2i100!3m2!2i20!5b1!7m50!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e3!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e3!2b1!3e2!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e9!2b1!3e2!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!2b1!4b1!9b0!6m3!1s!2z!7e81!16m4!1m1!1BCgIgAQ!2b1!4e1"
+        },
+        "search_parameters": {
+            "hl": "en",
+            "engine": "google_maps_photos",
+            "data_id": "0x12a4eb80cfabbbfd:0x2cd16f2aff436ed"
+        },
+        "serpapi_pagination": {
+            "next": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_photos&hl=en&next_page_token=EvgDKYQi49-NlUMIDwAAAAEAAAMAAAAACAAIAAAAIAAAAAAAJAAAAAAAAAAAgABAAAIAAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAAEQAAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAFAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAEAAAAAAACAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAACAAAECAAAAAAAAAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAABIAAAAgCEAAAAAAAASACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAGAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAEAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGBRCVCmEIuPfjZVD6AEAACAAAAADAAAAAAkAAAD8AAEAABAoDAECAIAgAIAAAgAAWCCiAEQAAAAAKAgABABAAEAC0EBEUCAQBCAAAQQIAiYAEABCAAAAAA",
+            "next_page_token": "EvgDKYQi49-NlUMIDwAAAAEAAAMAAAAACAAIAAAAIAAAAAAAJAAAAAAAAAAAgABAAAIAAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAAEQAAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAFAAAAAAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAEAAAAAAACAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAACAAAECAAAAAAAAAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAABIAAAAgCEAAAAAAAASACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAGAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAEAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAGBRCVCmEIuPfjZVD6AEAACAAAAADAAAAAAkAAAD8AAEAABAoDAECAIAgAIAAAgAAWCCiAEQAAAAAKAgABABAAEAC0EBEUCAQBCAAAQQIAiYAEABCAAAAAA"
+        }
+    },
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_reviews&hl=en",
+    "gps_coordinates": {
+        "latitude": 41.609375199999995,
+        "longitude": 2.1421068
+    },
+    "operating_hours": {
+        "friday": "9 AM–12 AM",
+        "monday": "9 AM–12 AM",
+        "sunday": "Closed",
+        "tuesday": "12–7 AM, 9 AM–7 PM",
+        "saturday": "12–7 AM",
+        "thursday": "9 AM–7 PM",
+        "wednesday": "9 AM–7 PM"
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/xe13Z3icuxmbUVJSUGylr5-TYayXnp-fnpNaWpxalJyfV5KaV6KXnJ-rX6Dv6GYYmFng7xRZlpKUEhXinR8SYFJUkhmcl57hWlLuFuZbkuZvoWuZHh6sG2xbbmmkmwHE2bp5-QCcDyFm"
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "--source=\"C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\400_Drive.SLDASM\" --target=\"C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\400_Drive2.json\"\r\n",
+      "workingDirectory": "C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\sw\\2025\\tools\\props\\bin\\Debug\\netcoreapp3.1",
+      "nativeDebugging": false
+    }
+  }
+}

@@ -1,0 +1,40 @@
+﻿"Base-Width"= 400
+
+"Base-Height"= 300
+
+"Support-Rod-Diameter"= 16
+
+"Support-Rod-X-Offset"= 40
+
+"Support-Rod-Y-Offset"= 35
+
+"Base-Thickness" = 5
+
+"Base-Depth"= 80
+
+"D2@Sketch1"="Base-Width"
+
+"D1@Sketch1"="Base-Height"
+
+"Corner-Radius-Major"= "Support-Rod-Diameter"
+
+"D1@Major-Fillet" = "Corner-Radius-Major"
+
+"D1@Sketch8" = "Base-Height" - "Support-Rod-Y-Offset" + 10
+
+"D2@Sketch8"= "Base-Width" - ( "Support-Rod-X-Offset" ) + 5
+
+"Cutout-Horizontal"= "Base-Width" * 0.5
+
+"Cutout-Vertical"= "Base-Height" * 0.4
+
+"Outer-Support-Bore-Diameter"= 6.1
+
+"D2@Sketch6"="Cutout-Horizontal"
+
+"D1@Sketch7"="Cutout-Vertical"
+
+"Inner-Support-Bore-Diameter"= 8.2
+
+"Cutout-Depth"= 18
+

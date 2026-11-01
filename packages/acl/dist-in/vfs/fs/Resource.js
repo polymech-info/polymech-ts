@@ -1,0 +1,14 @@
+export var EResourceType;
+(function (EResourceType) {
+    EResourceType[EResourceType["JS_HEADER_INCLUDE"] = 'JS-HEADER-INCLUDE'] = "JS_HEADER_INCLUDE";
+    EResourceType[EResourceType["JS_HEADER_SCRIPT_TAG"] = 'JS-HEADER-SCRIPT-TAG'] = "JS_HEADER_SCRIPT_TAG";
+    EResourceType[EResourceType["CSS"] = 'CSS'] = "CSS";
+    EResourceType[EResourceType["FILE_PROXY"] = 'FILE_PROXY'] = "FILE_PROXY";
+})(EResourceType || (EResourceType = {}));
+export function DefaultDelimitter() {
+    return {
+        begin: '%',
+        end: '%'
+    };
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVzb3VyY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdmZzL2ZzL1Jlc291cmNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThCQSxNQUFNLENBQU4sSUFBWSxhQUtYO0FBTEQsV0FBWSxhQUFhO0lBQ3hCLG1EQUFvQixtQkFBMEIsdUJBQUEsQ0FBQTtJQUM5QyxzREFBdUIsc0JBQTZCLDBCQUFBLENBQUE7SUFDcEQscUNBQU0sS0FBWSxTQUFBLENBQUE7SUFDbEIsNENBQWEsWUFBbUIsZ0JBQUEsQ0FBQTtBQUNqQyxDQUFDLEVBTFcsYUFBYSxLQUFiLGFBQWEsUUFLeEI7QUFvQkQsTUFBTSxVQUFVLGlCQUFpQjtJQUNoQyxPQUFPO1FBQ04sS0FBSyxFQUFFLEdBQUc7UUFDVixHQUFHLEVBQUUsR0FBRztLQUNSLENBQUM7QUFDSCxDQUFDIn0=

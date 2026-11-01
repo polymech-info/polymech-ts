@@ -1,0 +1,22 @@
+<h4 style="text-align:center"> Our latest Instagram posts </h4>
+
+[%js%]
+
+return cacache.get.info(CACHE, 'vendor-instagram').then((cache)=>{
+    if(cache){
+        return cacache.get(CACHE, 'vendor-instagram').then((cached)=>{
+            return cached.data.toString();
+        })
+    }
+    console.log('get instagram images');
+    return instagram.images(config.instagram.user,config.instagram.token,global).then((images)=>{
+        images = images.slice(0, 8);
+        images = html.container.wrap(images.map((i)=> html.container.item(html.image(i.path, "https://www.instagram.com/p/" + i.url,'max-height:200px'),'border:none; width:200px;max-height:200px')).join('\n'));
+        return cacache.put(CACHE,'vendor-instagram',images).then(()=>{
+            return images;
+        })
+    });
+
+});
+
+[%endjs%]

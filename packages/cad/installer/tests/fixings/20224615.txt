@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-26072024-046913";"";
+"REFERENCE";"20224615";"";
+"TraceParts.PartTitle";"Button Head Seal Screw M8 12.0 303 Stainless Steel";"";
+"TraceParts.InstanceId";"90-26072024-0469131RFEDI0DDMPM7OE7420M48TES";"";
+"SUPPLIER";"Essentra Components";"";
+"DESIGN";"Button Head Seal Screw M8 12.0 303 Stainless Steel";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.1";"";

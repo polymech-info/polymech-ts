@@ -1,0 +1,130 @@
+[
+  {
+    "$ref": "#/definitions/watermark",
+    "definitions": {
+      "watermark": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1,
+            "description": "FILE|FOLDER|GLOB - Source file(s) to add watermark to"
+          },
+          "dst": {
+            "type": "string",
+            "description": "FILE|FOLDER|GLOB - Destination for watermarked files"
+          },
+          "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable internal debug messages"
+          },
+          "alt": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use alternate tokenizer, & instead of $"
+          },
+          "dry": {
+            "type": "boolean",
+            "default": false,
+            "description": "Run without conversion"
+          },
+          "verbose": {
+            "type": "boolean",
+            "default": false,
+            "description": "Show internal messages"
+          },
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "warn",
+              "info",
+              "debug",
+              "error"
+            ],
+            "default": "info",
+            "description": "Log level: warn, info, debug, error"
+          },
+          "cache": {
+            "type": "boolean",
+            "default": true,
+            "description": "Skip processing if target file already exists"
+          },
+          "watermark": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Watermark content: text string or path to image file (PNG, JPG, SVG)"
+          },
+          "position": {
+            "type": "string",
+            "enum": [
+              "top-left",
+              "top-right",
+              "bottom-left",
+              "bottom-right",
+              "center"
+            ],
+            "default": "bottom-right",
+            "description": "Position of watermark"
+          },
+          "margin": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 24,
+            "description": "Margin from edges in pixels"
+          },
+          "opacity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0.85,
+            "description": "Opacity of watermark (0-1)"
+          },
+          "sizePct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0.2,
+            "description": "Size of image watermark as percentage of base image width (0-1)"
+          },
+          "fontSize": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "default": 48,
+            "description": "Font size for text watermark in pixels"
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$",
+            "default": "#ffffff",
+            "description": "Text color (hex format, e.g., #ffffff)"
+          },
+          "fontFamily": {
+            "type": "string",
+            "default": "Arial",
+            "description": "Font family for text watermark"
+          },
+          "strokeColor": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$",
+            "default": "#000000",
+            "description": "Text stroke color (hex format, e.g., #000000)"
+          },
+          "strokeWidth": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 2,
+            "description": "Text stroke width in pixels"
+          }
+        },
+        "required": [
+          "src",
+          "watermark"
+        ],
+        "additionalProperties": true,
+        "description": "IWatermarkOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

@@ -1,0 +1,12 @@
+[%js%]
+if(store.product.howtos && store.product.howtos.length){
+    return store.product.howtos.map((i)=>{
+        return i
+    }).join('\n<br/>');
+    /*
+    const t = html.thumbs(`${abs_url}/${product}/media/products`,`${PRODUCT_ROOT}/media/products`);
+    return `<h5 style="text-align:center">Products done with ${store.product.name}</h5>
+    ${t}`;
+    */
+}
+[%endjs%]

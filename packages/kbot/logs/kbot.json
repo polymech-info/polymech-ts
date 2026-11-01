@@ -1,0 +1,4 @@
+{"level":"INFO","time":"2026-04-28T15:08:19.029Z","logger":"kbot","msg":"Fetched 128 OpenAI models, to C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\dist-in\\data\\openai_models.json"}
+{"level":"INFO","time":"2026-04-28T15:08:19.031Z","logger":"kbot","msg":"Fetched 128 OpenAI models, to C:\\Users\\zx\\.kbot\\openai.json"}
+{"level":"DEBUG","time":"2026-04-28T15:08:19.179Z","logger":"kbot","msg":"Fetched 367 OpenRouter models to C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\kbot\\dist-in\\data\\openrouter_models.json"}
+{"level":"INFO","time":"2026-04-28T15:08:19.180Z","logger":"kbot","msg":"Fetched 367 OpenRouter models, to C:\\Users\\zx\\.kbot\\openrouter.json"}

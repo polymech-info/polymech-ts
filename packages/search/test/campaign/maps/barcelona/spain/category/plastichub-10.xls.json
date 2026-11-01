@@ -1,0 +1,347 @@
+[
+  {
+    "position": 1,
+    "title": "Plastics Hub",
+    "place_id": "ChIJabXHCeG3cEgRTYlNwRQIf6Y",
+    "data_id": "0x4870b7e109c7b569:0xa67f0814c14d894d",
+    "data_cid": "11997316817573742925",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x4870b7e109c7b569%3A0xa67f0814c14d894d&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x4870b7e109c7b569%3A0xa67f0814c14d894d&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 52.3961366,
+      "longitude": -1.7978661
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJabXHCeG3cEgRTYlNwRQIf6Y",
+    "provider_id": "/g/11jwl8cc52",
+    "rating": 4,
+    "reviews": 316,
+    "type": "Building materials supplier",
+    "types": [
+      "Building materials supplier"
+    ],
+    "type_id": "building_materials_supplier",
+    "type_ids": [
+      "building_materials_supplier"
+    ],
+    "address": "Unit 15, Monkspath Business Park, Shirley, Solihull B90 4NY, United Kingdom",
+    "open_state": "Closed · Opens 8 AM Mon",
+    "hours": "Closed · Opens 8 AM Mon",
+    "operating_hours": {
+      "friday": "8 AM–4 PM",
+      "saturday": "Closed",
+      "sunday": "Closed",
+      "monday": "8 AM–4 PM",
+      "tuesday": "8 AM–4 PM",
+      "wednesday": "8 AM–4 PM",
+      "thursday": "8 AM–4 PM"
+    },
+    "phone": "+44 121 716 2588",
+    "website": "/url?q=https://www.plasticshub.com/&opi=79508299&sa=U&ved=0ahUKEwikv-nOnoSRAxWgGlkFHWmBJq0Q61gIGSgR&usg=AOvVaw3zl0nqV2_UYXwnYro1ijXN",
+    "extensions": [
+      {
+        "service_options": [
+          "Onsite services"
+        ]
+      },
+      {
+        "accessibility": [
+          "Wheelchair accessible entrance",
+          "Wheelchair accessible parking lot"
+        ]
+      },
+      {
+        "payments": [
+          "Credit cards",
+          "Debit cards"
+        ]
+      }
+    ],
+    "service_options": {
+      "onsite_services": true
+    },
+    "user_review": "\"Absolutely fantastic experience using plastic hub.\"",
+    "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMwWpEv9UmMgOu7tkaRhfIYjEixUvtx6NCtunZR=w93-h92-k-no",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/c77q1HicuxmbUVJSUGylr5-TYayXnp-fnpNaWpxalJyfV5KaV6KXnJ-rX6Dv6GYYmFngWx5e4FpmGZrrm-5fal6SnRiUkeYZmeWaWRFaVlJh5udcUpoXFWRbbmmsm2FppJutm5cPAK6wIlA",
+    "page": 0,
+    "geo": {
+      "latitude": 52.3961366,
+      "longitude": -1.7978661,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "principalSubdivision": "England",
+      "principalSubdivisionCode": "GB-ENG",
+      "city": "Solihull",
+      "locality": "Solihull",
+      "postcode": "B90 4",
+      "plusCode": "9C4W96W2+FV",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "description": "country in Western Europe",
+            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "order": 4,
+            "adminLevel": 2,
+            "isoCode": "GB",
+            "wikidataId": "Q145",
+            "geonameId": 2635167
+          },
+          {
+            "name": "England",
+            "description": "home nation of the United Kingdom",
+            "isoName": "England",
+            "order": 6,
+            "adminLevel": 4,
+            "isoCode": "GB-ENG",
+            "wikidataId": "Q21",
+            "geonameId": 6269131
+          },
+          {
+            "name": "West Midlands Combined Authority",
+            "description": "Combined authority",
+            "order": 10,
+            "adminLevel": 5,
+            "wikidataId": "Q21061625"
+          },
+          {
+            "name": "Solihull",
+            "description": "town in the West Midlands of England",
+            "order": 11,
+            "adminLevel": 8,
+            "wikidataId": "Q397343",
+            "geonameId": 2637546
+          },
+          {
+            "name": "Solihull",
+            "description": "metropolitan borough in the West Midlands, England",
+            "isoName": "Solihull",
+            "order": 12,
+            "adminLevel": 8,
+            "isoCode": "GB-SOL",
+            "wikidataId": "Q1925858",
+            "geonameId": 3333195
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "British Isles",
+            "description": "group of islands in northwest Europe",
+            "order": 2,
+            "wikidataId": "Q38272",
+            "geonameId": 2654669
+          },
+          {
+            "name": "Europe/London",
+            "description": "time zone",
+            "order": 3
+          },
+          {
+            "name": "Great Britain",
+            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
+            "order": 5,
+            "wikidataId": "Q23666",
+            "geonameId": 2648147
+          },
+          {
+            "name": "West Midlands",
+            "description": "one of nine official regions of England",
+            "order": 7,
+            "wikidataId": "Q48038",
+            "geonameId": 11591953
+          },
+          {
+            "name": "West Midlands",
+            "description": "metropolitan county of England",
+            "order": 8,
+            "wikidataId": "Q23124",
+            "geonameId": 2634343
+          },
+          {
+            "name": "West Midlands Fire Service",
+            "description": "English regional fire and rescue service",
+            "order": 9,
+            "wikidataId": "Q7985942"
+          },
+          {
+            "name": "B90 4",
+            "description": "postal code",
+            "order": 13
+          }
+        ]
+      }
+    }
+  },
+  {
+    "position": 2,
+    "title": "Plastic Hub",
+    "place_id": "ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "data_id": "0x12a4eb80cfabbbfd:0x2cd16f2aff436ed",
+    "data_cid": "201842789891454701",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x12a4eb80cfabbbfd%3A0x2cd16f2aff436ed&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+      "latitude": 41.609375199999995,
+      "longitude": 2.1421068
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_burz4DrpBIR7Tb0r_IWzQI",
+    "provider_id": "/g/11rxv42q_7",
+    "type": "Machine shop",
+    "types": [
+      "Machine shop"
+    ],
+    "type_id": "machine_shop",
+    "type_ids": [
+      "machine_shop"
+    ],
+    "address": "Carrer Can Peric, 11, 1B, 08181 Sentmenat, Barcelona, Spain",
+    "open_state": "Open · Closes 7 AM Sat",
+    "hours": "Open · Closes 7 AM Sat",
+    "operating_hours": {
+      "friday": "9 AM–12 AM",
+      "saturday": "12–7 AM",
+      "sunday": "Closed",
+      "monday": "9 AM–12 AM",
+      "tuesday": "12–7 AM, 9 AM–7 PM",
+      "wednesday": "9 AM–7 PM",
+      "thursday": "9 AM–7 PM"
+    },
+    "phone": "+34 691 95 22 87",
+    "website": "/url?q=https://polymech.io/es&opi=79508299&sa=U&ved=0ahUKEwikv-nOnoSRAxWgGlkFHWmBJq0Q61gINygQ&usg=AOvVaw1eXT3j7KlDqt_37xYZVivZ",
+    "extensions": [
+      {
+        "accessibility": [
+          "Wheelchair accessible entrance"
+        ]
+      },
+      {
+        "crowd": [
+          "LGBTQ+ friendly",
+          "Transgender safespace"
+        ]
+      }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOBYvdbdZTKoTP4rtiSnghEtwFVMtfO8-9gWS-S=w92-h92-k-no",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/xe13Z3icuxmbUVJSUGylr5-TYayXnp-fnpNaWpxalJyfV5KaV6KXnJ-rX6Dv6GYYmFng7xRZlpKUEhXinR8SYFJUkhmcl57hWlLuFuZbkuZvoWuZHh6sG2xbbmmkmwHE2bp5-QCcDyFm",
+    "page": 0,
+    "geo": {
+      "latitude": 41.609375199999995,
+      "longitude": 2.1421068,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "principalSubdivision": "Catalunya",
+      "principalSubdivisionCode": "ES-CT",
+      "city": "Sentmenat",
+      "locality": "Sentmenat",
+      "postcode": "",
+      "plusCode": "8FH4J45R+QR",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Spain",
+            "description": "constitutional monarchy in Southwest Europe",
+            "isoName": "Spain",
+            "order": 2,
+            "adminLevel": 2,
+            "isoCode": "ES",
+            "wikidataId": "Q29",
+            "geonameId": 2510769
+          },
+          {
+            "name": "East",
+            "order": 5,
+            "adminLevel": 3
+          },
+          {
+            "name": "Catalunya",
+            "description": "nationality and autonomous community of Spain",
+            "isoName": "Catalunya",
+            "order": 7,
+            "adminLevel": 4,
+            "isoCode": "ES-CT",
+            "wikidataId": "Q5705",
+            "geonameId": 3336901
+          },
+          {
+            "name": "Provincia de Barcelona",
+            "description": "province in Catalonia, Spain",
+            "isoName": "Provincia de Barcelona",
+            "order": 9,
+            "adminLevel": 6,
+            "isoCode": "ES-B",
+            "wikidataId": "Q81949",
+            "geonameId": 3128759
+          },
+          {
+            "name": "Valles Occidental",
+            "description": "Catalan comarca (county) in the vegueria (region) of Barcelona",
+            "order": 11,
+            "adminLevel": 7,
+            "wikidataId": "Q13948"
+          },
+          {
+            "name": "Sentmenat",
+            "description": "municipality in the comarca of the Vallès Occidental in Catalonia, Spain",
+            "order": 12,
+            "adminLevel": 8,
+            "wikidataId": "Q13943",
+            "geonameId": 3109165
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent in the Northern Hemisphere",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Madrid",
+            "description": "time zone",
+            "order": 3
+          },
+          {
+            "name": "Iberian Peninsula",
+            "description": "peninsula located in the extreme southwest of Europe",
+            "order": 4,
+            "wikidataId": "Q12837",
+            "geonameId": 2267430
+          },
+          {
+            "name": "Catalan countries",
+            "description": "territories where Catalan is the native language",
+            "order": 6,
+            "wikidataId": "Q234963"
+          },
+          {
+            "name": "Catalan as own language in Catalonia",
+            "order": 8
+          },
+          {
+            "name": "Ambit metropolita de Barcelona",
+            "description": "region (vegueria) of Catalonia",
+            "order": 10,
+            "wikidataId": "Q249461"
+          }
+        ]
+      }
+    }
+  }
+]

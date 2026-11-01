@@ -1,0 +1,57 @@
+{
+    "scripts": [
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        "'unsafe-hashes'"
+    ],
+    "supabase": [
+        "https://*.supabase.co",
+        "wss://*.supabase.co"
+    ],
+    "polymech": [
+        "https://assets.polymech.info",
+        "https://*.polymech.info",
+        "https://service.polymech.info",
+        "wss://service.polymech.info"
+    ],
+    "cdn": [
+        "https://cdn.jsdelivr.net",
+        "https://cdn.tailwindcss.com"
+    ],
+    "fonts": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.scalar.com"
+    ],
+    "googleapis": [
+        "https://*.googleapis.com",
+        "https://*.gstatic.com"
+    ],
+    "analytics": [
+        "https://www.googletagmanager.com",
+        "https://*.google-analytics.com",
+        "https://www.google-analytics.com",
+        "https://www.google.com"
+    ],
+    "ai": [
+        "https://api.openai.com"
+    ],
+    "video": [
+        "https://stream.mux.com"
+    ],
+    "maptiler": [
+        "https://api.maptiler.com",
+        "https://*.maptiler.com"
+    ],
+    "geo": [
+        "https://ipapi.co"
+    ],
+    "openstreetmap": [
+        "https://*.tile.openstreetmap.org",
+        "https://*.openstreetmap.org"
+    ],
+    "carto": [
+        "https://*.cartocdn.com",
+        "https://*.carto.com"
+    ]
+}

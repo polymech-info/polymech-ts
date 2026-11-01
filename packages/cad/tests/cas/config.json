@@ -1,0 +1,36 @@
+{
+
+    "slug" : "cassandra-mini",
+    "category" : "sheetpress",
+    "name":"Cassandra Mini",
+    "code": "casm",
+    "feature":"40cm Sheets",
+    "keywords" : "sheetpress",
+    "showParts": false,
+    "cscartId":7,
+    "showDimensions":true,
+    "Preview3d": true,
+    "version": "dev-a",
+    "product_dimensions": "${abs_url}/${product_rel}/drawings/dimensions.jpg",
+    "edrawings":"${abs_url}/${product_rel}/resources/GlobalAssembly.html",
+    "production":{
+        "fusion-folder":"https://myhub.autodesk360.com/ue2b6df80/g/projects/2017062581474431/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28ud3hERk1FZ1ZSTEMtRU1SUVVTdWFUdw==",
+        "nc-folder":"${ph-nc}/nc/sheetpress",
+        "cam":[
+            {
+                "name":"Heater - Blocks Drilling - 6mm",
+                "url":"https://a360.co/3su43td"
+            }
+        ]
+    },
+    "authors": [
+        {
+            "name": "PlasticHub S.L.",
+            "url": "${author_link}"
+        },
+        {
+            "name": "Dan Shirley - Timberstar",
+            "url": "https://www.facebook.com/dan.shirley.33"
+        }
+    ]
+}

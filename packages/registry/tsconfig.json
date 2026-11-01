@@ -1,0 +1,22 @@
+{
+	"extends": "../typescript-config/base.json",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "src",
+		"baseUrl": ".",
+		"allowJs": true,
+		"esModuleInterop": true,
+		"composite": false,
+		"importHelpers": false,
+		"inlineSourceMap": true,
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
+	},
+	"files": [
+		"src/index.ts",
+		"src/main.ts",
+	]
+}

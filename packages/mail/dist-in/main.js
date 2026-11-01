@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+import { defaults } from './_cli.js';
+defaults();
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+//import { register as registerTest } from './commands/test'; registerTest(CLI)
+const parser = yargs(hideBin(process.argv));
+const argv = parser.argv;
+if (argv.h || argv.help) {
+    parser.showHelp();
+    process.exit();
+}
+else if (argv.v || argv.version) {
+    process.exit();
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9tYWluLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sV0FBVyxDQUFDO0FBQUMsUUFBUSxFQUFFLENBQUE7QUFDaEQsT0FBTyxLQUFLLE1BQU0sT0FBTyxDQUFBO0FBQ3pCLE9BQU8sRUFBRSxPQUFPLEVBQUUsTUFBTSxlQUFlLENBQUE7QUFFdkMsK0VBQStFO0FBRS9FLE1BQU0sTUFBTSxHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUM7QUFDNUMsTUFBTSxJQUFJLEdBQVEsTUFBTSxDQUFDLElBQUksQ0FBQTtBQUM3QixJQUFJLElBQUksQ0FBQyxDQUFDLElBQUksSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO0lBQ3RCLE1BQU0sQ0FBQyxRQUFRLEVBQUUsQ0FBQztJQUNsQixPQUFPLENBQUMsSUFBSSxFQUFFLENBQUM7QUFDbkIsQ0FBQztLQUFNLElBQUksSUFBSSxDQUFDLENBQUMsSUFBSSxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7SUFDaEMsT0FBTyxDQUFDLElBQUksRUFBRSxDQUFDO0FBQ25CLENBQUMifQ==

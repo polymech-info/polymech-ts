@@ -1,0 +1,95 @@
+[% capture config %][% js %]
+const globalVariables = readJSON('${root}/osr/global.json');
+addGlobal({config:globalVariables});
+return globalVariables;
+[%endjs%][% endcapture %]
+[% capture product %][% js %]
+
+    let globalVariables = readJSON('${root}/osr/global.json');
+    let localVariables = readJSON('${PRODUCT_ROOT}/config.json');
+    let localYAML = readFile('${PRODUCT_ROOT}/config.yaml');
+
+    let defaultsYAML = fs.findUp.sync('defaults.yaml', {
+        cwd:PRODUCT_ROOT,
+        stopAt:root
+    });
+
+    if(defaultsYAML){
+        defaultsYAML = readFile(defaultsYAML).trim();
+        localYAML = `${defaultsYAML}\n${localYAML}`;
+    }
+
+    let defaultsJSON = fs.findUp.sync('defaults.json', {
+        cwd:PRODUCT_ROOT,
+        stopAt:root
+    });
+
+    if(defaultsJSON){
+        defaultsJSON = readJSON(defaultsJSON);
+        localVariables = {
+            ...defaultsJSON,
+            ...localVariables
+        }
+    }
+
+
+    let allVariables = {
+        ...localVariables,
+        ...globalVariables,
+        ...scope
+    }
+    let all = substitute(JSON.stringify(allVariables,null,2),allVariables);
+    allVariables = JSON.parse(all);
+    resolveConfig(allVariables);
+    return allVariables;
+
+[%endjs%][% endcapture %]
+---
+[% js %]
+let globalVariables = readJSON('${root}/osr/global.json');
+resolveConfig(globalVariables);
+addGlobal(globalVariables);
+let localVariables = readJSON('${PRODUCT_ROOT}/config.json');
+let localYAML = readFile('${PRODUCT_ROOT}/config.yaml');
+
+let defaultsYAML = fs.findUp.sync('defaults.yaml', {
+    cwd:PRODUCT_ROOT,
+    stopAt:root
+});
+
+if(defaultsYAML){
+    defaultsYAML = readFile(defaultsYAML).trim();
+    localYAML = `${defaultsYAML}\n${localYAML}`;
+}
+
+let defaultsJSON = fs.findUp.sync('defaults.json', {
+    cwd:PRODUCT_ROOT,
+    stopAt:root
+});
+
+if(defaultsJSON){
+    defaultsJSON = readJSON(defaultsJSON);
+    localVariables = {
+        ...defaultsJSON,
+        ...localVariables
+    }
+}
+localVariables['rel']=product.replace('products/','');
+localVariables['image']='${abs_url}/${product_rel}/renderings/perspective.jpg';
+let allVariables = {
+    ...localVariables,
+    ...globalVariables,
+    ...scope
+
+}
+
+let all = substitute(JSON.stringify(allVariables, null, 2), allVariables);
+allVariables = JSON.parse(all);
+resolveConfig(allVariables);
+store.product = allVariables;
+addGlobal(allVariables);
+register('product', allVariables);
+const yaml = substitute(localYAML, allVariables);
+return (YAML.stringify(allVariables) + yaml).trim();
+[%endjs%]
+---

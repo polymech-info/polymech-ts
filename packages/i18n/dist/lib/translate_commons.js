@@ -1,0 +1,185 @@
+import * as path from 'path';
+import { isString, isArray, isObject, isNumber } from '@polymech/core/primitives';
+import { sync as read } from "@polymech/fs/read";
+import { sync as write } from "@polymech/fs/write";
+import { minify as minify_html } from 'html-minifier-terser';
+import { store, get } from './store.js';
+import * as deepl from './deepl.js';
+const minify = false;
+import { defaultFilters, defaultOptions, transformObject, testFilters } from './async-iterator.js';
+import { update } from './glossary.js';
+import { createLogger } from '@polymech/log';
+export let logger = createLogger('i18n');
+export const clean = (text = "") => text.trim();
+export const extension = (file) => path.parse(file).ext;
+export const getTranslation = (translations, all = false) => {
+    if (!all) {
+        if (translations && translations[0] && translations[0].text) {
+            return translations[0].text;
+        }
+    }
+    else {
+        return translations;
+    }
+    return false;
+};
+export const storeSet = (storePath, text, translation, file = '') => {
+    const store = read(storePath, 'json') || {};
+    store[text] = clean(translation);
+    write(storePath, store);
+};
+export const storeGet = (storePath, text, file = '') => {
+    const db = read(storePath, 'json') || {};
+    if (db[text]) {
+        return db[text];
+    }
+};
+export const translateObjectAIT = async (obj, src, options) => {
+    const opts = defaultOptions({
+        throttleDelay: 100,
+        concurrentTasks: 1,
+        path: options.query,
+        filterCallback: testFilters(defaultFilters([
+            async (input) => !options.keys.includes(input)
+        ])),
+        transform: async (input, path) => {
+            if ((isNumber(input) || parseInt(input))) {
+                return input;
+            }
+            const stored = get(options.store, input, options);
+            if (stored) {
+                return stored;
+            }
+            const translated = await _translate(input, src, options);
+            if (translated) {
+                if (options.store) {
+                    store(options.store, input, translated, options);
+                }
+                return translated;
+            }
+            return input;
+        },
+        errorCallback: (path, value, error) => {
+            logger.error(`Error at path: ${path}, value: ${value}, error: ${error}`);
+            return value;
+        }
+    });
+    try {
+        await transformObject(obj, opts.transform, opts.path, opts.throttleDelay, opts.concurrentTasks, opts.errorCallback, opts.filterCallback);
+        return obj;
+    }
+    catch (error) {
+        logger.error('Translation failed:', error);
+    }
+};
+export const translateDeepL = async (text, srcLang = 'EN', dstLang = 'DE', dOptions, options = {}, file = '') => {
+    if (minify) {
+        text = await minify_html(text, {
+            collapseWhitespace: true
+        });
+    }
+    let glossary;
+    try {
+        glossary = await update(srcLang.toLowerCase(), dstLang.toLowerCase(), options);
+    }
+    catch (e) {
+        logger.warn('Error updating glossary', e.message);
+    }
+    const deeplOptions = {
+        preserve_formatting: '1',
+        tag_handling: ["xml"],
+        ...dOptions,
+        text: text,
+        target_lang: dstLang,
+        source_lang: srcLang,
+        formality: options.formality || 'default',
+    };
+    if (glossary && glossary.glossaryId) {
+        deeplOptions.glossary_id = glossary.glossaryId;
+    }
+    // logger.info('Translate:', deeplOptions)
+    let ret = await deepl.translate_deepl(deeplOptions);
+    if (!ret) {
+        logger.error('Translate failed : ' + text, file);
+        return false;
+    }
+    ret = ret?.data;
+    if (options.filters) {
+        (ret.translations).forEach((t, i) => {
+            options.filters.forEach((f) => {
+                ret.translations[i].text = f(text, t.text, file);
+            });
+        });
+    }
+    return ret.translations;
+};
+const _translate = async (value, src, options) => {
+    const translations = await translateDeepL(value, options.srcLang, options.dstLang, {
+        auth_key: options.api_key,
+        formality: options.formality || 'default',
+        free_api: false
+    }, options, src);
+    return getTranslation(translations);
+};
+export const translateObject = async (obj, src, options) => {
+    if (isNumber(obj)) {
+        return obj;
+    }
+    if (isString(obj) && !obj.trim().length) {
+        return obj;
+    }
+    if (isString(obj) && options.store) {
+        const stored = get(options.store, obj, options);
+        if (stored && options.cache) {
+            return stored;
+        }
+        const ret = await _translate(obj, src, options);
+        if (ret && options.store) {
+            store(options.store, obj, ret, options);
+            return ret;
+        }
+        else {
+            console.error('Error translating : ', obj);
+        }
+        return obj;
+    }
+    if (isObject(obj) || isArray(obj)) {
+        for await (const [key, value] of Object.entries(obj)) {
+            if (!obj[key]) {
+                continue;
+            }
+            if (!isString(key)) {
+                continue;
+            }
+            if (isString(value) && options.keys && !options.keys.includes(key)) {
+                continue;
+            }
+            if (isString(value)) {
+                const stored = get(options.store, value, options);
+                if (stored && options.cache) {
+                    obj[key] = stored;
+                }
+                else {
+                    obj[key] = await _translate(value, src, options);
+                    if (options.store) {
+                        store(options.store, value, obj[key], options);
+                    }
+                }
+            }
+            else if (isObject(value)) {
+                obj[key] = await translateObject(value, src, options);
+            }
+            else if (isArray(value)) {
+                let i = 0;
+                for await (const v of value) {
+                    if (!v)
+                        continue;
+                    value[i] = await translateObject(v, src, options);
+                    i++;
+                }
+            }
+        }
+    }
+    return obj;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJhbnNsYXRlX2NvbW1vbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvbGliL3RyYW5zbGF0ZV9jb21tb25zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sS0FBSyxJQUFJLE1BQU0sTUFBTSxDQUFBO0FBQzVCLE9BQU8sRUFBRSxRQUFRLEVBQUUsT0FBTyxFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQTtBQUNqRixPQUFPLEVBQUUsSUFBSSxJQUFJLElBQUksRUFBRSxNQUFNLG1CQUFtQixDQUFBO0FBQ2hELE9BQU8sRUFBRSxJQUFJLElBQUksS0FBSyxFQUFFLE1BQU0sb0JBQW9CLENBQUE7QUFDbEQsT0FBTyxFQUFFLE1BQU0sSUFBSSxXQUFXLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQTtBQUc1RCxPQUFPLEVBQUUsS0FBSyxFQUFFLEdBQUcsRUFBRSxNQUFNLFlBQVksQ0FBQTtBQUN2QyxPQUFPLEtBQUssS0FBSyxNQUFNLFlBQVksQ0FBQTtBQUVuQyxNQUFNLE1BQU0sR0FBRyxLQUFLLENBQUE7QUFFcEIsT0FBTyxFQUNILGNBQWMsRUFDZCxjQUFjLEVBQ2QsZUFBZSxFQUVmLFdBQVcsRUFDZCxNQUFNLHFCQUFxQixDQUFBO0FBRTVCLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxlQUFlLENBQUE7QUFFdEMsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLGVBQWUsQ0FBQTtBQUM1QyxNQUFNLENBQUMsSUFBSSxNQUFNLEdBQUcsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFBO0FBRXhDLE1BQU0sQ0FBQyxNQUFNLEtBQUssR0FBRyxDQUFDLE9BQWUsRUFBRSxFQUFFLEVBQUUsQ0FBQyxJQUFJLENBQUMsSUFBSSxFQUFFLENBQUE7QUFDdkQsTUFBTSxDQUFDLE1BQU0sU0FBUyxHQUFHLENBQUMsSUFBWSxFQUFFLEVBQUUsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxD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

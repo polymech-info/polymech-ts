@@ -1,0 +1,14 @@
+import { IKBotTask, IKBotLogger } from './ai-tools/index.js';
+export declare const logger: IKBotLogger;
+export declare const getLogger: (options: IKBotTask) => IKBotLogger;
+export { run } from './commands/run.js';
+export { complete_options, complete_messages, complete_params } from './commands/run.js';
+export declare const module_root: () => string;
+export declare const assistant_supported: Record<string, string>;
+export * from './types.js';
+export * from './zod_types.js';
+export * from './zod_schema.js';
+export { E_OPENAI_MODEL } from './models/cache/openai-models.js';
+export { E_OPENROUTER_MODEL } from './models/cache/openrouter-models.js';
+export { E_OPENROUTER_MODEL_FREE } from './models/cache/openrouter-models-free.js';
+export type { IKBotTask } from './ai-tools/index.js';

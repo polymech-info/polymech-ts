@@ -1,0 +1,9 @@
+# Deno
+.deno
+deno.lock
+deno.json._decorators
+package-lock.json
+# Dependencies
+node_modules/
+# Build output
+build/

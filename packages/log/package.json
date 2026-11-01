@@ -1,0 +1,50 @@
+{
+  "name": "@polymech/log",
+  "version": "0.2.6",
+  "license": "BSD",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "https://git.osr-plastic.org/osr-plastic/osr-core/blob/master/LICENSE"
+    }
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@polymech/core": "file:../core",
+    "@repo/typescript-config": "file:../typescript-config",
+    "tslog": "^3.3.3",
+    "tsup": "^8.3.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.9",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-regexp": "^2.7.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "typescript-eslint": "^8.20.0"
+  },
+  "scripts": {
+    "test": "tsc && mocha build/test",
+    "buildtsc": "tsc -p . --declaration",
+    "build": "tsup",
+    "start": "node build/index.js",
+    "typings": "tsc -p . --declaration",
+    "dev": "tsc -p . --declaration -w"
+  },
+  "modules": [],
+  "readmeFilename": "Readme.md"
+}

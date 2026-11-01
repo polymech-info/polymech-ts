@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\sheetpress\\cassandra-edczmax-v1\\cad\\SPRCC-650-Assembly-Dual.SLDASM\" C:\\Users\\mc007\\Desktop\\osr\\products\\products\\sheetpress\\cassandra-edczmax-v1\\cad\\SPRCC-650-Assembly-Dual.xlsx\" --config Default --type 2 --detail 1",
+      "nativeDebugging": false
+    }
+  }
+}

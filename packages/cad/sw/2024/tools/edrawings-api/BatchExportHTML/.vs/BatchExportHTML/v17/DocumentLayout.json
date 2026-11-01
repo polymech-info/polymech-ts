@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AAE63356-3E7D-46D7-B8E2-7DA532E5EB12}|BatchExportHTML\\BatchExportHTML.vbproj|c:\\users\\zx\\desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\batchexporthtml\\batchexporthtml\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AAE63356-3E7D-46D7-B8E2-7DA532E5EB12}|BatchExportHTML\\BatchExportHTML.vbproj|solutionrelative:batchexporthtml\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAE63356-3E7D-46D7-B8E2-7DA532E5EB12}|BatchExportHTML\\BatchExportHTML.vbproj|C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\batchexporthtml\\edrawingshost.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AAE63356-3E7D-46D7-B8E2-7DA532E5EB12}|BatchExportHTML\\BatchExportHTML.vbproj|solutionrelative:batchexporthtml\\edrawingshost.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EDrawingsHost.vb",
+              "DocumentMoniker": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\BatchExportHTML\\EDrawingsHost.vb",
+              "RelativeDocumentMoniker": "BatchExportHTML\\EDrawingsHost.vb",
+              "ToolTip": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\BatchExportHTML\\EDrawingsHost.vb",
+              "RelativeToolTip": "BatchExportHTML\\EDrawingsHost.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-07T10:47:46.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\BatchExportHTML\\Module1.vb",
+              "RelativeDocumentMoniker": "BatchExportHTML\\Module1.vb",
+              "ToolTip": "C:\\Users\\zx\\Desktop\\osr\\osr-cad\\sw\\2024\\tools\\edrawings-api\\BatchExportHTML\\BatchExportHTML\\Module1.vb",
+              "RelativeToolTip": "BatchExportHTML\\Module1.vb",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2023-11-11T18:02:24.48Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

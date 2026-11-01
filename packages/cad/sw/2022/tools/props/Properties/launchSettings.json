@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "--source=\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\sheetpress\\cassandra-edczmax-rc2\\cad\\Global-SPC-650-Default-RC2.SLDASM\"  --target=\"C:\\Users\\mc007\\Desktop\\osr\\products\\products\\sheetpress\\cassandra-edczmax-rc2\\cad\\Global-SPC-650-Default-RC2.json\"\r\n",
+      "workingDirectory": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\tools\\props\\bin\\Debug\\netcoreapp3.1",
+      "nativeDebugging": false
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "name": "@polymech/commons",
+  "version": "0.2.6",
+  "license": "BSD",
+  "type": "module",
+  "bin": {
+    "pm-cli": "./dist/main.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./variables": {
+      "import": "./dist/variables.js",
+      "require": "./dist/variables.cjs"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "require": "./dist/types.cjs"
+    },
+    "./schemas": {
+      "import": "./dist/schemas/index.js",
+      "require": "./dist/schemas/index.cjs"
+    },
+    "./config": {
+      "import": "./dist/config.js",
+      "require": "./dist/config.cjs"
+    },
+    "./profile": {
+      "import": "./dist/profile.js",
+      "require": "./dist/profile.cjs"
+    },
+    "./component": {
+      "import": "./dist/component.js",
+      "require": "./dist/component.cjs"
+    },
+    "./filter": {
+      "import": "./dist/filter.js",
+      "require": "./dist/filter.cjs"
+    },
+    "./glob": {
+      "import": "./dist/_glob.js",
+      "require": "./dist/_glob.cjs"
+    },
+    "./frontmatter": {
+      "import": "./dist/lang/frontmatter.js",
+      "require": "./dist/lang/frontmatter.js"
+    }
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "https://git.osr-plastic.org/osr-plastic/osr-core/blob/master/LICENSE"
+    }
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/osr-plastic/osr-core.git"
+  },
+  "types": "index.d.ts",
+  "dependencies": {
+    "@polymech/core": "file:../core",
+    "@polymech/fs": "file:../fs",
+    "@repo/typescript-config": "file:../typescript-config",
+    "@schemastore/package": "^0.0.10",
+    "ansi-regex": "^6.2.2",
+    "env-var": "^7.5.0",
+    "glob": "^10.4.5",
+    "js-yaml": "^4.1.0",
+    "jsonpath-plus": "^10.3.0",
+    "normalize-url": "^8.0.1",
+    "p-map": "^7.0.3",
+    "p-throttle": "^4.1.1",
+    "regedit": "^5.1.4",
+    "tslog": "^3.3.3",
+    "tsup": "^8.5.1",
+    "yargs": "^17.7.2",
+    "zod": "^4.3.6",
+    "zod-to-json-schema": "^3.25.1",
+    "zod-to-ts": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "test": "tsc && mocha build/test",
+    "buildtsc": "tsc -p . --declaration",
+    "build": "tsc -p . --declaration",
+    "start": "node build/index.js",
+    "typings": "tsc -p . --declaration",
+    "dev": "tsc -p . --declaration -w"
+  },
+  "modules": [],
+  "readmeFilename": "Readme.md"
+}

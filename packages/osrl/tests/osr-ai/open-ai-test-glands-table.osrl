@@ -1,0 +1,11 @@
+[% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,trim" dst:"${SRC_DIR}/${SRC_NAME}-glands.md" %]
+
+    Create a markdown table of cable gland dimensions
+     - type, eg: PG11, ...
+     - outer diameter of the nut
+     - height
+     - matching wire gauge, AWG
+     - matching wire diameter range, in mm
+     - bore/drill hole diameter
+
+[% osr-ai-end %]

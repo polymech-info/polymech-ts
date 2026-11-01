@@ -1,0 +1,15 @@
+import * as deeplN from 'deepl-node';
+import * as deepl from './deepl.js';
+import { IOptions } from '../types.js';
+export declare const name: (srcLang: any, dstLang: any) => string;
+export declare const glossaryMetaPath: (storeRoot: any, srcLang: any, dstLang: any) => string;
+export declare const glossaryPath: (storeRoot: any, srcLang: any, dstLang: any) => string;
+export declare const meta: (storeRoot: string, srcLang: string, dstLang: string) => deepl.IGlossary | null;
+export declare const data: (storeRoot: string, srcLang: string, dstLang: string) => string | null;
+export declare const hash: (storeRoot: string, srcLang: string, dstLang: string) => string;
+export declare const update_hash: (storeRoot: string, srcLang: string, dstLang: string) => void;
+export declare const create: (srcLang: string, dstLang: string, options: IOptions) => Promise<deepl.IGlossary>;
+export declare const pairs: (dOptions: deepl.IDeepLOptions, file: string) => Promise<readonly deeplN.GlossaryLanguagePair[]>;
+export declare const update: (srcLang: string, dstLang: string, options: IOptions) => Promise<deepl.IGlossary>;
+export declare const id: (root: string) => string;
+export declare const _data: (storeRoot: string, srcLang: string, dstLang: string) => any;

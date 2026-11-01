@@ -1,0 +1,51 @@
+# Travis CI Configuration
+language: node_js
+
+# Specify the operating systems
+os: 
+  - linux
+  - osx
+  - windows
+
+# Specify the Node.js versions to test on
+node_js:
+  - "node" # latest stable node
+
+# Specific operating system and Node.js version combinations
+matrix:
+  include:
+    # Linux (Ubuntu)
+    - os: linux
+      dist: ubuntu-latest
+      node_js: "node"
+
+    # macOS
+    - os: osx
+      node_js: "node"
+
+    # Windows
+    - os: windows
+      node_js: "node"
+
+# Cache node_modules between builds
+cache:
+  directories:
+    - node_modules
+
+# Install dependencies
+install:
+  - npm ci
+
+# Run tests
+script:
+  - npm test
+
+# Before deployment scripts (optional)
+before_deploy:
+  - npm run build
+
+# Notifications
+notifications:
+  email:
+    on_success: change
+    on_failure: always

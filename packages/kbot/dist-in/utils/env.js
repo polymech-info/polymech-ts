@@ -1,0 +1,4 @@
+export const env_vars = () => {
+    return process.env;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW52LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3V0aWxzL2Vudi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLENBQUMsTUFBTSxRQUFRLEdBQUcsR0FBMkIsRUFBRTtJQUNqRCxPQUFPLE9BQU8sQ0FBQyxHQUE2QixDQUFBO0FBQ2hELENBQUMsQ0FBQSJ9

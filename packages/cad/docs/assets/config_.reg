@@ -1,0 +1,399 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu]
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\1]
+"Item Name"="pm-cad"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000001
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\10]
+"Item Name"="CAD -> PDF"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(pdf)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\11]
+"Item Name"="CAD -> JPG"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(jpg)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\12]
+"Item Name"="CAD -> JSON"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(json)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\13]
+"Item Name"="CAD -> Parasolid"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(x_t)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\14]
+"Item Name"="CAD -> 3MF"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(glb)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\15]
+"Item Name"="CAD - > Configs"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}-configs.+(json)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\16]
+"Item Name"="CAD - > All Configs"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}-&{CONFIGURATION}.+(step|x_t)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\17]
+"Item Name"="---"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000003
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\18]
+"Item Name"="(Submenu End)"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000002
+"Show In Toolbar"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\19]
+"Item Name"="OSR-i18n"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000001
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\2]
+"Item Name"="---"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000003
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\20]
+"Item Name"="DE"
+"Command"="osr-i18n"
+"Arguments"="translate --alt=true --targetLang=\"DE\" --debug --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.&{DST_LANG}.+(md).md\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\21]
+"Item Name"="(Submenu End)"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000002
+"Show In Toolbar"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\22]
+"Item Name"="OSR-L"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000001
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\23]
+"Item Name"="compile"
+"Command"="osrl"
+"Arguments"="compile --alt=true --source=\"$(FullName)\"  --output=\"&{SRC_DIR}/&{SRC_NAME}.md\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\24]
+"Item Name"="(Submenu End)"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000002
+"Show In Toolbar"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\25]
+"Item Name"="OSR-SYNC"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000001
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\26]
+"Item Name"="OSR-SYNC"
+"Command"="osr-sync "
+"Arguments"="sync --alt=true --clean=false --verbose=true --debug=true --source=\"$(FullName)\" --target=\"&{OSR_ROOT}/temp/$(Name)\" --profile=\"&{OSR_ROOT}/osr-commons/profiles/.osr-sync-public.json\" "
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\27]
+"Item Name"="OSR-SYNC-OTHER-SIDE"
+"Command"="osr-sync"
+"Arguments"="sync --alt=true --clean=true --verbose=true --debug=true --source=\"$(FullName)\" --target=\"$(FullPathInactive)/$(Name)\" --profile=\"&{OSR_ROOT}/osr-commons/profiles/.osr-sync-public.json\" "
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\28]
+"Item Name"="OSR-SYNC-Module"
+"Command"="osr-sync"
+"Arguments"="sync --alt=true --clean=true --verbose=true --debug=true --source=\"$(FullName)\" --target=\"$(FullPathInactive)/$(Name)\" --profile=\"&{OSR_ROOT}/osr-commons/profiles/.osr-sync-module.json\" "
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\29]
+"Item Name"="(Submenu End)"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000002
+"Show In Toolbar"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\3]
+"Item Name"="DRAW-IO -> PNG"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(png)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\30]
+"Item Name"="OSR-Media"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000001
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\31]
+"Item Name"="JPG-Resize-Dir-80%"
+"Command"="osr-media"
+"Arguments"="resize --minWidth=1900  --width=1980 --alt=true --verbose=true --debug=true --src=\"$(FullName)/**/*.+(&{IMAGES})\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\32]
+"Item Name"="WEBP->JPG"
+"Command"="osr-media"
+"Arguments"="resize --percent=100 --alt=true --verbose=true --debug=true --src=\"$(FullName)/*.+(webp)\" --dst=\"$(FullName)/*.+(jpg)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\33]
+"Item Name"="(Submenu End)"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000002
+"Show In Toolbar"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\4]
+"Item Name"="DRAW-IO -> PDF"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(pdf)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\5]
+"Item Name"="DRAW-IO -> JPG"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(jpg)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\6]
+"Item Name"="DRAW-IO -> SVG"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(svg)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\7]
+"Item Name"="---"
+"Command"=""
+"Arguments"=""
+"Initial Directory"=""
+"Execute Through Shell"=dword:00000000
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000000
+"Icon"=""
+"Type"=dword:00000003
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\8]
+"Item Name"="CAD -> HTML"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=false --hash=false --debug=false --skip=true --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(html)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000000
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Altap\Altap Salamander 4.0\User Menu\9]
+"Item Name"="CAD -> STEP"
+"Command"="pm-cad"
+"Arguments"="sw --alt=true --verbose=true --hash=false --debug=true --skip=false --src=\"$(FullName)\"  --dst=\"&{SRC_DIR}/&{SRC_NAME}.+(step)\""
+"Initial Directory"="$(FullPath)"
+"Execute Through Shell"=dword:00000001
+"Close Shell Window"=dword:00000001
+"Open Shell Window"=dword:00000001
+"Icon"=""
+"Type"=dword:00000000
+"Show In Toolbar"=dword:00000001

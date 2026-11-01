@@ -1,0 +1,72 @@
+{
+  "ui:submitButtonOptions": {
+    "props": {
+      "disabled": false,
+      "className": "btn btn-info"
+    },
+    "norender": false,
+    "submitText": "Submit"
+  },
+  "src": {
+    "ui:description": "FILE|FOLDER|GLOB - Source file(s) to remove background from",
+    "ui:title": "Src"
+  },
+  "dst": {
+    "ui:description": "FILE|FOLDER|GLOB - Destination for processed files",
+    "ui:title": "Dst"
+  },
+  "debug": {
+    "ui:description": "Enable internal debug messages",
+    "ui:title": "Debug",
+    "ui:placeholder": false
+  },
+  "alt": {
+    "ui:description": "Use alternate tokenizer, & instead of $",
+    "ui:title": "Alt",
+    "ui:placeholder": false
+  },
+  "dry": {
+    "ui:description": "Run without conversion",
+    "ui:title": "Dry",
+    "ui:placeholder": false
+  },
+  "verbose": {
+    "ui:description": "Show internal messages",
+    "ui:title": "Verbose",
+    "ui:placeholder": false
+  },
+  "logLevel": {
+    "ui:description": "Log level: warn, info, debug, error",
+    "ui:title": "Loglevel",
+    "ui:placeholder": "info"
+  },
+  "apiKey": {
+    "ui:description": "Replicate API key (or set REPLICATE_API_TOKEN env var)",
+    "ui:title": "Apikey"
+  },
+  "model": {
+    "ui:description": "Background removal model to use",
+    "ui:title": "Model",
+    "ui:placeholder": "lucataco/remove-bg:95fcc2a26d3899cd6c2691c900465aaeff466285a65c14638cc5f36f34befaf1"
+  },
+  "alpha_matting": {
+    "ui:description": "Enable alpha matting for better edge refinement",
+    "ui:title": "Alpha_matting",
+    "ui:placeholder": false
+  },
+  "alpha_matting_foreground_threshold": {
+    "ui:description": "Alpha matting foreground threshold",
+    "ui:title": "Alpha_matting_foreground_threshold",
+    "ui:placeholder": 270
+  },
+  "alpha_matting_background_threshold": {
+    "ui:description": "Alpha matting background threshold",
+    "ui:title": "Alpha_matting_background_threshold",
+    "ui:placeholder": 10
+  },
+  "alpha_matting_erode_size": {
+    "ui:description": "Alpha matting erode size",
+    "ui:title": "Alpha_matting_erode_size",
+    "ui:placeholder": 10
+  }
+}

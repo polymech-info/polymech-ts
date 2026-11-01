@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "GoogleMaps::Each:Migrate",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist-in/main.js",
+            "outFiles": [
+                "${workspaceFolder}//**/*.js"
+            ],
+            "args": [
+                "googlemaps-each",
+                "--query='menuiserie'",
+                "--category=injection",
+                "--searchFrom=${TOWN}, ${COUNTRY}",
+                "--google_domain_='google.es'",
+                "--source='${OSR_ROOT}/products/company/campaign/france/terms.json'",
+                "--list='osr-ai://list at least 20 major cities next to ${AREA}, as JSON array, in french, flat, no objects, no comments?model=gpt-o&filters=code,JSONParse'",
+                "--dst='./${CATEGORY}/${QUERY}.xls'",
+                "--cwd='${OSR_ROOT}/products/company/campaign/${COUNTRY}/${AREA}-ai/${TOWN}'",
+                "--index='${OSR_ROOT}/osr-directory/meta/index.json'",
+                "--store='${OSR_ROOT}/osr-directory/meta/index.db'",
+                "--limit=300",
+                "--meta=true",
+                "--findEMail=true",
+                "--meta=true",
+                "--country=france",
+                "--area=Toulouse",
+                "--searchCache=true",
+                "--logLevel=debug",
+                "--cache=true",
+                "--headless=true",
+                "--migrate=true",
+                "--log='./log-Toulouse.json'"
+            ],
+            "outputCapture": "std"
+        }
+    ]
+}

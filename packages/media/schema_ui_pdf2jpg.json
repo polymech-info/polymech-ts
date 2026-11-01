@@ -1,0 +1,41 @@
+{
+  "ui:submitButtonOptions": {
+    "props": {
+      "disabled": false,
+      "className": "btn btn-info"
+    },
+    "norender": false,
+    "submitText": "Submit"
+  },
+  "input": {
+    "ui:description": "Path to the input PDF file",
+    "ui:title": "Input"
+  },
+  "output": {
+    "ui:description": "Output path template (e.g., output/page_{PAGE}.png)",
+    "ui:title": "Output"
+  },
+  "dpi": {
+    "ui:description": "Resolution for the output images",
+    "ui:title": "Dpi",
+    "ui:placeholder": 300
+  },
+  "scale": {
+    "ui:description": "Scaling factor to apply before rendering (e.g., 2 for 2x size)",
+    "ui:title": "Scale",
+    "ui:placeholder": 2
+  },
+  "format": {
+    "ui:description": "Output image format",
+    "ui:title": "Format",
+    "ui:placeholder": "jpg"
+  },
+  "startPage": {
+    "ui:description": "First page to convert (1-based index)",
+    "ui:title": "Startpage"
+  },
+  "endPage": {
+    "ui:description": "Last page to convert (1-based index)",
+    "ui:title": "Endpage"
+  }
+}

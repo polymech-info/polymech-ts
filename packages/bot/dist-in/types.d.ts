@@ -1,0 +1,20 @@
+import { PATH_INFO } from '@polymech/commons';
+export type IOptions = {
+    alt?: boolean;
+    config?: any;
+    cwd?: string;
+    root?: string;
+    debug?: boolean;
+    verbose?: boolean;
+    dry?: boolean;
+    dst: string;
+    dstInfo?: PATH_INFO;
+    env?: string;
+    cache?: boolean;
+    src: string;
+    srcInfo?: PATH_INFO;
+    stdout?: boolean;
+    variables?: Record<string, string>;
+    key?: string;
+    logLevel?: string;
+};

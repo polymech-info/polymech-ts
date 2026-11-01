@@ -1,0 +1,77 @@
+[
+  {
+    "$ref": "#/definitions/crop-foreground",
+    "definitions": {
+      "crop-foreground": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1,
+            "description": "FILE|FOLDER|GLOB - Source file(s) to crop foreground from"
+          },
+          "dst": {
+            "type": "string",
+            "description": "FILE|FOLDER|GLOB - Destination for processed files"
+          },
+          "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable internal debug messages"
+          },
+          "alt": {
+            "type": "boolean",
+            "default": false,
+            "description": "Use alternate tokenizer, & instead of $"
+          },
+          "dry": {
+            "type": "boolean",
+            "default": false,
+            "description": "Run without conversion"
+          },
+          "verbose": {
+            "type": "boolean",
+            "default": false,
+            "description": "Show internal messages"
+          },
+          "logLevel": {
+            "type": "string",
+            "enum": [
+              "warn",
+              "info",
+              "debug",
+              "error"
+            ],
+            "default": "info",
+            "description": "Log level: warn, info, debug, error"
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "Bria API key (or set in config.bria.key)"
+          },
+          "sync": {
+            "type": "boolean",
+            "default": true,
+            "description": "Use synchronous processing (recommended)"
+          },
+          "contentModeration": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable content moderation"
+          },
+          "preserveAlpha": {
+            "type": "boolean",
+            "default": true,
+            "description": "Preserve alpha channel from input image"
+          }
+        },
+        "required": [
+          "src"
+        ],
+        "additionalProperties": true,
+        "description": "ICropForegroundOptions"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

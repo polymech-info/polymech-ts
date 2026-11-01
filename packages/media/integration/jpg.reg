@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; Associate both lowercase and uppercase .jpg to jpegfile
+[HKEY_CLASSES_ROOT\.jpg]
+@="jpegfile"
+
+[HKEY_CLASSES_ROOT\.JPG]
+@="jpegfile"
+
+; Main group "Image Tools"
+[HKEY_CLASSES_ROOT\jpegfile\shell\ImageTools]
+"MUIVerb"="Image Tools"
+"SubCommands"=""
+
+; --- Resize Command ---
+[HKEY_CLASSES_ROOT\jpegfile\shell\ImageTools\shell\Resize]
+"MUIVerb"="Resize"
+"Icon"="imageres.dll,-5308"
+
+[HKEY_CLASSES_ROOT\jpegfile\shell\ImageTools\shell\Resize\command]
+@="\"pm-media" resize --minWidth=1900 --width=1980 --alt=true --logLevel=info --src=\"%1\""

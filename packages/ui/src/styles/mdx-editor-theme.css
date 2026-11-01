@@ -1,0 +1,126 @@
+/* MDXEditor Dark Theme Overrides */
+/* Maps MDXEditor variables to our app's Tailwind/CSS variables */
+
+.dark-editor {
+    /* Primary Accent Colors (Purple in your app) */
+    --accentBase: hsl(var(--primary));
+    --accentBgSubtle: hsl(var(--primary) / 0.1);
+    --accentBg: hsl(var(--primary) / 0.2);
+    --accentBgHover: hsl(var(--primary) / 0.3);
+    --accentBgActive: hsl(var(--primary) / 0.4);
+    --accentLine: hsl(var(--primary));
+    --accentBorder: hsl(var(--primary));
+    --accentBorderHover: hsl(var(--primary-glow));
+    --accentSolid: hsl(var(--primary));
+    --accentSolidHover: hsl(var(--primary-glow));
+    --accentText: hsl(var(--primary-foreground));
+    --accentTextContrast: hsl(var(--primary-foreground));
+
+    /* Base Colors (Backgrounds, Text, Borders) */
+    --baseBase: hsl(var(--background));
+    --baseBgSubtle: hsl(var(--muted));
+    --baseBg: hsl(var(--card));
+    /* Editor background */
+    --baseBgHover: hsl(var(--muted));
+    --baseBgActive: hsl(var(--muted) / 0.8);
+    --baseLine: hsl(var(--border));
+    --baseBorder: hsl(var(--border));
+    --baseBorderHover: hsl(var(--ring));
+    --baseSolid: hsl(var(--foreground));
+    --baseSolidHover: hsl(var(--muted-foreground));
+    --baseText: hsl(var(--foreground));
+    --baseTextContrast: hsl(var(--background));
+
+    /* Admonitions / Callouts */
+    --admonitionTipBg: hsl(var(--accent) / 0.1);
+    --admonitionTipBorder: hsl(var(--accent));
+    --admonitionInfoBg: hsl(var(--primary) / 0.1);
+    --admonitionInfoBorder: hsl(var(--primary));
+    --admonitionCautionBg: hsl(48 96% 89% / 0.1);
+    /* Hardcoded Amber for now or define --warning */
+    --admonitionCautionBorder: hsl(48 96% 89%);
+    --admonitionDangerBg: hsl(var(--destructive) / 0.1);
+    --admonitionDangerBorder: hsl(var(--destructive));
+    --admonitionNoteBg: hsl(var(--muted));
+    --admonitionNoteBorder: hsl(var(--border));
+
+    /* Font overrides to match app */
+    font-family: inherit;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    color: var(--baseText);
+    background-color: transparent;
+    /* Let container background show through or use --baseBg */
+}
+
+/* Ensure the editor container takes the background color in dark mode */
+.dark-theme .mdxeditor-root-contenteditable {
+    background-color: transparent;
+}
+
+/* Override MDXEditor's bundled color:black on the contentEditable area */
+.dark-editor [contenteditable] {
+    color: hsl(var(--foreground));
+}
+
+/* Toolbar: always match the app surface */
+.mdx-toolbar {
+    background-color: hsl(var(--card));
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+}
+
+/* Toolbar button icons and text */
+.mdx-toolbar button,
+.mdx-toolbar [role="button"],
+.mdx-toolbar [role="toolbar"] button,
+._toolbarRoot_uazmk_1132 button,
+[class*="_toolbarRoot_"] button {
+    color: hsl(var(--foreground)) !important;
+}
+
+/* SVG icons inside toolbar buttons */
+.mdx-toolbar button svg,
+.mdx-toolbar [role="button"] svg,
+[class*="_toolbarRoot_"] button svg,
+[class*="_toolbarButton_"] svg,
+[class*="_iconButton_"] svg {
+    color: hsl(var(--foreground)) !important;
+    fill: currentColor;
+}
+
+/* Hover state */
+.mdx-toolbar button:hover,
+[class*="_toolbarRoot_"] button:hover {
+    color: hsl(var(--foreground)) !important;
+    background-color: hsl(var(--muted)) !important;
+}
+
+/* Active / pressed state */
+.mdx-toolbar button[data-state="on"],
+.mdx-toolbar button[aria-pressed="true"],
+[class*="_toolbarRoot_"] button[data-state="on"],
+[class*="_activeToolbarButton_"] {
+    color: hsl(var(--primary)) !important;
+    background-color: hsl(var(--primary) / 0.15) !important;
+}
+
+/* Select/dropdown triggers in the toolbar (e.g. BlockTypeSelect) */
+.mdx-toolbar [role="combobox"],
+[class*="_toolbarRoot_"] [role="combobox"],
+[class*="_selectTrigger_"],
+[class*="_selectContent_"] {
+    color: hsl(var(--foreground)) !important;
+    background-color: hsl(var(--card)) !important;
+    border-color: hsl(var(--border)) !important;
+}
+
+/* Dropdown / popover items */
+[class*="_selectContent_"] [role="option"],
+[class*="_popupContainer_"] button {
+    color: hsl(var(--foreground)) !important;
+}
+[class*="_selectContent_"] [role="option"]:hover,
+[class*="_popupContainer_"] button:hover {
+    background-color: hsl(var(--muted)) !important;
+}

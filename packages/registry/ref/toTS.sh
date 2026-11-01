@@ -1,0 +1,1 @@
+kbotd "convert to Typescript, no comments,... just code" --each="*.h" --dst='./${SRC_NAME}.ts' --filters=code --mode=completion --router=openai --model=gpt-4o

@@ -1,0 +1,108 @@
+{
+  "ui:submitButtonOptions": {
+    "props": {
+      "disabled": false,
+      "className": "btn btn-info"
+    },
+    "norender": false,
+    "submitText": "Submit"
+  },
+  "src": {
+    "ui:description": "FILE|FOLDER|GLOB - Source file(s) to resize",
+    "ui:title": "Src"
+  },
+  "dst": {
+    "ui:description": "FILE|FOLDER|GLOB - Destination for resized files",
+    "ui:title": "Dst"
+  },
+  "debug": {
+    "ui:description": "Enable internal debug messages",
+    "ui:title": "Debug",
+    "ui:placeholder": false
+  },
+  "alt": {
+    "ui:description": "Use alternate tokenizer, & instead of $",
+    "ui:title": "Alt",
+    "ui:placeholder": false
+  },
+  "dry": {
+    "ui:description": "Run without conversion",
+    "ui:title": "Dry",
+    "ui:placeholder": false
+  },
+  "verbose": {
+    "ui:description": "Show internal messages",
+    "ui:title": "Verbose",
+    "ui:placeholder": false
+  },
+  "width": {
+    "ui:description": "Resize image width",
+    "ui:title": "Width"
+  },
+  "height": {
+    "ui:description": "Resize image height",
+    "ui:title": "Height"
+  },
+  "minHeight": {
+    "ui:description": "Resize image minimum height",
+    "ui:title": "Minheight"
+  },
+  "minWidth": {
+    "ui:description": "Resize image minimum width",
+    "ui:title": "Minwidth"
+  },
+  "minSize": {
+    "ui:description": "Resize image size (bytes)",
+    "ui:title": "Minsize"
+  },
+  "percent": {
+    "ui:description": "Resize image in percent (width)",
+    "ui:title": "Percent"
+  },
+  "square": {
+    "ui:description": "Fit image within width for 1:1 aspect ratio without cropping",
+    "ui:title": "Square",
+    "ui:placeholder": false
+  },
+  "fillColor": {
+    "ui:description": "Fill color for square backgrounds (default: white)",
+    "ui:title": "Fillcolor",
+    "ui:placeholder": "white"
+  },
+  "logLevel": {
+    "ui:description": "Log level: warn, info, debug, error",
+    "ui:title": "Loglevel",
+    "ui:placeholder": "info"
+  },
+  "fit": {
+    "ui:description": "How the image should be resized to fit both provided dimensions",
+    "ui:title": "Fit"
+  },
+  "position": {
+    "ui:description": "Position, gravity or strategy to use when fit is cover or contain",
+    "ui:title": "Position"
+  },
+  "background": {
+    "ui:description": "Background color when using a fit of contain",
+    "ui:title": "Background"
+  },
+  "kernel": {
+    "ui:description": "The kernel to use for image reduction",
+    "ui:title": "Kernel"
+  },
+  "withoutEnlargement": {
+    "ui:description": "Do not enlarge if the width or height are already less than the specified dimensions",
+    "ui:title": "Withoutenlargement",
+    "ui:placeholder": false
+  },
+  "withoutReduction": {
+    "ui:description": "Do not reduce if the width or height are already greater than the specified dimensions",
+    "ui:title": "Withoutreduction",
+    "ui:placeholder": false
+  },
+  "fastShrinkOnLoad": {
+    "ui:description": "Take greater advantage of the JPEG and WebP shrink-on-load feature",
+    "ui:title": "Fastshrinkonload",
+    "ui:placeholder": true
+  }
+}

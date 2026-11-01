@@ -1,0 +1,24 @@
+[% capture config %][% js %]
+const file = path.resolve(fs.resolve('${OSR_ROOT}/osr-templates/osrl/.osrl.json'))
+if(!fs.exists(file)){
+    logger.error('Error reading config')
+    return
+}
+logger.debug('file : ', file);
+const globalVariables = readJSON(file);
+addGlobal({config:globalVariables});
+return YAML.stringify(globalVariables);
+[%endjs%][%endcapture%]
+
+[[includes2]]
+
+[[abs_url]]
+
+```json
+{
+[%js%]
+    console.log(config.variables)
+	//JSON.stringify(global.variables,null,2)
+[%endjs%]
+}
+```

@@ -1,0 +1,15 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "3bcb3ca0f477acb2d3ca3990c48d80c5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@plastichub/fs": "^0.13.22",
+    "swagger-typescript-codegen": "^3.2.3"
+  }
+}

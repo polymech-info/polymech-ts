@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"DIN 1587 - d M10 x p 1.25 - 6";"";
+"MATERIAL";"Steel";"";
+"DESIGN";"Domed cap nut DIN 1587 - M10 x 1.25 - 6";"";
+"TraceParts.PartNumber";"10-11062001-190717";"";
+"STANDARD";"DIN 1587";"";
+"TraceParts.PartLanguage";"en";"";
+"OMNICLASS23";"23.13.23.11.13.23";"";
+"TraceParts.InstanceId";"10-11062001-1907179V5VYEBB7N4HOSHIPHI197WXG";"";
+"TraceParts.PartTitle";"Hexagon domed cap nut";"";
+"NOTE";"Class: 6";"";
+"TraceParts.PartVersion";"1.5.0";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStandardAcronym";"DIN";"";

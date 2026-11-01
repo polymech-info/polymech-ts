@@ -1,0 +1,15 @@
+## Example : List all major cities of Spain, as JSON Array, then iterate over it to retrieve tourist attractions
+
+[%capture cities %]
+    [% osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code,JSONParse" assign:"cities_ex" %]
+        List all major cities of Spain, as JSON Array, max. 2
+    [% osr-ai-end %]
+[% endcapture %]
+
+[%- for city in cities_ex %]
+## [ [[city]] ]([[abs_url]]/[[city]])
+[%- capture city_query -%]
+    List all top tourist attractions of [[city]], as Markdown bullet list, with links, dont add a chapter
+[%- endcapture -%]
+[%- osr-ai model:"gpt-4o" cache:false gui:true logLevel:"warn" filters:"code" assign:"city_ret" -%][[-city_query-]][%- osr-ai-end -%][%- endfor -%]
+

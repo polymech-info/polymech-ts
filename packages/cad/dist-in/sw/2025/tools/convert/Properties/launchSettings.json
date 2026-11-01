@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "--source=\"C:\\Users\\zx\\Desktop\\polymech\\polymech-mono\\packages\\cad\\tests\\drive\\400_Drive.SLDASM\" --target=\"C:\\Users\\zx\\Desktop\\osr\\osr-cad\\tests\\cabinet\\packed\" --configuration=\"Default\" --view=\"*Render\" --hidden=false --quality=2 --renderer=solidworks --rebuild  --pack\r\n\r\n",
+      "nativeDebugging": false
+    }
+  }
+}

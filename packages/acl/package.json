@@ -1,0 +1,81 @@
+{
+  "name": "@polymech/acl",
+  "version": "0.2.0",
+  "description": "Role-based access control (RBAC) library for Node.js, featuring hierarchical roles, capabilities, and Virtual Filesystem (VFS) integration.",
+  "keywords": [
+    "acl",
+    "rbac",
+    "access control",
+    "permissions",
+    "authorization",
+    "vfs",
+    "filesystem",
+    "security"
+  ],
+  "homepage": "https://service.polymech.info/",
+  "bugs": {
+    "url": "https://git.polymech.info/polymech/mono/issues"
+  },
+  "type": "module",
+  "types": "./dist-in/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Polymech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.polymech.info/polymech/mono.git",
+    "directory": "packages/acl"
+  },
+  "files": [
+    "dist-in"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist-in/index.d.ts",
+      "import": "./dist-in/index.js",
+      "default": "./dist-in/index.js"
+    },
+    "./vfs": {
+      "types": "./dist-in/vfs/AclVfsClient.d.ts",
+      "import": "./dist-in/vfs/AclVfsClient.js",
+      "default": "./dist-in/vfs/AclVfsClient.js"
+    },
+    "./vfs/decorated": {
+      "types": "./dist-in/vfs/DecoratedVfsClient.d.ts",
+      "import": "./dist-in/vfs/DecoratedVfsClient.js",
+      "default": "./dist-in/vfs/DecoratedVfsClient.js"
+    },
+    "./vfs/acl": {
+      "types": "./dist-in/vfs/vfs-acl.d.ts",
+      "import": "./dist-in/vfs/vfs-acl.js",
+      "default": "./dist-in/vfs/vfs-acl.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -p . --watch",
+    "test:core": "vitest run src/acl.test.ts",
+    "test:all": "vitest run tests/ src/acl.test.ts",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "ignore": "^7.0.5",
+    "mime": "^4.1.0",
+    "pino": "^9.6.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "file:../typescript-config",
+    "@types/node": "22.10.2",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@vitest/ui": "^4.1.5",
+    "eslint": "^9.39.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.56.0",
+    "vitest": "^4.1.5"
+  },
+  "overrides": {
+    "esbuild": "^0.25.0"
+  }
+}

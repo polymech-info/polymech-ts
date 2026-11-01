@@ -1,0 +1,164 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Grunt - Docs",
+			"skipFiles": [
+			  "<node_internals>/**"
+			],
+			"program": "${env:APPDATA}\\npm\\node_modules\\grunt\\bin\\grunt",
+			"cwd": "${workspaceRoot}",
+			"args": [
+			  "compile:content-en",
+			  "--verbose=false",
+			  "--watchContent=true",
+			  "--cache=false",
+			  "--logLevel=debug",
+			  "--stack"
+			],
+			"outFiles": [
+			  "${workspaceFolder}/**/*.js"
+			],
+			"resolveSourceMapLocations": [
+			  "${workspaceFolder}/**",
+			  "!**/node_modules/**"
+			],
+			"outputCapture": "std"
+		  },
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "lang:compile:expand - i18n",
+			"skipFiles": [],
+			"program": "${workspaceFolder}\\main.js",
+			"outFiles": [
+				"${workspaceFolder}/**/*.js"
+			],
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"compile",
+				"--language=osr",
+				"--debug=true",
+				"--expand=true",
+				"--product=asterix",
+				"--source=\"./examples/library/osr/bazar/root-i18n.html\"",
+				"--output=\"${root}/${product}/bazar/output-i18n.html\"",
+				"--root=\"./examples/library\"",
+				"--profile='${root}/.osrl.json'",
+				"--plugins='${root}/osr/plugins'",
+				"--env='bazar'",
+				"--stdout=true",
+				"--targetLanguage=de",
+				"--sourceLanguage=en"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+			"outputCapture": "std"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "lang:compile:osr-ai",
+			"program": "${workspaceFolder}\\main.js",
+			"outFiles": [
+				"${workspaceFolder}/**/*.js"
+			],
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"compile",
+				"--language=osr",
+				"--expand=true",
+				"--testvar=asterix",
+				"--source='./tests/osr-ai/open-ai-test.md'",
+				"--output='./tests/osr-ai/open-ai-test.out.md'",
+				"--root='./tests/open-ai'",
+				"--format2=html",
+				"--stdout=true",
+				"--var-area=sentmenat",
+				"--logLevel=trace"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+			"outputCapture": "std"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "lang:compile:template",
+			"skipFiles": [],
+			"program": "${workspaceFolder}\\main.js",
+			"outFiles": [
+				"${workspaceFolder}/**/*.js"
+			],
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"compile",
+				"--language=osr",
+				"--expand=true",
+                "--source=\"./tests/templates/source.md\"",
+				"--template=\"./tests/templates/template.md\"",
+				"--output=\"./tests/templates/output.md\"",
+				"--root=\"./tests/templates\"",
+				"--profile='${OSR_ROOT}/osr-templates/osrl/.osrl.json'",
+				"--plugins='${root}/osr/plugins'",
+				"--env='library'",
+				"--format2=html",
+				"--stdout=true",
+				"--trace='${SRC_DIR}/${SRC_NAME}-trace.json'",
+				"--logLevel=trace",
+				"--var-area=Sentmenat",
+				"--var-location=(Spain,Barcelona)",
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+			"outputCapture": "std"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "lang:compile:plugins",
+			"skipFiles": [],
+			"program": "${workspaceFolder}\\main.js",
+			"outFiles": [
+				"${workspaceFolder}/**/*.js"
+			],
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"compile",
+				"--language=osr",
+				"--expand=true",
+                "--source=\"./tests/plugins/source.md\"",
+				"--template=\"./tests/plugins/template.md\"",
+				"--output=\"./tests/plugins/output.md\"",
+				"--root=\"./tests/templates\"",
+				"--profile='${OSR_ROOT}/osr-templates/osrl/.osrl.json'",
+				"--plugins='${root}/osr/plugins'",
+				"--env='library'",
+				"--format2=html",
+				"--stdout=true",
+				"--logLevel=trace",
+				"--var-area=Sentmenat",
+				"--var-location=(Spain,Barcelona)",
+				"--targetLanguage=es",
+				"--sourceLanguage=en"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+			"outputCapture": "std"
+		}
+	]
+}
+

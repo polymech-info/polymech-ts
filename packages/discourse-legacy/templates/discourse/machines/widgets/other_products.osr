@@ -1,0 +1,25 @@
+<div style="padding:16px; text-align: center; ">
+    <h2> See our other products </h2>
+    <div class="ty-vendor-plans">
+[%js%]
+const template = readFile('${root}/osr/bazar/other_item.html');
+let product = store.product;
+let all = config.all.filter((p)=>{
+    return p.slug !== product.slug;
+})
+const ret = all.map((p)=>{
+    const vars = {
+       ...p,
+       image: p.image || substitute('${abs_url}/' + p.rel + '/renderings/perspective.jpg',global)
+   }
+   return substitute(template,vars);
+})
+return ret;
+[%endjs%]
+</div>
+<div style="clear: both;">
+    <p style="text-align:center ;">
+        <a href="https://plastic-hub.com/products/">See more products on our website</a>
+    </p>
+</div>
+</div>

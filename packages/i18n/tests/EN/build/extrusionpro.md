@@ -1,0 +1,104 @@
+---
+id: extrusionpro
+title: Extrusion Pro
+nav: kb
+menu:
+  kb:
+    parent: build
+    weight: 22
+---
+
+
+![Extruder Pro](/build/extruderpro.jpg)
+
+## Extrusion Pro information
+
+| Specification    |     |
+|----------|-------------|
+| Type   |     Single Screw   |
+|  Version   |     1.0   |
+| Price new material in NL |  +/- €2000 |
+| Weight (inc frame) |   110 kg   |
+| Dimension   | 1500 x 600 x 1550 mm|
+| Power (W) | 5 kW|
+| Voltage | 400V|
+| AMP | 16A|
+| Input Flake Size  | Small  |
+|Screw diameter | 30mm|
+|Length of screw (mm) | 790 mm |
+|Effective screw length | 600 mm |
+|Rated Motor Power | 3 kW |
+| Motor Type   |    (check the build section for more details)   |
+| - Rated Motor output Torque |  109 Nm |
+| - Rated Motor output speed |   263 RPM   |
+| - Max. Motor and Inverter power   | 3 kW|
+| - Recommended motor shaft   | 30 mm|
+| - Heating zones   | 3 |
+| - Heating power: max.   | 2 kW|
+
+
+# 3D Model
+
+<iframe width="500" height="600" src="https://b2b.partcommunity.com/community/partcloud/embedded.html?route=embedded-viewer&name=Extruder+Pro+v1&model_id=96617&portal=b2b&noAutoload=true&autoRotate=false&hideMenu=true&topColor=%23FFFFFF&bottomColor=%23ffffff&cameraParams=false&varsettransfer=" frameborder="0" id="EmbeddedView-Iframe-96617" allowfullscreen></iframe>
+
+## Pros & cons
+
+### Pros
+
+The extruder is one of the fastest and most efficient to melt plastic among Precious Plastic machines. It is a safe and reliable machine amongst our machine’s family!
+
+The Extruder Pro screw is designed to work with multiple types of plastics. Which  will make you capable of working with different kind of plastic in small batches. Also this machine is conceived to be much more polyvalent than other industrial machines, allowing you to extrude into moulds, shapes, different nozzles…
+
+### Cons
+
+This machine requires a higher skill set of machining amongst Precious Plastic machines. It also requires a large motor and a specialized screw that make it a relatively expensive machine compare to other Precious Plastic machines.
+
+### Normal VS Pro
+
+Compared to smaller version of extruder, this machine:
+
+- Has a larger screw which gives a higher output
+- Optimized screw design brings an homogeneous melt for a better quality plastic
+- An improved bearing design to support axial and radial extrusion forces
+- Is made to run for full days
+- Easier assembly and servicing
+- Overall stronger and tested components
+- A safer and easier to build electronic box
+- Has a larger insulated hopper allowing better fluidity
+
+## Input & output
+
+A variety of plastic types will be effective in this extruder. Each plastic type has its own properties and behaviours (flexible, hard, liquid etc.). Materials with a wide melting temperature range are easiest to work with. We suggest starting with PP, HDPE, LDPE or PS since they require less temperature precision. We do not recommend trying polymers with smaller melting temperature windows (such as PET), but if you decide to do so, please take safety precautions.
+
+You can set the temperature using the controllers on the electronic box. The heating elements are labeled and wired into three groups (nozzle, barrel and feeding). We recommend to use the temperatures from the table below as a general rule of thumb.  This is to help make sure the plastic is fully melted right before it comes out.
+
+### Make sure the extruder is up to temperature before starting the motor!
+
+| Plastic Type | Feeding Zone (C°) | Barrel Zone (C°) | Nozzle Zone (C°) |
+|--------------|-------------------|------------------|------------------|
+| PP           | 190               | 200              | 200              |
+| PS           | 200               | 210              | 210              |
+| HDPE         | 190               | 200              | 200              |
+| LDPE         | 190               | 200              | 200              |
+
+Some examples of extrusion times for some moulds:
+
+- Beam Mould (2000  mm x 40 mm x 40 mm): 8 Min
+- Little Lego Brick Mould: 4 Min
+- Big Lego Brick Mould: 6 Min
+- Skateboard Mould: 20 Min
+
+![Image](/build/extruderpro-output.jpg)
+
+## Resources
+
+- [Buy or sell parts & machines on our bazar](https://shop.osr-plastic.org)
+- [Find a local machine shop on our map](https://osr-plastic.org/users/Europe.html)
+- [How-to: make light beams - Library](https://osr-plastic.org/howtos/make-a-lamp-with-beams)
+- [How-to: make a T profile - Library](https://osr-plastic.org/howtos/make-a-tshape-beam-)
+- [Quick release nozzle - Library](https://osr-plastic.org/howtos/make-a-quick-release-for-the-extrusion-machine)
+- [Flat nozzle  - Library](https://osr-plastic.org/howtos/make-a-flat-nozzle-for-the-extrusion-machine)
+- [Documentation of screw](http://www.mie.uth.gr/ekp_yliko/_Chapter_5a.pdf)
+- [Documentation](http://www.polydynamics.com/Rheology.pdf)
+- [Documentation of hopper cones](http://craig-russell.co.uk/demos/cone_calculator/)
+- [Documentation](http://www.mvt.ovgu.de/mvt_media/Vorlesungen/Lecture_SFPS/Folien_SFPS_4-p-2002.pdf)

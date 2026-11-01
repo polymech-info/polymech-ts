@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "model-reader": {
+      "commandName": "Project",
+      "commandLineArgs": "--source=\"C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive.SLDASM\" --target=\"C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\tests\\drive\\400_Drive-configs.json\"\r\n",
+      "workingDirectory": "C:\\Users\\mc007\\Desktop\\osr\\osr-cad\\sw\\tools\\props\\bin\\Debug\\netcoreapp3.1",
+      "nativeDebugging": false
+    }
+  }
+}

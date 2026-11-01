@@ -1,0 +1,79 @@
+{
+  "name": "@plastichub/osr-tasks",
+  "description": "OSR Grunt Tasks",
+  "version": "0.5.4",
+  "typings": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "osr-task": "main.js"
+  },
+  "devDependencies": {
+    "@types/grunt": "^0.4.32",
+    "@types/node": "^22.12.0",
+    "@types/ssh2": "^1.15.4",
+    "@types/yargs": "^17.0.33"
+  },
+  "dependencies": {
+    "@plastichub/core": "^0.2.6",
+    "@plastichub/fs": "file:../fs",
+    "@plastichub/osr-cache": "file:../osr-cache",
+    "@plastichub/osr-cad": "file:../osr-cad",
+    "@plastichub/osr-cli-commons": "file:../osr-cli-commons",
+    "@plastichub/osr-commons": "file:../osr-commons",
+    "@plastichub/osr-i18n": "file:../osr-i18n",
+    "@plastichub/osr-log": "file:../osr-log",
+    "@plastichub/osr-mail": "file:../osr-mail",
+    "@plastichub/osr-media": "file:../osr-media",
+    "@plastichub/osr-sync": "file:../osr-sync",
+    "@plastichub/osrl": "file:../osrl",
+    "axios": "^1.7.9",
+    "bluebird": "^3.7.2",
+    "chokidar": "^4.0.3",
+    "env-var": "^7.5.0",
+    "fast-glob": "^3.3.3",
+    "fix": "^0.0.6",
+    "grunt": "^1.6.1",
+    "grunt-cli": "^1.5.0",
+    "grunt-extend-config": "^0.9.7",
+    "html-minifier-terser": "^7.2.0",
+    "jsonpath-plus": "^10.2.0",
+    "juice": "^11.0.0",
+    "md5": "^2.3.0",
+    "npm": "^11.0.0",
+    "p-map": "^4.0.0",
+    "querystring": "^0.2.1",
+    "sanitize-filename": "^1.6.3",
+    "semver": "^7.6.3",
+    "sharp": "^0.33.5",
+    "simple-git": "^3.27.0",
+    "ssh2": "^1.16.0",
+    "tslog": "^3.3.4",
+    "typescript": "^5.7.3",
+    "xlsx": "^0.18.5",
+    "yargs": "^17.7.2",
+    "zod": "^3.24.1"
+  },
+  "scripts": {
+    "test": "tsc; mocha --full-trace mocha \"spec/**/*.spec.js\"",
+    "test-with-coverage": "istanbul cover node_modules/.bin/_mocha -- 'spec/**/*.spec.js'",
+    "lint": "tslint --project=./tsconfig.json",
+    "build": "tsc -p . --declaration",
+    "dev": "tsc -p . --declaration -w",
+    "typings": "tsc --declaration",
+    "docs": "npx typedoc src/index.ts"
+  },
+  "homepage": "https://git.osr-plastic.org/plastichub/lib-content",
+  "repository": {
+    "type": "git",
+    "url": "https://git.osr-plastic.org/plastichub/lib-content.git"
+  },
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "typescript"
+  ]
+}

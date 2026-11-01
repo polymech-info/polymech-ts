@@ -1,0 +1,18 @@
+[
+  {
+    "src": "Model Number",
+    "translation": "Número de modelo"
+  },
+  {
+    "src": "Plastic Processed",
+    "translation": "Plástico procesado"
+  },
+  {
+    "src": "Condition",
+    "translation": "Condición"
+  },
+  {
+    "src": "Output (kg/h)",
+    "translation": "Producción (kg/h)"
+  }
+]
